@@ -1,4 +1,5 @@
 import Hero from "@/components/wgroup/Hero";
+import FrameAnimation from "@/components/wgroup/FrameAnimation";
 import About from "@/components/wgroup/About";
 import Stats from "@/components/wgroup/Stats";
 import Services from "@/components/wgroup/Services";
@@ -10,6 +11,8 @@ export default function HomePage() {
     <>
       {/* Dark - Hero with brain visual */}
       <Hero />
+      {/* Dark - Scroll-driven frame animation */}
+      <FrameAnimation />
       {/* Light - About section (white bg) */}
       <About />
       {/* Dark - Stats bar */}

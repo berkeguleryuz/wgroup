@@ -22,7 +22,27 @@
     "evolvementor": "EVolveMentor",
     "blog": "Blog",
     "faq": "SSS",
-    "contact": "Iletisim"
+    "contact": "Iletisim",
+    "explore": "Kesfet",
+    "hoverToPreview": "Onizlemek icin uzerine gelin",
+    "desc": {
+      "about": "Hikayemizi ve degerlerimizi kesfedin",
+      "mission": "Bizi ileriye tasiyan motivasyonumuz",
+      "partner": "Is birligi firsatlarini kesfedin",
+      "socialResponsibility": "Topluma karsi sorumlulugumuz",
+      "career": "Buyuyen ekibimize katilin",
+      "weduFactory": "Otomotiv egitim ve ogretim platformu",
+      "warticode": "Dijital donusum cozumleri",
+      "wqualitysphere": "Kalite yonetimi mukemmelligi",
+      "individualCourses": "Kisisel gelisim programlari",
+      "corporateCourses": "Kurumsal egitim cozumleri",
+      "digitautopivot": "Dijital pivot stratejileri",
+      "eduarttransform": "Egitim sanati donusumu",
+      "auditmastermind": "Kapsamli denetim cozumleri",
+      "autopathwayNavigator": "Otomotiv kariyer rehberligi",
+      "supplierelevatePro": "Tedarikci yonetimi mukemmelligi",
+      "evolvementor": "Mentorluk ve gelisim platformu"
+    }
   },
   "footer": {
     "brands": "Markalar",

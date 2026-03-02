@@ -22,7 +22,27 @@
     "evolvementor": "EVolveMentor",
     "blog": "Blog",
     "faq": "FAQ",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "explore": "Entdecken",
+    "hoverToPreview": "Zum Vorschauen darauf zeigen",
+    "desc": {
+      "about": "Erfahren Sie mehr über unsere Geschichte",
+      "mission": "Was uns antreibt",
+      "partner": "Zusammenarbeit erkunden",
+      "socialResponsibility": "Unser Engagement für die Gesellschaft",
+      "career": "Werden Sie Teil unseres Teams",
+      "weduFactory": "Automotive Bildungsplattform",
+      "warticode": "Digitale Transformationslösungen",
+      "wqualitysphere": "Exzellenz im Qualitätsmanagement",
+      "individualCourses": "Persönliche Entwicklungsprogramme",
+      "corporateCourses": "Unternehmens-Trainingslösungen",
+      "digitautopivot": "Digitale Pivot-Strategien",
+      "eduarttransform": "Transformation der Bildungskunst",
+      "auditmastermind": "Umfassende Audit-Lösungen",
+      "autopathwayNavigator": "Automotive Karriereführung",
+      "supplierelevatePro": "Exzellenz im Lieferantenmanagement",
+      "evolvementor": "Mentoring- und Entwicklungsplattform"
+    }
   },
   "footer": {
     "brands": "Marken",
