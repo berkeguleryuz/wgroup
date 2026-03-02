@@ -257,20 +257,10 @@ export default function Brands() {
           {brands.map((brand) => (
             <div key={brand.key} className="flex flex-col items-center">
               <div
-                className="brand-icon-circle relative flex h-16 w-16 items-center justify-center rounded-full sm:h-20 sm:w-20"
-                style={{
-                  background: `${brand.colorHex}0A`,
-                  border: `1.5px solid ${brand.colorHex}20`,
-                }}
+                className="brand-icon-circle flex h-16 w-16 items-center justify-center rounded-full border border-primary/15 bg-primary/[0.04] sm:h-20 sm:w-20"
               >
-                {/* Subtle glow behind icon */}
-                <div
-                  className="absolute -inset-3 rounded-full opacity-20 blur-2xl"
-                  style={{ background: brand.colorHex }}
-                />
                 <brand.Icon
-                  className="h-6 w-6 sm:h-7 sm:w-7"
-                  style={{ color: brand.colorHex }}
+                  className="h-6 w-6 text-primary sm:h-7 sm:w-7"
                 />
               </div>
             </div>
@@ -325,7 +315,7 @@ export default function Brands() {
               href={brand.slug}
               className="brand-card group block"
             >
-              <div className="h-full overflow-hidden rounded-2xl border border-gray-200/60 bg-white p-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-900/[0.06]">
+              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/60 bg-white p-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-900/[0.06]">
                 {/* Image */}
                 <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl">
                   <Image
@@ -335,19 +325,12 @@ export default function Brands() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
 
                 {/* Icon + Name */}
                 <div className="mb-2.5 flex items-center gap-2.5">
-                  <div
-                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg"
-                    style={{ background: `${brand.colorHex}12` }}
-                  >
-                    <brand.Icon
-                      className="h-4 w-4"
-                      style={{ color: brand.colorHex }}
-                    />
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/[0.08]">
+                    <brand.Icon className="h-4 w-4 text-primary" />
                   </div>
                   <h3
                     className="text-lg font-bold text-gray-900"
@@ -360,15 +343,14 @@ export default function Brands() {
                 </div>
 
                 {/* Description */}
-                <p className="mb-5 text-sm leading-relaxed text-gray-500">
+                <p className="mb-5 flex-1 text-sm leading-relaxed text-gray-500">
                   {t(`${brand.key}Desc`)}
                 </p>
 
-                {/* CTA */}
+                {/* CTA - always at bottom */}
                 <div
-                  className="flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3"
+                  className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary transition-all duration-300 group-hover:gap-3"
                   style={{
-                    color: brand.colorHex,
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   }}
                 >

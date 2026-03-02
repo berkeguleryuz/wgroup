@@ -72,7 +72,6 @@ function PillarCard({
       gsap.to(cardRef.current, {
         rotateX: ((y - centerY) / centerY) * -6,
         rotateY: ((x - centerX) / centerX) * 6,
-        transformPerspective: 800,
         scale: 1.02,
         duration: 0.3,
         ease: "power2.out",
@@ -213,20 +212,24 @@ export default function About() {
       }
 
       /* pillar cards – 3D entrance */
-      gsap.from(".pillar-card", {
-        y: 60,
-        rotationX: -12,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "back.out(1.2)",
-        force3D: true,
-        scrollTrigger: {
-          trigger: ".pillar-card",
+      const pillarCards = gsap.utils.toArray<HTMLElement>(".pillar-card");
+      if (pillarCards.length) {
+        gsap.set(pillarCards, { opacity: 0, y: 60 });
+        ScrollTrigger.create({
+          trigger: pillarCards[0],
           start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
+          once: true,
+          onEnter: () => {
+            gsap.to(pillarCards, {
+              y: 0,
+              opacity: 1,
+              stagger: 0.15,
+              duration: 0.8,
+              ease: "back.out(1.2)",
+            });
+          },
+        });
+      }
 
       /* floating icon animation */
       gsap.utils.toArray<HTMLElement>(".pillar-icon").forEach((icon) => {
@@ -244,34 +247,43 @@ export default function About() {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative overflow-hidden bg-secondary py-28"
-    >
-      {/* ---- Top edge: curved horizon at section entry (white → dark) ---- */}
-      <div className="pointer-events-none absolute inset-x-0 -mt-48 z-20">
+    <>
+      {/* ---- Curved top edge: sits OUTSIDE section to avoid overflow-hidden clip ---- */}
+      <div className="relative -mt-[80px] -mb-4 overflow-visible">
         <svg
-          className="w-full"
-          viewBox="0 0 1440 60"
+          className="block w-full h-[84px]"
+          viewBox="0 0 1440 84"
           fill="none"
           preserveAspectRatio="none"
-          style={{ display: "block" }}
         >
-          {/* Dark section curves upward into the white area */}
-          <path
-            d="M0 60 Q720 0 1440 60 V60 H0 Z"
-            fill="var(--secondary)"
-          />
+          <path d="M0 80 Q720 0 1440 80 V84 H0 Z" fill="#0a0f1e" />
         </svg>
-        {/* Glow at the top edge */}
+        {/* Glow */}
         <div
-          className="absolute left-1/2 top-2 h-[80px] w-[700px] -translate-x-1/2 rounded-full blur-[60px]"
+          className="pointer-events-none absolute left-1/2 bottom-0 h-[100px] w-[700px] -translate-x-1/2 rounded-full blur-[80px]"
           style={{
             background:
-              "radial-gradient(ellipse at center, rgba(99,102,241,0.18) 0%, rgba(30,109,181,0.08) 60%, transparent 100%)",
+              "radial-gradient(ellipse at center, rgba(99,102,241,0.2) 0%, rgba(30,109,181,0.1) 50%, transparent 100%)",
           }}
         />
+        {/* Sparkles covering the curve area */}
+        <div className="pointer-events-none absolute inset-0">
+          <Sparkles
+            className="h-full w-full"
+            density={60}
+            size={1}
+            speed={0.3}
+            opacity={0.4}
+            opacitySpeed={1.2}
+            color="#ffffff"
+          />
+        </div>
       </div>
+
+      <section
+        ref={sectionRef}
+        className="relative overflow-hidden bg-secondary py-28"
+      >
 
       {/* ---- Horizon arc + glow + sparkles ---- */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px]">
@@ -413,5 +425,6 @@ export default function About() {
         </div>
       </div>
     </section>
+    </>
   );
 }
