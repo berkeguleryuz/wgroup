@@ -1,0 +1,662 @@
+{
+  "navbar": {
+    "home": "Startseite",
+    "company": "Unternehmen",
+    "about": "Uber uns",
+    "mission": "Unsere Mission",
+    "partner": "Partner",
+    "socialResponsibility": "Soziale Verantwortung",
+    "career": "Karriere",
+    "brands": "Marken",
+    "weduFactory": "WEdu Factory",
+    "warticode": "WArtiCode",
+    "wqualitysphere": "WQualitySphere",
+    "products": "Produkte",
+    "individualCourses": "Einzelkurse",
+    "corporateCourses": "Unternehmenskurse",
+    "digitautopivot": "DigitAutoPivot",
+    "eduarttransform": "EduArtTransform",
+    "auditmastermind": "AuditMastermind",
+    "autopathwayNavigator": "AutoPathWay Navigator",
+    "supplierelevatePro": "SupplierElevate Pro",
+    "evolvementor": "EVolveMentor",
+    "blog": "Blog",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "brands": "Marken",
+    "products": "Produkte",
+    "company": "Unternehmen",
+    "followUs": "Folgen Sie uns",
+    "weduFactory": "WEdu Factory",
+    "warticode": "WArtiCode",
+    "wqualitysphere": "WQualitySphere",
+    "individualProducts": "Automotive Professionals - EINZELPERSONEN",
+    "corporateProducts": "Automotive Professionals - UNTERNEHMEN",
+    "digitautopivot": "DigitAutoPivot",
+    "eduarttransform": "EduArtTransform",
+    "auditmastermind": "AuditMastermind",
+    "autopathwayNavigator": "AutoPathWay Navigator",
+    "supplierelevatePro": "SupplierElevate Pro",
+    "evolvementor": "EVolveMentor",
+    "about": "Uber uns",
+    "mission": "Unsere Mission",
+    "partner": "Partner",
+    "socialResponsibility": "Soziale Verantwortung",
+    "career": "Karriere",
+    "faq": "FAQ",
+    "phone": "+49 174 177 78 79",
+    "hqLab": "Hauptsitz & Labor",
+    "address": "Fasanenstrasse 85, 10623 Berlin",
+    "copyright": "© 2024 WGroupGMBH. Alle Rechte vorbehalten. Made in BERLIN."
+  },
+  "hero": {
+    "title": "Die Kunst, Wissen in Exzellenz zu verwandeln",
+    "subtitle": "Fuhrende Innovation in der Automobilindustrie durch Qualitatsmanagement, digitale Transformation und Expertenberatung in uber 40 Landern.",
+    "aboutUs": "Uber uns",
+    "contactUs": "Kontaktieren Sie uns",
+    "statGlobalLabel": "Globale Reichweite",
+    "statGlobalValue": "40+ Lander",
+    "statExpertLabel": "Branchenexperte",
+    "statExpertValue": "Seit 2015",
+    "statAutoLabel": "Automobilindustrie",
+    "statAutoValue": "IATF 16949",
+    "scrollText": "Scrollen zum Entdecken"
+  },
+  "whatWeDo": {
+    "title": "Was machen wir?",
+    "description": "Wgroup GmbH glaubt an die vereinende Kraft der Vielfalt und bringt in seinen Projekten analytische Denker und kreative Kunstler zusammen.",
+    "weduFactoryDesc": "Qualifizierte Schulungen in der Automobilindustrie mit IATF 16949 Fokus. Fachkrafte mit modernsten Kenntnissen starken.",
+    "warticodeDesc": "Fuhrende Bildungs- und Softwarelosungen im Automobilbereich. Digitale Transformation durch Innovation.",
+    "wqualitysphereDesc": "Strategische Transformation und Beratung fur die Automobilindustrie. Qualitatsmanagement auf hochstem Niveau."
+  },
+  "brands": {
+    "title": "Marken",
+    "weduFactory": "WEdu Factory",
+    "warticode": "WArtiCode",
+    "wqualitysphere": "WQualitySphere",
+    "readMore": "Mehr erfahren"
+  },
+  "productTabs": {
+    "title": "Produkte",
+    "tab1": "Automotive Professionals - Einzelpersonen",
+    "tab2": "Automotive Professionals - Unternehmen",
+    "tab3": "WArtiCode",
+    "tab4": "WQualitySphere",
+    "individual": "Automotive Professionals - EINZELPERSONEN",
+    "individualSubtitle": "Umfassende Schulungsprogramme fur Einzelpersonen in der Automobilindustrie.",
+    "corporate": "Automotive Professionals - UNTERNEHMEN",
+    "corporateSubtitle": "Massgeschneiderte Unternehmensschulungen fur Automobilorganisationen.",
+    "readMore": "Mehr erfahren",
+    "digitautopivotDesc": "Exklusive Losung fur die digitale Transformation der Automobilindustrie.",
+    "eduarttransformDesc": "KI-gestutzte Plattform zur Umwandlung von Schulungsmaterialien in visuelle Erlebnisse.",
+    "auditmastermindDesc": "Umfassende Audit- und Qualitatsmanagementlosung fur die Automobilindustrie.",
+    "autopathwayNavigatorDesc": "Beschleunigung des Markteintritts und der Expansion im Automobilsektor.",
+    "supplierelevateProDesc": "Maximierung der Lieferantenleistung und Supply-Chain-Exzellenz.",
+    "evolvementorDesc": "Umfassendes Programm fur den Ubergang zum Elektrofahrzeugmarkt."
+  },
+  "blogPreview": {
+    "title": "Bleiben Sie immer auf dem Laufenden mit Wgroup",
+    "description": "Werfen Sie einen Blick auf unseren Blog! Hier veroffentlichen unsere Redakteure und Wgroup-Experten regelmasig spannende Artikel zu aktuellen Themen aus der Welt der Qualitat.",
+    "seeMore": "Mehr sehen"
+  },
+  "categories": {
+    "title": "Kategorien",
+    "knowledge": "Wissen",
+    "digitalization": "Digitalisierung",
+    "qualityManagement": "Qualitatsmanagement",
+    "news": "Nachrichten",
+    "readMore": "Mehr erfahren"
+  },
+  "features": {
+    "subtitle": "Von Automobilberatung bis digitale Transformation liefern wir umfassende Losungen fur Exzellenz.",
+    "card1Title": "Automotive Professionals",
+    "card1Desc": "Expertenschulungen und Zertifizierungsprogramme fur Fachleute der Automobilindustrie weltweit.",
+    "card2Title": "Qualitatsmanagement",
+    "card2Desc": "IATF 16949-konforme Qualitatssysteme und Audit-Exzellenz.",
+    "card3Title": "Digitale Akademie",
+    "card3Desc": "E-Learning-Plattform der nachsten Generation fur den Automobilsektor.",
+    "card4Title": "Innovationslabor",
+    "card4Desc": "F&E fur Elektrofahrzeuge und nachhaltige Automobiltechnologien.",
+    "card5Title": "Globale Beratung",
+    "card5Desc": "Strategische Beratung und Markteintrittsservices in uber 40 Landern.",
+    "card6Title": "Softwarelosungen",
+    "card6Desc": "Massgeschneiderte digitale Tools und Plattformen fur die Automobilindustrie."
+  },
+  "contactCta": {
+    "title": "Kontakt aufnehmen",
+    "description": "Bereit, Ihr Unternehmen zu transformieren? Kontaktieren Sie unser Team von Automobilexperten noch heute.",
+    "buttonText": "Kontaktieren Sie uns",
+    "careerButton": "Werden Sie Teil unseres Teams",
+    "emailLabel": "info@wgroupgmbh.eu",
+    "phoneLabel": "+49 174 177 78 79"
+  },
+  "about": {
+    "title": "Uber uns",
+    "subtitle": "Wgroup GmbH",
+    "p1": "Die Grundung der Wgroup GmbH begann 2015 als Initiative der Geschaftsentwicklung von TUV Sud und hat sich heute zu einem weltweit anerkannten Erfolg entwickelt. Durch die strategische Fusion des SAS-Ingenieur- und Softwareunternehmens mit den Unternehmen Work Academy und Work Production hat Wgroup GmbH eine fuhrende Position in der Automobilindustrie erreicht. Diese Fusion legte den Grundstein fur die Fahigkeit des Unternehmens, innovative Losungen zu entwickeln, die auf die Bedurfnisse der Branche zugeschnitten sind.",
+    "p2": "Unsere Grundungspartner, Sibel Kaya und Algan Alper Sen, verkopern den Geist der Kreativitat und des analytischen Denkens, auf dem das Unternehmen aufgebaut ist. Die Kombination aus Kayas Konservatoriumsausbildung und Sens Hintergrund in Automobiltechnik und Ingenieurwesen hat den Grundstein fur ein Arbeitsumfeld gelegt, in dem kreative und analytische Intelligenz im Einklang zusammenarbeiten, um Erfolg zu erzielen.",
+    "p3": "Als Vordenker in den Bereichen Audit, Beratung, Qualitatsprozessmanagement, digitale Akademie und Softwareentwicklung in der Automobilindustrie positioniert, bietet Wgroup GmbH Beratungs- und Auditdienstleistungen in mehr als 40 Landern an, hauptsachlich in Amerika und Europa, und entwickelt dabei innovative digitale Losungen, die speziell auf die Branche zugeschnitten sind. Diese umfangreichen Aktivitaten demonstrieren die Fahigkeit des Unternehmens, Kundenbedurfnisse prazise zu identifizieren und geeignete Losungen zu entwickeln.",
+    "p4": "Zu unseren Zukunftsstrategien gehoren vorrangig Investitionen in die Teileproduktion als Reaktion auf die sich entwickelnden Bedurfnisse der Automobilindustrie. In diesem Zusammenhang ist die Betonung von Forschungs- und Entwicklungsaktivitaten (F&E) fur die Entwicklung kritischer Verbindungsteile fur Elektrofahrzeuge ein bedeutender Schritt zur Starkung des innovations- und entwicklungsorientierten Ansatzes unseres Unternehmens. Diese strategische Initiative spiegelt die Entschlossenheit der Wgroup GmbH wider, technologische Innovationen anzufuhren, und zielt darauf ab, unsere Kapazitat, innovative Losungen im Automobilsektor anzubieten, auf ein hoheres Niveau zu heben.",
+    "p5": "Im Herzen des Erfolgs von Wgroup GmbH liegt die Synergie zwischen Kreativitat und analytischer Intelligenz, eine globale Vision und der Wunsch, branchenspezifische Losungen zu entwickeln. Das Unternehmen strebt nicht nur danach, Produkte und Dienstleistungen anzubieten, sondern auch die Zukunft des Automobilsektors zu gestalten, indem es das gewonnene Wissen und die Erfahrung teilt.",
+    "p6": "Die Geschichte der Wgroup GmbH unterstreicht, dass ein kontinuierliches Engagement fur Innovation und Qualitatsstandards den Grundstein fur nachhaltigen Erfolg in der Automobilindustrie bildet.",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "mission": {
+    "title": "Unsere Mission",
+    "p1": "Die Mission der Wgroup GmbH basiert auf den grundlegenden Prinzipien der Innovation und dem Streben nach Exzellenz. Diese Mission betont, dass nachhaltiger Erfolg in der Automobilindustrie durch die dynamische Integration von Kreativitat und analytischem Denken erreicht werden kann. Seit der Grundung unseres Unternehmens hat sich diese Integration tief unter unseren Mitarbeitern verankert und Wissen sowie Fahigkeiten aus verschiedenen Disziplinen zusammengefuhrt. Dieser multidisziplinare Ansatz pragt unseren Prozess zur Entdeckung und Entwicklung innovativer Losungen. \"Kunstlerische Kreativitat und ingenieursbasiertes analytisches Denken bilden die DNA unseres Unternehmens und treiben uns zur Entwicklung innovativer Losungen an.\"",
+    "p2": "Nachhaltigkeit ist ein Eckpfeiler unserer Geschaftsstrategie; wir verpflichten uns, aus wirtschaftlicher, okologischer und industrieller Perspektive in die Zukunft unserer Branche zu investieren. Unser Bestreben, innovative Losungen fur unsere Kunden und Partner zu entwickeln, ist eine treibende Kraft, die uns vorantreibt und unser Ziel unterstutzt, gemeinsamen Erfolg und Wertschopfung in unseren Kundenbeziehungen zu erzielen.",
+    "p3": "Wissensaustausch und Lernen sind die tragenden Saulen unserer Fuhrungsvision. Mit unserer Sensibilitat fur technologische Innovationen und Branchentrends streben wir danach, in Bereichen wie Bildung und Softwareentwicklung fuhrend zu sein. Dieser Pioniergeist ermoglicht es uns, durch den Austausch unseres Wissens und unserer Erfahrungen zur breiteren Industrie beizutragen.",
+    "p4": "Unsere strategische Planung und zukunftigen Investitionen spiegeln unsere Mission wider, schnelle und effektive Losungen fur die dynamischen Bedurfnisse der Branche bereitzustellen. Mit unseren innovativen Produkten und Dienstleistungen wollen wir Branchenveranderungen antizipieren und vorantreiben.",
+    "p5": "Zusammenfassend basiert die Mission der Wgroup GmbH auf Innovation, dem Streben nach Exzellenz, nachhaltigem Erfolg, Kunden- und Partnerorientierung, Wissensaustausch und der Entwicklung branchenspezifischer Losungen. Diese Kernwerte bilden das Fundament unserer Unternehmenskultur und leiten uns auf unserem Weg zu einer fuhrenden Position in der Automobilindustrie."
+  },
+  "partner": {
+    "title": "Partner",
+    "subtitle": "Strategische Partner",
+    "description": "Die Zusammenarbeit mit den unten aufgefuhrten Institutionen und Organisationen ist von entscheidender Bedeutung fur die Erreichung unserer Ziele.",
+    "berlinPartner": {
+      "name": "Berlin Partner fur Wirtschaft und Technologie",
+      "description": "Als Katalysator fur Berlins wirtschaftlichen und technologischen Fortschritt treibt diese angesehene Institution die Stadt durch innovative Vorhaben und strategische Kooperationen in die globale Wettbewerbsarena."
+    },
+    "retranetz": {
+      "name": "ReTraNetz-BB",
+      "description": "Als Vorreiter der Transformation der Automobil- und Zulieferersektoren integriert ReTraNetz-BB das Ethos nachhaltiger Entwicklung und Innovation in die regionale Industrie."
+    },
+    "ihk": {
+      "name": "IHK Berlin - Digital Education Netzwerk LAB",
+      "description": "Als Antwort auf die Bildungsanforderungen des digitalen Zeitalters entwickelt sich die IHK Berlin zum Zentrum des Wissens- und Kompetenztransfers und bietet Fachleuten der Branche hochwertige Schulungen und Workshops an."
+    },
+    "bbb": {
+      "name": "Burgschaftsbank (BBB)",
+      "description": "Die Burgschaftsbank fungiert als entscheidender Forderer von Innovation und Wachstum in der Geschaftswelt und fordert dadurch wirtschaftliche Vielfalt und Stabilitat."
+    }
+  },
+  "socialResponsibility": {
+    "title": "Soziale Verantwortung",
+    "subtitle": "Unser Engagement fur inklusive und nachhaltige soziale Verantwortung",
+    "description": "Unser Unternehmen verankert seinen Rahmen fur soziale Verantwortung auf drei Hauptsaulen: Geschlechtergleichstellung, Nachhaltigkeit und Umweltbewusstsein. Diese Prinzipien pragen zutiefst unser operatives Ethos und unsere Bemuhungen, einen sinnvollen Beitrag zur Gesellschaft zu leisten.",
+    "genderEquality": {
+      "title": "Geschlechtergleichstellung und Inklusion",
+      "description": "Unser entschlossenes Engagement fur Geschlechtergleichstellung zeigt sich in eindeutigen Richtlinien und Praktiken. Wir verfolgen aktiv konkrete Schritte, um Chancengleichheit fur alle unsere Mitarbeiter zu gewahrleisten. Mit dem Ziel, geschlechtsspezifische Diskriminierung bei Karriereentwicklung, Lohngleichheit und Fuhrungspositionen zu beseitigen, bemuhen wir uns, eine Arbeitsplatzkultur zu kultivieren, die Vielfalt und Inklusion fordert. Dies spiegelt unsere Kernwerte wider und veranschaulicht unser Engagement fur die Schaffung einer Umgebung, in der jeder Einzelne gerecht vertreten ist und sein Potenzial voll ausschopfen kann."
+    },
+    "sustainability": {
+      "title": "Nachhaltigkeit: Balance zwischen wirtschaftlichem Erfolg und Umweltverantwortung",
+      "description": "Nachhaltigkeit nimmt eine zentrale Position in unserem strategischen Geschaftsmodell ein und strebt danach, unsere wirtschaftlichen Leistungen mit unseren okologischen Verantwortlichkeiten in Einklang zu bringen. Initiativen, die unser Engagement fur Nachhaltigkeit demonstrieren, umfassen Energiesparprojekte, Abfallreduzierungsmassnahmen und die Nutzung nachhaltiger Ressourcen. Als Unternehmen unternehmen wir bedeutende Schritte zur Minimierung unserer Umweltauswirkungen durch Investitionen in grune Technologien, Steigerung der Energieeffizienz und Innovation nachhaltiger Losungen in unseren Prozessen und Produktangeboten."
+    },
+    "environment": {
+      "title": "Umweltbewusstsein: Unser Versprechen, die Zukunft zu bewahren",
+      "description": "Unser Engagement fur Umweltbewusstsein ist integraler Bestandteil aller unserer Geschaftsaktivitaten und manifestiert sich in Praktiken wie der Unterstutzung von Umweltnachhaltigkeitsprojekten und dem Schutz naturlicher Ressourcen. Wir fuhren Bewusstseins- und Bildungsprogramme durch, die darauf abzielen, die Umweltverantwortung unter unseren Mitarbeitern und Stakeholdern zu fordern und unser Ziel zu starken, hohe Standards bei der Reduzierung der Umweltauswirkungen in der Branche zu setzen."
+    },
+    "conclusion": "Die Vision der sozialen Verantwortung unseres Unternehmens, aufgebaut auf den Grundlagen von Geschlechtergleichstellung, Nachhaltigkeit und Umweltbewusstsein, zielt darauf ab, positive Veranderungen in der Geschaftswelt und der Gesellschaft insgesamt zu fordern. Dieser Ansatz spiegelt nicht nur unser Engagement fur ethische Geschaftspraktiken wider, sondern unterstreicht auch unseren Wunsch, in der unternehmerischen sozialen Verantwortung fuhrend zu sein."
+  },
+  "career": {
+    "title": "Karriere",
+    "subtitle": "Willkommen, Innovatoren und Game Changer!",
+    "p1": "Wir, WGroup GmbH, sind mehr als nur ein Team, wir sind eine Familie, die auf Vielfalt, Gleichheit und Inklusion basiert. Wir verbinden Geschlechtergleichstellung mit dem Glauben an faire und gleiche Chancen fur alle sowie Nachhaltigkeit und Umweltbewusstsein mit dem Wunsch, kunftigen Generationen eine bessere Welt zu hinterlassen. Diese Werte stehen bei jeder unserer Entscheidungen, jedem Projekt und der Reise, die Sie mit uns unternehmen werden, im Vordergrund.",
+    "p2": "Bei uns finden Sie Moglichkeiten zu wachsen, nicht nur in Ihrer Karriere, sondern auch in Ihrer personlichen Entwicklung. Bei der Arbeit konnen Sie Ihre innovativen Ideen teilen, nachhaltige Projekte entwickeln und sozialen Wandel vorantreiben. Denn wir glauben, dass der einzigartige Beitrag jedes Einzelnen eine entscheidende Rolle bei der Erreichung unserer gemeinsamen Ziele spielt.",
+    "p3": "Wir werden nicht nur durch die heutige Arbeit angetrieben; unsere Leidenschaft, die Zukunft zu gestalten, treibt uns jeden Tag voran. Als WGroup-Familie priorisieren wir das Gluck und das Wohlbefinden unserer Mitarbeiter. Mit flexiblen Arbeitszeiten, einem unterstutzenden Arbeitsumfeld und kontinuierlichen Lernmoglichkeiten ermutigen wir jeden von Ihnen, die beste Version Ihrer selbst zu sein.",
+    "p4": "Wir freuen uns darauf, Sie auf dieser Reise bei uns zu haben. Wir glauben, dass wir gemeinsam nicht nur unser Unternehmen, sondern auch die Welt zu einem besseren Ort machen werden.",
+    "p5": "Willkommen und lassen Sie uns neue Anfange wagen!",
+    "contactEmail": "dreamteamcreator@wgroupgmbh.eu",
+    "contactLabel": "Kontakt"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "city": "Berlin",
+    "hqLab": "Hauptsitz & Labor",
+    "building": "Ludwig Erhard Haus",
+    "address": "Fasanenstrasse 85, 10623 Berlin / Deutschland",
+    "email": "info@wgroupgmbh.eu",
+    "phone": "+49 174 177 78 79",
+    "formName": "Name Vorname",
+    "formEmail": "E-Mail",
+    "formMessage": "Kommentar oder Nachricht",
+    "formSend": "Senden",
+    "formRequired": "Erforderlich"
+  },
+  "faq": {
+    "title": "Haufig gestellte Fragen (FAQ)",
+    "q1": {
+      "question": "Wie tragen die Kurse der Wedu Factory bei?",
+      "answer": "Die Kurse der Wedu Factory bieten sowohl Einzelpersonen als auch Organisationen verschiedene Vorteile. Fur Einzelpersonen bieten diese Kurse die Moglichkeit, ihre Karriere voranzutreiben und die neuesten technologischen Entwicklungen und Best Practices in der Automobilindustrie kennenzulernen. Die Kurse der Wedu Factory unterstutzen die kontinuierliche Weiterentwicklung der Belegschaft und steigern dadurch die Leistung. Speziell konzipierte Schulungslosungen tragen direkt zu den Geschaftszielen bei und heben die Fahigkeiten und das Wissen der Mitarbeiter an. Mit den Kursen der Wedu Factory helfen wir sowohl Einzelpersonen als auch Organisationen, die fur eine erfolgreiche Zukunft erforderlichen Kompetenzen zu erwerben."
+    },
+    "q2": {
+      "question": "Wie wird man Teil der automobilen Lieferkette?",
+      "answer": "Die Einbindung in die automobile Lieferkette umfasst ein tiefgreifendes Verstandnis der Marktdynamik, die Durchfuhrung von Analysen potenzieller Kunden und Lieferanten sowie die Einhaltung branchenweit anerkannter Qualitatsstandards. Dieser Prozess erfordert strategische Planung, die Einhaltung branchenspezifischer Vorschriften und den Aufbau starker Geschaftsbeziehungen. Mit unserer Expertise bieten wir strategische Beratung, um Sie auf dieser Reise zu unterstutzen."
+    },
+    "q3": {
+      "question": "Welche Schritte sind fur einen strategischen Markteintritt in die Automobilindustrie erforderlich?",
+      "answer": "Fur einen erfolgreichen Eintritt in die Automobilindustrie ist der erste Schritt eine umfassende Analyse des Zielmarktes und der Hauptwettbewerber. Anschliessend sollten Sie das einzigartige Wertversprechen Ihres Unternehmens verfeinern und auf dieser Grundlage einen umfassenden Geschaftsplan entwickeln. Dabei werden innovative Produkte und Dienstleistungen entwickelt, die den Branchenbedurfnissen entsprechen, und Strategien zur Starkung Ihrer Marktposition identifiziert."
+    },
+    "q4": {
+      "question": "Was ist das IATF 16949 Qualitatsmanagementsystem und wie verlauft der Implementierungsprozess?",
+      "answer": "IATF 16949 ist ein Qualitatsmanagementsystem, das speziell fur die Automobilindustrie entwickelt wurde. Dieses System zielt darauf ab, das Management aller Geschaftsprozesse von der Produktion bis zur Lieferung in Ubereinstimmung mit internationalen Standards sicherzustellen und kontinuierlich zu verbessern. Der Implementierungsprozess umfasst Schritte wie Prozessoptimierung, Risikomanagement und Mitarbeiterschulung unter Berucksichtigung der spezifischen Anforderungen Ihres Unternehmens."
+    },
+    "q5": {
+      "question": "Welche Anforderungen gelten fur die Einhaltung von Qualitatsstandards in der Automobilindustrie?",
+      "answer": "Die Einhaltung von Qualitatsstandards erfordert eine detaillierte Ist-Zustandsanalyse (GAP-Analyse), die Uberprufung von Geschaftsprozessen und die Umsetzung kontinuierlicher Verbesserungsaktivitaten. Dabei ist es wesentlich, die notwendigen Anderungen zur Gewahrleistung der Standardkonformitat zu identifizieren und umzusetzen."
+    },
+    "q6": {
+      "question": "Wie sollten interne und externe Auditstrategien entwickelt und umgesetzt werden?",
+      "answer": "Effektive interne und externe Auditstrategien bestehen aus Schritten wie Risikobewertung, Festlegung der Audithaufigkeit und Analyse der Auditergebnisse. Diese Strategien tragen dazu bei, die Effektivitat der Managementsysteme Ihres Unternehmens zu verbessern, indem sie die kontinuierliche Verbesserung von Prozessen und Praktiken unterstutzen."
+    },
+    "q7": {
+      "question": "Welche digitalen Transformationsstrategien gibt es in der Automobilindustrie?",
+      "answer": "Die digitale Transformation in der Automobilindustrie umfasst die Integration technologischer Innovationen zur Steigerung der Effizienz, Kostensenkung und Verbesserung der Kundenzufriedenheit. Dieser Prozess beinhaltet die Starkung der digitalen Infrastruktur Ihres Unternehmens, die Automatisierung von Prozessen und die Integration intelligenter Entscheidungsmechanismen durch Datenanalytik. Mit unseren branchenspezifischen Losungen helfen wir Ihnen, auf der digitalen Transformationsreise Ihres Unternehmens einen Wettbewerbsvorteil zu erlangen."
+    },
+    "q8": {
+      "question": "Warum sind Programme zur beruflichen Weiterentwicklung fur Mitarbeiter in der Automobilindustrie wichtig?",
+      "answer": "Die kontinuierliche Entwicklung der Fahigkeiten und Kompetenzen der Mitarbeiter ist entscheidend fur die Aufrechterhaltung der Wettbewerbsfahigkeit und Innovation in der Automobilindustrie. Durch unsere auf technische Kompetenzen, Qualitatsmanagement, Fuhrungsqualitaten und digitale Transformation zugeschnittenen Schulungs- und Entwicklungsprogramme unterstutzen wir die berufliche Entwicklung Ihrer Mitarbeiter. Diese Kurse sind speziell darauf ausgelegt, die aktuellen und zukunftigen Bedurfnisse der Branche zu erfullen."
+    },
+    "q9": {
+      "question": "Was sind die effektivsten Methoden zur Entwicklung von Mitarbeiterfahigkeiten und -kompetenzen?",
+      "answer": "Die Mitarbeiterentwicklung sollte durch interaktive Schulungen, Mentoring, Workshops und kontinuierliche Lernmoglichkeiten unterstutzt werden. Dieser Ansatz festigt theoretisches Wissen mit praktischen Anwendungen und ermoglicht es Mitarbeitern, neue Fahigkeiten zu erwerben und bestehende zu verbessern. Daruber hinaus stellen wir die notwendigen Werkzeuge und Informationen bereit, damit sich Mitarbeiter an technologische Fortschritte und Branchentrends anpassen konnen."
+    }
+  },
+  "weduFactory": {
+    "title": "WEdu Factory",
+    "p1": "Wedu Factory ist eine qualifizierte Bildungseinrichtung mit erfahrenen Trainern, die uber langjahrige Schulungserfahrung in der Automobilindustrie verfugen und alle Probleme im Feld beherrschen. Als Teil der in Berlin ansassigen Marke Wgroup legt Wedu Factory einen besonderen Fokus auf die Automobilindustrie und zielt darauf ab, qualifiziertes Personal in Ubereinstimmung mit IATF 16949 Qualitatsstandards auszubilden.",
+    "p2": "Fachkundige Dozenten verstehen die Anforderungen jedes Bereichs der Branche, erstellen die effektivsten Inhalte und vermitteln den Teilnehmern die Best Practices der Branche. Dieses umfassende Programm ist speziell darauf ausgerichtet, die Bedurfnisse von Mitarbeitern und Unternehmen in der Automobilindustrie zu erfullen. Das Hauptziel des Programms ist es, den Teilnehmern eine vollstandige Beherrschung der IATF 16949 Qualitatsstandards zu ermoglichen, damit sie die Best Practices der Branche auf hochstem Niveau erlernen und anwenden konnen.",
+    "p3": "Wedu Factory bietet einzelnen Teilnehmern die Moglichkeit, einen Schritt in ihrer Karriere voranzukommen, wahrend Unternehmen die kontinuierliche Weiterentwicklung ihrer Belegschaft unterstutzen und ihre Unternehmensziele effektiver erreichen konnen.",
+    "p4": "Zu den Hohepunkten der Wedu Factory gehoren die volle Ubereinstimmung mit Branchenstandards, internationale Zuganglichkeit, kontinuierliche berufliche Entwicklungsmoglichkeiten und starke Branchenverbindungen. Daruber hinaus werden die Schulungsinhalte durch den effektiven Einsatz von Tools der kunstlichen Intelligenz und digitalen Technologien bereitgestellt, sodass die Teilnehmer auf schnellstem und prazisestem Weg Kompetenz erlangen.",
+    "p5": "Wedu Factory bietet eine einzigartige Plattform, um zukunftige Fuhrungskrafte in der Automobilindustrie auszubilden und die Bedurfnisse der Branche zu erfullen. Dieses Programm, das sowohl die Karrieren einzelner Teilnehmer starkt als auch die kontinuierliche Weiterentwicklung der Belegschaft fur Unternehmen unterstutzt, tragt erheblich zur Anhebung der Qualitatsstandards in der Automobilindustrie und zur Steigerung der Wettbewerbsfahigkeit in der Branche bei.",
+    "whyTitle": "Warum WEdu Factory?",
+    "letsWorkTogether": "Lassen Sie uns zusammenarbeiten",
+    "getStarted": "Loslegen",
+    "checkIndividual": "Einzelkurse ansehen",
+    "checkCorporate": "Unternehmenskurse ansehen"
+  },
+  "warticode": {
+    "title": "WArtiCode",
+    "subtitle": "Fuhrend in Bildung und Softwarelosungen im Automobilsektor",
+    "p1": "WArtiCode bietet einen einzigartigen Ansatz, der auf die Automobilindustrie zugeschnitten ist und Technologie und Kunst in Bildung und Softwarelosungen verbindet. Durch die Entwicklung massgeschneiderter Losungen zur Bewaltigung der Herausforderungen unserer Kunden machen wir Schulungsprozesse und Softwareentwicklungsprojekte wirkungsvoller, verstandlicher und nachhaltiger. Durch die Kombination der Moglichkeiten, die Technologie und Kunst bieten, verschieben wir die Grenzen sowohl der Bildung als auch der Softwarelosungen in der Automobilindustrie.",
+    "servicesTitle": "Unsere umfassenden Dienstleistungen",
+    "visualApproach": "Schaffen Sie einen Unterschied mit visuellen und kunstlerischen Ansatzen",
+    "innovation": "Schreiten Sie mit Innovation in die Zukunft",
+    "togetherSuccess": "Gemeinsam zum Erfolg",
+    "cta": "Sind Sie bereit, mit WArtiCode eine innovative Transformation in Ihren Bildungs- und Softwarelosungen einzuleiten?"
+  },
+  "wqualitysphere": {
+    "title": "WQualitySphere",
+    "subtitle": "Der Schlussel zu Ihrer strategischen Transformation in der Automobilindustrie",
+    "p1": "Wenn Sie nachhaltigen Erfolg und Fuhrungsstarke auf dem Automobilmarkt erzielen mochten, sind die umfassenden Beratungsleistungen von WQualitySphere genau das Richtige fur Sie. In einer Branche, die ein tiefes Verstandnis der Dynamik der automobilen Lieferkette erfordert, sind wir hier, um die strategische Transformation bereitzustellen, die Ihr Unternehmen benotigt.",
+    "servicesTitle": "Unsere umfassenden Dienstleistungen",
+    "whyTitle": "Warum WQualitySphere?",
+    "letsWorkTogether": "Lassen Sie uns zusammenarbeiten",
+    "getStarted": "Loslegen"
+  },
+  "productsIndividual": {
+    "title": "Automotive Professionals - EINZELPERSONEN",
+    "p1": "Die Digitale Akademie fur Automotive Professionals ist eine digitale Lernplattform, die aus der einzigartigen Kombination von Industrie und Kunst entstanden ist. Sie ist darauf ausgelegt, internationale Standards fur globale Automobilmarkte zu erfullen. Sie bietet Nutzern sowohl praktische als auch interaktive Lernerfahrungen, die es ihnen ermoglichen, die neuesten technologischen Entwicklungen in der Branche kennenzulernen und ihre Fahigkeiten zu verbessern. Diese Akademie zielt darauf ab, den Bedarf an qualifizierten Arbeitskraften im Automobilsektor zu decken und den Zugang zu Beschaftigungsmoglichkeiten zu erleichtern.",
+    "p2": "Die Akademie ist eine hervorragende Gelegenheit fur einzelne Teilnehmer, ihre Karriere voranzutreiben und ihr aktuelles Wissen und ihre Fahigkeiten zu erweitern. Absolventen konnen in der Branche wettbewerbsfahig sein, indem sie uber das beste Wissen und die besten Fahigkeiten in automobilen Qualitatssystemen verfugen, international anerkannte Qualitatsstandards erfullen und eine andere Perspektive bieten.",
+    "p3": "Daruber hinaus ist diese Plattform mit einem HR-Entwicklungsverfolgungssystem ausgestattet. Mit diesem System konnen die Fortschritte der Nutzer im Bildungsprozess detailliert verfolgt und berichtet werden. Dies ermoglicht es einzelnen Nutzern, ihren eigenen Fortschritt zu uberwachen.",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "Automotive Professionals - EINZELPERSONEN",
+    "orientation": {
+      "title": "ORIENTIERUNG - WAutoStart",
+      "description": "Dieser Orientierungskurs bietet einen idealen Einstieg in die Automobilindustrie und fordert Ihre Karriere. Mit Fokus auf IATF 16949 Standards vermitteln diese Schulungen ein breites Spektrum an Wissen, vom Verstandnis grundlegender Konzepte bis hin zu Geschaftsprozessen und Methoden der Leistungsuberwachung. Die dynamische, interaktive und fachkundig gestaltete digitale Schulungsplattform von Wedu Factory hilft Ihnen, Wissen in der Praxis anzuwenden.",
+      "modules": [
+        "Auf dem Weg in die Zukunft: Die Auswirkungen von IATF 16949 in der Automobilindustrie",
+        "Wedu Factory Digitale Akademie fur Automotive Professionals",
+        "IATF-Struktur und allgemeiner Uberblick uber die Organisation"
+      ]
+    },
+    "course1": {
+      "title": "KURS 1 - WAutoPilot",
+      "description": "Dieser Kurs steigert nicht nur Ihre Kompetenz in IATF 16949 Standards, sondern bietet Ihnen auch die Moglichkeit, Ihre Karriere auf neue Hohen zu bringen, indem er Sie mit dem neuesten Branchenwissen ausstattet. Durch das Erlernen der Schlusselelemente von Qualitatsstandards konnen Sie diese in Ihre Geschaftsprozesse integrieren und Kundenanforderungen prazise analysieren.",
+      "modules": [
+        "IATF 16949 Standardstruktur und Inhaltsuberblick",
+        "IATF 16949 Grundlagen des Automobil-Qualitatsmanagementstandards",
+        "Uberblick uber Original Equipment Manufacturers (OEM) und kundenspezifische Anforderungen (CSR)",
+        "Allgemeiner Uberblick uber Unterstutzungswerkzeuge (Core Tools, VDA Band, CQI, AIAG)"
+      ]
+    },
+    "course2": {
+      "title": "KURS 2 - WAutoCore",
+      "description": "Durch diesen Kurs erwerben Sie Expertise in Planung und Management der Produktqualitat, Details des Produktionsfreigabeverfahrens, Bewertung von Messsystemen, Management besonderer Merkmale, Risikoanalyse, Analyse von Design- und Prozessfehlern sowie Erfullung der Anforderungen an den Kontrollplan.",
+      "modules": [
+        "APQP (Erweiterte Produktqualitatsplanung)",
+        "PPAP (Produktionsfreigabeverfahren)",
+        "MSA (Messsystemanalyse)",
+        "SPC (Statistische Prozesskontrolle)",
+        "Management besonderer Merkmale",
+        "Risikoanalyse - VDA 4.2 (FTA, FMEA, SWOT)",
+        "DFMEA (Design-Fehlermoglichkeits- und Einflussanalyse) gemas AIAG/VDA",
+        "PFMEA (Prozess-Fehlermoglichkeits- und Einflussanalyse) gemas AIAG/VDA",
+        "Kontrollplan",
+        "CQI-20 Effektive Problemlosung",
+        "8D Problemlosung",
+        "A3 Problemlosung",
+        "Lessons Learned: Definition und Methoden"
+      ]
+    },
+    "course3": {
+      "title": "KURS 3 - WAutoSync",
+      "description": "Dieser Kurs ermoglicht es Ihnen, Teilefertigungsfreigabeprozesse zu verbessern, Prozessaudits nach VDA-Standards durchzufuhren und Fahigkeiten in Schichtprozessaudits und mehr zu erwerben. Sie entwickeln auch Ihre Fahigkeiten in Garantiemanagement, Qualitatkostenoptimierung, Lieferkettenleistungsmessung und Geschaftskontinuitatsplanung.",
+      "modules": [
+        "VDA 2 PPA - Teileproduktionsfreigabe",
+        "VDA 6.3 Prozessaudit",
+        "VDA 6.5 Produktaudit",
+        "Reifegradsicherung (RGA)",
+        "CQI-8 Leitfaden fur Schichtprozessaudits",
+        "CQI-14 Automobil-Garantiemanagement",
+        "CQI-22 Kosten schlechter Qualitat (CoPQ)",
+        "Key Performance Indicators (KPIs) fur die automobile Lieferkette",
+        "Geschaftskontinuitatsplanung (BCP) fur die automobile Lieferkette",
+        "Leitlinien fur das Management der automobilen Lieferkette"
+      ]
+    },
+    "course4": {
+      "title": "KURS 4 - WAutoAuditPRO",
+      "description": "Dieser Kurs vermittelt Ihnen umfassendes Wissen daruber, wie Sie interne Auditprozesse verbessern und IATF-Standards effektiv integrieren konnen. Er hilft Ihnen, den Zertifizierungsprozess und die erforderlichen Qualifikationen fur IATF-Auditoren zu verstehen und Strategien fur Qualitatsmanagement und interne Audits zu ubernehmen.",
+      "modules": [
+        "1./2. Partei Interner Auditor",
+        "Einfuhrung von IATF-Standards in den Unternehmensprozess",
+        "IATF 16949 Zertifizierungsregeln Uberblick",
+        "Uberblick uber den externen Auditprozess (3. Partei)",
+        "Allgemeiner Uberblick uber den IATF-Zertifizierungs- und Auditprozess",
+        "Uberblick uber die Qualifikation zum externen 3. Partei-Auditor fur IATF",
+        "Managementprozess",
+        "Qualitatsmanagementprozess",
+        "Qualitatsmanagementprozess - Spezifizierte interne Audits",
+        "Qualitatssicherungsprozess - Spezifiziertes Labor- und Messmittelmanagement",
+        "Lieferantenmanagement, Einkauf und Lieferkettenprozess",
+        "Logistik- und Lieferprozess",
+        "Wartungsprozess",
+        "Personalwesen-Prozess",
+        "Produktionsprozess",
+        "Externes Audit-Nichtkonformitatsmanagement"
+      ]
+    },
+    "course5": {
+      "title": "KURS 5 - WAutoECODrive",
+      "description": "Dieser Kurs zielt darauf ab, nachhaltige und losungsorientierte Strategien in der Automobilindustrie zu leiten, beginnend mit Nachhaltigkeit im IATF 16949 Standard, gruner Produktion, Sozialen Verantwortungsmanagementsystemen, Risikomanagement, Arbeitsschutz und -sicherheit. Er behandelt auch kritische Themen wie ISO 14001, ISO 26001, ISO 31000, ISO 45001 und ISO 50001.",
+      "modules": [
+        "Nachhaltigkeit und Losungen in der Automobilindustrie",
+        "IATF 16949 Standard Nachhaltigkeit",
+        "Lieferkettenmanagement und nachhaltige Beschaffung",
+        "Energieeffizienz und grune Produktion",
+        "Nachhaltigkeitsbewusstsein und Umsetzung",
+        "ISO 14001 Umweltmanagementsystem Nachhaltigkeitsanwendungen",
+        "ISO 26001 Soziales Verantwortungsmanagementsystem",
+        "ISO 31000 Risikomanagementsystem",
+        "ISO 45001 Arbeitsschutzmanagementsystem",
+        "ISO 50001 Energiemanagementsystem"
+      ]
+    }
+  },
+  "productsCorporate": {
+    "title": "Automotive Professionals - UNTERNEHMEN",
+    "p1": "Die Digitale Akademie fur Automotive Professionals ist eine digitale Lernplattform, die aus der einzigartigen Kombination von Industrie und Kunst entstanden ist. Sie ist darauf ausgelegt, internationale Standards fur globale Automobilmarkte zu erfullen. Sie bietet Nutzern sowohl praktische als auch interaktive Lernerfahrungen.",
+    "p2": "Unternehmen konnen mit dieser Plattform in die Bildung ihrer Mitarbeiter investieren, Talente intern entwickeln und einen Wettbewerbsvorteil erzielen. Absolventen konnen in der Branche wettbewerbsfahig sein, indem sie uber das beste Wissen und die besten Fahigkeiten in automobilen Qualitatssystemen verfugen.",
+    "p3": "Daruber hinaus ist diese Plattform mit einem HR-Entwicklungsverfolgungssystem ausgestattet. Unternehmensnutzer konnen die Bildungsergebnisse und die Entwicklung ihrer Mitarbeiter bewerten. Diese Funktion erleichtert es den Nutzern, ihre Lernziele zu erreichen, und hilft Organisationen, ihre Talentmanagementstrategien effektiver umzusetzen.",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "Automotive Professionals - UNTERNEHMEN",
+    "wselect": {
+      "title": "WSelect",
+      "description": "Sie konnen die gewunschten Produkte aus dem untenstehenden Formular auswahlen.",
+      "formName": "Name",
+      "formFirstName": "Vorname",
+      "formLastName": "Nachname",
+      "formEmail": "E-Mail",
+      "formPhone": "Telefon",
+      "formPickProducts": "Sie konnen Produkte auswahlen",
+      "formSend": "Senden"
+    },
+    "wautostart": {
+      "title": "WAutoStart",
+      "description": "Dieser Orientierungskurs bietet einen idealen Einstieg in die Automobilindustrie und fordert Ihre Karriere. Mit Fokus auf IATF 16949 Standards vermitteln diese Schulungen ein breites Spektrum an Wissen.",
+      "modules": [
+        "Auf dem Weg in die Zukunft: Die Auswirkungen von IATF 16949 in der Automobilindustrie",
+        "Wedu Factory Digitale Akademie fur Automotive Professionals",
+        "IATF-Struktur und allgemeiner Uberblick uber die Organisation"
+      ]
+    },
+    "wautopilot": {
+      "title": "WAutoPilot",
+      "description": "Dieser Kurs steigert nicht nur Ihre Kompetenz in IATF 16949 Standards, sondern bietet Ihnen auch die Moglichkeit, Ihre Karriere auf neue Hohen zu bringen.",
+      "modules": [
+        "IATF 16949 Standardstruktur und Inhaltsuberblick",
+        "IATF 16949 Grundlagen des Automobil-Qualitatsmanagementstandards",
+        "Uberblick uber OEM und kundenspezifische Anforderungen (CSR)",
+        "Allgemeiner Uberblick uber Unterstutzungswerkzeuge (Core Tools, VDA Band, CQI, AIAG)"
+      ]
+    },
+    "wautocore": {
+      "title": "WAutoCore",
+      "description": "Durch diesen Kurs erwerben Sie Expertise in Planung und Management der Produktqualitat, Details des Produktionsfreigabeverfahrens und Risikoanalyse.",
+      "modules": [
+        "APQP (Erweiterte Produktqualitatsplanung)",
+        "PPAP (Produktionsfreigabeverfahren)",
+        "MSA (Messsystemanalyse)",
+        "SPC (Statistische Prozesskontrolle)",
+        "Management besonderer Merkmale",
+        "Risikoanalyse - VDA 4.2 (FTA, FMEA, SWOT)",
+        "DFMEA gemas AIAG/VDA",
+        "PFMEA gemas AIAG/VDA",
+        "Kontrollplan",
+        "CQI-20 Effektive Problemlosung",
+        "8D Problemlosung",
+        "A3 Problemlosung",
+        "Lessons Learned: Definition und Methoden"
+      ]
+    },
+    "wautosync": {
+      "title": "WAutoSync",
+      "description": "Dieser Kurs ermoglicht es Ihnen, Teilefertigungsfreigabeprozesse zu verbessern, Prozessaudits nach VDA-Standards durchzufuhren und Fahigkeiten in Schichtprozessaudits zu erwerben.",
+      "modules": [
+        "VDA 2 PPA - Teileproduktionsfreigabe",
+        "VDA 6.3 Prozessaudit",
+        "VDA 6.5 Produktaudit",
+        "Reifegradsicherung (RGA)",
+        "CQI-8 Leitfaden fur Schichtprozessaudits",
+        "CQI-14 Automobil-Garantiemanagement",
+        "CQI-22 Kosten schlechter Qualitat (CoPQ)",
+        "KPIs fur die automobile Lieferkette",
+        "Geschaftskontinuitatsplanung (BCP) fur die automobile Lieferkette",
+        "Leitlinien fur das Management der automobilen Lieferkette"
+      ]
+    },
+    "wautoauditpro": {
+      "title": "WAutoAuditPRO",
+      "description": "Dieser Kurs vermittelt Ihnen umfassendes Wissen daruber, wie Sie interne Auditprozesse verbessern und IATF-Standards effektiv integrieren konnen.",
+      "modules": [
+        "1./2. Partei Interner Auditor",
+        "Einfuhrung von IATF-Standards in den Unternehmensprozess",
+        "IATF 16949 Zertifizierungsregeln Uberblick",
+        "Uberblick uber den externen Auditprozess (3. Partei)",
+        "Allgemeiner Uberblick uber den IATF-Zertifizierungs- und Auditprozess",
+        "Uberblick uber die Qualifikation zum externen Auditor fur IATF",
+        "Managementprozess",
+        "Qualitatsmanagementprozess",
+        "Qualitatsmanagementprozess - Spezifizierte interne Audits",
+        "Qualitatssicherungsprozess - Spezifiziertes Labor- und Messmittelmanagement",
+        "Lieferantenmanagement, Einkauf und Lieferkettenprozess",
+        "Logistik- und Lieferprozess",
+        "Wartungsprozess",
+        "Personalwesen-Prozess",
+        "Produktionsprozess",
+        "Externes Audit-Nichtkonformitatsmanagement"
+      ]
+    },
+    "wautoeco": {
+      "title": "WAutoECODrive",
+      "description": "Dieser Kurs zielt darauf ab, nachhaltige und losungsorientierte Strategien in der Automobilindustrie zu leiten, beginnend mit Nachhaltigkeit im IATF 16949 Standard.",
+      "modules": [
+        "Nachhaltigkeit und Losungen in der Automobilindustrie",
+        "IATF 16949 Standard Nachhaltigkeit",
+        "Lieferkettenmanagement und nachhaltige Beschaffung",
+        "Energieeffizienz und grune Produktion",
+        "Nachhaltigkeitsbewusstsein und Umsetzung",
+        "ISO 14001 Umweltmanagementsystem Nachhaltigkeitsanwendungen",
+        "ISO 26001 Soziales Verantwortungsmanagementsystem",
+        "ISO 31000 Risikomanagementsystem",
+        "ISO 45001 Arbeitsschutzmanagementsystem",
+        "ISO 50001 Energiemanagementsystem"
+      ]
+    }
+  },
+  "digitautopivot": {
+    "title": "DigitAutoPivot",
+    "brand": "WArtiCode",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "WArtiCode",
+    "p1": "\"DigitAutoPivot\" ist eine exklusive Losung fur die Automobilindustrie, die eine einzigartige Transformation bietet. Dieses Programm wurde sorgfaltig von einem Expertenteam aus Automobilfachleuten und Softwareentwicklern mit einem tiefen Verstandnis fur die Komplexitat der Branche entwickelt. Es hat die Kapazitat, massgeschneiderte Losungen bereitzustellen, indem es die einzigartigen Bedurfnisse jedes Unternehmens umfassend analysiert.",
+    "p2": "DigitAutoPivot ist mehr als nur ein Tool fur die digitale Transformation - es bietet kritische Analysen, die es Unternehmen ermoglichen, die richtigen Losungen fur ihre aktuellen und zukunftigen Bedurfnisse zu identifizieren und umzusetzen. Diese Losung transformiert grundlegend die Fahigkeit von Automobilunternehmen, die operative Effizienz zu steigern, Kosten zu optimieren und sich schnell an den Markt anzupassen.",
+    "p3": "Die Partnerschaft mit DigitAutoPivot gibt Ihrem Unternehmen die Moglichkeit, die neuesten Technologien und Methoden der Branche zu ubernehmen, Ihre Geschaftsprozesse effektiv zu digitalisieren und die Zukunft der Automobilindustrie mitzugestalten. Dies ist ein strategischer Vorteil, der Ihnen eine einzigartige Position im Markt verschafft."
+  },
+  "eduarttransform": {
+    "title": "EduArtTransform",
+    "brand": "WArtiCode",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "WArtiCode",
+    "p1": "\"EduArtTransform\" ist eine KI-gestutzte Transformationsplattform, die Ihre Schulungsmaterialien auf eine innovative und visuelle Reise mitnimmt. Diese bahnbrechende Losung kombiniert die Konzepte von Schulungsvideos, interaktivem Lernen und KI-Schulungstools, um Ihre Unternehmenskurse in ein Kunstwerk zu verwandeln. EduArtTransform bietet alle innovativen Funktionen, die Sie im Bereich digitaler Schulungslosungen und Mitarbeiterentwicklung suchen, und ist ideal fur Unternehmen, die den Trends der Bildungstechnologien und des visuellen Lernens folgen. Durch den Bruckenschlag zwischen Schulungsmaterialtransformation und Lernmanagementsystemen ermoglicht es Ihren Mitarbeitern, Informationen schneller und nachhaltiger aufzunehmen."
+  },
+  "auditmastermind": {
+    "title": "AuditMastermind",
+    "brand": "WQualitySphere",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "WQualitySphere",
+    "p1": "\"AuditMasterMind\" bietet eine umfassende Losung, die mit einem tiefen Verstandnis fur die Bedurfnisse des Qualitatsmanagements und der Prozessoptimierung von Unternehmen in der Automobilindustrie entwickelt wurde. Interne und externe Audits basieren auf der Einhaltung der IATF 16949 Qualitatsmanagementsystemstandards und konzentrieren sich auf die Herausforderungen in Beschaffung, Produktion und anderen kritischen Geschaftsprozessen.",
+    "p2": "\"AuditMasterMind\" steigert die operative Effizienz von Unternehmen und gewahrleistet die kontinuierliche Verbesserung von Qualitatsmanagementsystemen durch die Entwicklung massgeschneiderter Losungen fur die haufigsten Branchenprobleme. Es berucksichtigt die spezifischen Bedurfnisse von Unternehmen in Bereichen wie effektiveres Auditmanagement, Optimierung von Beschaffungs- und Lieferkettenoperationen.",
+    "p3": "\"AuditMasterMind\" ist die Losung, die Harmonie und Prozessoptimierung zwischen den globalen Operationen von Automobilunternehmen sicherstellt. Es erleichtert die Einhaltung von IATF 16949 Qualitatsstandards und unterstutzt die Integration einer Fabrik mit anderen Organisationen weltweit. Mit AuditMasterMind stellen Sie Konsistenz uber Ihre globalen Operationen hinweg sicher, optimieren Kosten und erreichen Qualitatsexzellenz in jeder Region."
+  },
+  "autopathwayNavigator": {
+    "title": "AutoPathWay Navigator",
+    "brand": "WQualitySphere",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "WQualitySphere",
+    "p1": "\"AutoPathWay\" ist eine beschleunigende Losung fur Unternehmen, die sich im Automobilsektor etablieren oder ihren Markt erweitern mochten. Der strategische Markteintritt konzentriert sich auf die effektive Installation und Implementierung von IATF 16949 Qualitatsmanagementsystemen, sodass Ihr Unternehmen schnell in neue Markte integriert werden kann und seine Wettbewerbsfahigkeit in bestehenden Markten steigert. Mit unserer tiefgreifenden Marktanalyse und strategischen Planungskapazitaten beschleunigen wir Ihren Workflow und erleichtern Ihnen die Anpassung an die Marktdynamik. AutoPathWay hilft Ihnen, Exzellenz zu erreichen, die Branchenstandards ubertrifft, und einen nachhaltigen Wettbewerbsvorteil zu erlangen."
+  },
+  "supplierelevatePro": {
+    "title": "SupplierElevate Pro",
+    "brand": "WQualitySphere",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "WQualitySphere",
+    "p1": "\"SupplierElevatePro\" steht in direktem Zusammenhang mit der Exzellenz des Lieferkettenmanagements und der Lieferantenentwicklungsprozesse in der Automobilindustrie. SupplierElevate Pro ist darauf ausgelegt, Unternehmen der Branche einen Wettbewerbsvorteil zu verschaffen, indem es die Leistung der Lieferanten maximiert und ihre Zusammenarbeit starkt. Dieses Programm bietet konkrete Losungen zur Einhaltung der IATF 16949 Qualitatsmanagementstandards, Kostenoptimierung und Steigerung der operativen Effizienz.",
+    "p2": "SupplierElevate Pro umfasst kritische Prozesse von der Lieferantenauswahl uber die Leistungsbewertung, kontinuierliche Verbesserung bis hin zum Risikomanagement. Wahrend es Qualitat und Kontinuitat in jeder Phase der Lieferkette garantiert, ermoglicht das Programm Automobilunternehmen, ein harmonisches und effizientes Liefernetzwerk aufzubauen, das ihre Wettbewerbsfahigkeit auf dem globalen Markt steigert.",
+    "p3": "Mit den von SupplierElevate Pro angebotenen Losungen konnen Unternehmen sich an schnell andernde Marktbedingungen anpassen, lieferantenbasierte Risiken minimieren und die Kundenzufriedenheit kontinuierlich steigern. Dieser innovative Ansatz zum Lieferkettenmanagement tragt zur kontinuierlichen Verbesserung von Qualitat und Effizienz in der Automobilindustrie bei."
+  },
+  "evolvementor": {
+    "title": "EVolveMentor",
+    "brand": "WQualitySphere",
+    "contactPricing": "Kontaktieren Sie uns fur Preise",
+    "category": "WQualitySphere",
+    "p1": "\"EVolveMentor\" ist ein umfassendes Transformations- und Entwicklungsprogramm fur den Ubergang zum Elektrofahrzeugmarkt. Das EVolveMentor-Programm hilft Teilnehmern, sowohl eine technische als auch strategische Transformation zu erreichen, indem es massgeschneiderte Schulungen, Workshops und Branchenanalysen bereitstellt, die auf die einzigartigen Bedurfnisse der Elektrofahrzeugindustrie zugeschnitten sind.",
+    "p2": "EVolveMentor ist ein umfassendes Transformations- und Entwicklungsprogramm, das Unternehmen und ihre Mitarbeiter in der Automobilindustrie beim Ubergang zum Elektrofahrzeugsektor unterstutzt. Dieses innovative Programm bietet vertiefte Schulungen und Beratungsleistungen zur Entwicklung technischer Fahigkeiten und zur schnellen Anpassung an neue Technologien sowie zum Aufbau nachhaltiger Geschaftsmodelle.",
+    "p3": "Mit EVolveMentor wird der Ubergang zum Elektrofahrzeugsektor nicht nur zu einer technologischen Transformation, sondern auch zu einer Moglichkeit, in die Entwicklung des Unternehmens und seiner Mitarbeiter zu investieren. Dieses Programm stellt die strategischen Werkzeuge und das Wissen bereit, die Unternehmen und ihre Mitarbeiter benotigen, um im EV-Okosystem erfolgreich zu sein."
+  },
+  "blog": {
+    "title": "Blog",
+    "allArticles": "Alle Artikel",
+    "articles": {
+      "iatf16949-modern-approaches": {
+        "slug": "iatf16949-modern-approaches",
+        "title": "Neugestaltung operativer Prozesse in der Automobilindustrie: Moderne Ansatze zu IATF 16949",
+        "category": "Wissen",
+        "p1": "Der Automobilsektor ist ein Bereich intensiven Wettbewerbs und erfordert kontinuierliche Innovation. Die Effektivitat von Qualitatsmanagementsystemen (QMS) bildet die Grundlage fur den Erfolg von Unternehmen in diesem Sektor. In diesem Zusammenhang ist der IATF 16949 Standard ein speziell fur den Automobilsektor entwickelter QMS-Standard und hat eine kritische Bedeutung fur die Optimierung operativer Prozesse.",
+        "p2h": "Effizienz und Flexibilitat in operativen Prozessen",
+        "p2": "Die Steigerung der Effizienz und Flexibilitat operativer Prozesse in der Automobilindustrie ist unerlasslich, um schnell und effektiv auf Marktschwankungen reagieren zu konnen. Methodologien wie Lean Manufacturing und kontinuierliche Verbesserung (Kaizen) konnen eingesetzt werden, um Verschwendung zu reduzieren, Prozesse zu beschleunigen und operative Kosten zu senken.",
+        "p3h": "Die Rolle von Technologie und digitaler Transformation",
+        "p3": "Die Rolle der Technologie bei der Modernisierung operativer Prozesse ist von entscheidender Bedeutung. Kunstliche Intelligenz (KI), maschinelles Lernen, Big-Data-Analytik und das Internet der Dinge (IoT) unterstutzen die effektive Umsetzung von IATF 16949, indem sie operative Prozesse intelligenter und effizienter machen.",
+        "p4h": "Prozessuberwachung und Qualitatskontrolle",
+        "p4": "Der IATF 16949 Standard bietet Unternehmen Leitlinien zur kontinuierlichen Uberwachung und Qualitatskontrolle operativer Prozesse. Fortgeschrittene Sensortechnologien und automatisierte Kontrollsysteme ermoglichen die ununterbrochene Uberwachung von Produktionsprozessen und die Bewertung der Einhaltung von Qualitatsstandards.",
+        "p5h": "Integration und Zusammenarbeit in der Lieferkette",
+        "p5": "Operative Prozesse in der Automobilindustrie beschranken sich nicht nur auf interne Produktionsprozesse, sondern umfassen auch ein breites Lieferkettennetzwerk. Der IATF 16949 Standard leitet Unternehmen bei der Integration und Zusammenarbeit in der Lieferkette an. Lieferantenmanagement und Lieferkettenrisikomanagement sind kritische Bereiche zur Verbesserung der Effektivitat operativer Prozesse.",
+        "p6h": "Kundenfeedback und kontinuierliche Verbesserung",
+        "p6": "Die Neugestaltung operativer Prozesse erfordert die standige Berucksichtigung von Kundenbedurfnissen und -erwartungen. IATF 16949 bietet Unternehmen Leitlinien zur Steigerung der Kundenzufriedenheit und zur Integration von Kundenfeedback in das Qualitatsmanagementsystem.",
+        "p7h": "Personalwesen und kultureller Wandel",
+        "p7": "Die Modernisierung operativer Prozesse und die Einhaltung des IATF 16949 Standards sollten sich nicht auf technologische Innovationen oder Prozessverbesserungen beschranken, sondern auch Veranderungen im Personalmanagement und in der Organisationskultur bewirken. Effektive Fuhrung, kontinuierliche Schulung und Entwicklung der Mitarbeiter, Teamarbeit und offene Kommunikation sind fur die erfolgreiche Umsetzung von Qualitatsmanagementsystemen unerlasslich.",
+        "p8h": "Fazit",
+        "p8": "Die Neugestaltung operativer Prozesse im Automobilsektor und die Ubernahme moderner Ansatze zum IATF 16949 Standard sind der Schlussel zur Steigerung der Wettbewerbsfahigkeit von Unternehmen und zur schnellen Anpassung an Marktveranderungen. Technologische Innovationen, Lieferkettenintegration, Kundenorientierung, Personalmanagement und kultureller Wandel sind Schlsselkomponenten dieses Transformationsprozesses."
+      },
+      "secrets-of-digitization": {
+        "slug": "secrets-of-digitization",
+        "title": "Geheimnisse der Digitalisierung: Unternehmens-Roadmap",
+        "category": "Digitalisierung",
+        "p1": "Im digitalen Zeitalter ist die Art und Weise, wie sich Unternehmen weiterentwickeln, nicht nur eine Frage der Technologie, sondern auch der Kultur und Strategie. Hier konzentrieren wir uns nicht nur auf die Bedeutung von Digitalisierungsprozessen, sondern auch auf praktische Losungen, wie Unternehmen diese Prozesse erfolgreich managen konnen.",
+        "p2h": "Digitale Transformation: Warum und Wie?",
+        "p2": "Die digitale Transformation ist ein strategischer Schritt, den Unternehmen unternehmen, um wettbewerbsfahig zu bleiben, die Effizienz zu steigern und das Kundenerlebnis zu bereichern. Diese Reise erfordert jedoch weit mehr als eine einfache Technologieinvestition. Sie umfasst die Transformation des Geschaftsmodells, der Unternehmenskultur und der Kundeninteraktionen.",
+        "p3h": "Kultureller Wandel und Fuhrung",
+        "p3": "Der erste Schritt zum Erfolg von Digitalisierungsprozessen ist die Forderung eines kulturellen Wandels im Unternehmen. Dies beginnt mit voller Unterstutzung des Top-Managements. Fuhrungskrafte sollten die Bedeutung der digitalen Transformation betonen und die Bereitschaft in Teams schaffen, neue Technologien anzunehmen.",
+        "p4h": "Praktische Anwendungslosungen",
+        "p4": "1. Datengesteuerte Entscheidungsfindung: Unternehmen konnen ihre Entscheidungsprozesse durch den Einsatz von Datenanalytik und Business-Intelligence-Tools verbessern. 2. Automatisierung und kunstliche Intelligenz: Die Automatisierung routinemasiger Geschaftsprozesse steigert die Effizienz. 3. Entwicklung digitaler Fahigkeiten: Unternehmen sollten Schulungsprogramme anbieten, um die digitalen Fahigkeiten ihrer Mitarbeiter zu verbessern. 4. Uberdenken des Kundenerlebnisses: Die Verbesserung des Kundenerlebnisses uber digitale Kanale verschafft Wettbewerbsvorteile.",
+        "p5h": "Lernen und Innovation",
+        "p5": "Digitalisierung ist ein Prozess des kontinuierlichen Lernens und der Innovation. Unternehmen mussen uber neue technologische Entwicklungen am Markt auf dem Laufenden bleiben und diese Innovationen in ihre Geschaftsprozesse integrieren.",
+        "p6h": "Fazit: Digitale Transformation ist eine Reise",
+        "p6": "Fur Unternehmen ist die digitale Transformation eine kontinuierliche Reise, kein Ziel. Diese Reise geht uber technologische Investitionen hinaus und umfasst kulturellen Wandel, Fuhrungsansatz und Geschaftsstrategie. Unternehmen mussen proaktiv, innovativ und flexibel sein, um Digitalisierungsprozesse erfolgreich zu managen. Fur jedes Unternehmen, das im digitalen Zeitalter uberleben und sich abheben mochte, ist es unerlasslich, eine digitale Transformationsreise anzutreten und auf dieser Reise kontinuierlich voranzukommen."
+      },
+      "electric-transformation": {
+        "slug": "electric-transformation",
+        "title": "Die elektrische Transformation: Strategien traditioneller Automobilzulieferer zur Anpassung an die neue Ara",
+        "category": "Qualitatsmanagement",
+        "p1": "Zulieferer und Teilehersteller im traditionellen Automobilsektor stehen angesichts des rasanten Anstiegs der Elektrofahrzeugproduktion vor einem erheblichen Transformationsprozess. Diese Transformation birgt ernsthafte Herausforderungen und Chancen sowohl in der Branchenstruktur als auch in der Ausbildung der Mitarbeiter.",
+        "p2h": "Herausforderungen der Transformation",
+        "p2": "Mit dem Aufstieg der Elektrofahrzeugproduktion (EV) waren traditionelle Automobilzulieferer gezwungen, ihre Produktionsprozesse und Produktpaletten radikal zu andern. Insbesondere die Produktion von Teilen fur Verbrennungsmotoren ist zuruckgegangen, wahrend neue Technologien wie Elektromotoren, Batteriesysteme und Leistungselektronik in den Vordergrund getreten sind.",
+        "p3h": "Technologische Transformation",
+        "p3": "Wahrend der traditionelle Automobilsektor auf seit Jahrzehnten ubernommene Fertigungsmethoden und Materialverwendung setzt, erfordern Elektrofahrzeuge einen vollig anderen Ansatz. Das bedeutet, dass Zulieferer bestehende Produktionslinien neu organisieren, neue Fertigungstechniken erlernen und mit anderen Materialien arbeiten mussen.",
+        "p4h": "Fachkrafteproblem",
+        "p4": "Die Produktion von Elektrofahrzeugen erhoht den Bedarf an spezialisierten Arbeitskraften, insbesondere in Bereichen wie Elektrotechnik, Softwareentwicklung und neue Materialwissenschaften.",
+        "p5h": "Losungen",
+        "p5": "In diesem Transformationsprozess gibt es mehrere Losungen: Innovative Partnerschaften, Kontinuierliche Schulung und Entwicklung, Staatliche und sektorale Unterstutzung, Technologietransfer, Innovative Produktentwicklung, Agile Produktionssysteme.",
+        "p6h": "Fazit",
+        "p6": "Das schnelle Wachstum der Elektrofahrzeugproduktion stellt sowohl eine Bedrohung als auch eine Chance fur traditionelle Automobilzulieferer dar. Dieser Transformationsprozess erfordert Offenheit fur technologische Innovation, kontinuierliche Personalentwicklung und neue Kooperationen. Durch die Bewaltigung dieser Herausforderungen konnen Zulieferer in das EV-Okosystem integriert werden und zu einer nachhaltigen Zukunft beitragen."
+      },
+      "iatf16949-ev-manufacturing": {
+        "slug": "iatf16949-ev-manufacturing",
+        "title": "Das neue Gesicht von IATF 16949: Qualitatsmanagement-Paradigma in der Elektrofahrzeug-Komponentenfertigung",
+        "category": "Qualitatsmanagement",
+        "p1": "Der Ansatz der Automobilindustrie zu Qualitatsmanagementsystemen entwickelt sich standig weiter, insbesondere unter dem IATF 16949 Standard. Der Aufstieg der Elektrofahrzeugtechnologien (EV) hat die Art und Weise, wie dieser Standard umgesetzt wird, und die Qualitatsmanagementpraktiken in der gesamten automobilen Lieferkette tiefgreifend beeinflusst.",
+        "p2h": "IATF 16949 und Elektrofahrzeug-Komponentenfertigung",
+        "p2": "Als Qualitatsmanagementsystem-Standard in der Automobilindustrie zielt IATF 16949 darauf ab, Produktionsprozesse kontinuierlich zu verbessern, Fehlerquoten zu reduzieren und die Kundenzufriedenheit zu steigern. Mit der Verbreitung von Elektrofahrzeugen ist es unvermeidlich, dass dieser Standard neue Anforderungen und Praktiken fur die Komponentenfertigung und Qualitatskontrollprozesse einfuhrt.",
+        "p3h": "Branchenerkenntnisse",
+        "p3": "Aktuelle Studien haben die Herausforderungen bei der Produktion von Elektrofahrzeugkomponenten und die unter IATF 16949 entwickelten Strategien und Methoden im Detail untersucht. Die Lebenszyklusbewertung (LCA) von Elektrofahrzeugkomponenten und die Steigerung ihres Recyclingpotenzials sind ebenfalls entscheidend fur einen nachhaltigen Automobilsektor.",
+        "p4h": "Angewandte Forschungs- und Entwicklungsstudien (F&E)",
+        "p4": "Parallel zur Entwicklung der Elektrofahrzeugtechnologien haben Unternehmen und Zulieferer im Automobilsektor ihre F&E-Bemuhungen in Ubereinstimmung mit dem IATF 16949 Standard intensiviert. Diese Studien zielen darauf ab, die Sicherheit, Leistung und Zuverlassigkeit von Elektrofahrzeugkomponenten zu maximieren.",
+        "p5h": "Branchenanwendungen und Zukunftsaussichten",
+        "p5": "Im Automobilsektor spielt die Umsetzung des IATF 16949 Standards eine grundlegende Rolle bei der kontinuierlichen Verbesserung der Qualitatsmanagementsysteme und der Steigerung der Kundenzufriedenheit. Insbesondere mit der Verbreitung von Elektrofahrzeugen wird es noch wichtiger, innovative und qualitativ hochwertige Produkte zu entwickeln, die mit den Nachhaltigkeitszielen ubereinstimmen.",
+        "p6h": "Fazit",
+        "p6": "Die Beziehung zwischen der Produktion von Elektrofahrzeugkomponenten und dem IATF 16949 Standard ist von strategischer Bedeutung fur die Zukunft der Automobilindustrie. Branchenpraktiken zeigen, dass kontinuierliche Innovation und Entwicklung in diesem Bereich erforderlich sind."
+      },
+      "retranetz-bb": {
+        "slug": "retranetz-bb",
+        "title": "WGroup GmbH ubernimmt eine fuhrende Rolle auf dem Weg in eine nachhaltige Zukunft mit ReTraNetz-BB",
+        "category": "Nachrichten",
+        "p1": "Als Pionier fur Nachhaltigkeit und umweltfreundliche Innovation in Berlin und Brandenburg anerkannt, spielt WGroup GmbH eine aktive Rolle im ReTraNetz-BB-Projekt, das die Zukunft der Automobil- und Zulieferindustrie gestaltet. Diese strategische Kooperation zielt darauf ab, den Ubergang kleiner und mittlerer Unternehmen (KMU) in der Region zu nachhaltiger Produktion und CO2-neutraler Mobilitat zu beschleunigen.",
+        "p2": "WGroup GmbH zeichnet sich als Unternehmen aus, das bei den regelmasig besuchten ReTraNetz-BB-Treffen die Nachhaltigkeitsbemuhungen in der Branche priorisiert. Das Unternehmen hat bedeutende Schritte unternommen, um seine Umweltauswirkungen zu minimieren, die Energieeffizienz zu steigern und CO2-Emissionen zu reduzieren.",
+        "p3": "Die Vorreiterrolle der WGroup GmbH innerhalb des ReTraNetz-BB-Netzwerks ist entscheidend fur die Uberwindung der Barrieren der Branche beim Ubergang in eine nachhaltige Zukunft. Die umweltfreundlichen Praktiken und nachhaltigen Produktionslosungen des Unternehmens unterstutzen das Wirtschaftswachstum in der Region und tragen gleichzeitig zur okologischen Nachhaltigkeit bei.",
+        "p4": "Die aktive Teilnahme und der Beitrag der WGroup GmbH am ReTraNetz-BB-Projekt erhohn die Nachhaltigkeitsstandards in der Automobil- und Zulieferindustrie in Berlin und Brandenburg und transformiert die Branche. Durch die Teilnahme an diesem Projekt erreicht das Unternehmen nicht nur seine eigenen Nachhaltigkeitsziele, sondern spielt auch eine fuhrende Rolle in der regionalen Entwicklung und im Umweltbewusstsein."
+      },
+      "ces-2024": {
+        "slug": "ces-2024",
+        "title": "Innovationsstars der Automobilwelt: WGroup GmbH und ihre Hauptmarke Wedu Factory rocken die CES 2024",
+        "category": "Nachrichten",
+        "p1": "Die CES 2024, die in Las Vegas stattfand und von der Technologiewelt mit Spannung erwartet wurde, begrte in diesem Jahr WGroup GmbH und ihre revolutionare Bildungsplattform Wedu Factory mit bahnbrechenden Innovationen in der Automobilindustrie. WGroup und Wedu Factory, die sich durch ihre innovativen Schritte im Bereich der Automobilteilefertigung und Bildungstechnologien hervorheben, zogen mit ihren Leistungen bei der Veranstaltung die Aufmerksamkeit von Branchenfachleuten und Technologiebegeisterten auf sich.",
+        "p2": "Mitbegrunder Sibel Kaya und Algan Alper Sen fuhrten WGroup und Wedu Factory durch strategische Treffen und Kooperationen mit fuhrenden Namen der Automobilindustrie, um die KI-gestutzte Plattform der Wedu Factory zu einer unverzichtbaren Quelle fur Automobilbildung zu machen. Mit ihren mehrsprachigen Schulungsinhalten und branchenspezifischen vertieften Kursen hat diese Plattform eine neue Ara im globalen Automobilbildungsmarkt eingelautet.",
+        "p3": "Die innovativen Schritte und strategischen Kooperationen der WGroup GmbH in der Teileproduktion eroffnen neue Wege fur nachhaltiges Wachstum und Innovation in der Automobilindustrie. Dank der strategischen Partnerschaft mit Berlin Partner erreichen die Innovationen von WGroup und Wedu Factory ein breiteres internationales Publikum.",
+        "p4": "Die CES 2024 ist fur WGroup GmbH und Wedu Factory mehr als nur eine Erfolgsgeschichte - sie ist ein Meilenstein, der ihr tiefes Engagement fur die Automobilindustrie und ihre Fuhrungsrolle in diesem Bereich untermauert. Die Veranstaltung demonstrierte der Welt die Vision beider Initiativen, die Automobilindustrie an der Schnittstelle von Technologie und Bildung neu zu gestalten."
+      }
+    }
+  },
+  "common": {
+    "readMore": "Mehr erfahren",
+    "contactUs": "Kontaktieren Sie uns",
+    "send": "Senden",
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Loslegen",
+    "backToHome": "Zuruck zur Startseite",
+    "loading": "Laden...",
+    "error": "Etwas ist schiefgelaufen",
+    "notFound": "Seite nicht gefunden",
+    "seeAll": "Alle ansehen",
+    "viewDetails": "Details ansehen",
+    "description": "Beschreibung",
+    "reviews": "Bewertungen",
+    "training": "Schulung",
+    "contactForPricing": "Kontaktieren Sie uns fur Preise",
+    "requiredField": "Dieses Feld ist erforderlich",
+    "successMessage": "Ihre Nachricht wurde erfolgreich gesendet!",
+    "errorMessage": "Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+  }
+}

@@ -1,26 +1,198 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #060b18;
+  --foreground: #e8edf5;
+  --primary: #1E6DB5;
+  --secondary: #0a0f1e;
+  --muted: #7a8ba8;
+  --border: rgba(255, 255, 255, 0.08);
+  --white: #FFFFFF;
+  --primary-hover: #2580d4;
+  --secondary-hover: #0d1424;
+  --accent-purple: #6366f1;
+  --accent-teal: #0891b2;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.07);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-white: var(--white);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+  --font-barlow: var(--font-barlow);
+  --font-instrument: var(--font-instrument);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* ==================================================================
+   Premium heading font
+   ================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+}
+
+/* ==================================================================
+   AnimatedTitle  word-by-word 3D reveal
+   ================================================================== */
+.animated-title {
+  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--foreground);
+}
+
+.animated-word {
+  opacity: 0;
+  transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+  transform-origin: 50% 50% -150px !important;
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.animated-word b {
+  color: var(--primary);
+  font-weight: inherit;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================================================================
+   mask-clip-path  for expanding image section
+   ================================================================== */
+.mask-clip-path {
+  clip-path: polygon(38% 30%, 62% 30%, 62% 70%, 38% 70%);
+}
+
+.about-image {
+  will-change: clip-path;
+}
+
+/* ==================================================================
+   Dark glass card  premium card on dark bg
+   ================================================================== */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  transform: translateZ(0);
+}
+
+/* ==================================================================
+   Shimmer border  animated sweep on card borders
+   ================================================================== */
+.shimmer-border {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(30, 109, 181, 0.1) 25%,
+    rgba(30, 109, 181, 0.3) 50%,
+    rgba(30, 109, 181, 0.1) 75%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-slide 3s ease-in-out infinite;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+  padding: 1.5px;
+  border-radius: inherit;
+}
+
+@keyframes shimmer-slide {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ==================================================================
+   Corner border  onchainwin-style corner-only borders
+   ================================================================== */
+.corner-border {
+  position: relative;
+}
+.corner-border::before,
+.corner-border::after,
+.corner-border > .corner-tl,
+.corner-border > .corner-br {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 30;
+  transition: all 0.3s;
+}
+.corner-border > .corner-tl {
+  top: 0; left: 0;
+  border-top: 2px solid var(--primary);
+  border-left: 2px solid var(--primary);
+  border-top-left-radius: 8px;
+}
+.corner-border > .corner-br {
+  bottom: 0; right: 0;
+  border-bottom: 2px solid var(--primary);
+  border-right: 2px solid var(--primary);
+  border-bottom-right-radius: 8px;
+}
+
+/* ==================================================================
+   Border glow
+   ================================================================== */
+.border-hsla {
+  border: 1px solid rgba(30, 109, 181, 0.2);
+}
+
+/* ==================================================================
+   Smooth scroll
+   ================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==================================================================
+   Selection
+   ================================================================== */
+::selection {
+  background-color: rgba(30, 109, 181, 0.3);
+  color: #ffffff;
+}
+
+/* ==================================================================
+   Scrollbar  dark
+   ================================================================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
