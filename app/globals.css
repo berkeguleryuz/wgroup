@@ -26,6 +26,10 @@
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-white: var(--white);
+  --color-accent-purple: var(--accent-purple);
+  --color-accent-teal: var(--accent-teal);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);
   --font-barlow: var(--font-barlow);

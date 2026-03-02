@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "@/components/icons";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PageLayout from "@/components/layout/PageLayout";

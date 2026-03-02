@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ShieldCheck, CheckCircle2, Wrench, Handshake, ArrowRight } from "lucide-react";
+import { ShieldCheck, CheckCircle2, Wrench, Handshake, ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);

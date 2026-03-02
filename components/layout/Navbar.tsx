@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ChevronDown, Menu, X, ArrowRight } from "lucide-react";
+import { ChevronDown, Menu, X, ArrowRight } from "@/components/icons";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 /* ---------- Types ---------- */
@@ -243,7 +243,6 @@ export default function Navbar() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const leaveTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const lastScrollY = useRef(0);
   const activeDropdownRef = useRef<string | null>(null);
 
   useEffect(() => {
@@ -279,8 +278,6 @@ export default function Navbar() {
 
   const handleScroll = useCallback(() => {
     const currentY = window.scrollY;
-    const nav = navRef.current;
-    if (!nav) return;
 
     if (activeDropdownRef.current) {
       setActiveDropdown(null);
@@ -288,14 +285,6 @@ export default function Navbar() {
     }
 
     setScrolled(currentY > 50);
-
-    if (currentY > lastScrollY.current && currentY > 80) {
-      gsap.to(nav, { y: -100, duration: 0.3, ease: "power2.out" });
-    } else {
-      gsap.to(nav, { y: 0, duration: 0.3, ease: "power2.out" });
-    }
-
-    lastScrollY.current = currentY;
   }, []);
 
   useGSAP(() => {
@@ -374,14 +363,18 @@ export default function Navbar() {
 
       <nav
         ref={navRef}
-        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-          scrolled || activeDropdown
-            ? "bg-[#0a0f1e]/95 shadow-lg shadow-black/10 backdrop-blur-xl"
-            : "bg-transparent"
-        }`}
+        className="fixed inset-x-0 top-0 z-50"
       >
+        {/* Pill container - always tube shaped */}
+        <div
+          className={`mx-3 mt-3 rounded-full transition-all duration-500 sm:mx-4 lg:mx-auto lg:max-w-5xl ${
+            scrolled
+              ? "bg-secondary/80 shadow-lg shadow-black/20 ring-1 ring-white/[0.08] backdrop-blur-xl"
+              : "bg-secondary/40 ring-1 ring-white/[0.06] backdrop-blur-md"
+          }`}
+        >
         {/* Main bar */}
-        <div className="flex h-[72px] items-center justify-between px-6 lg:px-10">
+        <div className="flex h-14 items-center justify-between px-3 lg:px-4">
           {/* Logo */}
           <Link
             href="/"
@@ -443,7 +436,7 @@ export default function Navbar() {
             <LanguageSwitcher dark />
             <Link
               href="/contact"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[#0891b2] px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-primary/30"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent-teal px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-primary/30"
               onClick={closeDropdown}
             >
               <span className="relative z-10">{t("contact")}</span>
@@ -466,19 +459,16 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* ========== MEGA MENU PANELS ========== */}
+        </div>{/* end pill container */}
+
+        {/* ========== MEGA MENU PANELS (outside pill) ========== */}
         {activeDropdown && (
           <div
             ref={panelRef}
-            className="hidden border-t border-white/[0.06] lg:block"
+            className="mx-3 mt-2 hidden overflow-hidden rounded-2xl border border-white/[0.08] shadow-2xl shadow-black/30 backdrop-blur-xl sm:mx-4 lg:mx-auto lg:block lg:max-w-6xl"
+            style={{ background: "rgba(10, 15, 30, 0.96)" }}
             onMouseEnter={keepOpen}
             onMouseLeave={startClose}
-            style={{
-              background: "rgba(10, 15, 30, 0.98)",
-              backdropFilter: "blur(24px)",
-              boxShadow:
-                "0 25px 60px -12px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.04)",
-            }}
           >
             {activeDropdown === "company" && <CompanyPanel />}
             {activeDropdown === "brands" && <BrandsPanel />}
@@ -519,7 +509,7 @@ export default function Navbar() {
             <div className="mt-2 border-t border-white/[0.06] px-6 py-5">
               <Link
                 href="/contact"
-                className="mb-4 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-[#0891b2] px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary/20"
+                className="mb-4 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent-teal px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary/20"
                 onClick={closeMobile}
               >
                 {t("contact")}
@@ -602,7 +592,7 @@ export default function Navbar() {
                 />
               </div>
             ))}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#060b18]/80 via-[#060b18]/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <p className="text-sm font-semibold text-white/90">
                 {t(activeKey)}
@@ -642,7 +632,7 @@ export default function Navbar() {
                   height={225}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#060b18]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
               <div className="p-5">
                 <h3 className="text-base font-semibold text-white/90 group-hover:text-white">
@@ -678,9 +668,9 @@ export default function Navbar() {
           <div className="col-span-8 grid grid-cols-3 gap-6">
             {/* WEdu Factory */}
             <div>
-              <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-primary/60">
+              <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold tracking-widest text-primary/60">
                 <span className="h-px flex-1 bg-primary/15" />
-                WEdu Factory
+                WEDU FACTORY
                 <span className="h-px flex-1 bg-primary/15" />
               </h4>
               <div className="space-y-1">
@@ -693,9 +683,9 @@ export default function Navbar() {
             {/* WArtiCode */}
             {group.sections?.[0] && (
               <div>
-                <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-primary/60">
+                <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold tracking-widest text-primary/60">
                   <span className="h-px flex-1 bg-primary/15" />
-                  {group.sections[0].label}
+                  WARTICODE
                   <span className="h-px flex-1 bg-primary/15" />
                 </h4>
                 <div className="space-y-1">
@@ -709,9 +699,9 @@ export default function Navbar() {
             {/* WQualitySphere */}
             {group.sections?.[1] && (
               <div>
-                <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-primary/60">
+                <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold tracking-widest text-primary/60">
                   <span className="h-px flex-1 bg-primary/15" />
-                  {group.sections[1].label}
+                  WQUALITYSPHERE
                   <span className="h-px flex-1 bg-primary/15" />
                 </h4>
                 <div className="space-y-1">
@@ -736,7 +726,7 @@ export default function Navbar() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 0px, 360px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#060b18]/80 via-[#060b18]/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
                     <p className="text-sm font-semibold text-white/90">
                       {hoveredItem ? t(hoveredItem) : ""}
@@ -788,7 +778,7 @@ export default function Navbar() {
           />
         </div>
         <div className="min-w-0 flex-1">
-          <div className="truncate text-sm font-medium text-white/80 group-hover:text-white">
+          <div className="text-sm font-medium leading-snug text-white/80 group-hover:text-white">
             {t(item.key)}
           </div>
         </div>

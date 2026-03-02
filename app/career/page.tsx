@@ -4,7 +4,7 @@ import { useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Briefcase, Mail, ArrowRight, Users, Sparkles, Globe, GraduationCap } from "lucide-react";
+import { Briefcase, Mail, ArrowRight, Users, Sparkles, Globe, GraduationCap } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);

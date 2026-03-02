@@ -63,7 +63,7 @@ export default function ProductLayout({
           <span
             className="rounded-full px-5 py-2 text-sm font-bold text-white shadow-lg"
             style={{
-              background: "linear-gradient(135deg, #1E6DB5, #0891b2)",
+              background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
               boxShadow: "0 4px 15px -3px rgba(30,109,181,0.3)",
             }}
           >

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown } from "@/components/icons";
 import gsap from "gsap";
 import ProductLayout from "@/components/layout/ProductLayout";
 

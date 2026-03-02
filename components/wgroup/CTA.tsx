@@ -4,7 +4,7 @@ import { useRef, useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "@/components/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,11 +43,11 @@ export default function CTA() {
       className="relative overflow-hidden bg-[#f8f9fb] py-24 sm:py-32"
     >
       <div className="mx-auto max-w-7xl px-6">
-        <div className="relative overflow-hidden rounded-3xl bg-[#060b18] px-8 py-20 sm:px-16 sm:py-24">
+        <div className="relative overflow-hidden rounded-3xl bg-background px-8 py-20 sm:px-16 sm:py-24">
           {/* Background blobs */}
           <div className="pointer-events-none absolute inset-0">
             <div className="cta-blob absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
-            <div className="cta-blob absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-[#6366f1]/10 blur-[120px]" />
+            <div className="cta-blob absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />
           </div>
 
           {/* Mesh */}
@@ -94,7 +94,7 @@ export default function CTA() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#060b18] shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 sm:text-base"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-background shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 sm:text-base"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   fontWeight: 600,

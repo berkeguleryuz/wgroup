@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { GraduationCap, BookOpen, Users, Award, Lightbulb, ArrowRight } from "lucide-react";
+import { GraduationCap, BookOpen, Users, Award, Lightbulb, ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);

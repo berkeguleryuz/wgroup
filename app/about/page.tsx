@@ -12,7 +12,7 @@ import {
   Users,
   Target,
   ArrowRight,
-} from "lucide-react";
+} from "@/components/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -3,11 +3,13 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const TOTAL_FRAMES = 121;
 const FRAME_PATH = "/videos/wgroup-frames/frame-";
+const IMAGE_SCALE = 0.72;
 
 const CARD_CONFIG = [
   { start: 0.02, end: 0.24 },
@@ -16,32 +18,7 @@ const CARD_CONFIG = [
   { start: 0.76, end: 0.96 },
 ];
 
-const cards = [
-  {
-    label: "01 / Vision",
-    title: "Innovation",
-    description:
-      "Driving digital transformation through cutting-edge solutions tailored to the automotive sector.",
-  },
-  {
-    label: "02 / Quality",
-    title: "Quality Management",
-    description:
-      "Implementing world-class quality management systems that meet and exceed IATF 16949, VDA, and ASPICE standards.",
-  },
-  {
-    label: "03 / Digital",
-    title: "Digital Transformation",
-    description:
-      "Bridging the gap between traditional automotive expertise and the digital future with measurable results.",
-  },
-  {
-    label: "04 / Education",
-    title: "Training & Consulting",
-    description:
-      "Comprehensive training programs and consulting services that empower organizations to achieve excellence.",
-  },
-];
+const cardKeys = ["card1", "card2", "card3", "card4"] as const;
 
 function padNumber(n: number): string {
   return String(n).padStart(4, "0");
@@ -55,6 +32,7 @@ export default function FrameAnimation() {
   const currentFrameRef = useRef(0);
   const [loaded, setLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
+  const t = useTranslations("frameAnimation");
 
   const drawFrame = useCallback((index: number) => {
     const canvas = canvasRef.current;
@@ -64,15 +42,12 @@ export default function FrameAnimation() {
     const img = framesRef.current[index];
     if (!img) return;
 
-    // White background
-    ctx.fillStyle = "#f5f3ef";
+    ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // Contain mode: fit frame within canvas, centered
-    const scale = Math.min(
-      canvas.width / img.width,
-      canvas.height / img.height
-    );
+    const scale =
+      Math.min(canvas.width / img.width, canvas.height / img.height) *
+      IMAGE_SCALE;
     const w = img.width * scale;
     const h = img.height * scale;
     const x = (canvas.width - w) / 2;
@@ -120,7 +95,6 @@ export default function FrameAnimation() {
 
     window.addEventListener("resize", resize);
 
-    // Single ScrollTrigger that drives everything
     const trigger = ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top top",
@@ -129,7 +103,7 @@ export default function FrameAnimation() {
       onUpdate: (self) => {
         const p = self.progress;
 
-        // --- Frame scrubbing ---
+        // Frame scrubbing
         const frameIndex = Math.min(
           Math.floor(p * TOTAL_FRAMES),
           TOTAL_FRAMES - 1
@@ -139,7 +113,7 @@ export default function FrameAnimation() {
           drawFrame(frameIndex);
         }
 
-        // --- Card animations ---
+        // Card animations
         CARD_CONFIG.forEach(({ start, end }, i) => {
           const card = cardRefs.current[i];
           if (!card) return;
@@ -152,17 +126,14 @@ export default function FrameAnimation() {
 
           if (p >= start && p <= end) {
             if (p < fadeInEnd) {
-              // Fade in
               const t = (p - start) / (fadeInEnd - start);
               opacity = t;
               translateY = 30 * (1 - t);
             } else if (p > fadeOutStart) {
-              // Fade out
               const t = (p - fadeOutStart) / (end - fadeOutStart);
               opacity = 1 - t;
               translateY = -20 * t;
             } else {
-              // Fully visible
               opacity = 1;
               translateY = 0;
             }
@@ -185,7 +156,7 @@ export default function FrameAnimation() {
     <>
       {/* Loading overlay */}
       {!loaded && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center" style={{ backgroundColor: "#f5f3ef" }}>
+        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
           <div className="mb-4 h-1 w-48 overflow-hidden rounded-full bg-gray-200">
             <div
               className="h-full rounded-full bg-primary transition-all duration-300"
@@ -196,16 +167,16 @@ export default function FrameAnimation() {
             className="text-sm text-gray-400"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
-            Loading… {progress}%
+            {t("loading")}&hellip; {progress}%
           </p>
         </div>
       )}
 
-      {/* Animation section — 600vh scroll runway */}
+      {/* Animation section */}
       <section
         ref={sectionRef}
-        className="relative"
-        style={{ backgroundColor: "#f5f3ef", height: "600vh" }}
+        className="relative bg-white"
+        style={{ height: "600vh" }}
       >
         {/* Sticky canvas container */}
         <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
@@ -216,9 +187,8 @@ export default function FrameAnimation() {
         </div>
       </section>
 
-      {/* Fixed info cards — outside the scroll section, toggled by scroll progress */}
-      {cards.map((card, i) => {
-        // Alternate: card-1 left/bottom, card-2 right/top, card-3 left/bottom, card-4 right/top
+      {/* Fixed info cards */}
+      {cardKeys.map((key, i) => {
         const isLeft = i % 2 === 0;
         const positionClasses = isLeft
           ? "left-6 bottom-[15%] sm:left-12 lg:left-12"
@@ -226,9 +196,11 @@ export default function FrameAnimation() {
 
         return (
           <div
-            key={card.label}
-            ref={(el) => { cardRefs.current[i] = el; }}
-            className={`pointer-events-none fixed z-50 w-[calc(100%-48px)] sm:w-[380px] ${positionClasses}`}
+            key={key}
+            ref={(el) => {
+              cardRefs.current[i] = el;
+            }}
+            className={`pointer-events-none fixed z-40 w-[calc(100%-48px)] sm:w-[380px] ${positionClasses}`}
             style={{ opacity: 0, visibility: "hidden" }}
           >
             <div
@@ -241,16 +213,15 @@ export default function FrameAnimation() {
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
-                {card.label}
+                {t(`${key}Label`)}
               </p>
               <h3
                 className="mb-3 text-[28px] font-normal leading-tight text-white"
                 style={{
-                  fontFamily:
-                    "var(--font-instrument), Georgia, serif",
+                  fontFamily: "var(--font-instrument), Georgia, serif",
                 }}
               >
-                {card.title}
+                {t(`${key}Title`)}
               </h3>
               <p
                 className="text-sm font-light leading-relaxed text-white/50"
@@ -258,7 +229,7 @@ export default function FrameAnimation() {
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 }}
               >
-                {card.description}
+                {t(`${key}Desc`)}
               </p>
             </div>
           </div>

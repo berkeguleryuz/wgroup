@@ -4,7 +4,7 @@ import { useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Code2, Palette, Lightbulb, Handshake } from "lucide-react";
+import { Code2, Palette, Lightbulb, Handshake } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);

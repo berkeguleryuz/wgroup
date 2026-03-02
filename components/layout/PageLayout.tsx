@@ -107,7 +107,7 @@ export default function PageLayout({
       {/* Hero Banner */}
       <section
         ref={heroRef}
-        className="relative overflow-hidden bg-[#0a0f1e] py-24 px-6 sm:py-32"
+        className="relative overflow-hidden bg-secondary py-24 px-6 sm:py-32"
       >
         {/* Hero background image */}
         {heroImage && (
@@ -125,11 +125,11 @@ export default function PageLayout({
 
         {/* animated blobs */}
         <div className="pointer-events-none absolute inset-0">
-          <div className="page-blob absolute -left-20 -top-20 h-[400px] w-[400px] rounded-full bg-[#6366f1]/8 blur-[120px]" />
+          <div className="page-blob absolute -left-20 -top-20 h-[400px] w-[400px] rounded-full bg-accent-purple/8 blur-[120px]" />
           <div
             className="page-blob absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full bg-primary/8 blur-[100px]"
           />
-          <div className="page-blob absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-[#0891b2]/8 blur-[80px]" />
+          <div className="page-blob absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-accent-teal/8 blur-[80px]" />
           {/* mesh grid */}
           <div
             className="absolute inset-0 opacity-[0.02]"
@@ -149,7 +149,7 @@ export default function PageLayout({
         </div>
 
         {/* gradient overlays */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/60 via-[#0a0f1e]/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-secondary/20 to-transparent" />
 
         {/* content */}
         <div className="relative z-10 mx-auto max-w-4xl text-center">
