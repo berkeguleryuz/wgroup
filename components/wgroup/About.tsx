@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
 import Lottie from "lottie-react";
+import { Sparkles } from "@/components/ui/Sparkles";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -247,7 +248,79 @@ export default function About() {
       ref={sectionRef}
       className="relative overflow-hidden bg-secondary py-28"
     >
-      {/* Background effects */}
+      {/* ---- Top edge: curved horizon at section entry (white → dark) ---- */}
+      <div className="pointer-events-none absolute inset-x-0 -mt-48 z-20">
+        <svg
+          className="w-full"
+          viewBox="0 0 1440 60"
+          fill="none"
+          preserveAspectRatio="none"
+          style={{ display: "block" }}
+        >
+          {/* Dark section curves upward into the white area */}
+          <path
+            d="M0 60 Q720 0 1440 60 V60 H0 Z"
+            fill="var(--secondary)"
+          />
+        </svg>
+        {/* Glow at the top edge */}
+        <div
+          className="absolute left-1/2 top-2 h-[80px] w-[700px] -translate-x-1/2 rounded-full blur-[60px]"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(99,102,241,0.18) 0%, rgba(30,109,181,0.08) 60%, transparent 100%)",
+          }}
+        />
+      </div>
+
+      {/* ---- Horizon arc + glow + sparkles ---- */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px]">
+        {/* Purple / blue glow behind the arc */}
+        <div
+          className="absolute bottom-0 left-1/2 h-[260px] w-[900px] -translate-x-1/2 rounded-full blur-[100px]"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(99,102,241,0.25) 0%, rgba(30,109,181,0.12) 50%, transparent 80%)",
+          }}
+        />
+
+        {/* Curved horizon line */}
+        <svg
+          className="absolute bottom-0 left-1/2 w-[120%] max-w-[1400px] -translate-x-1/2"
+          viewBox="0 0 1400 120"
+          fill="none"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 120 Q700 0 1400 120"
+            stroke="url(#horizon-grad)"
+            strokeWidth="1"
+            fill="none"
+          />
+          <defs>
+            <linearGradient id="horizon-grad" x1="0" y1="0" x2="1400" y2="0" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="rgba(255,255,255,0)" />
+              <stop offset="30%" stopColor="rgba(255,255,255,0.12)" />
+              <stop offset="50%" stopColor="rgba(255,255,255,0.2)" />
+              <stop offset="70%" stopColor="rgba(255,255,255,0.12)" />
+              <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        {/* Sparkles above the arc */}
+        <Sparkles
+          className="absolute inset-0"
+          density={100}
+          size={1.2}
+          speed={0.3}
+          opacity={0.4}
+          opacitySpeed={1.2}
+          color="#ffffff"
+        />
+      </div>
+
+      {/* Background grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.02]"
         style={{
