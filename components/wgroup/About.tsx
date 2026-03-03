@@ -10,7 +10,7 @@ import { Sparkles } from "@/components/ui/Sparkles";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const pillarLotties = ["/lottie/target.json", "/lottie/target.json", "/lottie/trending-up.json"] as const;
+const pillarLotties = ["/lottie/target.json", "/lottie/lightbulb.json", "/lottie/trending-up.json"] as const;
 const pillarColors = ["var(--primary)", "var(--accent-purple)", "var(--accent-teal)"] as const;
 
 /* ---------- Corner Bracket ---------- */

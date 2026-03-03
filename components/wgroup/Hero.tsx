@@ -140,19 +140,19 @@ export default function Hero() {
       });
 
       gsap.from(".brain-left", {
-        x: -30,
+        x: -120,
         opacity: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        delay: 0.2,
+        duration: 2.5,
+        ease: "power2.inOut",
+        delay: 0.3,
       });
 
       gsap.from(".brain-right", {
-        x: 30,
+        x: 120,
         opacity: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        delay: 0.4,
+        duration: 2.5,
+        ease: "power2.inOut",
+        delay: 0.5,
       });
 
       const tl = gsap.timeline({ delay: 0.6 });
