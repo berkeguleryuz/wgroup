@@ -64,7 +64,7 @@ function TimelineStep({
 
       {/* Right: text content */}
       <div className={`flex-1 ${isLast ? "pb-0" : "pb-10"}`}>
-        <p className="text-base leading-relaxed text-white/55 sm:text-[17px] sm:leading-[1.8]">
+        <p className="text-base leading-relaxed text-muted sm:text-[17px] sm:leading-[1.8]">
           {text}
         </p>
       </div>

@@ -43,7 +43,7 @@ function PartnerShowcase({
             {String(number).padStart(2, "0")}
           </span>
           <h2
-            className="mt-3 text-xl font-bold text-white sm:text-2xl"
+            className="mt-3 text-xl font-bold text-foreground sm:text-2xl"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             {name}
@@ -64,7 +64,7 @@ function PartnerShowcase({
             }}
           />
           <p
-            className="flex-1 text-base leading-[1.9] text-white/50 sm:text-[17px]"
+            className="flex-1 text-base leading-[1.9] text-muted sm:text-[17px]"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             {description}
@@ -74,7 +74,7 @@ function PartnerShowcase({
 
       {/* Divider */}
       {!isLast && (
-        <div className="h-px bg-gradient-to-r from-transparent via-white/[0.06] to-transparent" />
+        <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       )}
     </>
   );
@@ -119,7 +119,7 @@ export default function PartnerPage() {
     >
       <div ref={sectionRef}>
         <p
-          className="page-content-block mb-12 text-lg leading-relaxed text-white/40"
+          className="page-content-block mb-12 text-lg leading-relaxed text-muted"
           style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
         >
           {t("description")}

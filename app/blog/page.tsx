@@ -115,9 +115,9 @@ function BlogCard({
           className="group relative flex h-full flex-col overflow-hidden rounded-2xl p-7 shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
           style={{
             transformStyle: "preserve-3d",
-            background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
+            background: `linear-gradient(135deg, var(--card-bg), ${color}10, var(--card-bg))`,
             backdropFilter: "blur(12px)",
-            border: `1px solid rgba(255,255,255,0.07)`,
+            border: `1px solid var(--card-border)`,
             boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
           }}
         >
@@ -135,7 +135,7 @@ function BlogCard({
           />
 
           {/* Hover shimmer */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
           <div className="relative z-10 flex flex-1 flex-col" style={{ transform: "translateZ(15px)" }}>
             {image && (
@@ -231,8 +231,8 @@ export default function BlogPage() {
                         boxShadow: `0 4px 15px -3px ${catColor}40`,
                       }
                     : {
-                        background: `linear-gradient(135deg, rgba(255,255,255,0.06), ${catColor}08)`,
-                        border: `1px solid rgba(255,255,255,0.07)`,
+                        background: `linear-gradient(135deg, var(--card-bg), ${catColor}08)`,
+                        border: `1px solid var(--card-border)`,
                       }
                 }
               >

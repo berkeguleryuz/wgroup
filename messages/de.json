@@ -194,7 +194,7 @@
     "phoneLabel": "+49 174 177 78 79"
   },
   "about": {
-    "title": "Uber uns",
+    "title": "Unsere",
     "eyebrow": "ÜBER UNS",
     "titleHighlight": "Geschichte",
     "subtitle": "Wgroup GmbH",
@@ -240,29 +240,35 @@
     }
   },
   "socialResponsibility": {
-    "title": "Soziale Verantwortung",
+    "title": "Soziale",
     "eyebrow": "VERANTWORTUNG",
-    "titleHighlight": "Wirkung",
+    "titleHighlight": "Verantwortung",
     "subtitle": "Unser Engagement fur inklusive und nachhaltige soziale Verantwortung",
     "description": "Unser Unternehmen verankert seinen Rahmen fur soziale Verantwortung auf drei Hauptsaulen: Geschlechtergleichstellung, Nachhaltigkeit und Umweltbewusstsein. Diese Prinzipien pragen zutiefst unser operatives Ethos und unsere Bemuhungen, einen sinnvollen Beitrag zur Gesellschaft zu leisten.",
     "genderEquality": {
-      "title": "Geschlechtergleichstellung und Inklusion",
-      "description": "Unser entschlossenes Engagement fur Geschlechtergleichstellung zeigt sich in eindeutigen Richtlinien und Praktiken. Wir verfolgen aktiv konkrete Schritte, um Chancengleichheit fur alle unsere Mitarbeiter zu gewahrleisten. Mit dem Ziel, geschlechtsspezifische Diskriminierung bei Karriereentwicklung, Lohngleichheit und Fuhrungspositionen zu beseitigen, bemuhen wir uns, eine Arbeitsplatzkultur zu kultivieren, die Vielfalt und Inklusion fordert. Dies spiegelt unsere Kernwerte wider und veranschaulicht unser Engagement fur die Schaffung einer Umgebung, in der jeder Einzelne gerecht vertreten ist und sein Potenzial voll ausschopfen kann."
+      "title": "Geschlechtergleichstellung",
+      "description": "Wir gewährleisten Chancengleichheit durch klare Richtlinien und Praktiken. Von der Karriereentwicklung bis zu Führungspositionen setzen wir uns auf allen Ebenen für Vielfalt und Inklusion ein."
     },
     "sustainability": {
-      "title": "Nachhaltigkeit: Balance zwischen wirtschaftlichem Erfolg und Umweltverantwortung",
-      "description": "Nachhaltigkeit nimmt eine zentrale Position in unserem strategischen Geschaftsmodell ein und strebt danach, unsere wirtschaftlichen Leistungen mit unseren okologischen Verantwortlichkeiten in Einklang zu bringen. Initiativen, die unser Engagement fur Nachhaltigkeit demonstrieren, umfassen Energiesparprojekte, Abfallreduzierungsmassnahmen und die Nutzung nachhaltiger Ressourcen. Als Unternehmen unternehmen wir bedeutende Schritte zur Minimierung unserer Umweltauswirkungen durch Investitionen in grune Technologien, Steigerung der Energieeffizienz und Innovation nachhaltiger Losungen in unseren Prozessen und Produktangeboten."
+      "title": "Nachhaltigkeit",
+      "description": "Nachhaltigkeit steht im Mittelpunkt unserer Geschäftsstrategie. Durch Energiesparprojekte, Investitionen in grüne Technologien und Abfallreduzierung bringen wir wirtschaftlichen Erfolg und Umweltverantwortung in Einklang."
     },
     "environment": {
-      "title": "Umweltbewusstsein: Unser Versprechen, die Zukunft zu bewahren",
-      "description": "Unser Engagement fur Umweltbewusstsein ist integraler Bestandteil aller unserer Geschaftsaktivitaten und manifestiert sich in Praktiken wie der Unterstutzung von Umweltnachhaltigkeitsprojekten und dem Schutz naturlicher Ressourcen. Wir fuhren Bewusstseins- und Bildungsprogramme durch, die darauf abzielen, die Umweltverantwortung unter unseren Mitarbeitern und Stakeholdern zu fordern und unser Ziel zu starken, hohe Standards bei der Reduzierung der Umweltauswirkungen in der Branche zu setzen."
+      "title": "Umweltbewusstsein",
+      "description": "Umweltbewusstsein ist fester Bestandteil aller unserer Aktivitäten. Wir unterstützen Nachhaltigkeitsprojekte, schützen natürliche Ressourcen und fördern Umweltverantwortung durch Bildungsprogramme."
     },
-    "conclusion": "Die Vision der sozialen Verantwortung unseres Unternehmens, aufgebaut auf den Grundlagen von Geschlechtergleichstellung, Nachhaltigkeit und Umweltbewusstsein, zielt darauf ab, positive Veranderungen in der Geschaftswelt und der Gesellschaft insgesamt zu fordern. Dieser Ansatz spiegelt nicht nur unser Engagement fur ethische Geschaftspraktiken wider, sondern unterstreicht auch unseren Wunsch, in der unternehmerischen sozialen Verantwortung fuhrend zu sein."
+    "conclusion": "Unsere Vision der sozialen Verantwortung, aufgebaut auf Geschlechtergleichstellung, Nachhaltigkeit und Umweltbewusstsein, zielt darauf ab, positive Veränderungen in der Geschäftswelt und der Gesellschaft zu fördern.",
+    "ctaEyebrow": "UNSER ENGAGEMENT",
+    "ctaTitle": "Bereit, etwas zu",
+    "ctaHighlight": "bewirken?",
+    "ctaDesc": "Erfahren Sie mehr darüber, wie WGroup durch Geschlechtergleichstellung, Nachhaltigkeit und Umweltbewusstsein positive Veränderungen vorantreibt.",
+    "contactCta": "Kontakt aufnehmen",
+    "ctaLearnMore": "Mehr erfahren"
   },
   "career": {
-    "title": "Karriere",
+    "title": "Werden Sie Teil",
     "eyebrow": "KARRIERE",
-    "titleHighlight": "Team",
+    "titleHighlight": "unseres Teams",
     "subtitle": "Willkommen, Innovatoren und Game Changer!",
     "p1": "Wir, WGroup GmbH, sind mehr als nur ein Team, wir sind eine Familie, die auf Vielfalt, Gleichheit und Inklusion basiert. Wir verbinden Geschlechtergleichstellung mit dem Glauben an faire und gleiche Chancen fur alle sowie Nachhaltigkeit und Umweltbewusstsein mit dem Wunsch, kunftigen Generationen eine bessere Welt zu hinterlassen. Diese Werte stehen bei jeder unserer Entscheidungen, jedem Projekt und der Reise, die Sie mit uns unternehmen werden, im Vordergrund.",
     "p2": "Bei uns finden Sie Moglichkeiten zu wachsen, nicht nur in Ihrer Karriere, sondern auch in Ihrer personlichen Entwicklung. Bei der Arbeit konnen Sie Ihre innovativen Ideen teilen, nachhaltige Projekte entwickeln und sozialen Wandel vorantreiben. Denn wir glauben, dass der einzigartige Beitrag jedes Einzelnen eine entscheidende Rolle bei der Erreichung unserer gemeinsamen Ziele spielt.",
@@ -271,7 +277,12 @@
     "p5": "Willkommen und lassen Sie uns neue Anfange wagen!",
     "contactEmail": "dreamteamcreator@wgroupgmbh.eu",
     "contactLabel": "Interesse, Teil unseres Teams zu werden?",
-    "contactCta": "Kontakt aufnehmen"
+    "contactCta": "Kontakt aufnehmen",
+    "ctaEyebrow": "MITMACHEN",
+    "ctaTitle": "Bereit, die Zukunft",
+    "ctaHighlight": "zu gestalten?",
+    "ctaDesc": "Senden Sie uns Ihre Bewerbung und werden Sie Teil eines Teams, das Innovation, Vielfalt und Leidenschaft vereint.",
+    "ctaLearnMore": "Mehr erfahren"
   },
   "contact": {
     "title": "Kontakt",
@@ -293,9 +304,9 @@
     "officeTitle": "Unser Büro"
   },
   "faq": {
-    "title": "Haufig gestellte Fragen (FAQ)",
+    "title": "Häufig gestellte",
     "eyebrow": "FAQ",
-    "titleHighlight": "Antworten",
+    "titleHighlight": "Fragen",
     "q1": {
       "question": "Wie tragen die Kurse der Wedu Factory bei?",
       "answer": "Die Kurse der Wedu Factory bieten sowohl Einzelpersonen als auch Organisationen verschiedene Vorteile. Fur Einzelpersonen bieten diese Kurse die Moglichkeit, ihre Karriere voranzutreiben und die neuesten technologischen Entwicklungen und Best Practices in der Automobilindustrie kennenzulernen. Die Kurse der Wedu Factory unterstutzen die kontinuierliche Weiterentwicklung der Belegschaft und steigern dadurch die Leistung. Speziell konzipierte Schulungslosungen tragen direkt zu den Geschaftszielen bei und heben die Fahigkeiten und das Wissen der Mitarbeiter an. Mit den Kursen der Wedu Factory helfen wir sowohl Einzelpersonen als auch Organisationen, die fur eine erfolgreiche Zukunft erforderlichen Kompetenzen zu erwerben."
@@ -337,16 +348,22 @@
     "title": "WEdu Factory",
     "eyebrow": "WEDU FACTORY",
     "titleHighlight": "Akademie",
-    "p1": "Wedu Factory ist eine qualifizierte Bildungseinrichtung mit erfahrenen Trainern, die uber langjahrige Schulungserfahrung in der Automobilindustrie verfugen und alle Probleme im Feld beherrschen. Als Teil der in Berlin ansassigen Marke Wgroup legt Wedu Factory einen besonderen Fokus auf die Automobilindustrie und zielt darauf ab, qualifiziertes Personal in Ubereinstimmung mit IATF 16949 Qualitatsstandards auszubilden.",
-    "p2": "Fachkundige Dozenten verstehen die Anforderungen jedes Bereichs der Branche, erstellen die effektivsten Inhalte und vermitteln den Teilnehmern die Best Practices der Branche. Dieses umfassende Programm ist speziell darauf ausgerichtet, die Bedurfnisse von Mitarbeitern und Unternehmen in der Automobilindustrie zu erfullen. Das Hauptziel des Programms ist es, den Teilnehmern eine vollstandige Beherrschung der IATF 16949 Qualitatsstandards zu ermoglichen, damit sie die Best Practices der Branche auf hochstem Niveau erlernen und anwenden konnen.",
-    "p3": "Wedu Factory bietet einzelnen Teilnehmern die Moglichkeit, einen Schritt in ihrer Karriere voranzukommen, wahrend Unternehmen die kontinuierliche Weiterentwicklung ihrer Belegschaft unterstutzen und ihre Unternehmensziele effektiver erreichen konnen.",
-    "p4": "Zu den Hohepunkten der Wedu Factory gehoren die volle Ubereinstimmung mit Branchenstandards, internationale Zuganglichkeit, kontinuierliche berufliche Entwicklungsmoglichkeiten und starke Branchenverbindungen. Daruber hinaus werden die Schulungsinhalte durch den effektiven Einsatz von Tools der kunstlichen Intelligenz und digitalen Technologien bereitgestellt, sodass die Teilnehmer auf schnellstem und prazisestem Weg Kompetenz erlangen.",
-    "p5": "Wedu Factory bietet eine einzigartige Plattform, um zukunftige Fuhrungskrafte in der Automobilindustrie auszubilden und die Bedurfnisse der Branche zu erfullen. Dieses Programm, das sowohl die Karrieren einzelner Teilnehmer starkt als auch die kontinuierliche Weiterentwicklung der Belegschaft fur Unternehmen unterstutzt, tragt erheblich zur Anhebung der Qualitatsstandards in der Automobilindustrie und zur Steigerung der Wettbewerbsfahigkeit in der Branche bei.",
-    "whyTitle": "Warum WEdu Factory?",
-    "letsWorkTogether": "Lassen Sie uns zusammenarbeiten",
-    "getStarted": "Loslegen",
+    "p1h": "Expertenschulung",
+    "p1": "Eine qualifizierte Bildungseinrichtung mit erfahrenen Trainern, die über langjährige Erfahrung in der Automobilindustrie verfügen, als Teil der Berliner Marke WGroup.",
+    "p2h": "Branchenstandards",
+    "p2": "Fachkundige Dozenten erstellen effektivste Inhalte und vermitteln Teilnehmern die Best Practices und volle Beherrschung der IATF 16949 Qualitätsstandards.",
+    "p3h": "Einzeln & Unternehmen",
+    "p3": "Einzelne Teilnehmer können ihre Karriere vorantreiben, während Unternehmen die kontinuierliche Weiterentwicklung ihrer Belegschaft unterstützen.",
+    "p4h": "KI-gestütztes Lernen",
+    "p4": "Schulungsinhalte werden mit KI-Tools und digitalen Technologien bereitgestellt, damit Teilnehmer auf schnellstem Weg Kompetenz erlangen.",
+    "p5h": "Zukünftige Führungskräfte",
+    "p5": "Eine einzigartige Plattform zur Ausbildung zukünftiger Führungskräfte in der Automobilindustrie und zur Steigerung der Wettbewerbsfähigkeit.",
     "checkIndividual": "Einzelkurse ansehen",
-    "checkCorporate": "Unternehmenskurse ansehen"
+    "checkCorporate": "Unternehmenskurse ansehen",
+    "ctaEyebrow": "LOSLEGEN",
+    "ctaTitle": "Bereit, die Zukunft",
+    "ctaHighlight": "zu gestalten?",
+    "ctaDesc": "Lassen Sie uns besprechen, wie WEdu Factory durch innovative Schulungsprogramme zukünftige Führungskräfte in der Automobilindustrie entwickeln kann."
   },
   "warticode": {
     "title": "WArtiCode",
@@ -363,7 +380,11 @@
     "togetherSuccess": "Gemeinsam zum Erfolg",
     "togetherSuccessDesc": "Partnerschaftliche Zusammenarbeit, die Ihre Ziele mit unserer Expertise fur nachhaltige Ergebnisse verbindet.",
     "ctaButton": "Kontakt aufnehmen",
-    "cta": "Sind Sie bereit, mit WArtiCode eine innovative Transformation in Ihren Bildungs- und Softwarelosungen einzuleiten?"
+    "ctaLearnMore": "Mehr erfahren",
+    "ctaEyebrow": "LOSLEGEN",
+    "ctaTitle": "Bereit für eine",
+    "ctaHighlight": "Transformation?",
+    "ctaDesc": "Lassen Sie uns besprechen, wie WArtiCode Ihnen helfen kann, innovative Veränderungen in Ihren Bildungs- und Softwarelösungen zu erreichen."
   },
   "wqualitysphere": {
     "title": "WQualitySphere",
@@ -372,12 +393,17 @@
     "subtitle": "Der Schlussel zu Ihrer strategischen Transformation in der Automobilindustrie",
     "p1": "Wenn Sie nachhaltigen Erfolg und Fuhrungsstarke auf dem Automobilmarkt erzielen mochten, sind die umfassenden Beratungsleistungen von WQualitySphere genau das Richtige fur Sie. In einer Branche, die ein tiefes Verstandnis der Dynamik der automobilen Lieferkette erfordert, sind wir hier, um die strategische Transformation bereitzustellen, die Ihr Unternehmen benotigt.",
     "servicesTitle": "Unsere umfassenden Dienstleistungen",
-    "servicesDesc": "Von der IATF 16949-Implementierung uber Lieferantenaudits bis zur Prozessoptimierung — wir liefern ganzheitliche Qualitatsberatung fur automobile Exzellenz.",
+    "servicesDesc": "Von der IATF 16949-Implementierung über Lieferantenaudits bis zur Prozessoptimierung liefern wir ganzheitliche Qualitätsberatung für automobile Exzellenz.",
     "whyTitle": "Warum WQualitySphere?",
     "whyDesc": "Jahrzehntelange praktische Erfahrung in der automobilen Lieferkette, kombiniert mit einer zukunftsorientierten Methodik, die messbare und nachhaltige Ergebnisse liefert.",
     "letsWorkTogether": "Lassen Sie uns zusammenarbeiten",
     "letsWorkTogetherDesc": "Arbeiten Sie mit unseren Experten zusammen, um eine strategische Roadmap zu definieren, Ihre Qualitatskultur zu starken und Ihren Wettbewerbsvorteil zu beschleunigen.",
-    "getStarted": "Loslegen"
+    "getStarted": "Loslegen",
+    "ctaEyebrow": "LOSLEGEN",
+    "ctaTitle": "Bereit, Ihre Qualität",
+    "ctaHighlight": "zu steigern?",
+    "ctaDesc": "Lassen Sie uns besprechen, wie WQualitySphere Ihrem Unternehmen helfen kann, strategische Transformation und Qualitätsexzellenz in der Automobilindustrie zu erreichen.",
+    "ctaLearnMore": "Mehr erfahren"
   },
   "productsIndividual": {
     "title": "Automotive Professionals - EINZELPERSONEN",
@@ -645,7 +671,7 @@
     "p3": "Mit EVolveMentor wird der Ubergang zum Elektrofahrzeugsektor nicht nur zu einer technologischen Transformation, sondern auch zu einer Moglichkeit, in die Entwicklung des Unternehmens und seiner Mitarbeiter zu investieren. Dieses Programm stellt die strategischen Werkzeuge und das Wissen bereit, die Unternehmen und ihre Mitarbeiter benotigen, um im EV-Okosystem erfolgreich zu sein."
   },
   "blog": {
-    "title": "Blog",
+    "title": "Aktuelle",
     "eyebrow": "BLOG",
     "titleHighlight": "Einblicke",
     "allArticles": "Alle Artikel",
@@ -776,7 +802,7 @@
     "registerNumber": "Handelsregisternummer: HRB 221994 B",
     "vatTitle": "Umsatzsteuer-ID",
     "vatDescription": "Umsatzsteuer-Identifikationsnummer gemaß § 27 a Umsatzsteuergesetz:",
-    "vatNumber": "[wird nachgetragen]",
+    "vatNumber": "DE337373977",
     "responsibleTitle": "Verantwortlich fur den Inhalt nach § 55 Abs. 2 RStV",
     "responsibleName": "Algan Alper Sen",
     "responsibleAddress": "Trappenpfad 33, 12351 Berlin",

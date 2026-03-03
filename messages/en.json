@@ -194,7 +194,7 @@
     "phoneLabel": "+49 174 177 78 79"
   },
   "about": {
-    "title": "About",
+    "title": "Our",
     "eyebrow": "ABOUT US",
     "titleHighlight": "Story",
     "subtitle": "Wgroup GmbH",
@@ -240,27 +240,33 @@
     }
   },
   "socialResponsibility": {
-    "title": "Social Responsibility",
+    "title": "Social",
     "eyebrow": "RESPONSIBILITY",
-    "titleHighlight": "Impact",
+    "titleHighlight": "Responsibility",
     "subtitle": "Our Commitment to Inclusive and Sustainable Social Responsibility",
     "description": "Our corporation anchors its social responsibility framework on three principal pillars: gender equality, sustainability, and environmental consciousness. These principles profoundly inform our operational ethos and our endeavors to contribute meaningfully to society.",
     "genderEquality": {
-      "title": "Gender Equality and Inclusion",
-      "description": "Our staunch commitment to gender equality manifests through definitive policies and practices. We actively pursue concrete steps to ensure equality of opportunity for all our employees. Aiming to eliminate gender-based discrimination in career progression, pay equity, and leadership appointments, we endeavor to cultivate a workplace culture that champions diversity and inclusion. This reflects our core values, illustrating our commitment to creating an environment where every individual is represented equitably and can participate fully, leveraging their potential to the fullest extent."
+      "title": "Gender Equality",
+      "description": "We ensure equality of opportunity through definitive policies and practices. From career progression to leadership appointments, we champion diversity and inclusion at every level."
     },
     "sustainability": {
-      "title": "Sustainability: Balancing Economic Success with Environmental Stewardship",
-      "description": "Sustainability occupies a central position in our strategic business model, seeking to balance our economic achievements with our environmental responsibilities. Initiatives that demonstrate our commitment to sustainability include energy-saving projects, waste reduction efforts, and the utilization of sustainable resources. As a company, we take significant strides in minimizing our environmental impact through investments in green technologies, enhancing energy efficiency, and innovating sustainable solutions in our processes and product offerings."
+      "title": "Sustainability",
+      "description": "Sustainability is central to our business strategy. Through energy-saving projects, green technology investments, and waste reduction, we balance economic success with environmental responsibility."
     },
     "environment": {
-      "title": "Environmental Awareness: Our Pledge to Preserve the Future",
-      "description": "Our commitment to environmental awareness is integral to all our business activities, manifested through practices such as supporting environmental sustainability projects and conserving natural resources. We engage in awareness and education programs aimed at promoting environmental responsibility among our employees and stakeholders, reinforcing our goal to set high standards in reducing environmental impact within the industry."
+      "title": "Environmental Awareness",
+      "description": "Environmental awareness is integral to all our activities. We support sustainability projects, conserve natural resources, and promote responsibility through education programs."
     },
-    "conclusion": "The social responsibility vision of our company, built on the foundations of gender equality, sustainability, and environmental consciousness, aims to foster positive change in the business community and society at large. This approach not only reflects our dedication to ethical business practices but also underscores our desire to lead in corporate social responsibility."
+    "conclusion": "Our social responsibility vision, built on gender equality, sustainability, and environmental consciousness, aims to foster positive change in the business community and society at large.",
+    "ctaEyebrow": "OUR COMMITMENT",
+    "ctaTitle": "Ready to Make a",
+    "ctaHighlight": "Difference?",
+    "ctaDesc": "Learn more about how WGroup is driving positive change through gender equality, sustainability, and environmental consciousness.",
+    "contactCta": "Contact Us",
+    "ctaLearnMore": "Learn More"
   },
   "career": {
-    "title": "Career",
+    "title": "Join Our",
     "eyebrow": "CAREERS",
     "titleHighlight": "Team",
     "subtitle": "Welcome, Innovators and Game Changers!",
@@ -271,7 +277,12 @@
     "p5": "Welcome and let's have new beginnings!",
     "contactEmail": "dreamteamcreator@wgroupgmbh.eu",
     "contactLabel": "Interested in joining our team?",
-    "contactCta": "Get in Touch"
+    "contactCta": "Get in Touch",
+    "ctaEyebrow": "JOIN US",
+    "ctaTitle": "Ready to Shape",
+    "ctaHighlight": "The Future?",
+    "ctaDesc": "Send us your application and become part of a team that combines innovation, diversity, and passion to make a difference.",
+    "ctaLearnMore": "Learn More"
   },
   "contact": {
     "title": "Get in",
@@ -293,9 +304,9 @@
     "officeTitle": "Our Office"
   },
   "faq": {
-    "title": "Frequently Asked Questions (FAQ)",
+    "title": "Frequently Asked",
     "eyebrow": "FAQ",
-    "titleHighlight": "Answers",
+    "titleHighlight": "Questions",
     "q1": {
       "question": "How do Wedu Factory's courses contribute?",
       "answer": "Wedu Factory's courses provide various benefits to both individuals and organizations. For individuals, these courses offer an opportunity to advance their careers and learn about the latest technological developments and best practices in the automotive industry. Wedu Factory's courses support the continuous development of the workforce, thereby enhancing performance. Specially designed training solutions directly contribute to business goals and elevate the skills and knowledge of employees. With Wedu Factory's courses, we help both individuals and organizations acquire the competencies necessary for a successful future."
@@ -337,16 +348,22 @@
     "title": "WEdu Factory",
     "eyebrow": "WEDU FACTORY",
     "titleHighlight": "Academy",
-    "p1": "Wedu Factory is a qualified training institution with experienced trainers who have many years of training experience in the automotive industry and a command of all the problems in the field. Operating as part of the Berlin-based Wgroup brand, Wedu Factory has a special focus on the automotive industry and aims to train qualified personnel in accordance with IATF 16949 quality standards.",
-    "p2": "Expert instructors understand the requirements of each area of the industry, creating the most effective content and providing participants with industry best practices. This comprehensive program is specifically designed to meet the needs of employees and companies in the automotive industry. The main objective of the program is to provide participants with a full command of IATF 16949 quality standards, enabling them to learn and apply industry best practices at the highest level.",
-    "p3": "Wedu Factory offers individual participants the opportunity to take a step forward in their careers, while corporate companies can support the continuous development of their workforce and achieve their company goals more effectively.",
-    "p4": "Wedu Factory highlights include full compliance with industry standards, international accessibility, continuous professional development opportunities and strong industry connections. In addition, the training content is delivered with the effective use of artificial intelligence tools and digital technologies, enabling participants to gain competence in the fastest and most accurate way.",
-    "p5": "Wedu Factory offers a unique platform to train future leaders in the automotive industry and meet the needs of the sector. This program, which both strengthens the careers of individual participants and supports the continuous development of the workforce for corporate companies, contributes significantly to raising quality standards in the automotive industry and increasing competitiveness in the sector.",
-    "whyTitle": "Why WEdu Factory?",
-    "letsWorkTogether": "Let's Work Together",
-    "getStarted": "Get Started",
+    "p1h": "Expert Training",
+    "p1": "A qualified training institution with experienced trainers who have many years of experience in the automotive industry, operating as part of the Berlin-based WGroup brand.",
+    "p2h": "Industry Best Practices",
+    "p2": "Expert instructors create the most effective content, providing participants with industry best practices and full command of IATF 16949 quality standards.",
+    "p3h": "Individual & Corporate",
+    "p3": "Individual participants can take a step forward in their careers, while corporate companies can support the continuous development of their workforce.",
+    "p4h": "AI-Powered Learning",
+    "p4": "Training content delivered with artificial intelligence tools and digital technologies, enabling participants to gain competence in the fastest and most accurate way.",
+    "p5h": "Future Leaders",
+    "p5": "A unique platform to train future leaders in the automotive industry, contributing to raising quality standards and increasing competitiveness in the sector.",
     "checkIndividual": "Check Out Individual Courses",
-    "checkCorporate": "Check Out Corporate Courses"
+    "checkCorporate": "Check Out Corporate Courses",
+    "ctaEyebrow": "GET STARTED",
+    "ctaTitle": "Ready to Shape",
+    "ctaHighlight": "The Future?",
+    "ctaDesc": "Let's discuss how WEdu Factory can help develop future leaders in the automotive industry through innovative training programs."
   },
   "warticode": {
     "title": "WArtiCode",
@@ -363,7 +380,11 @@
     "togetherSuccess": "Towards Success Together",
     "togetherSuccessDesc": "Collaborative partnerships that align your goals with our expertise for lasting results.",
     "ctaButton": "Get in Touch",
-    "cta": "Are you ready to initiate an innovative transformation in your education and software solutions with WArtiCode?"
+    "ctaLearnMore": "Learn More",
+    "ctaEyebrow": "GET STARTED",
+    "ctaTitle": "Ready to Transform",
+    "ctaHighlight": "Your Solutions?",
+    "ctaDesc": "Let's discuss how WArtiCode can help your organization achieve innovative transformation in education and software solutions."
   },
   "wqualitysphere": {
     "title": "WQualitySphere",
@@ -372,12 +393,17 @@
     "subtitle": "The Key to Your Strategic Transformation in the Automotive Industry",
     "p1": "If you want to achieve sustainable success and leadership in the automotive market, WQualitySphere's comprehensive consulting services are for you. In an industry that requires a deep understanding of the dynamics of the automotive supply chain, we are here to provide the strategic transformation your company needs.",
     "servicesTitle": "Our Comprehensive Services",
-    "servicesDesc": "From IATF 16949 implementation to supplier audits and process optimization — we deliver end-to-end quality consulting tailored to automotive excellence.",
+    "servicesDesc": "From IATF 16949 implementation to supplier audits and process optimization, we deliver end-to-end quality consulting tailored to automotive excellence.",
     "whyTitle": "Why WQualitySphere?",
     "whyDesc": "Decades of hands-on experience in the automotive supply chain, combined with a forward-thinking methodology that drives measurable, lasting results.",
     "letsWorkTogether": "Let's Work Together",
     "letsWorkTogetherDesc": "Partner with our expert consultants to define a strategic roadmap, strengthen your quality culture, and accelerate your competitive advantage.",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "ctaEyebrow": "GET STARTED",
+    "ctaTitle": "Ready to Elevate",
+    "ctaHighlight": "Your Quality?",
+    "ctaDesc": "Let's discuss how WQualitySphere can help your organization achieve strategic transformation and quality excellence in the automotive industry.",
+    "ctaLearnMore": "Learn More"
   },
   "productsIndividual": {
     "title": "Automotive Professionals - INDIVIDUAL",
@@ -645,7 +671,7 @@
     "p3": "With EVolveMentor, the transition to the electric vehicle sector becomes not only a technological transformation, but also a way to invest in the development of the company and its employees. This program provides the strategic tools and knowledge that companies and their employees need to succeed in the EV ecosystem."
   },
   "blog": {
-    "title": "Blog",
+    "title": "Latest",
     "eyebrow": "BLOG",
     "titleHighlight": "Insights",
     "allArticles": "All Articles",
@@ -776,7 +802,7 @@
     "registerNumber": "Commercial Register Number: HRB 221994 B",
     "vatTitle": "VAT ID",
     "vatDescription": "VAT identification number according to § 27 a of the German VAT Act:",
-    "vatNumber": "[to be added]",
+    "vatNumber": "DE337373977",
     "responsibleTitle": "Responsible for content according to § 55 Abs. 2 RStV",
     "responsibleName": "Algan Alper Sen",
     "responsibleAddress": "Trappenpfad 33, 12351 Berlin",

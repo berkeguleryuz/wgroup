@@ -34,38 +34,38 @@ export default function CookiePolicyPage() {
     <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")}>
       <div ref={sectionRef} className="space-y-10">
         {/* What are cookies */}
-        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("whatTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("whatText")}</p>
         </div>
 
         {/* Which cookies */}
-        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("whichTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("whichText")}</p>
         </div>
 
         {/* Necessary cookies */}
-        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h3 className="text-lg font-semibold text-foreground">{t("necessaryTitle")}</h3>
           <p className="text-lg leading-relaxed text-muted">{t("necessaryText")}</p>
         </div>
 
         {/* Analytics cookies */}
-        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h3 className="text-lg font-semibold text-foreground">{t("analyticsTitle")}</h3>
           <p className="text-lg leading-relaxed text-muted">{t("analyticsText")}</p>
         </div>
 
         {/* Managing cookies */}
-        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("manageTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("manageText")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("manageBrowsers")}</p>
         </div>
 
         {/* Contact */}
-        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("contactTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("contactText")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("contactEmail")}</p>

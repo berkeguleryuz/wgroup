@@ -147,7 +147,7 @@ export default function Footer() {
             </h3>
             <div className="flex items-center gap-4">
               <a
-                href="https://www.linkedin.com/company/wgroupgmbh"
+                href="https://www.linkedin.com/company/wgroup-gmbh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white/50 transition-colors hover:text-white"

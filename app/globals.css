@@ -43,6 +43,21 @@ body {
 }
 
 /* ==================================================================
+   Light content scope — sub-page content sections
+   ================================================================== */
+.light-content {
+  --background: #f7f9fc;
+  --foreground: #0f172a;
+  --secondary: #edf2f7;
+  --muted: #4a5568;
+  --border: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(0, 0, 0, 0.02);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --secondary-hover: #e2e8f0;
+  color: var(--foreground);
+}
+
+/* ==================================================================
    Premium heading font
    ================================================================== */
 h1, h2, h3, h4, h5, h6 {

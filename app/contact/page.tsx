@@ -63,7 +63,7 @@ export default function ContactPage() {
             {/* Inner card content */}
             <div
               className="relative rounded-2xl"
-              style={{ background: "var(--background, #0a0a0a)" }}
+              style={{ background: "var(--background)" }}
             >
               <div className="p-8 sm:p-10">
               <h3 className="mb-1 text-xl font-bold text-foreground">{t("formTitle")}</h3>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                       required
                       value={formState.name}
                       onChange={(e) => setFormState((prev) => ({ ...prev, name: e.target.value }))}
-                      className="w-full rounded-lg border border-white/[0.06] bg-transparent p-3.5 text-sm text-white placeholder:text-white/20 transition-all duration-300 focus:border-primary/40 focus:outline-none"
+                      className="w-full rounded-lg border border-border bg-transparent p-3.5 text-sm text-foreground placeholder:text-muted transition-all duration-300 focus:border-primary/40 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                       required
                       value={formState.email}
                       onChange={(e) => setFormState((prev) => ({ ...prev, email: e.target.value }))}
-                      className="w-full rounded-lg border border-white/[0.06] bg-transparent p-3.5 text-sm text-white placeholder:text-white/20 transition-all duration-300 focus:border-primary/40 focus:outline-none"
+                      className="w-full rounded-lg border border-border bg-transparent p-3.5 text-sm text-foreground placeholder:text-muted transition-all duration-300 focus:border-primary/40 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -109,7 +109,7 @@ export default function ContactPage() {
                     rows={5}
                     value={formState.message}
                     onChange={(e) => setFormState((prev) => ({ ...prev, message: e.target.value }))}
-                    className="w-full resize-none rounded-lg border border-white/[0.06] bg-transparent p-3.5 text-sm text-white placeholder:text-white/20 transition-all duration-300 focus:border-primary/40 focus:outline-none"
+                    className="w-full resize-none rounded-lg border border-border bg-transparent p-3.5 text-sm text-foreground placeholder:text-muted transition-all duration-300 focus:border-primary/40 focus:outline-none"
                   />
                 </div>
 
@@ -151,7 +151,7 @@ export default function ContactPage() {
                 href={`https://maps.google.com/?q=${encodeURIComponent(t("address"))}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-white/[0.03]"
+                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-foreground/[0.03]"
               >
                 <MapPin className="h-4 w-4 flex-shrink-0 text-primary/60" />
                 <div>
@@ -162,7 +162,7 @@ export default function ContactPage() {
 
               <a
                 href={`mailto:${t("email")}`}
-                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-white/[0.03]"
+                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-foreground/[0.03]"
               >
                 <Mail className="h-4 w-4 flex-shrink-0 text-primary/60" />
                 <span className="text-sm text-foreground group-hover:text-primary transition-colors">{t("email")}</span>
@@ -170,7 +170,7 @@ export default function ContactPage() {
 
               <a
                 href={`tel:${t("phone").replace(/\s/g, "")}`}
-                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-white/[0.03]"
+                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-foreground/[0.03]"
               >
                 <Phone className="h-4 w-4 flex-shrink-0 text-primary/60" />
                 <span className="text-sm text-foreground group-hover:text-primary transition-colors">{t("phone")}</span>
@@ -179,19 +179,19 @@ export default function ContactPage() {
           </div>
 
           {/* Divider */}
-          <div className="contact-reveal h-px w-full bg-gradient-to-r from-white/[0.06] via-white/[0.1] to-transparent" />
+          <div className="contact-reveal h-px w-full bg-gradient-to-r from-border via-border to-transparent" />
 
           {/* Social — standalone pill buttons */}
           <div className="contact-reveal">
             <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("followUs")}</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="https://www.linkedin.com/company/wgroupgmbh"
+                href="https://www.linkedin.com/company/wgroup-gmbh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  border: "1px solid var(--card-border)",
                 }}
               >
                 <Linkedin className="h-4.5 w-4.5 text-primary/70 transition-colors group-hover:text-primary" />
@@ -204,7 +204,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  border: "1px solid var(--card-border)",
                 }}
               >
                 <Instagram className="h-4.5 w-4.5 text-primary/70 transition-colors group-hover:text-primary" />

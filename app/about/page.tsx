@@ -12,8 +12,8 @@ import { ArrowRight } from "@/components/icons";
 gsap.registerPlugin(ScrollTrigger);
 
 const statLotties = [
-  "/lottie/target.json",
   "/lottie/lightbulb.json",
+  "/lottie/calendar.json",
   "/lottie/trending-up.json",
   "/lottie/target.json",
 ] as const;

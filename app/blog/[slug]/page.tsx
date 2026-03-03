@@ -104,7 +104,7 @@ export default function BlogDetailPage({
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
           </div>
         )}
 
@@ -127,7 +127,7 @@ export default function BlogDetailPage({
           ))}
         </div>
 
-        <div className="mt-12 border-t border-white/[0.07] pt-8">
+        <div className="mt-12 border-t border-border pt-8">
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 font-medium text-primary transition-colors hover:text-primary-hover"

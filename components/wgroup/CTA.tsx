@@ -5,6 +5,7 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "@/components/icons";
+import MorphButton from "@/components/ui/MorphButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,16 +93,22 @@ export default function CTA() {
               operational excellence and drive innovation.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-background shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 sm:text-base"
-                style={{
-                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                  fontWeight: 600,
-                }}
-              >
-                Contact Us
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+              <Link href="/contact" className="group">
+                <MorphButton
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-background shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-0.5 sm:text-base"
+                  style={{
+                    fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                    fontWeight: 600,
+                  }}
+                  fillColor="#0a0f1e"
+                  textColor="#0a0f1e"
+                  textColorHover="#ffffff"
+                >
+                  <span className="flex items-center gap-2">
+                    Contact Us
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                  </span>
+                </MorphButton>
               </Link>
               <Link
                 href="/about"

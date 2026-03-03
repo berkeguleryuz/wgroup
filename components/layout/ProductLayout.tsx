@@ -69,28 +69,30 @@ export default function ProductLayout({
           >
             {brand}
           </span>
-          <span
-            className="rounded-full px-5 py-2 text-sm font-semibold"
-            style={{
-              background: "rgba(30,109,181,0.15)",
-              border: "1px solid rgba(30,109,181,0.3)",
-              color: "#5ba3d9",
-            }}
-          >
-            {category}
-          </span>
+          {category !== brand && (
+            <span
+              className="rounded-full px-5 py-2 text-sm font-semibold"
+              style={{
+                background: "rgba(30,109,181,0.15)",
+                border: "1px solid rgba(30,109,181,0.3)",
+                color: "var(--primary)",
+              }}
+            >
+              {category}
+            </span>
+          )}
         </div>
 
         <div
           className="product-detail relative mb-8 overflow-hidden rounded-2xl p-5 shadow-lg"
           style={{
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,255,255,0.07)",
+            background: "var(--card-bg)",
+            border: "1px solid var(--card-border)",
             boxShadow: "0 8px 30px -8px rgba(0,0,0,0.3)",
           }}
         >
           <div className="pointer-events-none absolute -right-8 -top-8 h-24 w-24 rounded-full bg-primary/10 blur-2xl" />
-          <p className="relative z-10 text-sm italic text-white/50">
+          <p className="relative z-10 text-sm italic text-muted">
             {contactPricing}
           </p>
         </div>

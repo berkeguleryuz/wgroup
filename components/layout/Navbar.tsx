@@ -36,9 +36,9 @@ const navImages: Record<string, string> = {
   partner: "/images/company/partners.webp",
   socialResponsibility: "/images/company/social-responsibility.webp",
   career: "/images/company/career.webp",
-  weduFactory: "/images/brands/wedu-factory.webp",
-  warticode: "/images/brands/warticode.webp",
-  wqualitysphere: "/images/brands/wqualitysphere.webp",
+  weduFactory: "/wgroup/01_Ana_Sayfa/19_Wedu_Factory.webp",
+  warticode: "/wgroup/01_Ana_Sayfa/18_Warticode.webp",
+  wqualitysphere: "/wgroup/01_Ana_Sayfa/20_WQuality%20Sphere.webp",
   individualCourses: "/images/products/individual.webp",
   corporateCourses: "/images/products/corporate.webp",
   digitautopivot: "/images/products/digitautopivot.webp",
@@ -152,12 +152,12 @@ function MobileAccordion({
                   className="group w-[200px] flex-shrink-0 overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.04]"
                   onClick={onNavigate}
                 >
-                  <div className="aspect-[16/10] overflow-hidden">
+                  <div className="aspect-square overflow-hidden">
                     <Image
                       src={navImages[item.key]}
                       alt={t(item.key)}
                       width={200}
-                      height={125}
+                      height={200}
                       className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
@@ -368,10 +368,13 @@ export default function Navbar() {
         {/* Pill container - always tube shaped */}
         <div
           className={`mx-3 mt-3 rounded-full transition-all duration-500 sm:mx-4 lg:mx-auto lg:max-w-5xl ${
-            scrolled
-              ? "bg-secondary/80 shadow-lg shadow-black/20 ring-1 ring-white/[0.08] backdrop-blur-xl"
-              : "bg-secondary/40 ring-1 ring-white/[0.06] backdrop-blur-md"
+            activeDropdown
+              ? "shadow-lg shadow-black/20 ring-1 ring-white/[0.08] backdrop-blur-xl"
+              : scrolled
+                ? "bg-secondary/80 shadow-lg shadow-black/20 ring-1 ring-white/[0.08] backdrop-blur-xl"
+                : "bg-secondary/40 ring-1 ring-white/[0.06] backdrop-blur-md"
           }`}
+          style={activeDropdown ? { background: "rgba(10, 15, 30, 0.96)" } : undefined}
         >
         {/* Main bar */}
         <div className="flex h-14 items-center justify-between px-3 lg:px-4">
@@ -382,7 +385,7 @@ export default function Navbar() {
             onClick={closeDropdown}
           >
             <Image
-              src="/images/wgroup-logo.png"
+              src="/wgroup/logo.png"
               alt="WGroup"
               width={140}
               height={65}
@@ -621,27 +624,27 @@ export default function Navbar() {
               key={item.key}
               href={item.href}
               data-menu-item
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03] transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.06] hover:shadow-xl hover:shadow-primary/5"
+              className="group relative overflow-hidden rounded-2xl border border-white/[0.10] bg-white/[0.07] transition-all duration-300 hover:border-white/[0.18] hover:bg-white/[0.10] hover:shadow-xl hover:shadow-primary/10"
               onClick={closeDropdown}
             >
-              <div className="aspect-[16/9] overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <Image
                   src={navImages[item.key]}
                   alt={t(item.key)}
                   width={400}
-                  height={225}
+                  height={400}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
               <div className="p-5">
-                <h3 className="text-base font-semibold text-white/90 group-hover:text-white">
+                <h3 className="text-base font-semibold text-white group-hover:text-white">
                   {t(item.key)}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-white/35 group-hover:text-white/50">
+                <p className="mt-1 text-sm leading-relaxed text-white/75 group-hover:text-white/90">
                   {t(`desc.${item.key}`)}
                 </p>
-                <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-primary/70 group-hover:text-primary">
+                <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-[#60b0f0] group-hover:text-white">
                   {t("explore")}
                   <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </div>

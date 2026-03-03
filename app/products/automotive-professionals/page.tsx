@@ -60,7 +60,7 @@ export default function AutomotiveProfessionalsIndividualPage() {
           return (
             <div
               key={course.id}
-              className="bg-white/[0.04] rounded-xl border border-white/[0.07] shadow-sm"
+              className="bg-card-bg rounded-xl border border-card-border shadow-sm"
             >
               <button
                 onClick={() => toggleItem(course.id)}

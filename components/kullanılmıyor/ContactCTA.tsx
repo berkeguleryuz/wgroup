@@ -279,7 +279,7 @@ export default function ContactCTA() {
             icon={Linkedin}
             label="LinkedIn"
             subtitle="Follow our journey"
-            href="https://www.linkedin.com/company/wgroupgmbh"
+            href="https://www.linkedin.com/company/wgroup-gmbh"
             gradient="linear-gradient(135deg, #0A66C2, #0052A3)"
             glowColor="rgba(10, 102, 194, 0.4)"
           />

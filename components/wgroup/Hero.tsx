@@ -5,7 +5,9 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "@/components/icons";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import MorphButton from "@/components/ui/MorphButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -257,16 +259,22 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta-group mt-10 flex flex-col items-center gap-4 sm:flex-row">
-            <Link
-              href="/about"
-              className="group inline-flex h-14 items-center gap-2 rounded-full bg-white px-8 text-sm font-semibold text-background shadow-lg shadow-white/10 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-white/20 sm:text-base"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                fontWeight: 600,
-              }}
-            >
-              {t("aboutUs")}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            <Link href="/about" className="group">
+              <MorphButton
+                className="inline-flex h-14 items-center gap-2 rounded-full bg-white px-8 text-sm font-semibold text-background shadow-lg shadow-white/10 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-xl group-hover:shadow-white/20 sm:text-base"
+                style={{
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                  fontWeight: 600,
+                }}
+                fillColor="var(--background)"
+                textColor="var(--background)"
+                textColorHover="#ffffff"
+              >
+                <span className="flex items-center gap-2">
+                  {t("aboutUs")}
+                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </span>
+              </MorphButton>
             </Link>
 
             <Link
