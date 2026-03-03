@@ -99,7 +99,7 @@ export default function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
                 className={`flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm transition-all duration-200 ${
                   isActive
                     ? "bg-white/10 text-white"
-                    : "text-white/50 hover:bg-white/[0.06] hover:text-white"
+                    : "text-white/50 hover:bg-white/6 hover:text-white"
                 }`}
               >
                 <span className="text-base leading-none">{lang.flag}</span>

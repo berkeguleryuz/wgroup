@@ -257,7 +257,7 @@ export default function Brands() {
           {brands.map((brand) => (
             <div key={brand.key} className="flex flex-col items-center">
               <div
-                className="brand-icon-circle flex h-16 w-16 items-center justify-center rounded-full border border-primary/15 bg-primary/[0.04] sm:h-20 sm:w-20"
+                className="brand-icon-circle flex h-16 w-16 items-center justify-center rounded-full border border-primary/15 bg-primary/4 sm:h-20 sm:w-20"
               >
                 <brand.Icon
                   className="h-6 w-6 text-primary sm:h-7 sm:w-7"
@@ -315,9 +315,9 @@ export default function Brands() {
               href={brand.slug}
               className="brand-card group block"
             >
-              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/60 bg-white p-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-900/[0.06]">
+              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/60 bg-white p-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-900/6">
                 {/* Image */}
-                <div className="relative mb-5 aspect-[16/10] overflow-hidden rounded-xl">
+                <div className="relative mb-5 aspect-16/10 overflow-hidden rounded-xl">
                   <Image
                     src={brand.image}
                     alt={t(`${brand.key}Name`)}
@@ -329,7 +329,7 @@ export default function Brands() {
 
                 {/* Icon + Name */}
                 <div className="mb-2.5 flex items-center gap-2.5">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/[0.08]">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/8">
                     <brand.Icon className="h-4 w-4 text-primary" />
                   </div>
                   <h3

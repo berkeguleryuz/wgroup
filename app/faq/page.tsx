@@ -53,11 +53,11 @@ function FAQItem({
       >
         <button
           onClick={handleToggle}
-          className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left transition-colors duration-200 hover:bg-primary/[0.03]"
+          className="flex w-full cursor-pointer items-center justify-between px-6 py-5 text-left transition-colors duration-200 hover:bg-primary/3"
         >
           <div className="flex items-center gap-4 pr-4">
             <span
-              className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-xs font-bold transition-all duration-300"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-xs font-bold transition-all duration-300"
               style={{
                 background: isOpen ? "#1e6db5" : "rgba(30,109,181,0.1)",
                 color: isOpen ? "#ffffff" : "#1e6db5",
@@ -73,7 +73,7 @@ function FAQItem({
             </span>
           </div>
           <ChevronDown
-            className="h-4 w-4 flex-shrink-0 text-muted transition-transform duration-300"
+            className="h-4 w-4 shrink-0 text-muted transition-transform duration-300"
             style={{ transform: isOpen ? "rotate(180deg)" : "rotate(0deg)" }}
           />
         </button>

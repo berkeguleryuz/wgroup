@@ -232,7 +232,7 @@ export default function FrameAnimation() {
             ref={(el) => {
               cardRefs.current[i] = el;
             }}
-            className={`pointer-events-none fixed z-40 w-[calc(100%-48px)] sm:w-[380px] ${positionClasses}`}
+            className={`pointer-events-none fixed z-40 w-[calc(100%-48px)] sm:w-95 ${positionClasses}`}
             style={{ opacity: 0, visibility: "hidden" }}
           >
             <div

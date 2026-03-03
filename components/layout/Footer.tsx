@@ -170,7 +170,7 @@ export default function Footer() {
       </div>
 
       {/* ---------- Bottom bar ---------- */}
-      <div className="border-t border-white/[0.06]">
+      <div className="border-t border-white/6">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-6 text-center text-xs text-white/40 sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
             <span>{t("phone")}</span>

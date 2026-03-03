@@ -142,14 +142,14 @@ function MobileAccordion({
       </button>
 
       {open && (
-        <div ref={contentRef} className="overflow-hidden bg-white/[0.02] py-1">
+        <div ref={contentRef} className="overflow-hidden bg-white/2 py-1">
           {group.key === "brands" ? (
             <div className="flex gap-3 overflow-x-auto px-6 py-3 scrollbar-hide">
               {group.items.map((item) => (
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="group w-[200px] flex-shrink-0 overflow-hidden rounded-xl border border-white/[0.06] bg-white/[0.04]"
+                  className="group w-50 shrink-0 overflow-hidden rounded-xl border border-white/6 bg-white/4"
                   onClick={onNavigate}
                 >
                   <div className="aspect-square overflow-hidden">
@@ -175,11 +175,11 @@ function MobileAccordion({
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="flex items-center gap-3 px-6 py-2.5 transition-colors hover:bg-white/[0.04]"
+                  className="flex items-center gap-3 px-6 py-2.5 transition-colors hover:bg-white/4"
                   onClick={onNavigate}
                 >
                   {navImages[item.key] && (
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-lg bg-white/[0.06]">
+                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-lg bg-white/6">
                       <Image
                         src={navImages[item.key]}
                         alt=""
@@ -195,7 +195,7 @@ function MobileAccordion({
 
               {group.sections?.map((section) => (
                 <div key={section.label}>
-                  <div className="mx-6 my-1.5 border-t border-white/[0.06]" />
+                  <div className="mx-6 my-1.5 border-t border-white/6" />
                   <span className="block px-6 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary/50">
                     {section.label}
                   </span>
@@ -203,11 +203,11 @@ function MobileAccordion({
                     <Link
                       key={item.key}
                       href={item.href}
-                      className="flex items-center gap-3 px-6 py-2.5 transition-colors hover:bg-white/[0.04]"
+                      className="flex items-center gap-3 px-6 py-2.5 transition-colors hover:bg-white/4"
                       onClick={onNavigate}
                     >
                       {navImages[item.key] && (
-                        <div className="h-8 w-8 shrink-0 overflow-hidden rounded-lg bg-white/[0.06]">
+                        <div className="h-8 w-8 shrink-0 overflow-hidden rounded-lg bg-white/6">
                           <Image
                             src={navImages[item.key]}
                             alt=""
@@ -369,10 +369,10 @@ export default function Navbar() {
         <div
           className={`mx-3 mt-3 rounded-full transition-all duration-500 sm:mx-4 lg:mx-auto lg:max-w-5xl ${
             activeDropdown
-              ? "shadow-lg shadow-black/20 ring-1 ring-white/[0.08] backdrop-blur-xl"
+              ? "shadow-lg shadow-black/20 ring-1 ring-white/8 backdrop-blur-xl"
               : scrolled
-                ? "bg-secondary/80 shadow-lg shadow-black/20 ring-1 ring-white/[0.08] backdrop-blur-xl"
-                : "bg-secondary/40 ring-1 ring-white/[0.06] backdrop-blur-md"
+                ? "bg-secondary/80 shadow-lg shadow-black/20 ring-1 ring-white/8 backdrop-blur-xl"
+                : "bg-secondary/40 ring-1 ring-white/6 backdrop-blur-md"
           }`}
           style={activeDropdown ? { background: "rgba(10, 15, 30, 0.96)" } : undefined}
         >
@@ -409,8 +409,8 @@ export default function Navbar() {
                   }
                   className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
                     activeDropdown === item.key
-                      ? "bg-white/[0.08] text-white"
-                      : "text-white/70 hover:bg-white/[0.06] hover:text-white"
+                      ? "bg-white/8 text-white"
+                      : "text-white/70 hover:bg-white/6 hover:text-white"
                   }`}
                   aria-expanded={activeDropdown === item.key}
                 >
@@ -425,7 +425,7 @@ export default function Navbar() {
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-white/70 transition-all duration-200 hover:bg-white/[0.06] hover:text-white"
+                  className="rounded-lg px-3 py-2 text-sm font-medium text-white/70 transition-all duration-200 hover:bg-white/6 hover:text-white"
                   onClick={closeDropdown}
                 >
                   {t(item.key)}
@@ -439,12 +439,12 @@ export default function Navbar() {
             <LanguageSwitcher dark />
             <Link
               href="/contact"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-accent-teal px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-[1px] hover:shadow-xl hover:shadow-primary/30"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-linear-to-r from-primary to-accent-teal px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-px hover:shadow-xl hover:shadow-primary/30"
               onClick={closeDropdown}
             >
               <span className="relative z-10">{t("contact")}</span>
               <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-              <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             </Link>
           </div>
 
@@ -468,7 +468,7 @@ export default function Navbar() {
         {activeDropdown && (
           <div
             ref={panelRef}
-            className="mx-3 mt-2 hidden overflow-hidden rounded-2xl border border-white/[0.08] shadow-2xl shadow-black/30 backdrop-blur-xl sm:mx-4 lg:mx-auto lg:block lg:max-w-6xl"
+            className="mx-3 mt-2 hidden overflow-hidden rounded-2xl border border-white/8 shadow-2xl shadow-black/30 backdrop-blur-xl sm:mx-4 lg:mx-auto lg:block lg:max-w-6xl"
             style={{ background: "rgba(10, 15, 30, 0.96)" }}
             onMouseEnter={keepOpen}
             onMouseLeave={startClose}
@@ -509,10 +509,10 @@ export default function Navbar() {
               )
             )}
 
-            <div className="mt-2 border-t border-white/[0.06] px-6 py-5">
+            <div className="mt-2 border-t border-white/6 px-6 py-5">
               <Link
                 href="/contact"
-                className="mb-4 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent-teal px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary/20"
+                className="mb-4 flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-primary to-accent-teal px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary/20"
                 onClick={closeMobile}
               >
                 {t("contact")}
@@ -549,13 +549,13 @@ export default function Navbar() {
                 data-menu-item
                 className={`group flex items-center gap-4 rounded-xl px-4 py-3.5 transition-all duration-200 ${
                   hoveredItem === item.key
-                    ? "bg-white/[0.08]"
-                    : "hover:bg-white/[0.05]"
+                    ? "bg-white/8"
+                    : "hover:bg-white/5"
                 }`}
                 onMouseEnter={() => setHoveredItem(item.key)}
                 onClick={closeDropdown}
               >
-                <div className="flex h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-white/[0.06] ring-1 ring-white/[0.08]">
+                <div className="flex h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-white/6 ring-1 ring-white/8">
                   <Image
                     src={navImages[item.key]}
                     alt=""
@@ -578,7 +578,7 @@ export default function Navbar() {
           </div>
 
           {/* Featured image with crossfade */}
-          <div className="col-span-2 relative min-h-[280px] overflow-hidden rounded-2xl bg-white/[0.03] ring-1 ring-white/[0.06]">
+          <div className="col-span-2 relative min-h-70 overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
             {group.items.map((item) => (
               <div
                 key={item.key}
@@ -595,7 +595,7 @@ export default function Navbar() {
                 />
               </div>
             ))}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5">
               <p className="text-sm font-semibold text-white/90">
                 {t(activeKey)}
@@ -624,7 +624,7 @@ export default function Navbar() {
               key={item.key}
               href={item.href}
               data-menu-item
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.10] bg-white/[0.07] transition-all duration-300 hover:border-white/[0.18] hover:bg-white/[0.10] hover:shadow-xl hover:shadow-primary/10"
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/7 transition-all duration-300 hover:border-white/18 hover:bg-white/10 hover:shadow-xl hover:shadow-primary/10"
               onClick={closeDropdown}
             >
               <div className="aspect-square overflow-hidden">
@@ -635,7 +635,7 @@ export default function Navbar() {
                   height={400}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               </div>
               <div className="p-5">
                 <h3 className="text-base font-semibold text-white group-hover:text-white">
@@ -718,7 +718,7 @@ export default function Navbar() {
 
           {/* Preview image */}
           <div className="col-span-4">
-            <div className="relative h-full min-h-[260px] overflow-hidden rounded-2xl border border-white/[0.06] bg-white/[0.03]">
+            <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3">
               {activeImage ? (
                 <>
                   <Image
@@ -729,7 +729,7 @@ export default function Navbar() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 0px, 360px"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
                     <p className="text-sm font-semibold text-white/90">
                       {hoveredItem ? t(hoveredItem) : ""}
@@ -741,7 +741,7 @@ export default function Navbar() {
                 </>
               ) : (
                 <div className="flex h-full flex-col items-center justify-center gap-3">
-                  <div className="h-12 w-12 rounded-xl bg-white/[0.04] p-3">
+                  <div className="h-12 w-12 rounded-xl bg-white/4 p-3">
                     <ArrowRight className="h-full w-full text-white/15" />
                   </div>
                   <p className="text-xs text-white/20">
@@ -765,13 +765,13 @@ export default function Navbar() {
         data-menu-item
         className={`group flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200 ${
           hoveredItem === item.key
-            ? "bg-white/[0.08]"
-            : "hover:bg-white/[0.05]"
+            ? "bg-white/8"
+            : "hover:bg-white/5"
         }`}
         onMouseEnter={() => setHoveredItem(item.key)}
         onClick={closeDropdown}
       >
-        <div className="flex h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/[0.06] ring-1 ring-white/[0.06]">
+        <div className="flex h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/6">
           <Image
             src={navImages[item.key]}
             alt=""

@@ -49,8 +49,8 @@ export default function CTA() {
         <div className="relative overflow-hidden rounded-3xl bg-background px-8 py-20 sm:px-16 sm:py-24">
           {/* Background blobs */}
           <div className="pointer-events-none absolute inset-0">
-            <div className="cta-blob absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
-            <div className="cta-blob absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />
+            <div className="cta-blob absolute -left-20 top-0 h-75 w-75 rounded-full bg-primary/15 blur-[100px]" />
+            <div className="cta-blob absolute bottom-0 right-0 h-100 w-100 rounded-full bg-accent-purple/10 blur-[120px]" />
           </div>
 
           {/* Mesh */}
@@ -113,7 +113,7 @@ export default function CTA() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.12] hover:border-white/30 sm:text-base"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/6 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/12 hover:border-white/30 sm:text-base"
                 style={{
                   fontFamily: "var(--font-barlow), system-ui, sans-serif",
                   fontWeight: 600,
