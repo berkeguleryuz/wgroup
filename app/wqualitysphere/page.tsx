@@ -107,12 +107,12 @@ function ServiceCard({
         {/* Mouse-follow glow */}
         <div
           ref={glowRef}
-          className="pointer-events-none absolute h-[160px] w-[160px] rounded-full opacity-0 blur-3xl"
+          className="pointer-events-none absolute h-40 w-40 rounded-full opacity-0 blur-3xl"
           style={{ background: `${color}20` }}
         />
 
         {/* Hover shimmer */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+        <div className="absolute inset-0 bg-linear-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
         <div
           className="relative z-10 flex flex-col items-center text-center"
@@ -214,8 +214,8 @@ export default function WQualitySpherePage() {
         <div className="wq-cta relative mt-14 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
           {/* Background blobs */}
           <div className="pointer-events-none absolute inset-0">
-            <div className="cta-blob absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
-            <div className="cta-blob absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />
+            <div className="cta-blob absolute -left-20 top-0 h-75 w-75 rounded-full bg-primary/15 blur-[100px]" />
+            <div className="cta-blob absolute bottom-0 right-0 h-100 w-100 rounded-full bg-accent-purple/10 blur-[120px]" />
           </div>
 
           {/* Mesh */}
@@ -268,7 +268,7 @@ export default function WQualitySpherePage() {
               </Link>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.12] hover:border-white/30 sm:text-base"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/6 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/12 hover:border-white/30 sm:text-base"
                 style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", fontWeight: 600 }}
               >
                 {t("ctaLearnMore")}

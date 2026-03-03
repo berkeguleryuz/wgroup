@@ -249,9 +249,9 @@ export default function About() {
   return (
     <>
       {/* ---- Curved top edge: sits OUTSIDE section to avoid overflow-hidden clip ---- */}
-      <div className="relative -mt-[200px] overflow-visible">
+      <div className="relative -mt-50 overflow-visible">
         <svg
-          className="block w-full h-[204px]"
+          className="block w-full h-51"
           viewBox="0 0 1440 84"
           fill="none"
           preserveAspectRatio="none"
@@ -260,7 +260,7 @@ export default function About() {
         </svg>
         {/* Glow */}
         <div
-          className="pointer-events-none absolute left-1/2 bottom-0 h-[100px] w-[700px] -translate-x-1/2 rounded-full blur-[80px]"
+          className="pointer-events-none absolute left-1/2 bottom-0 h-25 w-175 -translate-x-1/2 rounded-full blur-[80px]"
         />
         {/* Sparkles covering the curve area */}
         <div className="pointer-events-none absolute inset-0">
@@ -282,10 +282,10 @@ export default function About() {
       >
 
       {/* ---- Horizon arc + glow + sparkles ---- */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[420px]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-105">
         {/* Purple / blue glow behind the arc */}
         <div
-          className="absolute bottom-0 left-1/2 h-[260px] w-[900px] -translate-x-1/2 rounded-full blur-[100px]"
+          className="absolute bottom-0 left-1/2 h-65 w-225 -translate-x-1/2 rounded-full blur-[100px]"
           style={{
             background:
               "radial-gradient(ellipse at center, rgba(99,102,241,0.25) 0%, rgba(30,109,181,0.12) 50%, transparent 80%)",
@@ -294,7 +294,7 @@ export default function About() {
 
         {/* Curved horizon line */}
         <svg
-          className="absolute bottom-0 left-1/2 w-[120%] max-w-[1400px] -translate-x-1/2"
+          className="absolute bottom-0 left-1/2 w-[120%] max-w-350 -translate-x-1/2"
           viewBox="0 0 1400 120"
           fill="none"
           preserveAspectRatio="none"
@@ -374,7 +374,7 @@ export default function About() {
         <div className="mt-16">
           <div
             ref={imageRef}
-            className="relative mx-auto h-[50vh] w-full overflow-hidden rounded-3xl will-change-[clip-path]"
+            className="relative mx-auto h-[50vh] w-full overflow-hidden rounded-3xl will-change-clip-path"
           >
             <Image
               src="/images/company/about.webp"
@@ -383,7 +383,7 @@ export default function About() {
               className="object-cover"
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-secondary/60 via-transparent to-transparent" />
             <div className="absolute bottom-8 left-8 z-10">
               <span
                 className="text-sm font-semibold tracking-widest text-white/60"

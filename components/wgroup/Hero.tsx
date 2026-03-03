@@ -15,7 +15,7 @@ gsap.registerPlugin(ScrollTrigger);
 function BrainVisual() {
   return (
     <div className="brain-visual pointer-events-none absolute inset-0 flex items-center justify-center">
-      <div className="relative h-[500px] w-[500px] sm:h-[600px] sm:w-[600px] lg:h-[700px] lg:w-[700px]">
+      <div className="relative h-125 w-125 sm:h-150 sm:w-150 lg:h-175 lg:w-175">
         {/* Left hemisphere - Analytical (blue, geometric) */}
         <div className="brain-left absolute left-0 top-1/2 h-[85%] w-[50%] -translate-y-1/2 overflow-hidden rounded-l-full">
           <div
@@ -63,7 +63,7 @@ function BrainVisual() {
         </div>
 
         {/* Center divider line */}
-        <div className="absolute left-1/2 top-[10%] h-[80%] w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-white/20 to-transparent" />
+        <div className="absolute left-1/2 top-[10%] h-[80%] w-px -translate-x-1/2 bg-linear-to-b from-transparent via-white/20 to-transparent" />
 
         {/* Outer glow ring */}
         <div
@@ -221,7 +221,7 @@ export default function Hero() {
         <BrainVisual />
 
         <div
-          className="pointer-events-none absolute inset-0 opacity-[0.02]"
+          className="pointer-events-none absolute inset-0 opacity-2"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)",
@@ -238,7 +238,7 @@ export default function Hero() {
           </h1>
 
           <h1
-            className="hero-line-2 mt-2 text-center text-[clamp(2.5rem,7vw,5.5rem)] leading-[1] text-white"
+            className="hero-line-2 mt-2 text-center text-[clamp(2.5rem,7vw,5.5rem)] leading-none text-white"
             style={{
               fontFamily: "var(--font-instrument), Georgia, serif",
               fontStyle: "italic",
@@ -279,7 +279,7 @@ export default function Hero() {
 
             <Link
               href="/contact"
-              className="group inline-flex h-14 items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-8 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/[0.12] sm:text-base"
+              className="group inline-flex h-14 items-center gap-2 rounded-full border border-white/20 bg-white/6 px-8 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-white/30 hover:bg-white/12 sm:text-base"
               style={{
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
                 fontWeight: 600,
@@ -293,7 +293,7 @@ export default function Hero() {
       </div>
 
 
-      <h1 className="pointer-events-none absolute bottom-5 right-2 z-[5] select-none text-[8vw] font-black tracking-tight text-white">
+      <h1 className="pointer-events-none absolute bottom-5 right-2 z-5 select-none text-[8vw] font-black tracking-tight text-white">
         WGroup
       </h1>
     </div>
