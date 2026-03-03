@@ -6,24 +6,29 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Code2, Palette, Lightbulb, Handshake } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const cards = [
-  { key: "servicesTitle", icon: Code2, color: "#0891b2" },
-  { key: "visualApproach", icon: Palette, color: "#6366f1" },
-  { key: "innovation", icon: Lightbulb, color: "#f59e0b" },
-  { key: "togetherSuccess", icon: Handshake, color: "#0d9488" },
+  { key: "servicesTitle", descKey: "servicesTitleDesc", icon: Code2, color: "#0891b2" },
+  { key: "visualApproach", descKey: "visualApproachDesc", icon: Palette, color: "#6366f1" },
+  { key: "innovation", descKey: "innovationDesc", icon: Lightbulb, color: "#f59e0b" },
+  { key: "togetherSuccess", descKey: "togetherSuccessDesc", icon: Handshake, color: "#0d9488" },
 ] as const;
 
 function ServiceCard({
   icon: Icon,
   color,
   title,
+  description,
+  number,
 }: {
   icon: React.ElementType;
   color: string;
   title: string;
+  description: string;
+  number: number;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
@@ -77,30 +82,26 @@ function ServiceCard({
 
   return (
     <div
-      className="wc-card"
+      className="warticode-block"
       style={{ perspective: "800px" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <div
         ref={cardRef}
-        className="group relative flex h-full flex-col items-center overflow-hidden rounded-2xl p-8 text-center shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
+        className="group relative h-full overflow-hidden rounded-2xl p-7 shadow-xl will-change-transform hover:shadow-2xl"
         style={{
           transformStyle: "preserve-3d",
-          background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}12, rgba(255,255,255,0.03))`,
+          background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
           backdropFilter: "blur(12px)",
-          border: `1px solid rgba(255,255,255,0.07)`,
-          boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
+          border: "1px solid rgba(255,255,255,0.07)",
+          boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
         }}
       >
         {/* Corner glow */}
         <div
           className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl"
           style={{ background: `${color}15` }}
-        />
-        <div
-          className="pointer-events-none absolute -bottom-8 -left-8 h-32 w-32 rounded-full blur-3xl opacity-50"
-          style={{ background: `${color}10` }}
         />
 
         {/* Mouse-follow glow */}
@@ -113,14 +114,29 @@ function ServiceCard({
         {/* Hover shimmer */}
         <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <div className="relative z-10" style={{ transform: "translateZ(20px)" }}>
+        <div
+          className="relative z-10 flex flex-col items-center text-center"
+          style={{ transform: "translateZ(15px)" }}
+        >
+          {/* Numbered badge - top left */}
+          <div className="absolute left-0 top-0">
+            <span
+              className="text-xs font-bold tracking-wider"
+              style={{ color: `${color}60` }}
+            >
+              {String(number).padStart(2, "0")}
+            </span>
+          </div>
+
+          {/* Icon */}
           <div
-            className="wc-icon mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl"
+            className="warticode-icon mb-4 flex h-14 w-14 items-center justify-center rounded-xl"
             style={{ background: `${color}15` }}
           >
-            <Icon className="h-8 w-8" style={{ color }} />
+            <Icon className="h-7 w-7" style={{ color }} />
           </div>
-          <h2 className="text-lg font-bold text-foreground">{title}</h2>
+          <h3 className="mb-2 text-lg font-bold text-foreground">{title}</h3>
+          <p className="text-sm leading-relaxed text-muted">{description}</p>
         </div>
       </div>
     </div>
@@ -133,7 +149,7 @@ export default function WarticodePage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".wc-card", {
+      gsap.from(".warticode-block", {
         y: 60,
         opacity: 0,
         rotationY: -15,
@@ -142,13 +158,13 @@ export default function WarticodePage() {
         ease: "back.out(1.2)",
         force3D: true,
         scrollTrigger: {
-          trigger: ".wc-card",
+          trigger: ".warticode-block",
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
       });
 
-      gsap.utils.toArray<HTMLElement>(".wc-icon").forEach((icon) => {
+      gsap.utils.toArray<HTMLElement>(".warticode-icon").forEach((icon) => {
         gsap.to(icon, {
           y: -5,
           duration: 2,
@@ -175,15 +191,22 @@ export default function WarticodePage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("subtitle")} heroImage="/images/brands/warticode.webp">
+    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/brands/warticode.webp">
       <div ref={sectionRef}>
         <p className="page-content-block mb-12 text-lg leading-relaxed text-muted">
           {t("p1")}
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2">
-          {cards.map(({ key, icon, color }) => (
-            <ServiceCard key={key} icon={icon} color={color} title={t(key)} />
+          {cards.map(({ key, descKey, icon, color }, i) => (
+            <ServiceCard
+              key={key}
+              icon={icon}
+              color={color}
+              title={t(key)}
+              description={t(descKey)}
+              number={i + 1}
+            />
           ))}
         </div>
 
@@ -199,6 +222,12 @@ export default function WarticodePage() {
           <p className="relative z-10 text-lg font-medium italic leading-relaxed text-white/90">
             {t("cta")}
           </p>
+          <Link
+            href="/contact"
+            className="relative z-10 mt-6 inline-block rounded-full border border-white/20 bg-white/[0.06] px-8 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.12] hover:border-white/30 hover:-translate-y-0.5"
+          >
+            {t("ctaButton")}
+          </Link>
         </div>
       </div>
     </PageLayout>

@@ -5,32 +5,43 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lottie from "lottie-react";
 import PageLayout from "@/components/layout/PageLayout";
-import {
-  Globe,
-  Award,
-  Users,
-  Target,
-  ArrowRight,
-} from "@/components/icons";
+import { ArrowRight } from "@/components/icons";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ---------- 3D tilt stat card ---------- */
+const statLotties = [
+  "/lottie/target.json",      // Globe/Countries → target (crosshair/global)
+  "/lottie/lightbulb.json",   // Award/Founded → lightbulb (innovation)
+  "/lottie/trending-up.json", // Users/Clients → trending-up (growth)
+  "/lottie/target.json",      // Target/IATF → target (precision)
+] as const;
+
+/* ---------- 3D tilt stat card with Lottie ---------- */
 function StatItem({
-  icon: Icon,
+  lottie,
   value,
   label,
   color,
 }: {
-  icon: React.ElementType;
+  lottie: string;
   value: string;
   label: string;
   color: string;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
+  const lottieWrapRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const [animationData, setAnimationData] = useState<object | null>(null);
+
+  useEffect(() => {
+    fetch(lottie)
+      .then((res) => res.json())
+      .then(setAnimationData)
+      .catch(() => {});
+  }, [lottie]);
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
@@ -61,6 +72,14 @@ function StatItem({
           overwrite: "auto",
         });
       }
+
+      if (lottieWrapRef.current) {
+        gsap.to(lottieWrapRef.current, {
+          scale: 1.15,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      }
     },
     []
   );
@@ -77,6 +96,13 @@ function StatItem({
     });
     if (glowRef.current) {
       gsap.to(glowRef.current, { opacity: 0, duration: 0.4 });
+    }
+    if (lottieWrapRef.current) {
+      gsap.to(lottieWrapRef.current, {
+        scale: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      });
     }
   }, []);
 
@@ -110,13 +136,13 @@ function StatItem({
         />
 
         <div
-          className="stat-icon mx-auto mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl"
-          style={{
-            background: `${color}15`,
-            transform: "translateZ(30px)",
-          }}
+          ref={lottieWrapRef}
+          className="stat-icon mx-auto mb-4 h-14 w-14"
+          style={{ transform: "translateZ(30px)" }}
         >
-          <Icon className="h-7 w-7" style={{ color }} />
+          {animationData && (
+            <Lottie animationData={animationData} loop autoplay className="h-full w-full" />
+          )}
         </div>
         <div style={{ transform: "translateZ(20px)" }}>
           <p className="text-3xl font-extrabold text-foreground">{value}</p>
@@ -193,54 +219,53 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("p1")} heroImage="/images/company/about.webp">
+    <PageLayout title={t("title")} subtitle={t("p1")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/company/about.webp">
       <div ref={sectionRef}>
         {/* Stats grid */}
         <div className="page-content-block mb-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
-          <StatItem
-            icon={Globe}
-            value="40+"
-            label="Countries"
-            color="#1E6DB5"
-          />
-          <StatItem
-            icon={Award}
-            value="2015"
-            label="Founded"
-            color="#0891b2"
-          />
-          <StatItem
-            icon={Users}
-            value="500+"
-            label="Clients"
-            color="#0d9488"
-          />
-          <StatItem
-            icon={Target}
-            value="IATF"
-            label="16949 Certified"
-            color="#6366f1"
-          />
+          {[
+            { value: "40+", label: "Countries", color: "#1E6DB5" },
+            { value: "2015", label: "Founded", color: "#0891b2" },
+            { value: "500+", label: "Clients", color: "#0d9488" },
+            { value: "IATF", label: "16949 Certified", color: "#6366f1" },
+          ].map((stat, i) => (
+            <StatItem
+              key={i}
+              lottie={statLotties[i]}
+              value={stat.value}
+              label={stat.label}
+              color={stat.color}
+            />
+          ))}
         </div>
 
-        {/* Content paragraphs */}
+        {/* Content paragraphs - alternating style */}
         <div className="page-content-block space-y-6">
-          <p className="about-paragraph text-lg leading-relaxed text-muted">
-            {t("p2")}
-          </p>
-          <p className="about-paragraph text-lg leading-relaxed text-muted">
-            {t("p3")}
-          </p>
-          <p className="about-paragraph text-lg leading-relaxed text-muted">
-            {t("p4")}
-          </p>
-          <p className="about-paragraph text-lg leading-relaxed text-muted">
-            {t("p5")}
-          </p>
-          <p className="about-paragraph text-lg leading-relaxed text-muted">
-            {t("p6")}
-          </p>
+          {[t("p2"), t("p3"), t("p4"), t("p5"), t("p6")].map((text, i) => (
+            i % 2 === 1 ? (
+              /* Highlighted glassmorphism card */
+              <div
+                key={i}
+                className="about-paragraph group relative overflow-hidden rounded-2xl py-6 px-7 sm:px-8"
+                style={{
+                  background: "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(255,255,255,0.03))",
+                  border: "1px solid rgba(30,109,181,0.12)",
+                  boxShadow: "0 8px 30px -8px rgba(0,0,0,0.15)",
+                }}
+              >
+                {/* Subtle corner glow */}
+                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/8 blur-3xl" />
+                <p className="relative z-10 text-lg leading-relaxed text-muted">{text}</p>
+              </div>
+            ) : (
+              /* Normal paragraph */
+              <p key={i} className="about-paragraph text-lg leading-relaxed text-muted">{text}</p>
+            )
+          ))}
         </div>
+
+        {/* Gradient divider before CTA */}
+        <div className="mx-auto my-10 h-px w-2/3 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
         {/* CTA */}
         <div className="about-cta mt-16 text-center">

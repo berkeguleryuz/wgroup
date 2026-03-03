@@ -195,6 +195,8 @@
   },
   "about": {
     "title": "About",
+    "eyebrow": "ABOUT US",
+    "titleHighlight": "Story",
     "subtitle": "Wgroup GmbH",
     "p1": "The establishment of Wgroup GmbH began in 2015 as an initiative of TUV Sud's business development and has today transformed into a success recognized globally. Formed through the strategic merger of SAS engineering and software company with Work Academy and Work Production companies, Wgroup GmbH has attained a leading position in the automotive industry. This merger has laid the foundation for the company's capacity to develop innovative solutions tailored to the industry's needs.",
     "p2": "Our founding partners, Sibel Kaya and Algan Alper Sen, embody the spirit of creativity and analytical thinking upon which the company is built. The combination of Kaya's conservatory education and Sen's background in automotive and engineering has laid the groundwork for a work environment where creative and analytical intelligence work in harmony to achieve success.",
@@ -206,6 +208,8 @@
   },
   "mission": {
     "title": "Our Mission",
+    "eyebrow": "OUR MISSION",
+    "titleHighlight": "Vision",
     "p1": "The mission of Wgroup GmbH is founded upon the fundamental principles of innovation and the pursuit of excellence. This mission emphasizes that sustainable success in the automotive industry can be achieved through the dynamic integration of creativity and analytical thought. From the inception of our company, this integration has deeply ingrained itself among our employees, merging knowledge and skills from various disciplines. This multidisciplinary approach shapes our process for discovering and developing innovative solutions. \"Artistic creativity and engineering-based analytical thinking form the DNA of our company and drive us towards developing innovative solutions.\"",
     "p2": "Sustainability is a cornerstone of our business strategy; we are committed to investing in the future of our sector from economic, environmental, and industrial perspectives. Our quest to produce innovative solutions for our clients and partners is a driving force that propels us forward, supporting our objective of achieving mutual success and value creation in our customer relationships.",
     "p3": "Knowledge sharing and learning are the foundational pillars of our leadership vision. With our sensitivity to technological innovations and industry trends, we aim to lead in areas such as education and software development. This pioneering spirit allows us to contribute to the broader industry by sharing our knowledge and experiences.",
@@ -214,6 +218,8 @@
   },
   "partner": {
     "title": "Partner",
+    "eyebrow": "PARTNERS",
+    "titleHighlight": "Network",
     "subtitle": "Strategic Partners",
     "description": "Collaboration with the institutions and organizations listed below represents the critical importance in achieving our objectives.",
     "berlinPartner": {
@@ -235,6 +241,8 @@
   },
   "socialResponsibility": {
     "title": "Social Responsibility",
+    "eyebrow": "RESPONSIBILITY",
+    "titleHighlight": "Impact",
     "subtitle": "Our Commitment to Inclusive and Sustainable Social Responsibility",
     "description": "Our corporation anchors its social responsibility framework on three principal pillars: gender equality, sustainability, and environmental consciousness. These principles profoundly inform our operational ethos and our endeavors to contribute meaningfully to society.",
     "genderEquality": {
@@ -253,6 +261,8 @@
   },
   "career": {
     "title": "Career",
+    "eyebrow": "CAREERS",
+    "titleHighlight": "Team",
     "subtitle": "Welcome, Innovators and Game Changers!",
     "p1": "We, WGroup GmbH, are more than just a team, we are a family based on diversity, equality and inclusion. We combine gender equality with the belief in fair and equal opportunities for all, and sustainability and environmental awareness with the desire to leave a better world for future generations. These values are at the forefront of our every decision, every project and the journey you will take with us.",
     "p2": "With us, you will find opportunities to grow not only in your career, but also in your personal development. At work, you can share your innovative ideas, develop sustainable projects and lead social change. Because we believe that each individual's unique contribution plays a critical role in achieving our shared goals.",
@@ -260,10 +270,13 @@
     "p4": "We look forward to having you with us on this journey. We believe that together, we will make not only our company, but also the world a better place.",
     "p5": "Welcome and let's have new beginnings!",
     "contactEmail": "dreamteamcreator@wgroupgmbh.eu",
-    "contactLabel": "Contact"
+    "contactLabel": "Interested in joining our team?",
+    "contactCta": "Get in Touch"
   },
   "contact": {
     "title": "Contact Us",
+    "eyebrow": "CONTACT",
+    "titleHighlight": "Touch",
     "city": "Berlin",
     "hqLab": "HQ&Lab",
     "building": "Ludwig Erhard Haus",
@@ -278,6 +291,8 @@
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",
+    "eyebrow": "FAQ",
+    "titleHighlight": "Answers",
     "q1": {
       "question": "How do Wedu Factory's courses contribute?",
       "answer": "Wedu Factory's courses provide various benefits to both individuals and organizations. For individuals, these courses offer an opportunity to advance their careers and learn about the latest technological developments and best practices in the automotive industry. Wedu Factory's courses support the continuous development of the workforce, thereby enhancing performance. Specially designed training solutions directly contribute to business goals and elevate the skills and knowledge of employees. With Wedu Factory's courses, we help both individuals and organizations acquire the competencies necessary for a successful future."
@@ -317,6 +332,8 @@
   },
   "weduFactory": {
     "title": "WEdu Factory",
+    "eyebrow": "WEDU FACTORY",
+    "titleHighlight": "Academy",
     "p1": "Wedu Factory is a qualified training institution with experienced trainers who have many years of training experience in the automotive industry and a command of all the problems in the field. Operating as part of the Berlin-based Wgroup brand, Wedu Factory has a special focus on the automotive industry and aims to train qualified personnel in accordance with IATF 16949 quality standards.",
     "p2": "Expert instructors understand the requirements of each area of the industry, creating the most effective content and providing participants with industry best practices. This comprehensive program is specifically designed to meet the needs of employees and companies in the automotive industry. The main objective of the program is to provide participants with a full command of IATF 16949 quality standards, enabling them to learn and apply industry best practices at the highest level.",
     "p3": "Wedu Factory offers individual participants the opportunity to take a step forward in their careers, while corporate companies can support the continuous development of their workforce and achieve their company goals more effectively.",
@@ -330,25 +347,39 @@
   },
   "warticode": {
     "title": "WArtiCode",
+    "eyebrow": "WARTICODE",
+    "titleHighlight": "Solutions",
     "subtitle": "Leading in Education and Software Solutions in the Automotive Sector",
     "p1": "WArtiCode offers a unique approach tailored to the automotive industry, blending technology and art in education and software solutions. By developing customized solutions to address the challenges our clients face, we make training processes and software development projects more impactful, understandable, and lasting. By combining the possibilities offered by technology and art, we push the boundaries of both education and software solutions in the automotive industry.",
     "servicesTitle": "Our Comprehensive Services",
+    "servicesTitleDesc": "End-to-end education and software development tailored for the automotive sector.",
     "visualApproach": "Create a Difference with Visual and Artistic Approaches",
+    "visualApproachDesc": "We blend visual storytelling and artistic design to make learning memorable and impactful.",
     "innovation": "Walk into the Future with Innovation",
+    "innovationDesc": "Cutting-edge technologies and forward-thinking strategies to keep you ahead of the curve.",
     "togetherSuccess": "Towards Success Together",
+    "togetherSuccessDesc": "Collaborative partnerships that align your goals with our expertise for lasting results.",
+    "ctaButton": "Get in Touch",
     "cta": "Are you ready to initiate an innovative transformation in your education and software solutions with WArtiCode?"
   },
   "wqualitysphere": {
     "title": "WQualitySphere",
+    "eyebrow": "WQUALITYSPHERE",
+    "titleHighlight": "Quality",
     "subtitle": "The Key to Your Strategic Transformation in the Automotive Industry",
     "p1": "If you want to achieve sustainable success and leadership in the automotive market, WQualitySphere's comprehensive consulting services are for you. In an industry that requires a deep understanding of the dynamics of the automotive supply chain, we are here to provide the strategic transformation your company needs.",
     "servicesTitle": "Our Comprehensive Services",
+    "servicesDesc": "From IATF 16949 implementation to supplier audits and process optimization — we deliver end-to-end quality consulting tailored to automotive excellence.",
     "whyTitle": "Why WQualitySphere?",
+    "whyDesc": "Decades of hands-on experience in the automotive supply chain, combined with a forward-thinking methodology that drives measurable, lasting results.",
     "letsWorkTogether": "Let's Work Together",
+    "letsWorkTogetherDesc": "Partner with our expert consultants to define a strategic roadmap, strengthen your quality culture, and accelerate your competitive advantage.",
     "getStarted": "Get Started"
   },
   "productsIndividual": {
     "title": "Automotive Professionals - INDIVIDUAL",
+    "coursesTitle": "Courses",
+    "modulesTitle": "Training Modules",
     "p1": "The Digital Academy for Automotive Professionals is a digital learning platform born from the unique combination of industry and art. It is designed to meet international standards for global automotive markets. It offers users both practical and interactive learning experiences, allowing them to learn about the latest technological developments in the industry and enhance their skills. This academy aims to meet the qualified workforce needs of the automotive sector and facilitate access to job opportunities.",
     "p2": "The Academy is an excellent opportunity for individual participants to advance their careers and enhance their current knowledge and skills. Graduates can compete in the industry by possessing the best knowledge and skills in automotive quality systems, meeting international accepted quality standards, and providing a different perspective. Offering education in multiple languages, this platform provides comprehensive education about automotive to individual and corporate participants.",
     "p3": "Moreover, this platform is equipped with an HR development tracking system. With this system, users' progress in the education process can be tracked and reported in detail. This allows individual users to monitor their own progress.",
@@ -449,6 +480,8 @@
   },
   "productsCorporate": {
     "title": "Automotive Professionals - CORPORATE",
+    "productsTitle": "Products",
+    "modulesTitle": "Training Modules",
     "p1": "The Digital Academy for Automotive Professionals is a digital learning platform born from the unique combination of industry and art. It is designed to meet international standards for global automotive markets. It offers users both practical and interactive learning experiences, allowing them to learn about the latest technological developments in the industry and enhance their skills. This academy aims to meet the qualified workforce needs of the automotive sector and facilitate access to job opportunities.",
     "p2": "Corporate companies can invest in their employees' education, develop talent internally, and gain a competitive advantage using this platform. Graduates can compete in the industry by possessing the best knowledge and skills in automotive quality systems, meeting international accepted quality standards, and providing a different perspective. Offering education in multiple languages, this platform provides comprehensive education about automotive to individual and corporate participants.",
     "p3": "Moreover, this platform is equipped with an HR development tracking system. With this system, users' progress in the education process can be tracked and reported in detail. Corporate users can evaluate their employees' education results and development. This feature facilitates users in achieving their learning goals and helps organizations to conduct their talent management strategies more effectively.",
@@ -610,6 +643,8 @@
   },
   "blog": {
     "title": "Blog",
+    "eyebrow": "BLOG",
+    "titleHighlight": "Insights",
     "allArticles": "All Articles",
     "articles": {
       "iatf16949-modern-approaches": {
@@ -722,6 +757,7 @@
   },
   "impressum": {
     "title": "Legal Notice",
+    "eyebrow": "IMPRESSUM",
     "subtitle": "Information according to § 5 TMG (German Telemedia Act)",
     "companyTitle": "Information according to § 5 TMG",
     "companyName": "Wgroup GmbH",
@@ -751,6 +787,7 @@
   },
   "datenschutz": {
     "title": "Privacy Policy",
+    "eyebrow": "DATENSCHUTZ",
     "subtitle": "Information on data protection according to GDPR",
     "introTitle": "1. Privacy at a Glance",
     "introText": "The following notes provide a simple overview of what happens to your personal data when you visit our website. Personal data is any data that can be used to personally identify you.",
@@ -783,6 +820,7 @@
   },
   "agb": {
     "title": "Terms and Conditions",
+    "eyebrow": "AGB",
     "subtitle": "General Terms and Conditions of Wgroup GmbH",
     "scopeTitle": "§ 1 Scope",
     "scopeText": "These General Terms and Conditions (hereinafter \"GTC\") apply to all business relationships between Wgroup GmbH, Trappenpfad 33, 12351 Berlin (hereinafter \"Provider\") and the customer (hereinafter \"Customer\"). The version valid at the time of conclusion of the contract shall apply.",
@@ -803,6 +841,7 @@
   },
   "cookiePolicy": {
     "title": "Cookie Policy",
+    "eyebrow": "COOKIES",
     "subtitle": "Information about our use of cookies",
     "whatTitle": "What are Cookies?",
     "whatText": "Cookies are small text files that are stored on your device by websites when you visit them. They are widely used to make websites work or work more efficiently, as well as to provide information to website operators.",

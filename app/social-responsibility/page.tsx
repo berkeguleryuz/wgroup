@@ -10,117 +10,94 @@ import PageLayout from "@/components/layout/PageLayout";
 gsap.registerPlugin(ScrollTrigger);
 
 const PILLARS = [
-  { key: "genderEquality", icon: Heart, color: "#e11d48" },
-  { key: "sustainability", icon: Leaf, color: "#16a34a" },
-  { key: "environment", icon: Globe, color: "#0891b2" },
+  { key: "genderEquality", icon: Heart },
+  { key: "sustainability", icon: Leaf },
+  { key: "environment", icon: Globe },
 ] as const;
+
+function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
+  const color = "rgba(30,109,181,0.4)";
+  const styles: Record<string, React.CSSProperties> = {
+    tl: { top: 0, left: 0, borderTop: `2px solid ${color}`, borderLeft: `2px solid ${color}` },
+    tr: { top: 0, right: 0, borderTop: `2px solid ${color}`, borderRight: `2px solid ${color}` },
+    bl: { bottom: 0, left: 0, borderBottom: `2px solid ${color}`, borderLeft: `2px solid ${color}` },
+    br: { bottom: 0, right: 0, borderBottom: `2px solid ${color}`, borderRight: `2px solid ${color}` },
+  };
+  return <span className="pointer-events-none absolute h-6 w-6" style={styles[position]} />;
+}
 
 function PillarCard({
   icon: Icon,
-  color,
   title,
   description,
 }: {
   icon: React.ElementType;
-  color: string;
   title: string;
   description: string;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
 
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!cardRef.current) return;
-      const rect = cardRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      gsap.to(cardRef.current, {
-        rotateX: ((y - centerY) / centerY) * -6,
-        rotateY: ((x - centerX) / centerX) * 6,
-        transformPerspective: 800,
-        scale: 1.02,
-        duration: 0.3,
-        ease: "power2.out",
-        overwrite: "auto",
-      });
-
-      if (glowRef.current) {
-        gsap.to(glowRef.current, {
-          x: x - 100,
-          y: y - 100,
-          opacity: 0.7,
-          duration: 0.3,
-          overwrite: "auto",
-        });
-      }
-    },
-    []
-  );
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    gsap.to(cardRef.current, {
+      rotateX: ((y - centerY) / centerY) * -6,
+      rotateY: ((x - centerX) / centerX) * 6,
+      transformPerspective: 800,
+      scale: 1.02,
+      duration: 0.3,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+  }, []);
 
   const handleMouseLeave = useCallback(() => {
     if (cardRef.current) {
       gsap.to(cardRef.current, {
-        rotateX: 0,
-        rotateY: 0,
-        scale: 1,
-        duration: 0.6,
-        ease: "elastic.out(1, 0.5)",
+        rotateX: 0, rotateY: 0, scale: 1,
+        duration: 0.6, ease: "elastic.out(1, 0.5)",
       });
-    }
-    if (glowRef.current) {
-      gsap.to(glowRef.current, { opacity: 0, duration: 0.4 });
     }
   }, []);
 
   return (
-    <div
-      className="sr-card"
-      style={{ perspective: "800px" }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="pillar-block" style={{ perspective: "800px" }} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave}>
       <div
         ref={cardRef}
-        className="group relative overflow-hidden rounded-2xl p-8 shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
-        style={{
-          transformStyle: "preserve-3d",
-          background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
-          backdropFilter: "blur(12px)",
-          border: `1px solid rgba(255,255,255,0.07)`,
-          boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
-        }}
+        className="group relative h-full p-8 will-change-transform"
+        style={{ transformStyle: "preserve-3d" }}
       >
-        {/* Corner glow */}
-        <div
-          className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full blur-3xl"
-          style={{ background: `linear-gradient(135deg, ${color}15, transparent)` }}
-        />
+        {/* Corner brackets — all primary */}
+        <CornerBracket position="tl" />
+        <CornerBracket position="tr" />
+        <CornerBracket position="bl" />
+        <CornerBracket position="br" />
 
-        {/* Mouse-follow glow */}
-        <div
-          ref={glowRef}
-          className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0 blur-3xl"
-          style={{ background: `${color}20` }}
-        />
+        {/* Corner glow */}
+        <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
 
         {/* Hover shimmer */}
         <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <div className="relative z-10 flex gap-6" style={{ transform: "translateZ(15px)" }}>
-          <div
-            className="sr-icon flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
-            style={{ background: `${color}15` }}
-          >
-            <Icon className="h-7 w-7" style={{ color }} />
+        <div className="relative z-10 flex flex-col items-center text-center" style={{ transform: "translateZ(20px)" }}>
+          {/* Icon with CSS shimmer */}
+          <div className="pillar-icon relative mb-5 flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl bg-primary/10">
+            <Icon className="relative z-10 h-7 w-7 text-primary" />
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background: "linear-gradient(105deg, transparent 30%, rgba(30,109,181,0.25) 50%, transparent 70%)",
+                backgroundSize: "200% 100%",
+                animation: "iconShimmer 3s ease-in-out infinite",
+              }}
+            />
           </div>
-          <div>
-            <h2 className="mb-3 text-xl font-bold text-foreground">{title}</h2>
-            <p className="leading-relaxed text-muted">{description}</p>
-          </div>
+          <h2 className="mb-3 text-lg font-bold text-foreground">{title}</h2>
+          <p className="text-sm leading-relaxed text-muted">{description}</p>
         </div>
       </div>
     </div>
@@ -133,29 +110,19 @@ export default function SocialResponsibilityPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".sr-card", {
+      gsap.from(".pillar-block", {
         y: 60,
         opacity: 0,
         rotationX: -12,
-        stagger: 0.15,
+        stagger: 0.12,
         duration: 0.8,
         ease: "back.out(1.2)",
         force3D: true,
         scrollTrigger: {
-          trigger: ".sr-card",
+          trigger: ".pillar-block",
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
-      });
-
-      gsap.utils.toArray<HTMLElement>(".sr-icon").forEach((icon) => {
-        gsap.to(icon, {
-          y: -5,
-          duration: 2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
       });
 
       gsap.from(".sr-conclusion", {
@@ -175,18 +142,18 @@ export default function SocialResponsibilityPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("subtitle")} heroImage="/images/company/social-responsibility.webp">
+    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/company/social-responsibility.webp">
       <div ref={sectionRef}>
         <p className="page-content-block mb-12 text-lg leading-relaxed text-muted">
           {t("description")}
         </p>
 
-        <div className="space-y-6">
-          {PILLARS.map(({ key, icon, color }) => (
+        {/* Pillar cards - 3-column grid */}
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {PILLARS.map(({ key, icon }) => (
             <PillarCard
               key={key}
               icon={icon}
-              color={color}
               title={t(`${key}.title`)}
               description={t(`${key}.description`)}
             />
@@ -205,6 +172,14 @@ export default function SocialResponsibilityPage() {
             {t("conclusion")}
           </p>
         </div>
+
+        {/* Keyframes */}
+        <style jsx global>{`
+          @keyframes iconShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+          }
+        `}</style>
       </div>
     </PageLayout>
   );

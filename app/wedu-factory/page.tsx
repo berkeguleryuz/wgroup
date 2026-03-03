@@ -22,10 +22,12 @@ function ContentCard({
   icon: Icon,
   color,
   text,
+  reverse = false,
 }: {
   icon: React.ElementType;
   color: string;
   text: string;
+  reverse?: boolean;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
   const glowRef = useRef<HTMLDivElement>(null);
@@ -79,25 +81,25 @@ function ContentCard({
 
   return (
     <div
-      className="wf-card"
+      className="wf-block"
       style={{ perspective: "800px" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <div
         ref={cardRef}
-        className="group relative overflow-hidden rounded-2xl p-7 shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
+        className="group relative overflow-hidden rounded-2xl p-7 shadow-xl will-change-transform hover:shadow-2xl"
         style={{
           transformStyle: "preserve-3d",
-          background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
+          background: `linear-gradient(${reverse ? '225deg' : '135deg'}, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
           backdropFilter: "blur(12px)",
-          border: `1px solid rgba(255,255,255,0.07)`,
-          boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
+          border: "1px solid rgba(255,255,255,0.07)",
+          boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
         }}
       >
-        {/* Corner glow */}
+        {/* Corner glow - position depends on direction */}
         <div
-          className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl"
+          className={`pointer-events-none absolute ${reverse ? '-left-12 -top-12' : '-right-12 -top-12'} h-40 w-40 rounded-full blur-3xl`}
           style={{ background: `${color}15` }}
         />
 
@@ -111,14 +113,14 @@ function ContentCard({
         {/* Hover shimmer */}
         <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <div className="relative z-10 flex gap-5" style={{ transform: "translateZ(15px)" }}>
+        <div className={`relative z-10 flex gap-5 ${reverse ? 'flex-row-reverse text-right' : ''}`} style={{ transform: "translateZ(15px)" }}>
           <div
-            className="wf-icon flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl"
+            className="wf-icon flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
             style={{ background: `${color}15` }}
           >
-            <Icon className="h-6 w-6" style={{ color }} />
+            <Icon className="h-7 w-7" style={{ color }} />
           </div>
-          <p className="text-base leading-relaxed text-muted">{text}</p>
+          <p className="text-lg leading-relaxed text-muted">{text}</p>
         </div>
       </div>
     </div>
@@ -131,16 +133,16 @@ export default function WeduFactoryPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".wf-card", {
+      gsap.from(".wf-block", {
         y: 60,
         opacity: 0,
-        rotationX: -10,
-        stagger: 0.1,
+        rotationX: -12,
+        stagger: 0.12,
         duration: 0.8,
         ease: "back.out(1.2)",
         force3D: true,
         scrollTrigger: {
-          trigger: ".wf-card",
+          trigger: ".wf-block",
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
@@ -148,7 +150,7 @@ export default function WeduFactoryPage() {
 
       gsap.utils.toArray<HTMLElement>(".wf-icon").forEach((icon) => {
         gsap.to(icon, {
-          y: -4,
+          y: -5,
           duration: 2,
           repeat: -1,
           yoyo: true,
@@ -187,24 +189,39 @@ export default function WeduFactoryPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} heroImage="/images/brands/wedu-factory.webp">
+    <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/brands/wedu-factory.webp">
       <div ref={sectionRef}>
-        <div className="space-y-5">
-          {sections.map(({ icon, color, key }) => (
-            <ContentCard key={key} icon={icon} color={color} text={t(key)} />
+        <div className="space-y-2">
+          {sections.map(({ icon, color, key }, i) => (
+            <div key={key}>
+              <ContentCard
+                icon={icon}
+                color={color}
+                text={t(key)}
+                reverse={i % 2 === 1}
+              />
+              {/* Gradient divider between cards (not after last) */}
+              {i < sections.length - 1 && (
+                <div className="mx-auto my-4 h-px w-1/2 bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
+              )}
+            </div>
           ))}
         </div>
 
-        <div
-          className="wf-why relative mt-14 overflow-hidden rounded-2xl p-10 shadow-xl"
-          style={{
-            background: "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(30,109,181,0.08), rgba(255,255,255,0.03))",
-            border: "1px solid rgba(255,255,255,0.07)",
-            boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
-          }}
-        >
-          <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
-          <h2 className="relative z-10 text-2xl font-bold text-foreground">{t("whyTitle")}</h2>
+        {/* Why section with corner brackets */}
+        <div className="wf-why relative mt-12 mb-8 mx-auto max-w-2xl p-10">
+          {/* Corner brackets */}
+          <span className="pointer-events-none absolute left-0 top-0 h-6 w-6" style={{ borderTop: "2px solid var(--primary)", borderLeft: "2px solid var(--primary)" }} />
+          <span className="pointer-events-none absolute right-0 top-0 h-6 w-6" style={{ borderTop: "2px solid var(--primary)", borderRight: "2px solid var(--primary)" }} />
+          <span className="pointer-events-none absolute left-0 bottom-0 h-6 w-6" style={{ borderBottom: "2px solid var(--primary)", borderLeft: "2px solid var(--primary)" }} />
+          <span className="pointer-events-none absolute right-0 bottom-0 h-6 w-6" style={{ borderBottom: "2px solid var(--primary)", borderRight: "2px solid var(--primary)" }} />
+
+          <h2 className="text-center text-2xl font-bold text-foreground sm:text-3xl">
+            {t("whyTitle")}
+          </h2>
+          <p className="mt-3 text-center text-base text-muted">
+            {t("letsWorkTogether")}
+          </p>
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">

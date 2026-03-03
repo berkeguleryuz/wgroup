@@ -195,6 +195,8 @@
   },
   "about": {
     "title": "Hakkımızda",
+    "eyebrow": "HAKKIMIZDA",
+    "titleHighlight": "Hikaye",
     "subtitle": "Wgroup GmbH",
     "p1": "Wgroup GmbH'nin kuruluşu 2015 yılında TÜV Süd'ün iş geliştirme girişimi olarak başladı ve bugün küresel olarak tanınan bir başarıya dönüştü. SAS mühendislik ve yazılım şirketinin Work Academy ve Work Production şirketleriyle stratejik birleşmesiyle oluşan Wgroup GmbH, otomotiv sektöründe lider bir konuma ulaştı. Bu birleşme, şirketin sektörün ihtiyaçlarına yönelik yenilikçi çözümler geliştirme kapasitesinin temelini attı.",
     "p2": "Kurucu ortaklarımız Sibel Kaya ve Algan Alper Şen, şirketin üzerine kurulduğu yaratıcılık ve analitik düşünce ruhunu somutlaştırmaktadır. Kaya'nın konservatuvar eğitimi ile Şen'in otomotiv ve mühendislik geçmişinin kombinasyonu, yaratıcı ve analitik zekanın başarıya ulaşmak için uyum içinde çalıştığı bir çalışma ortamının temelini atmıştır.",
@@ -206,6 +208,8 @@
   },
   "mission": {
     "title": "Misyonumuz",
+    "eyebrow": "MİSYONUMUZ",
+    "titleHighlight": "Vizyon",
     "p1": "Wgroup GmbH'nin misyonu, yenilik ve mükemmellik arayışının temel ilkeleri üzerine kuruludur. Bu misyon, otomotiv sektöründe sürdürülebilir başarının yaratıcılık ve analitik düşüncenin dinamik entegrasyonu yoluyla elde edilebileceğini vurgulamaktadır. Şirketimizin kuruluşundan bu yana, bu entegrasyon çalışanlarımız arasında derinlemesine yer etmiş, çeşitli disiplinlerden bilgi ve becerileri birleştirmiştir. Bu çok disiplinli yaklaşım, yenilikçi çözümler keşfetme ve geliştirme sürecimizi şekillendirmektedir. \"Sanatsal yaratıcılık ve mühendislik tabanlı analitik düşünce, şirketimizin DNA'sını oluşturur ve bizi yenilikçi çözümler geliştirmeye doğru iter.\"",
     "p2": "Sürdürülebilirlik, iş stratejimizin temel taşıdır; ekonomik, çevresel ve endüstriyel perspektiflerden sektörümüzün geleceğine yatırım yapma taahhüdündeyiz. Müşterilerimiz ve ortaklarımız için yenilikçi çözümler üretme arayışımız, bizi ileriye taşıyan itici güçtür ve müşteri ilişkilerimizde karşılıklı başarı ve değer yaratma hedefimizi desteklemektedir.",
     "p3": "Bilgi paylaşımı ve öğrenme, liderlik vizyonumuzun temel direkleridir. Teknolojik yeniliklere ve sektör trendlerine duyarlılığımızla eğitim ve yazılım geliştirme gibi alanlarda liderlik etmeyi hedefliyoruz. Bu öncü ruh, bilgi ve deneyimlerimizi paylaşarak daha geniş sektöre katkı sağlamamıza olanak tanır.",
@@ -214,6 +218,8 @@
   },
   "partner": {
     "title": "Ortaklar",
+    "eyebrow": "ORTAKLAR",
+    "titleHighlight": "Ağ",
     "subtitle": "Stratejik Ortaklar",
     "description": "Aşağıda listelenen kurum ve kuruluşlarla işbirliği, hedeflerimize ulaşmadaki kritik önemi temsil etmektedir.",
     "berlinPartner": {
@@ -235,6 +241,8 @@
   },
   "socialResponsibility": {
     "title": "Sosyal Sorumluluk",
+    "eyebrow": "SORUMLULUK",
+    "titleHighlight": "Etki",
     "subtitle": "Kapsayıcı ve Sürdürülebilir Sosyal Sorumluluk Taahhüdümüz",
     "description": "Şirketimiz, sosyal sorumluluk çerçevesini üç temel direk üzerine kurmaktadır: cinsiyet eşitliği, sürdürülebilirlik ve çevre bilincidir. Bu ilkeler, operasyonel yaklaşımımızı ve topluma anlamlı katkıda bulunma çabalarımızı derinden bilgilendirmektedir.",
     "genderEquality": {
@@ -253,6 +261,8 @@
   },
   "career": {
     "title": "Kariyer",
+    "eyebrow": "KARİYER",
+    "titleHighlight": "Ekip",
     "subtitle": "Hoşgeldiniz, Yenilikçiler ve Oyun Değiştiriciler!",
     "p1": "Biz WGroup GmbH olarak sadece bir ekip değil, çeşitlilik, eşitlik ve kapsayıcılık temelli bir aileyiz. Cinsiyet eşitliğini herkes için adil ve eşit fırsatlara inanmayla, sürdürülebilirlik ve çevre bilincini ise gelecek nesillere daha iyi bir dünya bırakma arzusuyla birleştiriyoruz. Bu değerler, her kararımızın, her projemizin ve bizimle çıkacağınız yolculuğun ön saflarındadır.",
     "p2": "Bizimle sadece kariyerinizde değil, kişisel gelişiminizde de büyüme fırsatları bulacaksınız. İşte yenilikçi fikirlerinizi paylaşabilir, sürdürülebilir projeler geliştirebilir ve sosyal değişime öncülük edebilirsiniz. Çünkü her bireyin benzersiz katkısının ortak hedeflerimize ulaşmada kritik bir rol oynadığına inanıyoruz.",
@@ -260,10 +270,13 @@
     "p4": "Bu yolculukta sizi aramızda görmek için sabırsızlanıyoruz. Birlikte yalnızca şirketimizi değil, dünyayı da daha iyi bir yer yapacağımıza inanıyoruz.",
     "p5": "Hoşgeldiniz ve yeni başlangıçlar dileriz!",
     "contactEmail": "dreamteamcreator@wgroupgmbh.eu",
-    "contactLabel": "İletişim"
+    "contactLabel": "Ekibimize katılmak ister misiniz?",
+    "contactCta": "Bize Ulaşın"
   },
   "contact": {
     "title": "Bize Ulaşın",
+    "eyebrow": "İLETİŞİM",
+    "titleHighlight": "İletişim",
     "city": "Berlin",
     "hqLab": "Merkez ve Laboratuvar",
     "building": "Ludwig Erhard Haus",
@@ -278,6 +291,8 @@
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",
+    "eyebrow": "SSS",
+    "titleHighlight": "Cevaplar",
     "q1": {
       "question": "Wedu Factory eğitimleri nasıl katkı sağlıyor?",
       "answer": "Wedu Factory eğitimleri hem bireylere hem de kuruluşlara çeşitli faydalar sağlar. Bireyler için bu eğitimler, kariyerlerini ilerletme ve otomotiv sektöründeki en son teknolojik gelişmeleri ve en iyi uygulamaları öğrenme fırsatı sunar. Wedu Factory eğitimleri iş gücünün sürekli gelişmesini destekleyerek performansı arttırır. Özel olarak tasarlanmış eğitim çözümleri doğrudan iş hedeflerine katkı sağlar ve çalışanların beceri ve bilgilerini yükseltir. Wedu Factory eğitimleriyle, hem bireylerin hem de kuruluşların başarılı bir gelecek için gerekli yetkinlikleri edinmesine yardımcı oluyoruz."
@@ -317,6 +332,8 @@
   },
   "weduFactory": {
     "title": "WEdu Factory",
+    "eyebrow": "WEDU FACTORY",
+    "titleHighlight": "Akademi",
     "p1": "Wedu Factory, otomotiv sektöründe uzun yıllık eğitim deneyimine sahip ve sahadaki tüm sorunlara hakim deneyimli eğitimlere sahip nitelikli bir eğitim kuruluşudur. Berlin merkezli Wgroup markasının bir parçası olarak faaliyet gösteren Wedu Factory, otomotiv sektörüne özel bir odaklanma ile IATF 16949 kalite standartlarına uygun nitelikli personel yetiştirmeyi amaçlamaktadır.",
     "p2": "Uzman eğitimciler, sektörün her alanının gereksinimlerini anlayarak en etkili içeriği oluşturur ve katılımcılara sektördeki en iyi uygulamaları sunar. Bu kapsamlı program, otomotiv sektöründeki çalışanların ve şirketlerin ihtiyaçlarını karşılamak üzere özel olarak tasarlanmıştır. Programın temel amacı, katılımcılara IATF 16949 kalite standartları konusunda tam bir hakimiyet sağlayarak, sektörün en iyi uygulamalarını en üst düzeyde öğrenmelerini ve uygulamalarını sağlamaktır.",
     "p3": "Wedu Factory, bireysel katılımcılara kariyerlerinde bir adım ileriye atma fırsatı sunarken, kurumsal şirketler iş güçlerinin sürekli gelişmesini destekleyebilir ve şirket hedeflerine daha etkili bir şekilde ulaşabilir.",
@@ -330,25 +347,39 @@
   },
   "warticode": {
     "title": "WArtiCode",
+    "eyebrow": "WARTICODE",
+    "titleHighlight": "Çözümler",
     "subtitle": "Otomotiv Sektöründe Eğitim ve Yazılım Çözümlerinde Lider",
     "p1": "WArtiCode, otomotiv sektörüne özel, teknoloji ve sanatı eğitim ve yazılım çözümlerinde harmanlayan benzersiz bir yaklaşım sunmaktadır. Müşterilerimizin karşılaştığı zorlukları ele almak için özelleşmiş çözümler geliştirerek, eğitim süreçlerini ve yazılım geliştirme projelerini daha etkili, anlaşılır ve kalıcı hale getiriyoruz. Teknoloji ve sanatın sunduğu olanakları birleştirerek, otomotiv sektöründe hem eğitimin hem de yazılım çözümlerinin sınırlarını zorluyoruz.",
     "servicesTitle": "Kapsamlı Hizmetlerimiz",
+    "servicesTitleDesc": "Otomotiv sektörüne özel uçtan uca eğitim ve yazılım geliştirme hizmetleri.",
     "visualApproach": "Görsel ve Sanatsal Yaklaşımlarla Fark Yaratın",
+    "visualApproachDesc": "Öğrenmeyi akılda kalıcı ve etkili kılmak için görsel hikaye anlatımı ve sanatsal tasarımı harmanlıyoruz.",
     "innovation": "Yenilikle Geleceğe Yürüyün",
+    "innovationDesc": "Sizi bir adım önde tutacak son teknoloji çözümler ve ileri görüşlü stratejiler.",
     "togetherSuccess": "Birlikte Başarıya Doğru",
+    "togetherSuccessDesc": "Hedeflerinizi uzmanlığımızla buluşturan, kalıcı sonuçlar üreten iş birlikleri.",
+    "ctaButton": "Bize Ulaşın",
     "cta": "WArtiCode ile eğitim ve yazılım çözümlerinizde yenilikçi bir dönüşüm başlatmaya hazır mısınız?"
   },
   "wqualitysphere": {
     "title": "WQualitySphere",
+    "eyebrow": "WQUALITYSPHERE",
+    "titleHighlight": "Kalite",
     "subtitle": "Otomotiv Sektöründeki Stratejik Dönüşümünüzün Anahtarı",
     "p1": "Otomotiv pazarında sürdürülebilir başarı ve liderlik elde etmek istiyorsanız, WQualitySphere'in kapsamlı danışmanlık hizmetleri tam size göre. Otomotiv tedarik zincirinin dinamiklerini derinlemesine anlamayı gerektiren bir sektörde, şirketinizin ihtiyaç duyduğu stratejik dönüşümü sağlamak için buradayız.",
     "servicesTitle": "Kapsamlı Hizmetlerimiz",
+    "servicesDesc": "IATF 16949 uygulamasından tedarikçi denetimlerine ve süreç optimizasyonuna kadar — otomotiv mükemmelliğine özel uçtan uca kalite danışmanlığı sunuyoruz.",
     "whyTitle": "Neden WQualitySphere?",
+    "whyDesc": "Otomotiv tedarik zincirinde onlarca yıllık deneyim ve ölçülebilir, kalıcı sonuçlar sağlayan ileri görüşlü bir metodoloji.",
     "letsWorkTogether": "Birlikte Çalışalım",
+    "letsWorkTogetherDesc": "Uzman danışmanlarımızla stratejik bir yol haritası belirleyin, kalite kültürünüzü güçlendirin ve rekabet avantajınızı hızlandırın.",
     "getStarted": "Başlayın"
   },
   "productsIndividual": {
     "title": "Otomotiv Profesyonelleri - BİREYSEL",
+    "coursesTitle": "Eğitimler",
+    "modulesTitle": "Eğitim Modülleri",
     "p1": "Otomotiv Profesyonelleri için Dijital Akademi, endüstri ve sanatın benzersiz birleşiminden doğan bir dijital öğrenme platformudur. Küresel otomotiv pazarları için uluslararası standartları karşılayacak şekilde tasarlanmıştır. Kullanıcılara hem pratik hem de interaktif öğrenme deneyimleri sunarak, sektördeki en son teknolojik gelişmeleri öğrenmelerini ve becerilerini geliştirmelerini sağlar. Bu akademi, otomotiv sektörünün nitelikli iş gücü ihtiyacını karşılamayı ve iş fırsatlarına erişimi kolaylaştırmayı amaçlamaktadır.",
     "p2": "Akademi, bireysel katılımcılar için kariyerlerini ilerletmek ve mevcut bilgi ve becerilerini geliştirmek için mükemmel bir fırsattır. Mezunlar, otomotiv kalite sistemlerinde en iyi bilgi ve becerilere sahip olarak, uluslararası kabul gören kalite standartlarını karşılayarak ve farklı bir bakış açısı sunarak sektörde rekabet edebilirler. Birden fazla dilde eğitim sunan bu platform, bireysel ve kurumsal katılımcılara otomotiv hakkında kapsamlı eğitim sağlamaktadır.",
     "p3": "Ayrıca bu platform, bir İK gelişim takip sistemi ile donatılmıştır. Bu sistem sayesinde kullanıcıların eğitim sürecindeki ilerlemeleri ayrıntılı olarak takip edilebilir ve raporlanabilir. Bu, bireysel kullanıcıların kendi ilerlemelerini izlemelerine olanak tanır.",
@@ -449,6 +480,8 @@
   },
   "productsCorporate": {
     "title": "Otomotiv Profesyonelleri - KURUMSAL",
+    "productsTitle": "Ürünler",
+    "modulesTitle": "Eğitim Modülleri",
     "p1": "Otomotiv Profesyonelleri için Dijital Akademi, endüstri ve sanatın benzersiz birleşiminden doğan bir dijital öğrenme platformudur. Küresel otomotiv pazarları için uluslararası standartları karşılayacak şekilde tasarlanmıştır. Kullanıcılara hem pratik hem de interaktif öğrenme deneyimleri sunarak, sektördeki en son teknolojik gelişmeleri öğrenmelerini ve becerilerini geliştirmelerini sağlar.",
     "p2": "Kurumsal şirketler, bu platformu kullanarak çalışanlarının eğitimine yatırım yapabilir, yetenekleri dahili olarak geliştirebilir ve rekabet avantajı kazanabilir. Mezunlar, otomotiv kalite sistemlerinde en iyi bilgi ve becerilere sahip olarak, uluslararası kabul gören kalite standartlarını karşılayarak ve farklı bir bakış açısı sunarak sektörde rekabet edebilirler.",
     "p3": "Ayrıca bu platform, bir İK gelişim takip sistemi ile donatılmıştır. Bu sistem sayesinde kullanıcıların eğitim sürecindeki ilerlemeleri ayrıntılı olarak takip edilebilir ve raporlanabilir. Kurumsal kullanıcılar çalışanlarının eğitim sonuçlarını ve gelişmesini değerlendirebilir. Bu özellik, kullanıcıların öğrenme hedeflerine ulaşmalarını kolaylaştırır ve kuruluşların yetenek yönetimi stratejilerini daha etkili bir şekilde yürütmelerine yardımcı olur.",
@@ -610,6 +643,8 @@
   },
   "blog": {
     "title": "Blog",
+    "eyebrow": "BLOG",
+    "titleHighlight": "İçgörüler",
     "allArticles": "Tüm Makaleler",
     "articles": {
       "iatf16949-modern-approaches": {
@@ -722,6 +757,7 @@
   },
   "impressum": {
     "title": "Yasal Bildirim",
+    "eyebrow": "YASAL BİLDİRİM",
     "subtitle": "§ 5 TMG kapsamında bilgiler (Alman Telemedya Yasası)",
     "companyTitle": "§ 5 TMG Kapsamında Bilgiler",
     "companyName": "Wgroup GmbH",
@@ -751,6 +787,7 @@
   },
   "datenschutz": {
     "title": "Gizlilik Politikası",
+    "eyebrow": "GİZLİLİK",
     "subtitle": "KVKK/GDPR kapsamında veri koruma bilgileri",
     "introTitle": "1. Gizlilik Özeti",
     "introText": "Aşağıdaki bilgiler, web sitemizi ziyaret ettiğinizde kişisel verilerinize ne olduğu hakkında basit bir genel bakış sunmaktadır. Kişisel veriler, sizi kişisel olarak tanımlamak için kullanılabilecek tüm verilerdir.",
@@ -783,6 +820,7 @@
   },
   "agb": {
     "title": "Kullanım Koşulları",
+    "eyebrow": "AGB",
     "subtitle": "Wgroup GmbH Genel İş Koşulları",
     "scopeTitle": "§ 1 Kapsam",
     "scopeText": "Bu Genel İş Koşulları (bundan sonra \"GİK\"), Wgroup GmbH, Trappenpfad 33, 12351 Berlin (bundan sonra \"Sağlayıcı\") ile müşteri (bundan sonra \"Müşteri\") arasındaki tüm iş ilişkilerine uygulanır. Sözleşmenin yapıldığı tarihte geçerli olan sürüm uygulanır.",
@@ -803,6 +841,7 @@
   },
   "cookiePolicy": {
     "title": "Çerez Politikası",
+    "eyebrow": "ÇEREZLER",
     "subtitle": "Çerez kullanımına ilişkin bilgiler",
     "whatTitle": "Çerezler Nedir?",
     "whatText": "Çerezler, web sitelerini ziyaret ettiğinizde cihazınıza depolanan küçük metin dosyalarıdır. Web sitelerinin çalışması veya daha verimli çalışması için ve web sitesi işletmecilerine bilgi sağlamak için yaygın olarak kullanılırlar.",

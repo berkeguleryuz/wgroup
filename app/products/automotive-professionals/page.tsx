@@ -53,7 +53,7 @@ export default function AutomotiveProfessionalsIndividualPage() {
       }
     >
       <div className="space-y-4">
-        <h2 className="text-2xl font-bold text-foreground mb-6">Courses</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6">{t("coursesTitle")}</h2>
         {courses.map((course) => {
           const isOpen = openItems.includes(course.id);
           const modules = t.raw(`${course.key}.modules`) as string[];
@@ -85,7 +85,7 @@ export default function AutomotiveProfessionalsIndividualPage() {
                     {t(`${course.key}.description`)}
                   </p>
                   <h4 className="font-medium text-foreground mb-2">
-                    Training Modules
+                    {t("modulesTitle")}
                   </h4>
                   <ul className="list-disc list-inside space-y-1 text-muted">
                     {modules.map((module, idx) => (

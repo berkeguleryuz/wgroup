@@ -4,30 +4,31 @@ import { useRef, useEffect, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Target, Eye, Heart, Lightbulb, Rocket } from "@/components/icons";
+import { Target, Globe, BookOpen, Sparkles, Rocket } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const items = [
-  { icon: Target, color: "#1E6DB5" },
-  { icon: Eye, color: "#0891b2" },
-  { icon: Heart, color: "#e11d48" },
-  { icon: Lightbulb, color: "#f59e0b" },
-  { icon: Rocket, color: "#6366f1" },
+  { icon: Target },
+  { icon: Globe },
+  { icon: BookOpen },
+  { icon: Sparkles },
+  { icon: Rocket },
 ];
 
-function MissionCard({
+function TimelineStep({
+  number,
   icon: Icon,
-  color,
   text,
+  featured = false,
 }: {
+  number: number;
   icon: React.ElementType;
-  color: string;
   text: string;
+  featured?: boolean;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = useCallback(
     (e: React.MouseEvent<HTMLDivElement>) => {
@@ -47,16 +48,6 @@ function MissionCard({
         ease: "power2.out",
         overwrite: "auto",
       });
-
-      if (glowRef.current) {
-        gsap.to(glowRef.current, {
-          x: x - 100,
-          y: y - 100,
-          opacity: 0.7,
-          duration: 0.3,
-          overwrite: "auto",
-        });
-      }
     },
     []
   );
@@ -71,55 +62,87 @@ function MissionCard({
         ease: "elastic.out(1, 0.5)",
       });
     }
-    if (glowRef.current) {
-      gsap.to(glowRef.current, { opacity: 0, duration: 0.4 });
-    }
   }, []);
 
   return (
     <div
-      className="mission-block"
+      className="mission-block relative flex gap-6 sm:gap-8"
       style={{ perspective: "800px" }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Left: timeline column */}
+      <div className="flex flex-col items-center">
+        {/* Numbered badge */}
+        <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">
+          {String(number).padStart(2, "0")}
+        </div>
+        {/* Vertical line */}
+        <div
+          className="mt-2 w-px flex-1"
+          style={{
+            background: "linear-gradient(to bottom, rgba(30,109,181,0.3), transparent)",
+          }}
+        />
+      </div>
+
+      {/* Right: content card */}
       <div
         ref={cardRef}
-        className="group relative overflow-hidden rounded-2xl p-7 shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
+        className={`group relative flex-1 overflow-hidden rounded-2xl shadow-xl will-change-transform ${featured ? "p-8" : "p-6"} mb-4`}
         style={{
           transformStyle: "preserve-3d",
-          background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
+          background: featured
+            ? "linear-gradient(135deg, rgba(30,109,181,0.07), rgba(255,255,255,0.04), rgba(30,109,181,0.04))"
+            : "linear-gradient(135deg, rgba(255,255,255,0.04), rgba(30,109,181,0.04), rgba(255,255,255,0.03))",
           backdropFilter: "blur(12px)",
-          border: `1px solid rgba(255,255,255,0.07)`,
-          boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
+          border: "1px solid rgba(255,255,255,0.07)",
+          boxShadow: featured
+            ? "0 15px 50px -10px rgba(0,0,0,0.4)"
+            : "0 10px 40px -10px rgba(0,0,0,0.3)",
         }}
       >
         {/* Corner glow */}
-        <div
-          className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl"
-          style={{ background: `${color}15` }}
-        />
-
-        {/* Mouse-follow glow */}
-        <div
-          ref={glowRef}
-          className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0 blur-3xl"
-          style={{ background: `${color}20` }}
-        />
+        <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary/10 blur-3xl" />
 
         {/* Hover shimmer */}
         <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
-        <div className="relative z-10 flex gap-5" style={{ transform: "translateZ(15px)" }}>
-          <div
-            className="mission-icon flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-xl"
-            style={{ background: `${color}15` }}
-          >
-            <Icon className="h-7 w-7" style={{ color }} />
+        <div
+          className="relative z-10 flex items-start gap-4"
+          style={{ transform: "translateZ(15px)" }}
+        >
+          {/* Icon with shimmer animation */}
+          <div className="mission-icon relative flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl bg-primary/10">
+            <Icon className="relative z-10 h-6 w-6 text-primary" />
+            {/* Shimmer sweep overlay */}
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{
+                background: "linear-gradient(105deg, transparent 30%, rgba(30,109,181,0.25) 50%, transparent 70%)",
+                backgroundSize: "200% 100%",
+                animation: "iconShimmer 3s ease-in-out infinite",
+              }}
+            />
           </div>
-          <p className="text-lg leading-relaxed text-muted">{text}</p>
+          {/* Text */}
+          <p
+            className={`leading-relaxed text-muted ${featured ? "text-lg" : "text-base"}`}
+          >
+            {text}
+          </p>
         </div>
       </div>
+
+      {/* Keyframes injected via style tag (only once) */}
+      {number === 1 && (
+        <style jsx global>{`
+          @keyframes iconShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+          }
+        `}</style>
+      )}
     </div>
   );
 }
@@ -144,16 +167,6 @@ export default function OurMissionPage() {
           toggleActions: "play none none reverse",
         },
       });
-
-      gsap.utils.toArray<HTMLElement>(".mission-icon").forEach((icon) => {
-        gsap.to(icon, {
-          y: -5,
-          duration: 2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
-      });
     }, sectionRef);
 
     return () => ctx.revert();
@@ -162,14 +175,15 @@ export default function OurMissionPage() {
   const paragraphs = [t("p1"), t("p2"), t("p3"), t("p4"), t("p5")];
 
   return (
-    <PageLayout title={t("title")} heroImage="/images/company/our-mission.webp">
-      <div ref={sectionRef} className="space-y-6">
+    <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/company/our-mission.webp">
+      <div ref={sectionRef} className="space-y-0">
         {paragraphs.map((text, i) => (
-          <MissionCard
+          <TimelineStep
             key={i}
+            number={i + 1}
             icon={items[i].icon}
-            color={items[i].color}
             text={text}
+            featured={i === 0}
           />
         ))}
       </div>

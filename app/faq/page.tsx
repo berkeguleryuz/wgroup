@@ -202,7 +202,7 @@ export default function FAQPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} heroImage="/images/home/knowledge.webp">
+    <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/home/knowledge.webp">
       <div ref={sectionRef} className="space-y-5">
         {faqIds.map((id, index) => (
           <FAQItem

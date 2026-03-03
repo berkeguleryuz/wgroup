@@ -54,7 +54,7 @@ export default function AutomotiveProfessionalsCorporatePage() {
       }
     >
       <div className="space-y-4">
-        <h2 className="text-2xl font-bold text-foreground mb-6">Products</h2>
+        <h2 className="text-2xl font-bold text-foreground mb-6">{t("productsTitle")}</h2>
         {courses.map((course) => {
           const isOpen = openItems.includes(course.id);
           const hasModules = course.key !== "wselect";
@@ -88,7 +88,7 @@ export default function AutomotiveProfessionalsCorporatePage() {
                   {hasModules && (
                     <>
                       <h4 className="font-medium text-foreground mb-2">
-                        Training Modules
+                        {t("modulesTitle")}
                       </h4>
                       <ul className="list-disc list-inside space-y-1 text-muted">
                         {(t.raw(`${course.key}.modules`) as string[]).map(

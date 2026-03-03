@@ -10,6 +10,8 @@ gsap.registerPlugin(ScrollTrigger);
 interface PageLayoutProps {
   title: string;
   subtitle?: string;
+  eyebrow?: string;
+  titleHighlight?: string;
   heroImage?: string;
   children: React.ReactNode;
 }
@@ -17,6 +19,8 @@ interface PageLayoutProps {
 export default function PageLayout({
   title,
   subtitle,
+  eyebrow,
+  titleHighlight,
   heroImage,
   children,
 }: PageLayoutProps) {
@@ -85,18 +89,6 @@ export default function PageLayout({
           });
         });
 
-      /* --- parallax on hero section --- */
-      gsap.to(".page-hero-bg-text", {
-        y: 60,
-        opacity: 0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: heroRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-        },
-      });
     }, heroRef);
 
     return () => ctx.revert();
@@ -141,34 +133,57 @@ export default function PageLayout({
           />
         </div>
 
-        {/* background text */}
-        <div className="page-hero-bg-text pointer-events-none absolute inset-0 flex items-center justify-center select-none">
-          <span className="text-[10vw] font-black tracking-tight text-white/[0.03]">
-            WGroup
-          </span>
-        </div>
-
         {/* gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-secondary/20 to-transparent" />
 
         {/* content */}
         <div className="relative z-10 mx-auto max-w-4xl text-center">
+          {eyebrow && (
+            <p
+              className="page-title-word mb-3 text-sm font-semibold tracking-[0.2em] text-primary"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+            >
+              {eyebrow}
+            </p>
+          )}
           <h1
             className="mb-6 text-4xl font-extrabold leading-[1.1] tracking-tight text-white md:text-5xl lg:text-6xl"
             style={{ perspective: "800px" }}
           >
-            {words.map((word, i) => (
-              <span
-                key={i}
-                className="page-title-word mr-[0.25em] inline-block will-change-transform"
-                style={{
-                  transformStyle: "preserve-3d",
-                  display: "inline-block",
-                }}
-              >
-                {word}
-              </span>
-            ))}
+            {titleHighlight ? (
+              <>
+                <span
+                  className="page-title-word mr-[0.25em] inline-block will-change-transform"
+                  style={{ transformStyle: "preserve-3d", display: "inline-block" }}
+                >
+                  {title}
+                </span>
+                <span
+                  className="page-title-word inline-block text-primary will-change-transform"
+                  style={{
+                    fontFamily: "var(--font-instrument), Georgia, serif",
+                    fontStyle: "italic",
+                    transformStyle: "preserve-3d",
+                    display: "inline-block",
+                  }}
+                >
+                  {titleHighlight}
+                </span>
+              </>
+            ) : (
+              words.map((word, i) => (
+                <span
+                  key={i}
+                  className="page-title-word mr-[0.25em] inline-block will-change-transform"
+                  style={{
+                    transformStyle: "preserve-3d",
+                    display: "inline-block",
+                  }}
+                >
+                  {word}
+                </span>
+              ))
+            )}
           </h1>
           {subtitle && (
             <p className="page-hero-subtitle mx-auto max-w-2xl text-lg text-white/60">
@@ -180,6 +195,21 @@ export default function PageLayout({
         </div>
       </section>
 
+      {/* Curved transition */}
+      <div className="relative -mt-1 -mb-1">
+        <svg
+          className="block w-full h-[60px]"
+          viewBox="0 0 1440 60"
+          fill="none"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 0 Q720 60 1440 0 V60 H0 Z"
+            fill="var(--background)"
+          />
+        </svg>
+      </div>
+
       {/* Content */}
       <section ref={contentRef} className="relative bg-background py-20 px-6">
         {/* subtle dot pattern */}
@@ -189,6 +219,14 @@ export default function PageLayout({
             backgroundImage:
               "radial-gradient(circle at 1px 1px, var(--primary) 1px, transparent 0)",
             backgroundSize: "40px 40px",
+          }}
+        />
+        {/* top glow */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-[200px]"
+          style={{
+            background:
+              "radial-gradient(ellipse at center top, rgba(30,109,181,0.06) 0%, transparent 70%)",
           }}
         />
         <div className="relative z-10 mx-auto max-w-4xl">{children}</div>

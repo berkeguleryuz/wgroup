@@ -42,10 +42,10 @@ export default function AGBPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("subtitle")}>
+    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")}>
       <div ref={sectionRef} className="space-y-10">
         {sections.map((section) => (
-          <div key={section.titleKey} className="legal-section page-content-block space-y-2">
+          <div key={section.titleKey} className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
             <h2 className="text-xl font-bold text-foreground">{t(section.titleKey)}</h2>
             <p className="text-lg leading-relaxed text-muted">{t(section.textKey)}</p>
           </div>

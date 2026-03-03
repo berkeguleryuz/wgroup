@@ -208,7 +208,7 @@ export default function BlogPage() {
   }, [activeCategory]);
 
   return (
-    <PageLayout title={t("title")}>
+    <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")}>
       <div ref={sectionRef}>
         {/* Category Filter */}
         <div className="page-content-block mb-10 flex flex-wrap gap-3">

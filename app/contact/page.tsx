@@ -161,7 +161,7 @@ export default function ContactPage() {
   };
 
   return (
-    <PageLayout title={t("title")}>
+    <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")}>
       <div ref={sectionRef} className="grid grid-cols-1 gap-12 lg:grid-cols-2">
         {/* Left: Contact Form */}
         <div className="page-content-block">

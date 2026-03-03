@@ -31,16 +31,16 @@ export default function DatenschutzPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("subtitle")}>
+    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")}>
       <div ref={sectionRef} className="space-y-10">
         {/* Intro */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("introTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("introText")}</p>
         </div>
 
         {/* Responsible Party */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("responsibleTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("responsibleText")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("responsibleName")}</p>
@@ -51,31 +51,31 @@ export default function DatenschutzPage() {
         </div>
 
         {/* Data Collection */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("collectionTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("collectionText")}</p>
         </div>
 
         {/* Cookies */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("cookiesTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("cookiesText")}</p>
         </div>
 
         {/* Contact Form */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("contactFormTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("contactFormText")}</p>
         </div>
 
         {/* Analytics */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("analyticsTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("analyticsText")}</p>
         </div>
 
         {/* Rights */}
-        <div className="legal-section page-content-block space-y-4">
+        <div className="legal-section page-content-block space-y-4 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("rightsTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("rightsText")}</p>
           <p className="text-lg font-medium text-foreground">{t("rightsListTitle")}</p>
@@ -90,7 +90,7 @@ export default function DatenschutzPage() {
         </div>
 
         {/* SSL */}
-        <div className="legal-section page-content-block space-y-2">
+        <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("sslTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("sslText")}</p>
         </div>
