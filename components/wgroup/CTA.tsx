@@ -2,6 +2,7 @@
 
 import { useRef, useEffect } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "@/components/icons";
@@ -11,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function CTA() {
   const sectionRef = useRef<HTMLElement>(null);
+  const t = useTranslations("homeCta");
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -69,7 +71,7 @@ export default function CTA() {
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
-              Get Started
+              {t("eyebrow")}
             </p>
             <h2
               className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
@@ -77,7 +79,7 @@ export default function CTA() {
                 fontFamily: "var(--font-barlow), system-ui, sans-serif",
               }}
             >
-              Ready to Transform{" "}
+              {t("title")}{" "}
               <span
                 className="text-primary"
                 style={{
@@ -85,12 +87,11 @@ export default function CTA() {
                   fontStyle: "italic",
                 }}
               >
-                Your Business?
+                {t("highlight")}
               </span>
             </h2>
             <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/50">
-              Let&apos;s discuss how WGroup can help your organization achieve
-              operational excellence and drive innovation.
+              {t("description")}
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link href="/contact" className="group">
@@ -105,7 +106,7 @@ export default function CTA() {
                   textColorHover="#ffffff"
                 >
                   <span className="flex items-center gap-2">
-                    Contact Us
+                    {t("contactUs")}
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </span>
                 </MorphButton>
@@ -118,7 +119,7 @@ export default function CTA() {
                   fontWeight: 600,
                 }}
               >
-                Learn More
+                {t("learnMore")}
               </Link>
             </div>
           </div>

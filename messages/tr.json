@@ -157,6 +157,14 @@
     "supplierelevateProDesc": "Tedarikçi performansını ve tedarik zinciri mükemmelliğini en üst düzeye çıkarma.",
     "evolvementorDesc": "Elektrikli araç pazarına geçiş için kapsamlı program."
   },
+  "homeCta": {
+    "eyebrow": "BAŞLAYIN",
+    "title": "İşletmenizi Dönüştürmeye",
+    "highlight": "Hazır Mısınız?",
+    "description": "WGroup'un kuruluşunuzun operasyonel mükemmelliğe ulaşmasına ve yeniliği yönlendirmesine nasıl yardımcı olabileceğini konuşalım.",
+    "contactUs": "Bize Ulaşın",
+    "learnMore": "Daha Fazla"
+  },
   "blogPreview": {
     "title": "Wgroup ile Her Zaman Güncel Kalın",
     "description": "Blogumuza göz atın! Burada editörlerimiz ve Wgroup uzmanları, kalite dünyasından güncel konularda düzenli olarak heyecan verici makaleler yayınlamaktadır.",

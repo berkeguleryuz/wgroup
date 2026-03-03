@@ -100,7 +100,7 @@ export default function Hero() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       gsap.set("#video-frame", {
-        clipPath: "polygon(28% 0%, 76% 0%, 100% 100%, 0% 100%)",
+        clipPath: "polygon(0 0, 100% 0%, 100% 75%, 0 100%)",
         borderRadius: "0 0 50% 50%",
       });
       gsap.from("#video-frame", {
@@ -293,7 +293,7 @@ export default function Hero() {
       </div>
 
 
-      <h1 className="pointer-events-none absolute bottom-5 right-5 z-[5] select-none text-[8vw] font-black tracking-tight text-foreground/[0.03]">
+      <h1 className="pointer-events-none absolute bottom-5 right-2 z-[5] select-none text-[8vw] font-black tracking-tight text-white">
         WGroup
       </h1>
     </div>

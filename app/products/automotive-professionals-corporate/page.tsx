@@ -7,7 +7,6 @@ import gsap from "gsap";
 import ProductLayout from "@/components/layout/ProductLayout";
 
 const courses = [
-  { key: "wselect", id: "wselect" },
   { key: "wautostart", id: "wautostart" },
   { key: "wautopilot", id: "wautopilot" },
   { key: "wautocore", id: "wautocore" },
@@ -57,7 +56,7 @@ export default function AutomotiveProfessionalsCorporatePage() {
         <h2 className="text-2xl font-bold text-foreground mb-6">{t("productsTitle")}</h2>
         {courses.map((course) => {
           const isOpen = openItems.includes(course.id);
-          const hasModules = course.key !== "wselect";
+          const hasModules = true;
           return (
             <div
               key={course.id}
