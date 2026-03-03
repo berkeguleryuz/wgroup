@@ -207,9 +207,9 @@
     "contactUs": "Kontaktieren Sie uns"
   },
   "mission": {
-    "title": "Unsere Mission",
+    "title": "Unsere",
     "eyebrow": "UNSERE MISSION",
-    "titleHighlight": "Vision",
+    "titleHighlight": "Mission",
     "p1": "Die Mission der Wgroup GmbH basiert auf den grundlegenden Prinzipien der Innovation und dem Streben nach Exzellenz. Diese Mission betont, dass nachhaltiger Erfolg in der Automobilindustrie durch die dynamische Integration von Kreativitat und analytischem Denken erreicht werden kann. Seit der Grundung unseres Unternehmens hat sich diese Integration tief unter unseren Mitarbeitern verankert und Wissen sowie Fahigkeiten aus verschiedenen Disziplinen zusammengefuhrt. Dieser multidisziplinare Ansatz pragt unseren Prozess zur Entdeckung und Entwicklung innovativer Losungen. \"Kunstlerische Kreativitat und ingenieursbasiertes analytisches Denken bilden die DNA unseres Unternehmens und treiben uns zur Entwicklung innovativer Losungen an.\"",
     "p2": "Nachhaltigkeit ist ein Eckpfeiler unserer Geschaftsstrategie; wir verpflichten uns, aus wirtschaftlicher, okologischer und industrieller Perspektive in die Zukunft unserer Branche zu investieren. Unser Bestreben, innovative Losungen fur unsere Kunden und Partner zu entwickeln, ist eine treibende Kraft, die uns vorantreibt und unser Ziel unterstutzt, gemeinsamen Erfolg und Wertschopfung in unseren Kundenbeziehungen zu erzielen.",
     "p3": "Wissensaustausch und Lernen sind die tragenden Saulen unserer Fuhrungsvision. Mit unserer Sensibilitat fur technologische Innovationen und Branchentrends streben wir danach, in Bereichen wie Bildung und Softwareentwicklung fuhrend zu sein. Dieser Pioniergeist ermoglicht es uns, durch den Austausch unseres Wissens und unserer Erfahrungen zur breiteren Industrie beizutragen.",
@@ -274,20 +274,23 @@
     "contactCta": "Kontakt aufnehmen"
   },
   "contact": {
-    "title": "Kontaktieren Sie uns",
+    "title": "Kontakt",
     "eyebrow": "KONTAKT",
-    "titleHighlight": "Kontakt",
+    "titleHighlight": "aufnehmen",
     "city": "Berlin",
     "hqLab": "Hauptsitz & Labor",
     "building": "Ludwig Erhard Haus",
     "address": "Fasanenstrasse 85, 10623 Berlin / Deutschland",
     "email": "info@wgroupgmbh.eu",
     "phone": "+49 174 177 78 79",
+    "formTitle": "Schreiben Sie uns",
     "formName": "Name Vorname",
     "formEmail": "E-Mail",
     "formMessage": "Kommentar oder Nachricht",
     "formSend": "Senden",
-    "formRequired": "Erforderlich"
+    "formRequired": "Erforderlich",
+    "followUs": "Folgen Sie uns",
+    "officeTitle": "Unser Büro"
   },
   "faq": {
     "title": "Haufig gestellte Fragen (FAQ)",

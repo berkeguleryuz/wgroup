@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "@/components/icons";
 import gsap from "gsap";
@@ -8,106 +8,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);
-
-/* ---------- Premium info card with gradient bg, glow, 3D tilt ---------- */
-function InfoCard({
-  children,
-  color = "#1E6DB5",
-}: {
-  children: React.ReactNode;
-  color?: string;
-}) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = useCallback(
-    (e: React.MouseEvent<HTMLDivElement>) => {
-      if (!cardRef.current) return;
-      const rect = cardRef.current.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-
-      gsap.to(cardRef.current, {
-        rotateX: ((y - centerY) / centerY) * -6,
-        rotateY: ((x - centerX) / centerX) * 6,
-        transformPerspective: 800,
-        scale: 1.02,
-        duration: 0.3,
-        ease: "power2.out",
-        overwrite: "auto",
-      });
-
-      if (glowRef.current) {
-        gsap.to(glowRef.current, {
-          x: x - 100,
-          y: y - 100,
-          opacity: 0.7,
-          duration: 0.3,
-          overwrite: "auto",
-        });
-      }
-    },
-    []
-  );
-
-  const handleMouseLeave = useCallback(() => {
-    if (cardRef.current) {
-      gsap.to(cardRef.current, {
-        rotateX: 0,
-        rotateY: 0,
-        scale: 1,
-        duration: 0.6,
-        ease: "elastic.out(1, 0.5)",
-      });
-    }
-    if (glowRef.current) {
-      gsap.to(glowRef.current, { opacity: 0, duration: 0.4 });
-    }
-  }, []);
-
-  return (
-    <div
-      className="contact-card"
-      style={{ perspective: "800px" }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      <div
-        ref={cardRef}
-        className="group relative overflow-hidden rounded-2xl p-8 shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
-        style={{
-          transformStyle: "preserve-3d",
-          background: `linear-gradient(135deg, rgba(255,255,255,0.04), ${color}10, rgba(255,255,255,0.03))`,
-          backdropFilter: "blur(12px)",
-          border: `1px solid rgba(255,255,255,0.07)`,
-          boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
-        }}
-      >
-        {/* Corner glow */}
-        <div
-          className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl"
-          style={{ background: `${color}15` }}
-        />
-
-        {/* Mouse-follow glow */}
-        <div
-          ref={glowRef}
-          className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0 blur-3xl"
-          style={{ background: `${color}20` }}
-        />
-
-        {/* Hover shimmer */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/10 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-        <div className="relative z-10" style={{ transform: "translateZ(15px)" }}>
-          {children}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function ContactPage() {
   const t = useTranslations("contact");
@@ -122,29 +22,14 @@ export default function ContactPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".form-field", {
+      gsap.from(".contact-reveal", {
         y: 40,
         opacity: 0,
         stagger: 0.1,
-        duration: 0.6,
+        duration: 0.7,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".form-field",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
-
-      gsap.from(".contact-card", {
-        y: 60,
-        rotationX: -12,
-        opacity: 0,
-        stagger: 0.15,
-        duration: 0.8,
-        ease: "back.out(1.2)",
-        force3D: true,
-        scrollTrigger: {
-          trigger: ".contact-card",
+          trigger: ".contact-reveal",
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
@@ -162,147 +47,172 @@ export default function ContactPage() {
 
   return (
     <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")}>
-      <div ref={sectionRef} className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-        {/* Left: Contact Form */}
-        <div className="page-content-block">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div className="form-field">
-              <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground">
-                {t("formName")}
-              </label>
-              <input
-                id="name"
-                type="text"
-                required
-                value={formState.name}
-                onChange={(e) => setFormState((prev) => ({ ...prev, name: e.target.value }))}
-                placeholder={t("formName")}
-                className="w-full rounded-xl border border-white/[0.1] bg-white/[0.06] p-4 text-white placeholder:text-white/30 transition-all duration-300 focus:border-primary focus:shadow-lg focus:shadow-primary/10 focus:outline-none"
-              />
-            </div>
+      <div ref={sectionRef} className="grid grid-cols-1 gap-12 lg:grid-cols-5">
+        {/* Left: Form (3 cols) — card with gradient top accent */}
+        <div className="contact-reveal lg:col-span-3">
+          {/* Animated rotating border card */}
+          <div className="relative rounded-2xl p-[1.5px]" style={{ overflow: "hidden" }}>
+            {/* Spinning conic gradient behind the card */}
+            <div
+              className="pointer-events-none absolute inset-[-50%] animate-[borderSpin_4s_linear_infinite]"
+              style={{
+                background: "conic-gradient(from 0deg, transparent 0%, #1E6DB5 12%, #1E6DB580 25%, transparent 37%, transparent 62%, #1E6DB580 75%, #1E6DB5 87%, transparent 100%)",
+              }}
+            />
 
-            <div className="form-field">
-              <label htmlFor="email" className="mb-2 block text-sm font-medium text-foreground">
-                {t("formEmail")}
-              </label>
-              <input
-                id="email"
-                type="email"
-                required
-                value={formState.email}
-                onChange={(e) => setFormState((prev) => ({ ...prev, email: e.target.value }))}
-                placeholder={t("formEmail")}
-                className="w-full rounded-xl border border-white/[0.1] bg-white/[0.06] p-4 text-white placeholder:text-white/30 transition-all duration-300 focus:border-primary focus:shadow-lg focus:shadow-primary/10 focus:outline-none"
-              />
-            </div>
+            {/* Inner card content */}
+            <div
+              className="relative rounded-2xl"
+              style={{ background: "var(--background, #0a0a0a)" }}
+            >
+              <div className="p-8 sm:p-10">
+              <h3 className="mb-1 text-xl font-bold text-foreground">{t("formTitle")}</h3>
+              <p className="mb-8 text-sm text-muted">{t("building")} &middot; {t("city")}</p>
 
-            <div className="form-field">
-              <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">
-                {t("formMessage")}
-              </label>
-              <textarea
-                id="message"
-                required
-                rows={5}
-                value={formState.message}
-                onChange={(e) => setFormState((prev) => ({ ...prev, message: e.target.value }))}
-                placeholder={t("formMessage")}
-                className="w-full resize-none rounded-xl border border-white/[0.1] bg-white/[0.06] p-4 text-white placeholder:text-white/30 transition-all duration-300 focus:border-primary focus:shadow-lg focus:shadow-primary/10 focus:outline-none"
-              />
-            </div>
+              <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div>
+                    <label htmlFor="name" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
+                      {t("formName")}
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      required
+                      value={formState.name}
+                      onChange={(e) => setFormState((prev) => ({ ...prev, name: e.target.value }))}
+                      className="w-full rounded-lg border border-white/[0.06] bg-transparent p-3.5 text-sm text-white placeholder:text-white/20 transition-all duration-300 focus:border-primary/40 focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
+                      {t("formEmail")}
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      required
+                      value={formState.email}
+                      onChange={(e) => setFormState((prev) => ({ ...prev, email: e.target.value }))}
+                      className="w-full rounded-lg border border-white/[0.06] bg-transparent p-3.5 text-sm text-white placeholder:text-white/20 transition-all duration-300 focus:border-primary/40 focus:outline-none"
+                    />
+                  </div>
+                </div>
 
-            <div className="form-field">
-              <button
-                type="submit"
-                className="group relative inline-flex w-full cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-full bg-primary px-8 py-4 text-base font-bold text-white shadow-lg shadow-primary/25 transition-all duration-300 hover:shadow-xl hover:shadow-primary/40 hover:-translate-y-0.5 sm:w-auto"
-              >
-                <span className="relative z-10">{t("formSend")}</span>
-                <Send className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-              </button>
-            </div>
+                <div>
+                  <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-muted">
+                    {t("formMessage")}
+                  </label>
+                  <textarea
+                    id="message"
+                    required
+                    rows={5}
+                    value={formState.message}
+                    onChange={(e) => setFormState((prev) => ({ ...prev, message: e.target.value }))}
+                    className="w-full resize-none rounded-lg border border-white/[0.06] bg-transparent p-3.5 text-sm text-white placeholder:text-white/20 transition-all duration-300 focus:border-primary/40 focus:outline-none"
+                  />
+                </div>
 
-            {submitted && (
-              <div className="form-field rounded-xl border border-green-500/20 bg-green-500/10 p-4">
-                <p className="font-medium text-green-400">{tc("successMessage")}</p>
-              </div>
-            )}
-          </form>
+                <div className="flex items-center gap-4">
+                  <button
+                    type="submit"
+                    className="group relative inline-flex cursor-pointer items-center gap-2.5 overflow-hidden rounded-lg bg-primary px-7 py-3.5 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
+                  >
+                    <span className="relative z-10">{t("formSend")}</span>
+                    <Send className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                    <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/15 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+                  </button>
+
+                  {submitted && (
+                    <p className="text-sm font-medium text-green-400">{tc("successMessage")}</p>
+                  )}
+                </div>
+              </form>
+            </div>
+          </div>
+          </div>
+
+          {/* Keyframes for border spin */}
+          <style jsx global>{`
+            @keyframes borderSpin {
+              from { transform: rotate(0deg); }
+              to { transform: rotate(360deg); }
+            }
+          `}</style>
         </div>
 
-        {/* Right: Contact Info */}
-        <div className="space-y-6">
-          <InfoCard>
-            <h3 className="mb-1 text-lg font-bold text-foreground">
-              {t("city")} {t("hqLab")}
-            </h3>
-            <p className="mb-6 text-sm text-muted">{t("building")}</p>
-
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <MapPin className="h-5 w-5 text-primary" />
+        {/* Right: Info (2 cols) — no card, clean direct content */}
+        <div className="lg:col-span-2 space-y-10">
+          {/* Office info — clean list with left accent */}
+          <div className="contact-reveal">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("officeTitle")}</h3>
+            <div className="space-y-1">
+              <a
+                href={`https://maps.google.com/?q=${encodeURIComponent(t("address"))}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-white/[0.03]"
+              >
+                <MapPin className="h-4 w-4 flex-shrink-0 text-primary/60" />
+                <div>
+                  <p className="text-sm text-foreground">{t("address")}</p>
+                  <p className="text-xs text-muted">{t("building")}</p>
                 </div>
-                <span className="mt-2 text-muted">{t("address")}</span>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <a
-                  href={`mailto:${t("email")}`}
-                  className="font-medium text-primary transition-colors hover:text-primary-hover"
-                >
-                  {t("email")}
-                </a>
-              </div>
+              <a
+                href={`mailto:${t("email")}`}
+                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-white/[0.03]"
+              >
+                <Mail className="h-4 w-4 flex-shrink-0 text-primary/60" />
+                <span className="text-sm text-foreground group-hover:text-primary transition-colors">{t("email")}</span>
+              </a>
 
-              <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                  <Phone className="h-5 w-5 text-primary" />
-                </div>
-                <a
-                  href={`tel:${t("phone").replace(/\s/g, "")}`}
-                  className="font-medium text-primary transition-colors hover:text-primary-hover"
-                >
-                  {t("phone")}
-                </a>
-              </div>
+              <a
+                href={`tel:${t("phone").replace(/\s/g, "")}`}
+                className="group flex items-center gap-4 rounded-lg px-3 py-3 -mx-3 transition-colors duration-200 hover:bg-white/[0.03]"
+              >
+                <Phone className="h-4 w-4 flex-shrink-0 text-primary/60" />
+                <span className="text-sm text-foreground group-hover:text-primary transition-colors">{t("phone")}</span>
+              </a>
             </div>
-          </InfoCard>
+          </div>
 
-          <InfoCard color="#0891b2">
-            <h3 className="mb-4 text-lg font-bold text-foreground">Follow Us</h3>
-            <div className="flex gap-4">
+          {/* Divider */}
+          <div className="contact-reveal h-px w-full bg-gradient-to-r from-white/[0.06] via-white/[0.1] to-transparent" />
+
+          {/* Social — standalone pill buttons */}
+          <div className="contact-reveal">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("followUs")}</h3>
+            <div className="flex flex-col gap-3">
               <a
                 href="https://www.linkedin.com/company/wgroupgmbh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 rounded-xl px-5 py-3 transition-all duration-300"
+                className="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  background: "linear-gradient(135deg, rgba(10,102,194,0.08), rgba(10,102,194,0.04))",
-                  border: "1px solid rgba(10,102,194,0.15)",
+                  border: "1px solid rgba(255,255,255,0.06)",
                 }}
               >
-                <Linkedin className="h-5 w-5 text-[#0A66C2] transition-transform duration-300 group-hover:scale-110" />
-                <span className="font-medium text-foreground">LinkedIn</span>
+                <Linkedin className="h-4.5 w-4.5 text-primary/70 transition-colors group-hover:text-primary" />
+                <span className="text-sm text-foreground">LinkedIn</span>
+                <span className="ml-auto text-xs text-muted opacity-0 transition-opacity group-hover:opacity-100">&rarr;</span>
               </a>
               <a
                 href="https://www.instagram.com/wgroupgmbh"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center gap-3 rounded-xl px-5 py-3 transition-all duration-300"
+                className="group flex items-center gap-3 rounded-lg px-4 py-3 transition-all duration-300 hover:-translate-y-0.5"
                 style={{
-                  background: "linear-gradient(135deg, rgba(228,64,95,0.08), rgba(193,53,132,0.04))",
-                  border: "1px solid rgba(228,64,95,0.15)",
+                  border: "1px solid rgba(255,255,255,0.06)",
                 }}
               >
-                <Instagram className="h-5 w-5 text-[#E4405F] transition-transform duration-300 group-hover:scale-110" />
-                <span className="font-medium text-foreground">Instagram</span>
+                <Instagram className="h-4.5 w-4.5 text-primary/70 transition-colors group-hover:text-primary" />
+                <span className="text-sm text-foreground">Instagram</span>
+                <span className="ml-auto text-xs text-muted opacity-0 transition-opacity group-hover:opacity-100">&rarr;</span>
               </a>
             </div>
-          </InfoCard>
+          </div>
         </div>
       </div>
     </PageLayout>

@@ -12,28 +12,36 @@ import { ArrowRight } from "@/components/icons";
 gsap.registerPlugin(ScrollTrigger);
 
 const statLotties = [
-  "/lottie/target.json",      // Globe/Countries → target (crosshair/global)
-  "/lottie/lightbulb.json",   // Award/Founded → lightbulb (innovation)
-  "/lottie/trending-up.json", // Users/Clients → trending-up (growth)
-  "/lottie/target.json",      // Target/IATF → target (precision)
+  "/lottie/target.json",
+  "/lottie/lightbulb.json",
+  "/lottie/trending-up.json",
+  "/lottie/target.json",
 ] as const;
 
-/* ---------- 3D tilt stat card with Lottie ---------- */
+/* ---------- Corner bracket ---------- */
+function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
+  const color = "rgba(30,109,181,0.4)";
+  const styles: Record<string, React.CSSProperties> = {
+    tl: { top: 0, left: 0, borderTop: `2px solid ${color}`, borderLeft: `2px solid ${color}` },
+    tr: { top: 0, right: 0, borderTop: `2px solid ${color}`, borderRight: `2px solid ${color}` },
+    bl: { bottom: 0, left: 0, borderBottom: `2px solid ${color}`, borderLeft: `2px solid ${color}` },
+    br: { bottom: 0, right: 0, borderBottom: `2px solid ${color}`, borderRight: `2px solid ${color}` },
+  };
+  return <span className="pointer-events-none absolute h-6 w-6" style={styles[position]} />;
+}
+
+/* ---------- 3D tilt stat card with Lottie + corner brackets ---------- */
 function StatItem({
   lottie,
   value,
   label,
-  color,
 }: {
   lottie: string;
   value: string;
   label: string;
-  color: string;
 }) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const glowRef = useRef<HTMLDivElement>(null);
   const lottieWrapRef = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
   const [animationData, setAnimationData] = useState<object | null>(null);
 
   useEffect(() => {
@@ -51,27 +59,15 @@ function StatItem({
       const y = e.clientY - rect.top;
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -8;
-      const rotateY = ((x - centerX) / centerX) * 8;
 
       gsap.to(cardRef.current, {
-        rotateX,
-        rotateY,
+        rotateX: ((y - centerY) / centerY) * -8,
+        rotateY: ((x - centerX) / centerX) * 8,
         duration: 0.4,
         ease: "power2.out",
         force3D: true,
         overwrite: "auto",
       });
-
-      if (glowRef.current) {
-        gsap.to(glowRef.current, {
-          x: x - 100,
-          y: y - 100,
-          opacity: 1,
-          duration: 0.3,
-          overwrite: "auto",
-        });
-      }
 
       if (lottieWrapRef.current) {
         gsap.to(lottieWrapRef.current, {
@@ -86,7 +82,6 @@ function StatItem({
 
   const handleMouseLeave = useCallback(() => {
     if (!cardRef.current) return;
-    setIsHovered(false);
     gsap.to(cardRef.current, {
       rotateX: 0,
       rotateY: 0,
@@ -94,9 +89,6 @@ function StatItem({
       ease: "elastic.out(1, 0.4)",
       force3D: true,
     });
-    if (glowRef.current) {
-      gsap.to(glowRef.current, { opacity: 0, duration: 0.4 });
-    }
     if (lottieWrapRef.current) {
       gsap.to(lottieWrapRef.current, {
         scale: 1,
@@ -111,29 +103,17 @@ function StatItem({
       className="about-stat"
       style={{ perspective: "800px" }}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={handleMouseLeave}
     >
       <div
         ref={cardRef}
-        className="relative overflow-hidden rounded-2xl border border-white/[0.07] bg-white/[0.04] p-8 text-center shadow-xl shadow-black/20 transition-shadow duration-300 will-change-transform hover:shadow-2xl hover:shadow-black/30"
+        className="relative h-full p-8 text-center will-change-transform"
         style={{ transformStyle: "preserve-3d" }}
       >
-        {/* mouse-follow glow */}
-        <div
-          ref={glowRef}
-          className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0"
-          style={{
-            background: `radial-gradient(circle, ${color}20 0%, transparent 70%)`,
-          }}
-        />
-
-        {/* shimmer border */}
-        <div
-          className={`shimmer-border pointer-events-none absolute inset-0 rounded-2xl transition-opacity duration-500 ${
-            isHovered ? "opacity-100" : "opacity-0"
-          }`}
-        />
+        <CornerBracket position="tl" />
+        <CornerBracket position="tr" />
+        <CornerBracket position="bl" />
+        <CornerBracket position="br" />
 
         <div
           ref={lottieWrapRef}
@@ -159,7 +139,6 @@ export default function AboutPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* stat cards stagger */
       gsap.from(".about-stat", {
         y: 80,
         rotationX: -15,
@@ -175,18 +154,6 @@ export default function AboutPage() {
         },
       });
 
-      /* floating icon bounce */
-      gsap.utils.toArray<HTMLElement>(".stat-icon").forEach((icon) => {
-        gsap.to(icon, {
-          y: -6,
-          duration: 2,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-        });
-      });
-
-      /* text paragraphs stagger */
       gsap.from(".about-paragraph", {
         y: 40,
         opacity: 0,
@@ -200,7 +167,6 @@ export default function AboutPage() {
         },
       });
 
-      /* CTA button reveal */
       gsap.from(".about-cta", {
         y: 30,
         opacity: 0,
@@ -224,44 +190,42 @@ export default function AboutPage() {
         {/* Stats grid */}
         <div className="page-content-block mb-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
           {[
-            { value: "40+", label: "Countries", color: "#1E6DB5" },
-            { value: "2015", label: "Founded", color: "#0891b2" },
-            { value: "500+", label: "Clients", color: "#0d9488" },
-            { value: "IATF", label: "16949 Certified", color: "#6366f1" },
+            { value: "40+", label: "Countries" },
+            { value: "2015", label: "Founded" },
+            { value: "500+", label: "Clients" },
+            { value: "IATF", label: "16949 Certified" },
           ].map((stat, i) => (
             <StatItem
               key={i}
               lottie={statLotties[i]}
               value={stat.value}
               label={stat.label}
-              color={stat.color}
             />
           ))}
         </div>
 
         {/* Content paragraphs - alternating style */}
         <div className="page-content-block space-y-6">
-          {[t("p2"), t("p3"), t("p4"), t("p5"), t("p6")].map((text, i) => (
+          {[t("p2"), t("p3"), t("p4"), t("p5"), t("p6")].map((text, i) =>
             i % 2 === 1 ? (
-              /* Highlighted glassmorphism card */
-              <div
-                key={i}
-                className="about-paragraph group relative overflow-hidden rounded-2xl py-6 px-7 sm:px-8"
-                style={{
-                  background: "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(255,255,255,0.03))",
-                  border: "1px solid rgba(30,109,181,0.12)",
-                  boxShadow: "0 8px 30px -8px rgba(0,0,0,0.15)",
-                }}
-              >
-                {/* Subtle corner glow */}
-                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/8 blur-3xl" />
-                <p className="relative z-10 text-lg leading-relaxed text-muted">{text}</p>
+              /* Highlighted card with spinning border */
+              <div key={i} className="about-paragraph">
+                <div className="relative rounded-2xl p-[1px] overflow-hidden">
+                  <div
+                    className="pointer-events-none absolute inset-[-50%] animate-[borderSpin_6s_linear_infinite]"
+                    style={{
+                      background: "conic-gradient(from 0deg, transparent 0%, #1E6DB540 15%, #1E6DB5 30%, transparent 45%, transparent 55%, #1E6DB5 70%, #1E6DB540 85%, transparent 100%)",
+                    }}
+                  />
+                  <div className="relative rounded-2xl bg-[var(--background)] py-6 px-7 sm:px-8">
+                    <p className="text-lg leading-relaxed text-muted">{text}</p>
+                  </div>
+                </div>
               </div>
             ) : (
-              /* Normal paragraph */
               <p key={i} className="about-paragraph text-lg leading-relaxed text-muted">{text}</p>
             )
-          ))}
+          )}
         </div>
 
         {/* Gradient divider before CTA */}
@@ -278,6 +242,13 @@ export default function AboutPage() {
             <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
           </Link>
         </div>
+
+        <style jsx global>{`
+          @keyframes borderSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+          }
+        `}</style>
       </div>
     </PageLayout>
   );

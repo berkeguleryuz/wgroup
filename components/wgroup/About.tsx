@@ -249,9 +249,9 @@ export default function About() {
   return (
     <>
       {/* ---- Curved top edge: sits OUTSIDE section to avoid overflow-hidden clip ---- */}
-      <div className="relative -mt-[80px] -mb-4 overflow-visible">
+      <div className="relative -mt-[200px] overflow-visible">
         <svg
-          className="block w-full h-[84px]"
+          className="block w-full h-[204px]"
           viewBox="0 0 1440 84"
           fill="none"
           preserveAspectRatio="none"
@@ -261,10 +261,6 @@ export default function About() {
         {/* Glow */}
         <div
           className="pointer-events-none absolute left-1/2 bottom-0 h-[100px] w-[700px] -translate-x-1/2 rounded-full blur-[80px]"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, rgba(99,102,241,0.2) 0%, rgba(30,109,181,0.1) 50%, transparent 100%)",
-          }}
         />
         {/* Sparkles covering the curve area */}
         <div className="pointer-events-none absolute inset-0">

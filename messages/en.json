@@ -207,9 +207,9 @@
     "contactUs": "Contact Us"
   },
   "mission": {
-    "title": "Our Mission",
+    "title": "Our",
     "eyebrow": "OUR MISSION",
-    "titleHighlight": "Vision",
+    "titleHighlight": "Mission",
     "p1": "The mission of Wgroup GmbH is founded upon the fundamental principles of innovation and the pursuit of excellence. This mission emphasizes that sustainable success in the automotive industry can be achieved through the dynamic integration of creativity and analytical thought. From the inception of our company, this integration has deeply ingrained itself among our employees, merging knowledge and skills from various disciplines. This multidisciplinary approach shapes our process for discovering and developing innovative solutions. \"Artistic creativity and engineering-based analytical thinking form the DNA of our company and drive us towards developing innovative solutions.\"",
     "p2": "Sustainability is a cornerstone of our business strategy; we are committed to investing in the future of our sector from economic, environmental, and industrial perspectives. Our quest to produce innovative solutions for our clients and partners is a driving force that propels us forward, supporting our objective of achieving mutual success and value creation in our customer relationships.",
     "p3": "Knowledge sharing and learning are the foundational pillars of our leadership vision. With our sensitivity to technological innovations and industry trends, we aim to lead in areas such as education and software development. This pioneering spirit allows us to contribute to the broader industry by sharing our knowledge and experiences.",
@@ -274,20 +274,23 @@
     "contactCta": "Get in Touch"
   },
   "contact": {
-    "title": "Contact Us",
+    "title": "Get in",
     "eyebrow": "CONTACT",
     "titleHighlight": "Touch",
     "city": "Berlin",
-    "hqLab": "HQ&Lab",
+    "hqLab": "HQ & Lab",
     "building": "Ludwig Erhard Haus",
     "address": "Fasanenstrasse 85, 10623 Berlin / Germany",
     "email": "info@wgroupgmbh.eu",
     "phone": "+49 174 177 78 79",
+    "formTitle": "Send us a message",
     "formName": "Name Surname",
     "formEmail": "Email",
     "formMessage": "Comment or Message",
     "formSend": "Send",
-    "formRequired": "Required"
+    "formRequired": "Required",
+    "followUs": "Follow Us",
+    "officeTitle": "Our Office"
   },
   "faq": {
     "title": "Frequently Asked Questions (FAQ)",

@@ -30,11 +30,12 @@ export default function FrameAnimation() {
   const framesRef = useRef<HTMLImageElement[]>([]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const currentFrameRef = useRef(0);
+  const angleRef = useRef({ value: 0 });
   const [loaded, setLoaded] = useState(false);
   const [progress, setProgress] = useState(0);
   const t = useTranslations("frameAnimation");
 
-  const drawFrame = useCallback((index: number) => {
+  const drawFrame = useCallback((index: number, angle: number = 0) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -42,6 +43,7 @@ export default function FrameAnimation() {
     const img = framesRef.current[index];
     if (!img) return;
 
+    // Clear with white
     ctx.fillStyle = "#ffffff";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -53,7 +55,19 @@ export default function FrameAnimation() {
     const x = (canvas.width - w) / 2;
     const y = (canvas.height - h) / 2;
 
+    // Apply subtle Y-axis rotation to the W image only
+    // angle oscillates between -1 and 1
+    // Simulate 3D Y-rotation: horizontal scale + slight skew
+    const skewFactor = angle * 0.025;
+    const scaleX = 1 - Math.abs(angle) * 0.012;
+    const offsetX = angle * 8;
+
+    ctx.save();
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.transform(scaleX, skewFactor, 0, 1, offsetX, 0);
+    ctx.translate(-canvas.width / 2, -canvas.height / 2);
     ctx.drawImage(img, x, y, w, h);
+    ctx.restore();
   }, []);
 
   // Preload all frames
@@ -77,7 +91,7 @@ export default function FrameAnimation() {
     framesRef.current = images;
   }, []);
 
-  // Setup canvas resize + scroll animation
+  // Setup canvas resize + scroll animation + subtle idle rotation
   useEffect(() => {
     if (!loaded) return;
 
@@ -91,9 +105,26 @@ export default function FrameAnimation() {
     };
 
     resize();
-    drawFrame(0);
+    drawFrame(0, 0);
 
     window.addEventListener("resize", resize);
+
+    // Continuous subtle Y-axis rotation — oscillates angle between -1 and 1
+    const angleTween = gsap.to(angleRef.current, {
+      value: 1,
+      duration: 5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+
+    // rAF loop to continuously redraw with the rotation applied
+    let rafId: number;
+    const animate = () => {
+      drawFrame(currentFrameRef.current, angleRef.current.value);
+      rafId = requestAnimationFrame(animate);
+    };
+    rafId = requestAnimationFrame(animate);
 
     const trigger = ScrollTrigger.create({
       trigger: sectionRef.current,
@@ -110,7 +141,6 @@ export default function FrameAnimation() {
         );
         if (frameIndex !== currentFrameRef.current) {
           currentFrameRef.current = frameIndex;
-          drawFrame(frameIndex);
         }
 
         // Card animations
@@ -149,6 +179,8 @@ export default function FrameAnimation() {
     return () => {
       window.removeEventListener("resize", resize);
       trigger.kill();
+      angleTween.kill();
+      cancelAnimationFrame(rafId);
     };
   }, [loaded, drawFrame]);
 

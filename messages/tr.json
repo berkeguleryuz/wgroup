@@ -207,9 +207,9 @@
     "contactUs": "Bize Ulaşın"
   },
   "mission": {
-    "title": "Misyonumuz",
+    "title": "Bizim",
     "eyebrow": "MİSYONUMUZ",
-    "titleHighlight": "Vizyon",
+    "titleHighlight": "Misyonumuz",
     "p1": "Wgroup GmbH'nin misyonu, yenilik ve mükemmellik arayışının temel ilkeleri üzerine kuruludur. Bu misyon, otomotiv sektöründe sürdürülebilir başarının yaratıcılık ve analitik düşüncenin dinamik entegrasyonu yoluyla elde edilebileceğini vurgulamaktadır. Şirketimizin kuruluşundan bu yana, bu entegrasyon çalışanlarımız arasında derinlemesine yer etmiş, çeşitli disiplinlerden bilgi ve becerileri birleştirmiştir. Bu çok disiplinli yaklaşım, yenilikçi çözümler keşfetme ve geliştirme sürecimizi şekillendirmektedir. \"Sanatsal yaratıcılık ve mühendislik tabanlı analitik düşünce, şirketimizin DNA'sını oluşturur ve bizi yenilikçi çözümler geliştirmeye doğru iter.\"",
     "p2": "Sürdürülebilirlik, iş stratejimizin temel taşıdır; ekonomik, çevresel ve endüstriyel perspektiflerden sektörümüzün geleceğine yatırım yapma taahhüdündeyiz. Müşterilerimiz ve ortaklarımız için yenilikçi çözümler üretme arayışımız, bizi ileriye taşıyan itici güçtür ve müşteri ilişkilerimizde karşılıklı başarı ve değer yaratma hedefimizi desteklemektedir.",
     "p3": "Bilgi paylaşımı ve öğrenme, liderlik vizyonumuzun temel direkleridir. Teknolojik yeniliklere ve sektör trendlerine duyarlılığımızla eğitim ve yazılım geliştirme gibi alanlarda liderlik etmeyi hedefliyoruz. Bu öncü ruh, bilgi ve deneyimlerimizi paylaşarak daha geniş sektöre katkı sağlamamıza olanak tanır.",
@@ -274,20 +274,23 @@
     "contactCta": "Bize Ulaşın"
   },
   "contact": {
-    "title": "Bize Ulaşın",
+    "title": "İletişime",
     "eyebrow": "İLETİŞİM",
-    "titleHighlight": "İletişim",
+    "titleHighlight": "Geçin",
     "city": "Berlin",
-    "hqLab": "Merkez ve Laboratuvar",
+    "hqLab": "Merkez & Laboratuvar",
     "building": "Ludwig Erhard Haus",
     "address": "Fasanenstrasse 85, 10623 Berlin / Almanya",
     "email": "info@wgroupgmbh.eu",
     "phone": "+49 174 177 78 79",
+    "formTitle": "Bize mesaj gönderin",
     "formName": "Ad Soyad",
     "formEmail": "E-posta",
     "formMessage": "Yorum veya Mesaj",
     "formSend": "Gönder",
-    "formRequired": "Zorunlu"
+    "formRequired": "Zorunlu",
+    "followUs": "Bizi Takip Edin",
+    "officeTitle": "Ofisimiz"
   },
   "faq": {
     "title": "Sıkça Sorulan Sorular (SSS)",
