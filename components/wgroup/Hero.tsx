@@ -11,84 +11,24 @@ import MorphButton from "@/components/ui/MorphButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
-/* ---- Animated Brain Visual (Left=Analytical, Right=Creative) ---- */
+/* ---- Hero Brain Image — full-bleed background cover ---- */
 function BrainVisual() {
   return (
-    <div className="brain-visual pointer-events-none absolute inset-0 flex items-center justify-center">
-      <div className="relative h-125 w-125 sm:h-150 sm:w-150 lg:h-175 lg:w-175">
-        {/* Left hemisphere - Analytical (blue, geometric) */}
-        <div className="brain-left absolute left-0 top-1/2 h-[85%] w-[50%] -translate-y-1/2 overflow-hidden rounded-l-full">
-          <div
-            className="h-full w-full"
-            style={{
-              background:
-                "radial-gradient(ellipse at 70% 50%, rgba(30,109,181,0.25) 0%, rgba(30,109,181,0.08) 50%, transparent 80%)",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-30"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(30,109,181,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(30,109,181,0.4) 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
-            }}
-          />
-          <div className="brain-node absolute left-[20%] top-[25%] h-2 w-2 rounded-full bg-primary/60" />
-          <div className="brain-node absolute left-[40%] top-[45%] h-3 w-3 rounded-full bg-primary/40" />
-          <div className="brain-node absolute left-[15%] top-[65%] h-2 w-2 rounded-full bg-primary/50" />
-          <div className="brain-node absolute left-[55%] top-[30%] h-1.5 w-1.5 rounded-full bg-accent-teal/60" />
-          <div className="brain-node absolute left-[35%] top-[75%] h-2.5 w-2.5 rounded-full bg-primary/30" />
-        </div>
-
-        {/* Right hemisphere - Creative (purple, organic) */}
-        <div className="brain-right absolute right-0 top-1/2 h-[85%] w-[50%] -translate-y-1/2 overflow-hidden rounded-r-full">
-          <div
-            className="h-full w-full"
-            style={{
-              background:
-                "radial-gradient(ellipse at 30% 50%, rgba(99,102,241,0.25) 0%, rgba(99,102,241,0.08) 50%, transparent 80%)",
-            }}
-          />
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage:
-                "radial-gradient(circle at 30% 30%, rgba(99,102,241,0.5) 2px, transparent 2px), radial-gradient(circle at 70% 60%, rgba(168,85,247,0.4) 3px, transparent 3px), radial-gradient(circle at 50% 80%, rgba(99,102,241,0.3) 2px, transparent 2px)",
-              backgroundSize: "60px 60px, 80px 80px, 50px 50px",
-            }}
-          />
-          <div className="brain-blob absolute right-[20%] top-[20%] h-12 w-12 rounded-full bg-accent-purple/20 blur-md" />
-          <div className="brain-blob absolute right-[40%] top-[50%] h-16 w-16 rounded-full bg-[#a855f7]/15 blur-lg" />
-          <div className="brain-blob absolute right-[15%] top-[70%] h-10 w-10 rounded-full bg-accent-purple/20 blur-md" />
-        </div>
-
-        {/* Center divider line */}
-        <div className="absolute left-1/2 top-[10%] h-[80%] w-px -translate-x-1/2 bg-linear-to-b from-transparent via-white/20 to-transparent" />
-
-        {/* Outer glow ring */}
-        <div
-          className="brain-ring absolute inset-0 rounded-full"
-          style={{
-            background:
-              "conic-gradient(from 0deg, rgba(30,109,181,0.15), rgba(99,102,241,0.15), rgba(30,109,181,0.15))",
-            filter: "blur(40px)",
-          }}
-        />
-
-        {/* Labels */}
-        <span
-          className="absolute left-[8%] top-1/2 -translate-y-1/2 text-[10px] font-semibold uppercase tracking-[0.25em] text-primary/40 sm:text-xs"
-          style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-        >
-          Analytical
-        </span>
-        <span
-          className="absolute right-[8%] top-1/2 -translate-y-1/2 text-[10px] font-semibold uppercase tracking-[0.25em] text-accent-purple/40 sm:text-xs"
-          style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-        >
-          Creative
-        </span>
-      </div>
+    <div className="brain-visual pointer-events-none absolute inset-0">
+      <img
+        src="/w/hero.jpg"
+        alt=""
+        className="brain-img h-full w-full object-cover opacity-40"
+        style={{ filter: "brightness(0.7)" }}
+      />
+      {/* Dark overlay to keep text legible */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(6,11,24,0.5) 0%, rgba(6,11,24,0.7) 100%)",
+        }}
+      />
     </div>
   );
 }
@@ -116,43 +56,12 @@ export default function Hero() {
         },
       });
 
-      gsap.to(".brain-node", {
-        scale: 1.5,
-        opacity: 0.8,
-        duration: 2,
-        stagger: { each: 0.4, repeat: -1, yoyo: true },
-        ease: "sine.inOut",
-      });
-
-      gsap.to(".brain-blob", {
-        x: "random(-10, 10)",
-        y: "random(-10, 10)",
-        duration: 3,
-        stagger: { each: 0.5, repeat: -1, yoyo: true },
-        ease: "sine.inOut",
-      });
-
-      gsap.to(".brain-ring", {
-        rotation: 360,
-        duration: 30,
-        repeat: -1,
-        ease: "none",
-      });
-
-      gsap.from(".brain-left", {
-        x: -120,
+      gsap.from(".brain-img", {
+        scale: 1.1,
         opacity: 0,
         duration: 2.5,
-        ease: "power2.inOut",
+        ease: "power2.out",
         delay: 0.3,
-      });
-
-      gsap.from(".brain-right", {
-        x: 120,
-        opacity: 0,
-        duration: 2.5,
-        ease: "power2.inOut",
-        delay: 0.5,
       });
 
       const tl = gsap.timeline({ delay: 0.6 });
