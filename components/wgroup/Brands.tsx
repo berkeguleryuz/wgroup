@@ -66,25 +66,25 @@ function ShieldCheckIcon(props: React.SVGProps<SVGSVGElement>) {
 
 const brands = [
   {
-    key: "weduFactory",
-    slug: "/w-studio",
-    image: "/w/brands/wedu-factory.webp",
+    key: "wquality",
+    slug: "/w-quality",
+    image: "/w/brands/wqualitysphere.webp",
     colorHex: "#1E6DB5",
-    Icon: GradCapIcon,
+    Icon: ShieldCheckIcon,
   },
   {
-    key: "warticode",
+    key: "wdigilab",
     slug: "/w-digilab",
-    image: "/w/brands/warticode.webp",
+    image: "/w/brands/wdigilab.webp",
     colorHex: "#6366f1",
     Icon: CodeBracketsIcon,
   },
   {
-    key: "wqualitysphere",
-    slug: "/w-quality",
-    image: "/w/brands/wqualitysphere.webp",
+    key: "wstudio",
+    slug: "/w-studio",
+    image: "/w/brands/wstudio.webp",
     colorHex: "#0891b2",
-    Icon: ShieldCheckIcon,
+    Icon: GradCapIcon,
   },
 ];
 

@@ -16,7 +16,6 @@ export default function WStudioPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Hero text entrance */
       const heroTl = gsap.timeline({ delay: 0.3 });
       heroTl.from(".dv-hero-eyebrow", { y: 20, opacity: 0, duration: 0.6, ease: "power2.out" });
       heroTl.from(".dv-hero-title", { y: 60, opacity: 0, duration: 0.9, ease: "power3.out" }, "-=0.3");
@@ -24,7 +23,6 @@ export default function WStudioPage() {
       heroTl.from(".dv-hero-line", { scaleX: 0, duration: 0.8, ease: "power3.inOut" }, "-=0.3");
       heroTl.from(".dv-hero-intro", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.3");
 
-      /* Scroll sections */
       gsap.utils.toArray<HTMLElement>(".dv-fade").forEach((el) => {
         gsap.from(el, {
           y: 60, opacity: 0, duration: 1, ease: "power2.out",
@@ -34,14 +32,14 @@ export default function WStudioPage() {
 
       gsap.utils.toArray<HTMLElement>(".dv-cap-card").forEach((el, i) => {
         gsap.from(el, {
-          y: 40, opacity: 0, duration: 0.7, delay: i * 0.1, ease: "power2.out",
+          y: 50, opacity: 0, scale: 0.95, duration: 0.8, delay: i * 0.12, ease: "power2.out",
           scrollTrigger: { trigger: el, start: "top 90%", toggleActions: "play none none reverse" },
         });
       });
 
-      gsap.utils.toArray<HTMLElement>(".dv-approach-item").forEach((el, i) => {
+      gsap.utils.toArray<HTMLElement>(".dv-approach-block").forEach((el, i) => {
         gsap.from(el, {
-          x: i % 2 === 0 ? -40 : 40, opacity: 0, duration: 0.8, ease: "power2.out",
+          y: 40, opacity: 0, duration: 0.8, delay: i * 0.1, ease: "power2.out",
           scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
         });
       });
@@ -56,7 +54,6 @@ export default function WStudioPage() {
     <div ref={pageRef} style={{ background: "var(--background)" }}>
       {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
           <p className="dv-hero-eyebrow mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-primary"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
@@ -78,6 +75,7 @@ export default function WStudioPage() {
             {t("intro")}
           </p>
         </div>
+
         {/* Curved transition */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg className="block w-full h-[80px]" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
@@ -102,25 +100,23 @@ export default function WStudioPage() {
             </h2>
           </div>
 
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
-            {/* Left: large statement */}
-            <div className="dv-fade">
-              <p className="text-2xl leading-[1.5] sm:text-3xl"
-                style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
-                {t("whatWeDo1")}
+          {/* Full-width cinematic statement */}
+          <div className="dv-fade mb-12">
+            <p className="text-2xl leading-[1.5] sm:text-3xl lg:text-4xl"
+              style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
+              {t("whatWeDo1")}
+            </p>
+          </div>
+
+          {/* Detail text in a highlighted card */}
+          {[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).map((text, i) => (
+            <div key={i} className="dv-fade mb-6 last:mb-0">
+              <p className="text-base leading-[1.9] sm:text-lg"
+                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
+                {text}
               </p>
             </div>
-
-            {/* Right: detail paragraphs */}
-            <div className="dv-fade space-y-6">
-              {[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).map((text, i) => (
-                <p key={i} className="text-base leading-[1.9] sm:text-[17px]"
-                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
-                  {text}
-                </p>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -128,72 +124,58 @@ export default function WStudioPage() {
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/5 blur-[150px]" />
-          <div className="absolute -right-20 bottom-20 h-[300px] w-[300px] rounded-full bg-accent-teal/5 blur-[100px]" />
         </div>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-6">
-          {/* Section header */}
-          <div className="dv-fade mb-16">
-            <div className="flex items-center gap-4">
-              <div className="h-[3px] w-12 rounded-full" style={{ background: "linear-gradient(to right, var(--primary), var(--accent-teal))" }} />
-              <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary"
-                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                {t("capTitle")}
-              </h2>
-            </div>
+        <div className="relative z-10 mx-auto max-w-5xl px-6">
+          <div className="dv-fade mb-16 flex items-center gap-4">
+            <div className="h-[3px] w-12 rounded-full" style={{ background: "linear-gradient(to right, var(--primary), var(--accent-teal))" }} />
+            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+              {t("capTitle")}
+            </h2>
           </div>
 
-          {/* Bento grid */}
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
-            {capabilities.map((cap, i) => {
-              // First 2 cards span 3 cols each, last 3 span 2 cols each
-              const colSpan = i < 2 ? "lg:col-span-3" : "lg:col-span-2";
+          {/* 2x2 large cards */}
+          <div className="grid gap-6 sm:grid-cols-2">
+            {capabilities.map((cap, i) => (
+              <div
+                key={i}
+                className="dv-cap-card group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1"
+                style={{
+                  background: "linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
+                  border: "1px solid rgba(255,255,255,0.06)",
+                }}
+              >
+                <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                  style={{ background: "linear-gradient(135deg, rgba(30,109,181,0.1), transparent 40%, rgba(8,145,178,0.08))" }} />
 
-              return (
-                <div
-                  key={i}
-                  className={`dv-cap-card group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 ${colSpan}`}
-                  style={{
-                    background: "linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  {/* Animated gradient border on hover */}
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                    style={{ background: "linear-gradient(135deg, rgba(30,109,181,0.1), transparent 40%, rgba(8,145,178,0.08))" }} />
-
-
-                  <div className="relative z-10 p-8 sm:p-10">
-                    {/* Number + indicator */}
-                    <div className="mb-6 flex items-center justify-between">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold"
-                        style={{
-                          fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                          background: "linear-gradient(135deg, rgba(30,109,181,0.15), rgba(8,145,178,0.1))",
-                          color: "var(--primary)",
-                        }}>
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <img
-                        src="/wgroup/logo.png"
-                        alt=""
-                        className="h-7 w-auto opacity-0 transition-all duration-500 group-hover:opacity-20"
-                      />
-                    </div>
-
-                    {/* Capability text */}
-                    <h3 className="text-lg font-semibold leading-snug text-white/90 sm:text-xl"
-                      style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                      {cap}
-                    </h3>
-
-                    {/* Bottom decorative line */}
-                    <div className="mt-6 h-[1px] w-0 rounded-full transition-all duration-700 group-hover:w-full"
-                      style={{ background: "linear-gradient(to right, var(--primary), transparent)" }} />
+                <div className="relative z-10 p-10 sm:p-12">
+                  <div className="mb-8 flex items-center justify-between">
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
+                      style={{
+                        fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                        background: "linear-gradient(135deg, rgba(30,109,181,0.15), rgba(8,145,178,0.1))",
+                        color: "var(--primary)",
+                      }}>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <img
+                      src="/wgroup/logo.png"
+                      alt=""
+                      className="h-8 w-auto opacity-0 transition-all duration-500 group-hover:opacity-20"
+                    />
                   </div>
+
+                  <h3 className="text-xl font-semibold leading-snug text-white/90 sm:text-2xl"
+                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                    {cap}
+                  </h3>
+
+                  <div className="mt-8 h-[1px] w-0 rounded-full transition-all duration-700 group-hover:w-full"
+                    style={{ background: "linear-gradient(to right, var(--primary), transparent)" }} />
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -209,29 +191,33 @@ export default function WStudioPage() {
             </h2>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-8">
             {[t("approach1"), t("approach2"), t("approach3")].filter(Boolean).map((text, i) => (
-              <div key={i} className={`dv-approach-item flex flex-col gap-6 sm:flex-row sm:gap-12 ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}>
-                {/* Number accent */}
-                <div className="flex shrink-0 items-start sm:w-24">
-                  <span className="text-[64px] font-black leading-none sm:text-[80px]"
+              <div key={i} className="dv-approach-block relative rounded-2xl p-8 sm:p-10"
+                style={{
+                  background: i === 0 ? "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(8,145,178,0.03))" : "transparent",
+                  border: i === 0 ? "1px solid rgba(30,109,181,0.1)" : "none",
+                }}
+              >
+                <div className="flex items-start gap-6">
+                  <span className="hidden shrink-0 text-[56px] font-black leading-none sm:block"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
                       background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
-                      opacity: 0.15,
+                      opacity: 0.2,
                     }}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                </div>
-                {/* Text */}
-                <div className="flex-1">
-                  <div className="mb-4 h-[2px] w-10 rounded-full"
-                    style={{ background: i % 2 === 0 ? "linear-gradient(to right, var(--primary), transparent)" : "linear-gradient(to right, var(--accent-teal), transparent)" }} />
-                  <p className="text-lg leading-[1.8] sm:text-xl"
-                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#2a3444", fontWeight: 300 }}>
+                  <p className={`flex-1 leading-[1.8] ${i === 0 ? "text-lg sm:text-xl" : "text-base sm:text-lg"}`}
+                    style={{
+                      fontFamily: i === 0 ? "var(--font-instrument), Georgia, serif" : "var(--font-barlow), system-ui, sans-serif",
+                      fontStyle: i === 0 ? "italic" : "normal",
+                      fontWeight: i === 0 ? 400 : 300,
+                      color: i === 0 ? "#1e293b" : "#3a4a5c",
+                    }}>
                     {text}
                   </p>
                 </div>

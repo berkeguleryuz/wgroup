@@ -1,17 +1,19 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const DIVISIONS = [
-  { key: "wquality", color: "var(--primary)" },
-  { key: "wdigilab", color: "var(--accent-teal)" },
-  { key: "wstudio", color: "var(--accent-purple)" },
+  { key: "wquality", color: "var(--primary)", href: "/w-quality" },
+  { key: "wdigilab", color: "var(--accent-teal)", href: "/w-digilab" },
+  { key: "wstudio", color: "var(--accent-purple)", href: "/w-studio" },
 ] as const;
 
 function DivisionCard({
@@ -19,17 +21,22 @@ function DivisionCard({
   name,
   description,
   color,
+  href,
   isLast,
 }: {
   number: number;
   name: string;
   description: string;
   color: string;
+  href: string;
   isLast: boolean;
 }) {
   return (
     <>
-      <div className="division-card relative grid gap-6 py-12 first:pt-0 lg:grid-cols-[260px_1fr] lg:gap-14">
+      <Link
+        href={href}
+        className="division-card group relative grid gap-6 rounded-2xl py-12 px-2 transition-all duration-300 hover:bg-primary/[0.03] first:pt-0 lg:grid-cols-[260px_1fr] lg:gap-14 lg:px-6"
+      >
         {/* Left: identity */}
         <div>
           <span
@@ -53,7 +60,7 @@ function DivisionCard({
           />
         </div>
 
-        {/* Right: description */}
+        {/* Right: description + arrow */}
         <div className="flex items-start">
           <div
             className="mr-5 mt-1 hidden w-[2px] self-stretch rounded-full lg:block"
@@ -62,14 +69,21 @@ function DivisionCard({
               opacity: 0.25,
             }}
           />
-          <p
-            className="flex-1 text-base leading-[1.9] text-muted sm:text-[17px]"
-            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-          >
-            {description}
-          </p>
+          <div className="flex-1">
+            <p
+              className="text-base leading-[1.9] text-muted sm:text-[17px]"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+            >
+              {description}
+            </p>
+            <div className="mt-4 flex items-center gap-2 text-sm font-semibold opacity-0 transition-all duration-300 group-hover:opacity-100"
+              style={{ color, fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+              Explore
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </div>
+          </div>
         </div>
-      </div>
+      </Link>
 
       {!isLast && (
         <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -129,13 +143,14 @@ export default function OurDivisionsPage() {
           </p>
         </div>
 
-        {DIVISIONS.map(({ key, color }, i) => (
+        {DIVISIONS.map(({ key, color, href }, i) => (
           <DivisionCard
             key={key}
             number={i + 1}
             name={t(`${key}.name`)}
             description={t(`${key}.description`)}
             color={color}
+            href={href}
             isLast={i === DIVISIONS.length - 1}
           />
         ))}
