@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cat:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(wc:*)",
+      "Bash(kill %1:*)",
+      "Bash(node:*)",
+      "WebSearch",
+      "WebFetch(domain:landingfoliocom.imgix.net)",
+      "WebFetch(domain:www.pexels.com)",
+      "Bash(curl:*)",
+      "WebFetch(domain:pixabay.com)",
+      "Bash(identify:*)",
+      "Bash(ls:*)",
+      "WebFetch(domain:mixkit.co)",
+      "WebFetch(domain:lottiefiles.com)",
+      "Bash(ffprobe:*)",
+      "WebFetch(domain:component.gallery)",
+      "Bash(ffmpeg:*)",
+      "Bash(npx next:*)",
+      "Bash(convert:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "WebFetch(domain:icons8.de)",
+      "WebFetch(domain:www.freepik.com)",
+      "WebFetch(domain:www.pixel-perfect.space)",
+      "WebFetch(domain:lottie.host)",
+      "Bash(npx shadcn@latest:*)"
+    ]
+  }
+}
