@@ -943,5 +943,32 @@
     "contactText": "If you have questions about our cookie policy, please contact us at:",
     "contactEmail": "Email: info@wgroupgmbh.eu",
     "contactPhone": "Phone: +49 174 177 78 79"
+  },
+  "wqualityPage": {
+    "title": "W",
+    "eyebrow": "W-QUALITY",
+    "titleHighlight": "Quality",
+    "subtitle": "Industrial Consulting & Audit for Automotive and Manufacturing.",
+    "intro": "WQuality supports organizations in building robust quality systems, improving operational performance and preparing for complex industry audits.",
+    "whatWeDoTitle": "What We Do",
+    "whatWeDo1": "WQuality provides consulting expertise for organizations operating in automotive and manufacturing industries.",
+    "whatWeDo2": "Our focus is to strengthen quality systems, improve supplier performance and support organizations in navigating complex industry requirements.",
+    "whatWeDo3": "By combining industry experience with structured methodologies, WQuality helps organizations build sustainable operational excellence.",
+    "capTitle": "Core Capabilities",
+    "cap1": "Quality Systems Consulting",
+    "cap2": "Supplier Development",
+    "cap3": "Audit Preparation",
+    "cap4": "Operational Improvement",
+    "cap5": "Industry Compliance Support",
+    "approachTitle": "Our Approach",
+    "approach1": "WQuality believes that sustainable performance is built on strong systems and clear processes.",
+    "approach2": "Our approach combines industry experience, analytical thinking and structured methodologies to support organizations in building resilient operational systems.",
+    "approach3": "By focusing on practical solutions and measurable results, WQuality helps organizations strengthen both performance and compliance.",
+    "ctaEyebrow": "W-QUALITY",
+    "ctaTitle": "Ready to Strengthen Your",
+    "ctaHighlight": "Operations?",
+    "ctaDesc": "Discover how WQuality can support your organization in building sustainable quality systems and operational excellence.",
+    "contactCta": "Contact Us",
+    "ctaLearnMore": "Our Divisions"
   }
 }

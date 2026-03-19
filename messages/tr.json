@@ -943,5 +943,32 @@
     "contactText": "Çerez politikamız hakkında sorularınız varsa lütfen bizimle iletişime geçin:",
     "contactEmail": "E-posta: info@wgroupgmbh.eu",
     "contactPhone": "Telefon: +49 174 177 78 79"
+  },
+  "wqualityPage": {
+    "title": "W",
+    "eyebrow": "W-QUALITY",
+    "titleHighlight": "Quality",
+    "subtitle": "Otomotiv ve üretim sektörü için endüstriyel danışmanlık ve denetim.",
+    "intro": "WQuality, kuruluşların güçlü kalite sistemleri kurmalarına, operasyonel performanslarını geliştirmelerine ve karmaşık sektör denetimlerine hazırlanmalarına destek olur.",
+    "whatWeDoTitle": "Ne Yapıyoruz",
+    "whatWeDo1": "WQuality, otomotiv ve üretim sektörlerinde faaliyet gösteren kuruluşlara danışmanlık hizmetleri sunar.",
+    "whatWeDo2": "Odak noktamız kalite sistemlerini güçlendirmek, tedarikçi performansını geliştirmek ve kuruluşların karmaşık sektör gerekliliklerini yönetmelerine destek olmaktır.",
+    "whatWeDo3": "Endüstri deneyimini yapılandırılmış metodolojilerle birleştiren WQuality, kuruluşların sürdürülebilir operasyonel mükemmeliyet sağlamasına yardımcı olur.",
+    "capTitle": "Temel Yetkinlikler",
+    "cap1": "Kalite Sistemleri Danışmanlığı",
+    "cap2": "Tedarikçi Geliştirme",
+    "cap3": "Denetim Hazırlığı",
+    "cap4": "Operasyonel İyileştirme",
+    "cap5": "Sektörel Uyum Destekleri",
+    "approachTitle": "Yaklaşımımız",
+    "approach1": "WQuality, sürdürülebilir performansın güçlü sistemler ve net süreçler üzerine kurulduğuna inanır.",
+    "approach2": "Yaklaşımımız; endüstri deneyimini, analitik düşünceyi ve yapılandırılmış metodolojileri bir araya getirerek kuruluşların dayanıklı operasyonel sistemler kurmasına destek olur.",
+    "approach3": "Pratik çözümlere ve ölçülebilir sonuçlara odaklanarak WQuality, kuruluşların hem performanslarını hem de uyumluluklarını güçlendirmelerine yardımcı olur.",
+    "ctaEyebrow": "W-QUALITY",
+    "ctaTitle": "Operasyonlarınızı Güçlendirmeye",
+    "ctaHighlight": "Hazır Mısınız?",
+    "ctaDesc": "WQuality'nin kuruluşunuza sürdürülebilir kalite sistemleri ve operasyonel mükemmeliyet oluşturmada nasıl destek olabileceğini keşfedin.",
+    "contactCta": "Bize Ulaşın",
+    "ctaLearnMore": "Birimlerimiz"
   }
 }
