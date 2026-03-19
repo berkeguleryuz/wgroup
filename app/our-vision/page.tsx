@@ -83,7 +83,7 @@ export default function OurVisionPage() {
       subtitle={t("subtitle")}
       eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
-      heroImage="/images/company/career.webp"
+      heroImage="/w/company/career.webp"
     >
       <div ref={sectionRef}>
         {/* Opening — full width large text */}

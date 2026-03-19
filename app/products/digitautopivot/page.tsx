@@ -12,7 +12,7 @@ export default function DigitAutoPivotPage() {
       brand={t("brand")}
       category={t("category")}
       contactPricing={t("contactPricing")}
-      heroImage="/images/products/digitautopivot.webp"
+      heroImage="/w/products/digitautopivot.webp"
       description={
         <div className="space-y-6">
           <p className="text-lg text-muted leading-relaxed">{t("p1")}</p>

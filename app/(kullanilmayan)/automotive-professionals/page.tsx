@@ -43,7 +43,7 @@ export default function AutomotiveProfessionalsIndividualPage() {
       brand="WEdu Factory"
       category={t("category")}
       contactPricing={t("contactPricing")}
-      heroImage="/images/products/individual.webp"
+      heroImage="/w/products/individual.webp"
       description={
         <div className="space-y-6">
           <p className="text-lg text-muted leading-relaxed">{t("p1")}</p>

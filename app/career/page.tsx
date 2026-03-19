@@ -84,7 +84,7 @@ export default function CareerPage() {
       subtitle={t("subtitle")}
       eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
-      heroImage="/images/company/career.webp"
+      heroImage="/w/company/career.webp"
     >
       <div ref={sectionRef}>
         {/* Intro */}

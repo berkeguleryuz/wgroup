@@ -3,8 +3,8 @@
 import { useTranslations } from "next-intl";
 import ProductLayout from "@/components/layout/ProductLayout";
 
-export default function AuditMastermindPage() {
-  const t = useTranslations("auditmastermind");
+export default function AutoPathWayNavigatorPage() {
+  const t = useTranslations("autopathwayNavigator");
 
   return (
     <ProductLayout
@@ -12,12 +12,10 @@ export default function AuditMastermindPage() {
       brand={t("brand")}
       category={t("category")}
       contactPricing={t("contactPricing")}
-      heroImage="/images/products/auditmastermind.webp"
+      heroImage="/w/products/autopathway-navigator.webp"
       description={
         <div className="space-y-6">
           <p className="text-lg text-muted leading-relaxed">{t("p1")}</p>
-          <p className="text-lg text-muted leading-relaxed">{t("p2")}</p>
-          <p className="text-lg text-muted leading-relaxed">{t("p3")}</p>
         </div>
       }
     />

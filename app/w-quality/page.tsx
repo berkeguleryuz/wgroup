@@ -78,6 +78,12 @@ export default function WQualityPage() {
             {t("intro")}
           </p>
         </div>
+        {/* Curved transition */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg className="block w-full h-[80px]" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
+            <path d="M0 0 Q720 80 1440 0 V80 H0 Z" fill="#f7f9fc" />
+          </svg>
+        </div>
       </section>
 
       {/* ===== WHAT WE DO ===== */}
@@ -238,7 +244,7 @@ export default function WQualityPage() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="relative py-28 sm:py-36" style={{ background: "#f7f9fc" }}>
+      <section className="relative pb-28 sm:pb-36" style={{ background: "#f7f9fc" }}>
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",
           backgroundSize: "40px 40px",

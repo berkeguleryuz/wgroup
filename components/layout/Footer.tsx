@@ -14,17 +14,12 @@ const divisionLinks = [
 ] as const;
 
 const productLinks = [
-  { key: "individualProducts", href: "/products/automotive-professionals" },
-  {
-    key: "corporateProducts",
-    href: "/products/automotive-professionals-corporate",
-  },
-  { key: "digitautopivot", href: "/products/digitautopivot" },
-  { key: "eduarttransform", href: "/products/eduarttransform" },
-  { key: "auditmastermind", href: "/products/auditmastermind" },
-  { key: "autopathwayNavigator", href: "/products/autopathway-navigator" },
-  { key: "supplierelevatePro", href: "/products/supplierelevate-pro" },
-  { key: "evolvementor", href: "/products/evolvementor" },
+  { key: "studioItem1", href: "/products/digitautopivot" },
+  { key: "studioItem2", href: "/products/digitautopivot" },
+  { key: "digilabItem1", href: "/products/digitautopivot" },
+  { key: "digilabItem2", href: "/products/digitautopivot" },
+  { key: "qualityItem1", href: "/products/digitautopivot" },
+  { key: "qualityItem2", href: "/products/digitautopivot" },
 ] as const;
 
 const companyLinks = [
@@ -57,7 +52,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="mb-12">
           <Image
-            src="/images/wgroup-logo.png"
+            src="/wgroup/logo.png"
             alt="WGroup"
             width={160}
             height={74}

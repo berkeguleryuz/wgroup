@@ -121,7 +121,7 @@ export default function OurMissionPage() {
       title={t("title")}
       eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
-      heroImage="/images/company/our-mission.webp"
+      heroImage="/w/company/our-mission.webp"
     >
       <div ref={sectionRef}>
         {paragraphs.map((text, i) => (

@@ -31,22 +31,20 @@ function isGroup(item: NavItem): item is NavGroup {
 /* ---------- Image map ---------- */
 
 const navImages: Record<string, string> = {
-  aboutWgroup: "/images/company/about.webp",
-  whatWeDo: "/images/company/our-mission.webp",
-  ourDivisions: "/images/company/partners.webp",
-  ourStory: "/images/company/social-responsibility.webp",
-  ourVision: "/images/company/career.webp",
+  aboutWgroup: "/w/company/about.webp",
+  whatWeDo: "/w/company/our-mission.webp",
+  ourDivisions: "/w/company/partners.webp",
+  ourStory: "/w/company/social-responsibility.webp",
+  ourVision: "/w/company/career.webp",
   wquality: "/wgroup/01_Ana_Sayfa/20_WQuality%20Sphere.webp",
-  wdigilab: "/wgroup/01_Ana_Sayfa/18_Warticode.webp",
-  wstudio: "/wgroup/01_Ana_Sayfa/19_Wedu_Factory.webp",
-  individualCourses: "/images/products/individual.webp",
-  corporateCourses: "/images/products/corporate.webp",
-  digitautopivot: "/images/products/digitautopivot.webp",
-  eduarttransform: "/images/products/eduarttransform.webp",
-  auditmastermind: "/images/products/auditmastermind.webp",
-  autopathwayNavigator: "/images/products/autopathway-navigator.webp",
-  supplierelevatePro: "/images/products/supplierelevate-pro.webp",
-  evolvementor: "/images/products/evolvementor.webp",
+  wdigilab: "/w/brands/wdigilab.webp",
+  wstudio: "/w/brands/wstudio.webp",
+  studioItem1: "/w/products/digitautopivot.webp",
+  studioItem2: "/w/products/digitautopivot.webp",
+  digilabItem1: "/w/products/digitautopivot.webp",
+  digilabItem2: "/w/products/digitautopivot.webp",
+  qualityItem1: "/w/products/digitautopivot.webp",
+  qualityItem2: "/w/products/digitautopivot.webp",
 };
 
 /* ---------- Navigation structure ---------- */
@@ -73,30 +71,22 @@ const navItems: NavItem[] = [
   {
     key: "products",
     items: [
-      { key: "individualCourses", href: "/products/automotive-professionals" },
-      {
-        key: "corporateCourses",
-        href: "/products/automotive-professionals-corporate",
-      },
+      { key: "studioItem1", href: "/products/digitautopivot" },
+      { key: "studioItem2", href: "/products/digitautopivot" },
     ],
     sections: [
       {
-        label: "WArtiCode",
+        label: "W-DigiLab",
         items: [
-          { key: "digitautopivot", href: "/products/digitautopivot" },
-          { key: "eduarttransform", href: "/products/eduarttransform" },
+          { key: "digilabItem1", href: "/products/digitautopivot" },
+          { key: "digilabItem2", href: "/products/digitautopivot" },
         ],
       },
       {
-        label: "WQualitySphere",
+        label: "W-Quality",
         items: [
-          { key: "auditmastermind", href: "/products/auditmastermind" },
-          {
-            key: "autopathwayNavigator",
-            href: "/products/autopathway-navigator",
-          },
-          { key: "supplierelevatePro", href: "/products/supplierelevate-pro" },
-          { key: "evolvementor", href: "/products/evolvementor" },
+          { key: "qualityItem1", href: "/products/digitautopivot" },
+          { key: "qualityItem2", href: "/products/digitautopivot" },
         ],
       },
     ],
@@ -133,99 +123,88 @@ function MobileAccordion({
     <div>
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between px-6 py-3.5 text-base font-medium text-white/80 transition-colors hover:text-white"
+        className="flex w-full items-center justify-between rounded-xl px-4 py-4 text-lg font-medium text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+        style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
       >
         {t(group.key)}
         <ChevronDown
-          className={`h-4 w-4 transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`h-5 w-5 text-white/30 transition-transform duration-300 ${open ? "rotate-180 text-primary" : ""}`}
         />
       </button>
 
       {open && (
-        <div ref={contentRef} className="overflow-hidden bg-white/2 py-1">
-          {group.key === "divisions" ? (
-            <div className="flex gap-3 overflow-x-auto px-6 py-3 scrollbar-hide">
-              {group.items.map((item) => (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className="group w-50 shrink-0 overflow-hidden rounded-xl border border-white/6 bg-white/4"
-                  onClick={onNavigate}
-                >
-                  <div className="aspect-square overflow-hidden">
+        <div ref={contentRef} className="overflow-hidden pb-2">
+          {/* Main items */}
+          <div className="space-y-0.5 px-2">
+            {group.items.map((item) => (
+              <Link
+                key={item.key}
+                href={item.href}
+                className="flex items-center gap-3.5 rounded-lg px-4 py-3 transition-colors hover:bg-white/5"
+                onClick={onNavigate}
+              >
+                {navImages[item.key] && (
+                  <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/8">
                     <Image
                       src={navImages[item.key]}
-                      alt={t(item.key)}
-                      width={200}
-                      height={200}
-                      className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      alt=""
+                      width={36}
+                      height={36}
+                      className="h-full w-full object-cover"
                     />
                   </div>
-                  <div className="p-3">
-                    <span className="text-sm font-semibold text-white/90">
-                      {t(item.key)}
-                    </span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          ) : (
-            <>
-              {group.items.map((item) => (
+                )}
+                <div className="flex-1 min-w-0">
+                  <span className="text-[15px] font-medium text-white/75"
+                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                    {t(item.key)}
+                  </span>
+                </div>
+                <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/15" />
+              </Link>
+            ))}
+          </div>
+
+          {/* Sections (products sub-groups) */}
+          {group.sections?.map((section) => (
+            <div key={section.label} className="mt-2 px-2">
+              <div className="mx-2 mb-2 mt-1 flex items-center gap-2">
+                <div className="h-px flex-1 bg-white/6" />
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                  {section.label}
+                </span>
+                <div className="h-px flex-1 bg-white/6" />
+              </div>
+              {section.items.map((item) => (
                 <Link
                   key={item.key}
                   href={item.href}
-                  className="flex items-center gap-3 px-6 py-2.5 transition-colors hover:bg-white/4"
+                  className="flex items-center gap-3.5 rounded-lg px-4 py-3 transition-colors hover:bg-white/5"
                   onClick={onNavigate}
                 >
                   {navImages[item.key] && (
-                    <div className="h-8 w-8 shrink-0 overflow-hidden rounded-lg bg-white/6">
+                    <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/8">
                       <Image
                         src={navImages[item.key]}
                         alt=""
-                        width={32}
-                        height={32}
+                        width={36}
+                        height={36}
                         className="h-full w-full object-cover"
                       />
                     </div>
                   )}
-                  <span className="text-sm text-white/60">{t(item.key)}</span>
+                  <div className="flex-1 min-w-0">
+                    <span className="text-[15px] font-medium text-white/75"
+                      style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                      {t(item.key)}
+                    </span>
+                  </div>
+                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/15" />
                 </Link>
               ))}
-
-              {group.sections?.map((section) => (
-                <div key={section.label}>
-                  <div className="mx-6 my-1.5 border-t border-white/6" />
-                  <span className="block px-6 py-1.5 text-[11px] font-semibold uppercase tracking-widest text-primary/50">
-                    {section.label}
-                  </span>
-                  {section.items.map((item) => (
-                    <Link
-                      key={item.key}
-                      href={item.href}
-                      className="flex items-center gap-3 px-6 py-2.5 transition-colors hover:bg-white/4"
-                      onClick={onNavigate}
-                    >
-                      {navImages[item.key] && (
-                        <div className="h-8 w-8 shrink-0 overflow-hidden rounded-lg bg-white/6">
-                          <Image
-                            src={navImages[item.key]}
-                            alt=""
-                            width={32}
-                            height={32}
-                            className="h-full w-full object-cover"
-                          />
-                        </div>
-                      )}
-                      <span className="text-sm text-white/60">
-                        {t(item.key)}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              ))}
-            </>
-          )}
+            </div>
+          ))}
         </div>
       )}
     </div>
@@ -479,52 +458,81 @@ export default function Navbar() {
           </div>
         )}
 
-        {/* ========== MOBILE MENU ========== */}
-        {mobileOpen && (
-          <div
-            className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto py-2 lg:hidden"
-            style={{
-              background: "rgba(10, 15, 30, 0.98)",
-              backdropFilter: "blur(20px)",
-              borderTop: "1px solid rgba(255,255,255,0.06)",
-            }}
-          >
-            {navItems.map((item) =>
-              isGroup(item) ? (
-                <MobileAccordion
-                  key={item.key}
-                  group={item}
-                  t={t}
-                  onNavigate={closeMobile}
-                />
-              ) : (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className="block px-6 py-3.5 text-base font-medium text-white/80 transition-colors hover:text-white"
-                  onClick={closeMobile}
-                >
-                  {t(item.key)}
-                </Link>
-              )
-            )}
+      </nav>
 
-            <div className="mt-2 border-t border-white/6 px-6 py-5">
-              <Link
-                href="/contact"
-                className="mb-4 flex items-center justify-center gap-2 rounded-full bg-linear-to-r from-primary to-accent-teal px-6 py-3 text-base font-semibold text-white shadow-lg shadow-primary/20"
-                onClick={closeMobile}
-              >
-                {t("contact")}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-              <div className="flex justify-center">
-                <LanguageSwitcher dark />
-              </div>
+      {/* ========== FULL-SCREEN MOBILE MENU ========== */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-[60] flex flex-col overflow-y-auto lg:hidden"
+          style={{ background: "rgba(6, 11, 24, 0.99)" }}
+        >
+          {/* Top bar with logo + close */}
+          <div className="flex h-20 shrink-0 items-center justify-between px-6">
+            <Link href="/" onClick={closeMobile}>
+              <Image
+                src="/wgroup/logo.png"
+                alt="WGroup"
+                width={120}
+                height={55}
+                className="h-8 w-auto opacity-80"
+              />
+            </Link>
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="rounded-full p-2.5 text-white/70 transition-colors hover:bg-white/8 hover:text-white"
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          {/* Divider */}
+          <div className="mx-6 h-px bg-white/6" />
+
+          {/* Nav items */}
+          <div className="flex-1 px-6 py-6">
+            <nav className="space-y-1">
+              {navItems.map((item) =>
+                isGroup(item) ? (
+                  <MobileAccordion
+                    key={item.key}
+                    group={item}
+                    t={t}
+                    onNavigate={closeMobile}
+                  />
+                ) : (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className="flex items-center justify-between rounded-xl px-4 py-4 text-lg font-medium text-white/80 transition-colors hover:bg-white/5 hover:text-white"
+                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+                    onClick={closeMobile}
+                  >
+                    {t(item.key)}
+                    <ArrowRight className="h-4 w-4 text-white/20" />
+                  </Link>
+                )
+              )}
+            </nav>
+          </div>
+
+          {/* Bottom area */}
+          <div className="shrink-0 border-t border-white/6 px-6 py-6">
+            <Link
+              href="/contact"
+              className="mb-5 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-primary to-accent-teal px-6 py-3.5 text-base font-semibold text-white shadow-lg shadow-primary/20"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+              onClick={closeMobile}
+            >
+              {t("contact")}
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+            <div className="flex items-center justify-center">
+              <LanguageSwitcher dark />
             </div>
           </div>
-        )}
-      </nav>
+        </div>
+      )}
     </>
   );
 
@@ -627,24 +635,24 @@ export default function Navbar() {
               className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/7 transition-all duration-300 hover:border-white/18 hover:bg-white/10 hover:shadow-xl hover:shadow-primary/10"
               onClick={closeDropdown}
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-[4/3] overflow-hidden">
                 <Image
                   src={navImages[item.key]}
                   alt={t(item.key)}
                   width={400}
-                  height={400}
+                  height={300}
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
               </div>
               <div className="p-5">
-                <h3 className="text-base font-semibold text-white group-hover:text-white">
+                <h3 className="text-xl font-bold text-white group-hover:text-white">
                   {t(item.key)}
                 </h3>
-                <p className="mt-1 text-sm leading-relaxed text-white/75 group-hover:text-white/90">
+                <p className="mt-2 text-base leading-relaxed text-white/65 group-hover:text-white/85">
                   {t(`desc.${item.key}`)}
                 </p>
-                <div className="mt-3 flex items-center gap-1.5 text-xs font-semibold text-[#60b0f0] group-hover:text-white">
+                <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-[#60b0f0] group-hover:text-white">
                   {t("explore")}
                   <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </div>
@@ -669,12 +677,12 @@ export default function Navbar() {
         <div className="grid grid-cols-12 gap-8">
           {/* Product columns */}
           <div className="col-span-8 grid grid-cols-3 gap-6">
-            {/* WEdu Factory */}
+            {/* W-Studio */}
             <div>
-              <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold tracking-widest text-primary/60">
-                <span className="h-px flex-1 bg-primary/15" />
-                WEDU FACTORY
-                <span className="h-px flex-1 bg-primary/15" />
+              <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
+                <span className="h-px flex-1 bg-white/8" />
+                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-STUDIO</span>
+                <span className="h-px flex-1 bg-white/8" />
               </h4>
               <div className="space-y-1">
                 {group.items.map((item) => (
@@ -683,13 +691,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* WArtiCode */}
+            {/* W-DigiLab */}
             {group.sections?.[0] && (
               <div>
-                <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold tracking-widest text-primary/60">
-                  <span className="h-px flex-1 bg-primary/15" />
-                  WARTICODE
-                  <span className="h-px flex-1 bg-primary/15" />
+                <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
+                  <span className="h-px flex-1 bg-white/8" />
+                  <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-DIGILAB</span>
+                  <span className="h-px flex-1 bg-white/8" />
                 </h4>
                 <div className="space-y-1">
                   {group.sections[0].items.map((item) => (
@@ -699,13 +707,13 @@ export default function Navbar() {
               </div>
             )}
 
-            {/* WQualitySphere */}
+            {/* W-Quality */}
             {group.sections?.[1] && (
               <div>
-                <h4 className="mb-3 flex items-center gap-2 text-[11px] font-bold tracking-widest text-primary/60">
-                  <span className="h-px flex-1 bg-primary/15" />
-                  WQUALITYSPHERE
-                  <span className="h-px flex-1 bg-primary/15" />
+                <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
+                  <span className="h-px flex-1 bg-white/8" />
+                  <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-QUALITY</span>
+                  <span className="h-px flex-1 bg-white/8" />
                 </h4>
                 <div className="space-y-1">
                   {group.sections[1].items.map((item) => (
@@ -718,7 +726,7 @@ export default function Navbar() {
 
           {/* Preview image */}
           <div className="col-span-4">
-            <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3">
+            <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
               {activeImage ? (
                 <>
                   <Image
@@ -729,12 +737,12 @@ export default function Navbar() {
                     className="object-cover"
                     sizes="(max-width: 1024px) 0px, 360px"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5">
-                    <p className="text-sm font-semibold text-white/90">
+                    <p className="text-xl font-bold text-white">
                       {hoveredItem ? t(hoveredItem) : ""}
                     </p>
-                    <p className="mt-1 text-xs text-white/50">
+                    <p className="mt-2 text-base leading-relaxed text-white/65">
                       {hoveredItem ? t(`desc.${hoveredItem}`) : ""}
                     </p>
                   </div>

@@ -113,7 +113,7 @@ export default function OurDivisionsPage() {
       subtitle={t("subtitle")}
       eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
-      heroImage="/images/company/partners.webp"
+      heroImage="/w/company/partners.webp"
     >
       <div ref={sectionRef}>
         {/* Intro paragraphs */}
