@@ -36,9 +36,9 @@ const navImages: Record<string, string> = {
   ourDivisions: "/images/company/partners.webp",
   ourStory: "/images/company/social-responsibility.webp",
   ourVision: "/images/company/career.webp",
-  weduFactory: "/wgroup/01_Ana_Sayfa/19_Wedu_Factory.webp",
-  warticode: "/wgroup/01_Ana_Sayfa/18_Warticode.webp",
-  wqualitysphere: "/wgroup/01_Ana_Sayfa/20_WQuality%20Sphere.webp",
+  wquality: "/wgroup/01_Ana_Sayfa/20_WQuality%20Sphere.webp",
+  wdigilab: "/wgroup/01_Ana_Sayfa/18_Warticode.webp",
+  wstudio: "/wgroup/01_Ana_Sayfa/19_Wedu_Factory.webp",
   individualCourses: "/images/products/individual.webp",
   corporateCourses: "/images/products/corporate.webp",
   digitautopivot: "/images/products/digitautopivot.webp",
@@ -63,11 +63,11 @@ const navItems: NavItem[] = [
     ],
   },
   {
-    key: "brands",
+    key: "divisions",
     items: [
-      { key: "weduFactory", href: "/wedu-factory" },
-      { key: "warticode", href: "/warticode" },
-      { key: "wqualitysphere", href: "/wqualitysphere" },
+      { key: "wquality", href: "/w-quality" },
+      { key: "wdigilab", href: "/w-digilab" },
+      { key: "wstudio", href: "/w-studio" },
     ],
   },
   {
@@ -143,7 +143,7 @@ function MobileAccordion({
 
       {open && (
         <div ref={contentRef} className="overflow-hidden bg-white/2 py-1">
-          {group.key === "brands" ? (
+          {group.key === "divisions" ? (
             <div className="flex gap-3 overflow-x-auto px-6 py-3 scrollbar-hide">
               {group.items.map((item) => (
                 <Link
@@ -474,7 +474,7 @@ export default function Navbar() {
             onMouseLeave={startClose}
           >
             {activeDropdown === "company" && <CompanyPanel />}
-            {activeDropdown === "brands" && <BrandsPanel />}
+            {activeDropdown === "divisions" && <DivisionsPanel />}
             {activeDropdown === "products" && <ProductsPanel />}
           </div>
         )}
@@ -612,8 +612,8 @@ export default function Navbar() {
 
   /* ==================== BRANDS PANEL ==================== */
 
-  function BrandsPanel() {
-    const group = getGroup("brands");
+  function DivisionsPanel() {
+    const group = getGroup("divisions");
     if (!group) return null;
 
     return (
