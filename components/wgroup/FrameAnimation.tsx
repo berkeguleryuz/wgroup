@@ -65,7 +65,6 @@ export default function FrameAnimation() {
         <video
           src="/w/worldmap.mp4"
           autoPlay
-          loop
           muted
           playsInline
           className="h-full w-full object-cover"

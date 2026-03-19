@@ -11,72 +11,71 @@ import MorphButton from "@/components/ui/MorphButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PILLARS = [
-  { titleKey: "pillar1Title", descKey: "pillar1Desc", icon: "01" },
-  { titleKey: "pillar2Title", descKey: "pillar2Desc", icon: "02" },
-  { titleKey: "pillar3Title", descKey: "pillar3Desc", icon: "03" },
-] as const;
-
-export default function CareerPage() {
-  const t = useTranslations("careers");
+export default function OurVisionPage() {
+  const t = useTranslations("career");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".career-intro", {
+      gsap.from(".vision-intro", {
         y: 40,
         opacity: 0,
         duration: 0.9,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".career-intro",
+          trigger: ".vision-intro",
           start: "top 85%",
           toggleActions: "play none none reverse",
         },
       });
 
-      gsap.utils.toArray<HTMLElement>(".pillar-card").forEach((el, i) => {
+      gsap.utils.toArray<HTMLElement>(".vision-card").forEach((el, i) => {
         gsap.from(el, {
           y: 60,
           opacity: 0,
           duration: 0.8,
-          delay: i * 0.12,
+          delay: i * 0.1,
           ease: "power2.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 88%",
+            start: "top 85%",
             toggleActions: "play none none reverse",
           },
         });
       });
 
-      gsap.from(".career-who", {
+      gsap.from(".vision-pillars", {
         y: 50,
         opacity: 0,
-        duration: 0.9,
+        duration: 1,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: ".career-who",
-          start: "top 85%",
+          trigger: ".vision-pillars",
+          start: "top 80%",
           toggleActions: "play none none reverse",
         },
       });
 
-      gsap.from(".career-open", {
-        y: 50,
-        opacity: 0,
-        duration: 0.9,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".career-open",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
+      gsap.utils.toArray<HTMLElement>(".pillar-word").forEach((el, i) => {
+        gsap.from(el, {
+          y: 30,
+          opacity: 0,
+          duration: 0.7,
+          delay: 0.15 * i,
+          ease: "back.out(1.4)",
+          scrollTrigger: {
+            trigger: ".vision-pillars",
+            start: "top 75%",
+            toggleActions: "play none none reverse",
+          },
+        });
       });
     }, sectionRef);
 
     return () => ctx.revert();
   }, []);
+
+  const pillars = t("p5").split(".");
 
   return (
     <PageLayout
@@ -87,8 +86,8 @@ export default function CareerPage() {
       heroImage="/images/company/career.webp"
     >
       <div ref={sectionRef}>
-        {/* Intro */}
-        <div className="career-intro mb-16 text-center">
+        {/* Opening — full width large text */}
+        <div className="vision-intro mb-16 text-center">
           <p
             className="text-xl leading-[1.7] sm:text-2xl"
             style={{
@@ -97,138 +96,68 @@ export default function CareerPage() {
               fontWeight: 400,
             }}
           >
-            {t("intro")}
+            {t("p1")}
           </p>
         </div>
 
-        {/* Why WGroup — 3 pillars */}
-        <div className="mb-16">
-          <h2
-            className="mb-10 text-center text-2xl font-bold tracking-tight sm:text-3xl"
-            style={{
-              fontFamily: "var(--font-barlow), system-ui, sans-serif",
-              color: "#1e293b",
-            }}
-          >
-            {t("whyTitle")}
-          </h2>
-
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-            {PILLARS.map(({ titleKey, descKey, icon }, i) => (
-              <div
-                key={i}
-                className="pillar-card relative overflow-hidden rounded-2xl p-8"
-                style={{
-                  background: "rgba(30, 109, 181, 0.04)",
-                  border: "1px solid rgba(30, 109, 181, 0.08)",
-                }}
-              >
-                {/* Background number */}
+        {/* Content cards — alternating layout */}
+        <div className="space-y-8">
+          {[t("p2"), t("p3"), t("p4")].map((text, i) => (
+            <div
+              key={i}
+              className={`vision-card flex flex-col gap-6 sm:flex-row sm:gap-10 ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}
+            >
+              {/* Number side */}
+              <div className="flex shrink-0 items-start justify-center sm:w-28">
                 <span
-                  className="pointer-events-none absolute -right-2 -top-4 text-[100px] font-black leading-none"
+                  className="text-[72px] font-black leading-none sm:text-[96px]"
                   style={{
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                    opacity: 0.08,
+                    opacity: 1,
                   }}
                 >
-                  {icon}
+                  {String(i + 1).padStart(2, "0")}
                 </span>
+              </div>
 
+              {/* Text side */}
+              <div
+                className="flex-1 rounded-2xl p-8 sm:p-10"
+                style={{
+                  background: "rgba(30, 109, 181, 0.04)",
+                  border: "1px solid rgba(30, 109, 181, 0.08)",
+                }}
+              >
                 <div
-                  className="mb-5 h-[3px] w-10 rounded-full"
+                  className="mb-5 h-[3px] w-12 rounded-full"
                   style={{
-                    background: "linear-gradient(to right, var(--primary), var(--accent-teal))",
+                    background: i % 2 === 0
+                      ? "linear-gradient(to right, var(--primary), var(--accent-teal))"
+                      : "linear-gradient(to right, var(--accent-teal), var(--primary))",
                   }}
                 />
-                <h3
-                  className="mb-3 text-lg font-bold"
-                  style={{
-                    fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                    color: "#1e293b",
-                  }}
-                >
-                  {t(titleKey)}
-                </h3>
                 <p
-                  className="text-[15px] leading-relaxed"
+                  className="text-base leading-[1.9] sm:text-[17px]"
                   style={{
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     color: "#3a4a5c",
                   }}
                 >
-                  {t(descKey)}
+                  {text}
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Who We Are Looking For */}
-        <div className="career-who mb-16">
-          <div className="relative overflow-hidden rounded-2xl p-8 sm:p-12">
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-            <h2
-              className="mb-6 text-xl font-bold sm:text-2xl"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                color: "#1e293b",
-              }}
-            >
-              {t("whoTitle")}
-            </h2>
-            <p
-              className="text-base leading-[1.9] sm:text-[17px]"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                color: "#3a4a5c",
-              }}
-            >
-              {t("whoDesc")}
-            </p>
-          </div>
-        </div>
-
-        {/* Open Positions */}
-        <div className="career-open mb-6">
-          <div
-            className="overflow-hidden rounded-2xl p-8 sm:p-12"
-            style={{
-              background: "linear-gradient(135deg, #1E6DB5, #0891b2)",
-            }}
-          >
-            <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10 blur-3xl" />
-            <h2
-              className="mb-4 text-xl font-bold text-white sm:text-2xl"
-              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-            >
-              {t("openTitle")}
-            </h2>
-            <p
-              className="text-base leading-relaxed text-white/80 sm:text-[17px]"
-              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-            >
-              {t("openDesc")}
-            </p>
-            <a
-              href={`mailto:${t("contactEmail")}`}
-              className="mt-4 inline-block text-lg font-semibold text-white underline decoration-white/40 underline-offset-4 transition-colors hover:decoration-white"
-              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-            >
-              {t("contactEmail")}
-            </a>
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* Three pillars */}
-        <div className="mt-16 mb-6">
+        <div className="vision-pillars mt-20 mb-6">
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
-            {[t("pillar1Title"), t("pillar2Title"), t("pillar3Title")].map((word, i) => (
-              <div key={i} className="flex items-center gap-4 sm:gap-8">
+            {pillars.filter(Boolean).map((word, i) => (
+              <div key={i} className="pillar-word flex items-center gap-4 sm:gap-8">
                 {i > 0 && (
                   <div
                     className="hidden h-12 w-px sm:block"
@@ -245,7 +174,7 @@ export default function CareerPage() {
                     backgroundClip: "text",
                   }}
                 >
-                  {word}
+                  {word.trim()}
                 </span>
               </div>
             ))}
@@ -253,7 +182,7 @@ export default function CareerPage() {
         </div>
 
         {/* Global CTA */}
-        <div className="relative mt-14 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
+        <div className="relative mt-16 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
             <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />

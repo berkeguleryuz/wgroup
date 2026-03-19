@@ -8,14 +8,13 @@ import PageLayout from "@/components/layout/PageLayout";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PARTNERS = [
-  { key: "berlinPartner", color: "var(--primary)" },
-  { key: "retranetz", color: "var(--accent-teal)" },
-  { key: "ihk", color: "var(--primary)" },
-  { key: "bbb", color: "var(--accent-teal)" },
+const DIVISIONS = [
+  { key: "wquality", color: "var(--primary)" },
+  { key: "wdigilab", color: "var(--accent-teal)" },
+  { key: "wstudio", color: "var(--accent-purple)" },
 ] as const;
 
-function PartnerShowcase({
+function DivisionCard({
   number,
   name,
   description,
@@ -30,7 +29,7 @@ function PartnerShowcase({
 }) {
   return (
     <>
-      <div className="partner-card relative grid gap-6 py-12 first:pt-0 lg:grid-cols-[260px_1fr] lg:gap-14">
+      <div className="division-card relative grid gap-6 py-12 first:pt-0 lg:grid-cols-[260px_1fr] lg:gap-14">
         {/* Left: identity */}
         <div>
           <span
@@ -54,7 +53,7 @@ function PartnerShowcase({
           />
         </div>
 
-        {/* Right: description with left accent border */}
+        {/* Right: description */}
         <div className="flex items-start">
           <div
             className="mr-5 mt-1 hidden w-[2px] self-stretch rounded-full lg:block"
@@ -72,7 +71,6 @@ function PartnerShowcase({
         </div>
       </div>
 
-      {/* Divider */}
       {!isLast && (
         <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       )}
@@ -80,13 +78,13 @@ function PartnerShowcase({
   );
 }
 
-export default function PartnerPage() {
+export default function OurDivisionsPage() {
   const t = useTranslations("partner");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const cards = gsap.utils.toArray<HTMLElement>(".partner-card");
+      const cards = gsap.utils.toArray<HTMLElement>(".division-card");
       if (cards.length) {
         gsap.set(cards, { opacity: 0, y: 40 });
         ScrollTrigger.create({
@@ -118,21 +116,27 @@ export default function PartnerPage() {
       heroImage="/images/company/partners.webp"
     >
       <div ref={sectionRef}>
-        <p
-          className="page-content-block mb-12 text-lg leading-relaxed text-muted"
-          style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-        >
-          {t("description")}
-        </p>
+        {/* Intro paragraphs */}
+        <div className="page-content-block mb-12 space-y-4">
+          <p className="text-lg leading-relaxed text-muted" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+            {t("p1")}
+          </p>
+          <p className="text-lg leading-relaxed text-muted" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+            {t("p2")}
+          </p>
+          <p className="text-lg leading-relaxed text-muted" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+            {t("p3")}
+          </p>
+        </div>
 
-        {PARTNERS.map(({ key, color }, i) => (
-          <PartnerShowcase
+        {DIVISIONS.map(({ key, color }, i) => (
+          <DivisionCard
             key={key}
             number={i + 1}
             name={t(`${key}.name`)}
             description={t(`${key}.description`)}
             color={color}
-            isLast={i === PARTNERS.length - 1}
+            isLast={i === DIVISIONS.length - 1}
           />
         ))}
       </div>

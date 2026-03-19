@@ -12,8 +12,6 @@ const stepColors = [
   "var(--primary)",
   "var(--accent-teal)",
   "var(--primary)",
-  "var(--accent-teal)",
-  "var(--primary)",
 ];
 
 function TimelineStep({
@@ -116,7 +114,7 @@ export default function OurMissionPage() {
     return () => ctx.revert();
   }, []);
 
-  const paragraphs = [t("p1"), t("p2"), t("p3"), t("p4"), t("p5")];
+  const paragraphs = [t("p1"), t("p2"), t("p3")];
 
   return (
     <PageLayout

@@ -32,7 +32,8 @@
       "Read(//opt/homebrew/bin/**)",
       "Bash(avconvert --preset PresetHEVC1920x1080 --source /Users/berke/Desktop/Developer/web/wgroup/public/w/worldmap.mov --output /Users/berke/Desktop/Developer/web/wgroup/public/w/worldmap.mp4)",
       "Bash(avconvert --help)",
-      "Bash(avconvert --preset Preset1920x1080 --source /Users/berke/Desktop/Developer/web/wgroup/public/w/worldmap.mov --output /Users/berke/Desktop/Developer/web/wgroup/public/w/worldmap.mp4)"
+      "Bash(avconvert --preset Preset1920x1080 --source /Users/berke/Desktop/Developer/web/wgroup/public/w/worldmap.mov --output /Users/berke/Desktop/Developer/web/wgroup/public/w/worldmap.mp4)",
+      "WebFetch(domain:ui.tripled.work)"
     ]
   }
 }

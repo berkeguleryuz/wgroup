@@ -29,9 +29,9 @@ const productLinks = [
 
 const companyLinks = [
   { key: "about", href: "/about" },
-  { key: "mission", href: "/our-mission" },
-  { key: "partner", href: "/partner" },
-  { key: "socialResponsibility", href: "/social-responsibility" },
+  { key: "mission", href: "/what-we-do" },
+  { key: "partner", href: "/our-divisions" },
+  { key: "socialResponsibility", href: "/our-story" },
   { key: "career", href: "/career" },
   { key: "faq", href: "/faq" },
 ] as const;

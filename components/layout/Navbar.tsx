@@ -31,11 +31,11 @@ function isGroup(item: NavItem): item is NavGroup {
 /* ---------- Image map ---------- */
 
 const navImages: Record<string, string> = {
-  about: "/images/company/about.webp",
-  mission: "/images/company/our-mission.webp",
-  partner: "/images/company/partners.webp",
-  socialResponsibility: "/images/company/social-responsibility.webp",
-  career: "/images/company/career.webp",
+  aboutWgroup: "/images/company/about.webp",
+  whatWeDo: "/images/company/our-mission.webp",
+  ourDivisions: "/images/company/partners.webp",
+  ourStory: "/images/company/social-responsibility.webp",
+  ourVision: "/images/company/career.webp",
   weduFactory: "/wgroup/01_Ana_Sayfa/19_Wedu_Factory.webp",
   warticode: "/wgroup/01_Ana_Sayfa/18_Warticode.webp",
   wqualitysphere: "/wgroup/01_Ana_Sayfa/20_WQuality%20Sphere.webp",
@@ -55,11 +55,11 @@ const navItems: NavItem[] = [
   {
     key: "company",
     items: [
-      { key: "about", href: "/about" },
-      { key: "mission", href: "/our-mission" },
-      { key: "partner", href: "/partner" },
-      { key: "socialResponsibility", href: "/social-responsibility" },
-      { key: "career", href: "/career" },
+      { key: "aboutWgroup", href: "/about" },
+      { key: "whatWeDo", href: "/what-we-do" },
+      { key: "ourDivisions", href: "/our-divisions" },
+      { key: "ourStory", href: "/our-story" },
+      { key: "ourVision", href: "/our-vision" },
     ],
   },
   {

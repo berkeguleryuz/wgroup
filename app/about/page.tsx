@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lottie from "lottie-react";
 import PageLayout from "@/components/layout/PageLayout";
 import { ArrowRight } from "@/components/icons";
+import MorphButton from "@/components/ui/MorphButton";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -188,12 +189,11 @@ export default function AboutPage() {
     <PageLayout title={t("title")} subtitle={t("p1")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/company/about.webp">
       <div ref={sectionRef}>
         {/* Stats grid */}
-        <div className="page-content-block mb-16 grid grid-cols-2 gap-6 lg:grid-cols-4">
+        <div className="page-content-block mb-16 grid grid-cols-3 gap-6">
           {[
-            { value: "40+", label: "Countries" },
-            { value: "2015", label: "Founded" },
-            { value: "500+", label: "Clients" },
-            { value: "IATF", label: "16949 Certified" },
+            { value: "40+", label: t("statCountries") },
+            { value: "2015", label: t("statFounded") },
+            { value: "500+", label: t("statClients") },
           ].map((stat, i) => (
             <StatItem
               key={i}
@@ -204,43 +204,85 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Content paragraphs - alternating style */}
+        {/* Content paragraphs */}
         <div className="page-content-block space-y-6">
-          {[t("p2"), t("p3"), t("p4"), t("p5"), t("p6")].map((text, i) =>
-            i % 2 === 1 ? (
-              /* Highlighted card with spinning border */
-              <div key={i} className="about-paragraph">
-                <div className="relative rounded-2xl p-[1px] overflow-hidden">
-                  <div
-                    className="pointer-events-none absolute inset-[-50%] animate-[borderSpin_6s_linear_infinite]"
-                    style={{
-                      background: "conic-gradient(from 0deg, transparent 0%, #1E6DB540 15%, #1E6DB5 30%, transparent 45%, transparent 55%, #1E6DB5 70%, #1E6DB540 85%, transparent 100%)",
-                    }}
-                  />
-                  <div className="relative rounded-2xl bg-[var(--background)] py-6 px-7 sm:px-8">
-                    <p className="text-lg leading-relaxed text-muted">{text}</p>
-                  </div>
-                </div>
+          <p className="about-paragraph text-lg leading-relaxed text-muted">{t("p2")}</p>
+
+          <div className="about-paragraph">
+            <div className="relative rounded-2xl p-[1px] overflow-hidden">
+              <div
+                className="pointer-events-none absolute inset-[-50%] animate-[borderSpin_6s_linear_infinite]"
+                style={{
+                  background: "conic-gradient(from 0deg, transparent 0%, #1E6DB540 15%, #1E6DB5 30%, transparent 45%, transparent 55%, #1E6DB5 70%, #1E6DB540 85%, transparent 100%)",
+                }}
+              />
+              <div className="relative rounded-2xl bg-[var(--background)] py-6 px-7 sm:px-8">
+                <p className="text-lg leading-relaxed text-muted">{t("p3")}</p>
               </div>
-            ) : (
-              <p key={i} className="about-paragraph text-lg leading-relaxed text-muted">{text}</p>
-            )
-          )}
+            </div>
+          </div>
         </div>
 
-        {/* Gradient divider before CTA */}
-        <div className="mx-auto my-10 h-px w-2/3 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-
-        {/* CTA */}
-        <div className="about-cta mt-16 text-center">
-          <Link
-            href="/contact"
-            className="group relative inline-flex items-center gap-3 overflow-hidden rounded-xl bg-primary px-10 py-4 text-base font-bold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
-          >
-            <span className="relative z-10">{t("contactUs")}</span>
-            <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-            <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
-          </Link>
+        {/* Global CTA */}
+        <div className="about-cta relative mt-16 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
+            <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />
+          </div>
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
+              backgroundSize: "50px 50px",
+            }}
+          />
+          <div className="relative z-10 mx-auto max-w-2xl text-center">
+            <p
+              className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+            >
+              {t("ctaEyebrow")}
+            </p>
+            <h2
+              className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+            >
+              {t("ctaTitle")}{" "}
+              <span
+                className="text-primary"
+                style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic" }}
+              >
+                {t("ctaHighlight")}
+              </span>
+            </h2>
+            <p className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-white/50">
+              {t("ctaDesc")}
+            </p>
+            <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Link href="/contact" className="group">
+                <MorphButton
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-background shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-0.5 sm:text-base"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", fontWeight: 600 }}
+                  fillColor="#0a0f1e"
+                  textColor="#0a0f1e"
+                  textColorHover="#ffffff"
+                >
+                  <span className="flex items-center gap-2">
+                    {t("contactUs")}
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                  </span>
+                </MorphButton>
+              </Link>
+              <Link
+                href="/our-divisions"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.06] px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.12] hover:border-white/30 sm:text-base"
+                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", fontWeight: 600 }}
+              >
+                {t("ctaLearnMore")}
+              </Link>
+            </div>
+          </div>
         </div>
 
         <style jsx global>{`
