@@ -13,9 +13,9 @@ import { blogArticles } from "@/lib/blog";
 gsap.registerPlugin(ScrollTrigger);
 
 const categoryImages: Record<string, string> = {
-  knowledge: "/images/blog/knowledge.webp",
-  digitalization: "/images/blog/digitalization.webp",
-  qualityManagement: "/images/blog/quality-management.webp",
+  knowledge: "/w/blog/knowledge.webp",
+  digitalization: "/w/blog/digitalization.webp",
+  qualityManagement: "/w/blog/quality-management.webp",
 };
 
 export default function BlogDetailPage({

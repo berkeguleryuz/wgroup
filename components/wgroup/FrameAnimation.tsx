@@ -1,272 +1,156 @@
 "use client";
 
-import { useRef, useEffect, useState, useCallback } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const TOTAL_FRAMES = 121;
-const FRAME_PATH = "/videos/wgroup-frames/frame-";
-const IMAGE_SCALE = 0.72;
-
-const CARD_CONFIG = [
-  { start: 0.02, end: 0.24 },
-  { start: 0.26, end: 0.48 },
-  { start: 0.52, end: 0.74 },
-  { start: 0.76, end: 0.96 },
-];
-
 const cardKeys = ["card1", "card2", "card3", "card4"] as const;
-
-function padNumber(n: number): string {
-  return String(n).padStart(4, "0");
-}
 
 export default function FrameAnimation() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const framesRef = useRef<HTMLImageElement[]>([]);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const currentFrameRef = useRef(0);
-  const angleRef = useRef({ value: 0 });
-  const [loaded, setLoaded] = useState(false);
-  const [progress, setProgress] = useState(0);
   const t = useTranslations("frameAnimation");
 
-  const drawFrame = useCallback((index: number, angle: number = 0) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    const img = framesRef.current[index];
-    if (!img) return;
-
-    // Clear with white
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    const scale =
-      Math.min(canvas.width / img.width, canvas.height / img.height) *
-      IMAGE_SCALE;
-    const w = img.width * scale;
-    const h = img.height * scale;
-    const x = (canvas.width - w) / 2;
-    const y = (canvas.height - h) / 2;
-
-    // Apply subtle Y-axis rotation to the W image only
-    // angle oscillates between -1 and 1
-    // Simulate 3D Y-rotation: horizontal scale + slight skew
-    const skewFactor = angle * 0.025;
-    const scaleX = 1 - Math.abs(angle) * 0.012;
-    const offsetX = angle * 8;
-
-    ctx.save();
-    ctx.translate(canvas.width / 2, canvas.height / 2);
-    ctx.transform(scaleX, skewFactor, 0, 1, offsetX, 0);
-    ctx.translate(-canvas.width / 2, -canvas.height / 2);
-    ctx.drawImage(img, x, y, w, h);
-    ctx.restore();
-  }, []);
-
-  // Preload all frames
   useEffect(() => {
-    let loadedCount = 0;
-    const images: HTMLImageElement[] = [];
+    const ctx = gsap.context(() => {
+      cardRefs.current.forEach((card, i) => {
+        if (!card) return;
+        const isLeft = i % 2 === 0;
 
-    for (let i = 0; i < TOTAL_FRAMES; i++) {
-      const img = new Image();
-      img.src = `${FRAME_PATH}${padNumber(i + 1)}.webp`;
-      img.onload = () => {
-        loadedCount++;
-        setProgress(Math.round((loadedCount / TOTAL_FRAMES) * 100));
-        if (loadedCount === TOTAL_FRAMES) {
-          setLoaded(true);
-        }
-      };
-      images[i] = img;
-    }
-
-    framesRef.current = images;
-  }, []);
-
-  // Setup canvas resize + scroll animation + subtle idle rotation
-  useEffect(() => {
-    if (!loaded) return;
-
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const resize = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      drawFrame(currentFrameRef.current);
-    };
-
-    resize();
-    drawFrame(0, 0);
-
-    window.addEventListener("resize", resize);
-
-    // Continuous subtle Y-axis rotation — oscillates angle between -1 and 1
-    const angleTween = gsap.to(angleRef.current, {
-      value: 1,
-      duration: 5,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut",
-    });
-
-    // rAF loop to continuously redraw with the rotation applied
-    let rafId: number;
-    const animate = () => {
-      drawFrame(currentFrameRef.current, angleRef.current.value);
-      rafId = requestAnimationFrame(animate);
-    };
-    rafId = requestAnimationFrame(animate);
-
-    const trigger = ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top top",
-      end: "bottom bottom",
-      scrub: 0.5,
-      onUpdate: (self) => {
-        const p = self.progress;
-
-        // Frame scrubbing
-        const frameIndex = Math.min(
-          Math.floor(p * TOTAL_FRAMES),
-          TOTAL_FRAMES - 1
-        );
-        if (frameIndex !== currentFrameRef.current) {
-          currentFrameRef.current = frameIndex;
-        }
-
-        // Card animations
-        CARD_CONFIG.forEach(({ start, end }, i) => {
-          const card = cardRefs.current[i];
-          if (!card) return;
-
-          const fadeInEnd = start + 0.03;
-          const fadeOutStart = end - 0.03;
-
-          let opacity = 0;
-          let translateY = 30;
-
-          if (p >= start && p <= end) {
-            if (p < fadeInEnd) {
-              const t = (p - start) / (fadeInEnd - start);
-              opacity = t;
-              translateY = 30 * (1 - t);
-            } else if (p > fadeOutStart) {
-              const t = (p - fadeOutStart) / (end - fadeOutStart);
-              opacity = 1 - t;
-              translateY = -20 * t;
-            } else {
-              opacity = 1;
-              translateY = 0;
-            }
+        gsap.fromTo(
+          card,
+          {
+            x: isLeft ? -100 : 100,
+            opacity: 0,
+            rotateY: isLeft ? 8 : -8,
+          },
+          {
+            x: 0,
+            opacity: 1,
+            rotateY: 0,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top 85%",
+              end: "top 45%",
+              scrub: 0.5,
+            },
           }
+        );
 
-          card.style.opacity = String(opacity);
-          card.style.visibility = opacity > 0.01 ? "visible" : "hidden";
-          card.style.transform = `translateY(${translateY}px)`;
+        // Slight parallax float while visible
+        gsap.to(card, {
+          y: -40,
+          ease: "none",
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
         });
-      },
-    });
+      });
+    }, sectionRef);
 
-    return () => {
-      window.removeEventListener("resize", resize);
-      trigger.kill();
-      angleTween.kill();
-      cancelAnimationFrame(rafId);
-    };
-  }, [loaded, drawFrame]);
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <>
-      {/* Loading overlay */}
-      {!loaded && (
-        <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white">
-          <div className="mb-4 h-1 w-48 overflow-hidden rounded-full bg-gray-200">
+    <section ref={sectionRef} className="relative" style={{ background: "var(--background)" }}>
+      {/* Sticky video background */}
+      <div className="sticky top-0 z-0 h-screen w-full overflow-hidden">
+        <video
+          src="/w/worldmap.mp4"
+          autoPlay
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+        />
+        <div
+          className="absolute inset-0"
+          style={{ background: "rgba(6, 11, 24, 0.3)" }}
+        />
+      </div>
+
+      {/* Cards scroll over video */}
+      <div className="relative z-10" style={{ marginTop: "-100vh" }}>
+        {/* Top spacer */}
+        <div className="h-[60vh]" />
+
+        {cardKeys.map((key, i) => {
+          const isLeft = i % 2 === 0;
+
+          return (
             <div
-              className="h-full rounded-full bg-primary transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <p
-            className="text-sm text-gray-400"
-            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-          >
-            {t("loading")}&hellip; {progress}%
-          </p>
-        </div>
-      )}
-
-      {/* Animation section */}
-      <section
-        ref={sectionRef}
-        className="relative bg-white"
-        style={{ height: "600vh" }}
-      >
-        {/* Sticky canvas container */}
-        <div className="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
-          <canvas
-            ref={canvasRef}
-            style={{ maxWidth: "100%", maxHeight: "100vh" }}
-          />
-        </div>
-      </section>
-
-      {/* Fixed info cards */}
-      {cardKeys.map((key, i) => {
-        const isLeft = i % 2 === 0;
-        const positionClasses = isLeft
-          ? "left-6 bottom-[15%] sm:left-12 lg:left-12"
-          : "right-6 top-[15%] sm:right-12 lg:right-12";
-
-        return (
-          <div
-            key={key}
-            ref={(el) => {
-              cardRefs.current[i] = el;
-            }}
-            className={`pointer-events-none fixed z-40 w-[calc(100%-48px)] sm:w-95 ${positionClasses}`}
-            style={{ opacity: 0, visibility: "hidden" }}
-          >
-            <div
-              className="rounded-2xl border border-white/10 bg-[#1a1a1a]/90 p-8 shadow-[0_4px_40px_rgba(0,0,0,0.3)] backdrop-blur-2xl"
-              style={{ borderLeft: "3px solid rgba(255,255,255,0.1)" }}
+              key={key}
+              className={`flex ${isLeft ? "justify-start" : "justify-end"} px-6 sm:px-12 lg:px-20`}
+              style={{ marginBottom: i < 3 ? "45vh" : 0 }}
             >
-              <p
-                className="mb-3 text-[11px] font-medium uppercase tracking-[2.5px] text-white/40"
-                style={{
-                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
+              <div
+                ref={(el) => {
+                  cardRefs.current[i] = el;
                 }}
+                className="w-full max-w-lg"
+                style={{ opacity: 0, perspective: "800px" }}
               >
-                {t(`${key}Label`)}
-              </p>
-              <h3
-                className="mb-3 text-[28px] font-normal leading-tight text-white"
-                style={{
-                  fontFamily: "var(--font-instrument), Georgia, serif",
-                }}
-              >
-                {t(`${key}Title`)}
-              </h3>
-              <p
-                className="text-sm font-light leading-relaxed text-white/50"
-                style={{
-                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                }}
-              >
-                {t(`${key}Desc`)}
-              </p>
+                <div
+                  className="rounded-2xl p-8 sm:p-10"
+                  style={{
+                    background: "rgba(6, 11, 24, 0.93)",
+                    boxShadow: "0 20px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(30,109,181,0.15)",
+                    borderLeft: isLeft ? "3px solid rgba(30, 109, 181, 0.4)" : "none",
+                    borderRight: !isLeft ? "3px solid rgba(30, 109, 181, 0.4)" : "none",
+                    borderTop: "1px solid rgba(255,255,255,0.05)",
+                  }}
+                >
+                  {/* Card number accent */}
+                  <span
+                    className="mb-4 inline-block text-[64px] font-black leading-none"
+                    style={{
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                      color: "rgba(30, 109, 181, 0.12)",
+                    }}
+                  >
+                    0{i + 1}
+                  </span>
+
+                  <p
+                    className="mb-2 text-[11px] font-medium uppercase tracking-[3px]"
+                    style={{
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                      color: "rgba(30, 109, 181, 0.7)",
+                    }}
+                  >
+                    {t(`${key}Label`)}
+                  </p>
+                  <h3
+                    className="mb-4 text-[28px] font-normal leading-tight text-white sm:text-[32px]"
+                    style={{
+                      fontFamily: "var(--font-instrument), Georgia, serif",
+                    }}
+                  >
+                    {t(`${key}Title`)}
+                  </h3>
+                  <p
+                    className="text-[15px] font-light leading-relaxed text-white/55"
+                    style={{
+                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                    }}
+                  >
+                    {t(`${key}Desc`)}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </>
+          );
+        })}
+
+        {/* Bottom spacer */}
+        <div className="h-[30vh]" />
+      </div>
+    </section>
   );
 }

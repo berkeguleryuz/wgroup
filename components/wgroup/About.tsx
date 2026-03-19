@@ -377,7 +377,7 @@ export default function About() {
             className="relative mx-auto h-[50vh] w-full overflow-hidden rounded-3xl will-change-clip-path"
           >
             <Image
-              src="/images/company/about.webp"
+              src="/w/company/about.webp"
               alt="WGroup Berlin Office"
               fill
               className="object-cover"

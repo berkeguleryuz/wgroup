@@ -98,27 +98,21 @@ function PillarCard({
           boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
         }}
       >
-        {/* Corner glow */}
         <div
           className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full blur-3xl"
           style={{ background: `${color}15` }}
         />
-
-        {/* Mouse-follow glow */}
         <div
           ref={glowRef}
           className="pointer-events-none absolute h-[160px] w-[160px] rounded-full opacity-0 blur-3xl"
           style={{ background: `${color}20` }}
         />
-
-        {/* Hover shimmer */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
         <div
           className="relative z-10 flex flex-col items-center text-center"
           style={{ transform: "translateZ(15px)" }}
         >
-          {/* Numbered badge - top left */}
           <div className="absolute left-0 top-0">
             <span
               className="text-xs font-bold tracking-wider"
@@ -127,8 +121,6 @@ function PillarCard({
               {String(number).padStart(2, "0")}
             </span>
           </div>
-
-          {/* Icon */}
           <div
             className="sr-icon mb-4 flex h-14 w-14 items-center justify-center rounded-xl"
             style={{ background: `${color}15` }}
@@ -144,7 +136,7 @@ function PillarCard({
 }
 
 export default function SocialResponsibilityPage() {
-  const t = useTranslations("socialResponsibility");
+  const t = useTranslations("sr");
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -203,13 +195,12 @@ export default function SocialResponsibilityPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/images/company/social-responsibility.webp">
+    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/w/company/social-responsibility.webp">
       <div ref={sectionRef}>
         <p className="mb-12 text-lg leading-relaxed text-muted">
           {t("description")}
         </p>
 
-        {/* Pillar cards - single column */}
         <div className="mt-8 grid grid-cols-1 gap-6">
           {PILLARS.map(({ key, icon, color }, i) => (
             <PillarCard
@@ -223,7 +214,6 @@ export default function SocialResponsibilityPage() {
           ))}
         </div>
 
-        {/* Conclusion */}
         <div
           className="sr-conclusion relative mt-12 overflow-hidden rounded-2xl p-10 shadow-xl"
           style={{
@@ -237,15 +227,11 @@ export default function SocialResponsibilityPage() {
           </p>
         </div>
 
-        {/* CTA */}
         <div className="sr-cta relative mt-14 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
-          {/* Background blobs */}
           <div className="pointer-events-none absolute inset-0">
-            <div className="cta-blob absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
-            <div className="cta-blob absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />
+            <div className="absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />
+            <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[120px]" />
           </div>
-
-          {/* Mesh */}
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.02]"
             style={{
@@ -254,24 +240,13 @@ export default function SocialResponsibilityPage() {
               backgroundSize: "50px 50px",
             }}
           />
-
-          {/* Content */}
           <div className="relative z-10 mx-auto max-w-2xl text-center">
-            <p
-              className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary"
-              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-            >
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
               {t("ctaEyebrow")}
             </p>
-            <h2
-              className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
-              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-            >
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
               {t("ctaTitle")}{" "}
-              <span
-                className="text-primary"
-                style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic" }}
-              >
+              <span className="text-primary" style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic" }}>
                 {t("ctaHighlight")}
               </span>
             </h2>
@@ -283,9 +258,7 @@ export default function SocialResponsibilityPage() {
                 <MorphButton
                   className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-background shadow-lg transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-0.5 sm:text-base"
                   style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", fontWeight: 600 }}
-                  fillColor="#0a0f1e"
-                  textColor="#0a0f1e"
-                  textColorHover="#ffffff"
+                  fillColor="#0a0f1e" textColor="#0a0f1e" textColorHover="#ffffff"
                 >
                   <span className="flex items-center gap-2">
                     {t("contactCta")}

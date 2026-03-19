@@ -7,32 +7,29 @@ import { LinkedInIcon, InstagramIcon } from "@/components/icons";
 
 /* ---------- Link data ---------- */
 
-const brandLinks = [
-  { key: "weduFactory", href: "/wedu-factory" },
-  { key: "warticode", href: "/warticode" },
-  { key: "wqualitysphere", href: "/wqualitysphere" },
+const divisionLinks = [
+  { key: "wquality", href: "/w-quality" },
+  { key: "wdigilab", href: "/w-digilab" },
+  { key: "wstudio", href: "/w-studio" },
 ] as const;
 
 const productLinks = [
-  { key: "individualProducts", href: "/products/automotive-professionals" },
-  {
-    key: "corporateProducts",
-    href: "/products/automotive-professionals-corporate",
-  },
-  { key: "digitautopivot", href: "/products/digitautopivot" },
-  { key: "eduarttransform", href: "/products/eduarttransform" },
-  { key: "auditmastermind", href: "/products/auditmastermind" },
-  { key: "autopathwayNavigator", href: "/products/autopathway-navigator" },
-  { key: "supplierelevatePro", href: "/products/supplierelevate-pro" },
-  { key: "evolvementor", href: "/products/evolvementor" },
+  { key: "studioItem1", href: "/products/digitautopivot" },
+  { key: "studioItem2", href: "/products/digitautopivot" },
+  { key: "digilabItem1", href: "/products/digitautopivot" },
+  { key: "digilabItem2", href: "/products/digitautopivot" },
+  { key: "qualityItem1", href: "/products/digitautopivot" },
+  { key: "qualityItem2", href: "/products/digitautopivot" },
 ] as const;
 
 const companyLinks = [
   { key: "about", href: "/about" },
-  { key: "mission", href: "/our-mission" },
-  { key: "partner", href: "/partner" },
-  { key: "socialResponsibility", href: "/social-responsibility" },
+  { key: "whatWeDo", href: "/what-we-do" },
+  { key: "ourDivisions", href: "/our-divisions" },
+  { key: "ourStory", href: "/our-story" },
+  { key: "ourVision", href: "/our-vision" },
   { key: "career", href: "/career" },
+  { key: "socialResponsibility", href: "/social-responsibility" },
   { key: "faq", href: "/faq" },
 ] as const;
 
@@ -55,7 +52,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="mb-12">
           <Image
-            src="/images/wgroup-logo.png"
+            src="/wgroup/logo.png"
             alt="WGroup"
             width={160}
             height={74}
@@ -64,13 +61,32 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Brands */}
+          {/* Company */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
-              {t("brands")}
+              {t("company")}
             </h3>
             <ul className="space-y-2.5">
-              {brandLinks.map((link) => (
+              {companyLinks.map((link) => (
+                <li key={link.key}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-white/50 transition-colors hover:text-white"
+                  >
+                    {t(link.key)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Divisions */}
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
+              {t("divisions")}
+            </h3>
+            <ul className="space-y-2.5">
+              {divisionLinks.map((link) => (
                 <li key={link.key}>
                   <Link
                     href={link.href}
@@ -90,25 +106,6 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5">
               {productLinks.map((link) => (
-                <li key={link.key}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-white/50 transition-colors hover:text-white"
-                  >
-                    {t(link.key)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
-              {t("company")}
-            </h3>
-            <ul className="space-y-2.5">
-              {companyLinks.map((link) => (
                 <li key={link.key}>
                   <Link
                     href={link.href}
