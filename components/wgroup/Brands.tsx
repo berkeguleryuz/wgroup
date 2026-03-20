@@ -68,7 +68,7 @@ const brands = [
   {
     key: "wquality",
     slug: "/w-quality",
-    image: "/w/brands/wqualitysphere.webp",
+    image: "/w/brands/wquality.webp",
     colorHex: "#1E6DB5",
     Icon: ShieldCheckIcon,
   },
