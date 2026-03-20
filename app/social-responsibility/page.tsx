@@ -195,7 +195,7 @@ export default function SocialResponsibilityPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/w/company/social-responsibility.webp">
+    <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/w/wsocial.webp">
       <div ref={sectionRef}>
         <p className="mb-12 text-lg leading-relaxed text-muted">
           {t("description")}
