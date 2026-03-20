@@ -603,12 +603,12 @@ export default function Navbar() {
                 />
               </div>
             ))}
-            <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
-            <div className="absolute bottom-5 left-5 right-5">
-              <p className="text-sm font-semibold text-white/90">
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 60%, transparent)" }} />
+            <div className="absolute bottom-0 left-0 right-0 rounded-b-2xl px-7 pb-7 pt-16" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent)" }}>
+              <p className="font-bold leading-tight text-white" style={{ fontSize: "26px", textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>
                 {t(activeKey)}
               </p>
-              <p className="mt-1 text-xs text-white/50">
+              <p className="mt-2 leading-relaxed text-white" style={{ fontSize: "16px", opacity: 0.85, textShadow: "0 1px 8px rgba(0,0,0,0.7)" }}>
                 {t(`desc.${activeKey}`)}
               </p>
             </div>
