@@ -59,7 +59,7 @@ export default function FrameAnimation() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative" style={{ background: "var(--background)" }}>
+    <section ref={sectionRef} className="relative" style={{ background: "#0a0f1e" }}>
       {/* Sticky video background */}
       <div className="sticky top-0 z-0 h-screen w-full overflow-hidden">
         <video

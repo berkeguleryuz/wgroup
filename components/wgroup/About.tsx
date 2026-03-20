@@ -249,10 +249,10 @@ export default function About() {
   return (
     <>
       {/* ---- Curved top edge: sits OUTSIDE section to avoid overflow-hidden clip ---- */}
-      <div className="relative -mt-50 overflow-visible">
+      <div className="relative z-20 -mt-50 overflow-visible">
         <svg
-          className="block w-full h-51"
-          viewBox="0 0 1440 84"
+          className="block w-full h-50"
+          viewBox="0 0 1440 80"
           fill="none"
           preserveAspectRatio="none"
         >
@@ -305,15 +305,6 @@ export default function About() {
             strokeWidth="1"
             fill="none"
           />
-          <defs>
-            <linearGradient id="horizon-grad" x1="0" y1="0" x2="1400" y2="0" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="rgba(255,255,255,0)" />
-              <stop offset="30%" stopColor="rgba(255,255,255,0.12)" />
-              <stop offset="50%" stopColor="rgba(255,255,255,0.2)" />
-              <stop offset="70%" stopColor="rgba(255,255,255,0.12)" />
-              <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-            </linearGradient>
-          </defs>
         </svg>
 
         {/* Sparkles above the arc */}
@@ -331,11 +322,7 @@ export default function About() {
       {/* Background grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
+
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
