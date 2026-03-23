@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Outfit, Barlow, Instrument_Serif } from "next/font/google";
+import { Geist } from "next/font/google";
 import { getLocale, getMessages } from "next-intl/server";
 import I18nProvider from "@/components/providers/I18nProvider";
 import Navbar from "@/components/layout/Navbar";
@@ -33,6 +34,12 @@ const instrumentSerif = Instrument_Serif({
   display: "swap",
 });
 
+const geist = Geist({
+  variable: "--font-geist",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     template: "%s | WGroup GmbH",
@@ -51,7 +58,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} ${barlow.variable} ${instrumentSerif.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.variable} ${outfit.variable} ${barlow.variable} ${instrumentSerif.variable} ${geist.variable} font-sans antialiased`} suppressHydrationWarning>
         <I18nProvider locale={locale} messages={messages} timeZone="Europe/Berlin">
           <Navbar />
           <main>{children}</main>

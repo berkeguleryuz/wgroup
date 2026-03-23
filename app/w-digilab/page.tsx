@@ -36,9 +36,9 @@ export default function WDigiLabPage() {
         });
       });
 
-      gsap.utils.toArray<HTMLElement>(".dv-approach-item").forEach((el, i) => {
+      gsap.utils.toArray<HTMLElement>(".dv-approach-block").forEach((el, i) => {
         gsap.from(el, {
-          x: i % 2 === 0 ? -40 : 40, opacity: 0, duration: 0.8, ease: "power2.out",
+          y: 40, opacity: 0, duration: 0.8, delay: i * 0.1, ease: "power2.out",
           scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
         });
       });
@@ -100,25 +100,21 @@ export default function WDigiLabPage() {
             </h2>
           </div>
 
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
-            {/* Left: large statement */}
-            <div className="dv-fade">
-              <p className="text-2xl leading-[1.5] sm:text-3xl"
-                style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
-                {t("whatWeDo1")}
+          <div className="dv-fade mb-12">
+            <p className="text-2xl leading-[1.5] sm:text-3xl lg:text-4xl"
+              style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
+              {t("whatWeDo1")}
+            </p>
+          </div>
+
+          {[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).map((text, i) => (
+            <div key={i} className="dv-fade mb-6 last:mb-0">
+              <p className="text-base leading-[1.9] sm:text-lg"
+                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
+                {text}
               </p>
             </div>
-
-            {/* Right: detail paragraphs */}
-            <div className="dv-fade space-y-6">
-              {[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).map((text, i) => (
-                <p key={i} className="text-base leading-[1.9] sm:text-[17px]"
-                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
-                  {text}
-                </p>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
@@ -184,29 +180,32 @@ export default function WDigiLabPage() {
             </h2>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-6">
             {[t("approach1"), t("approach2"), t("approach3")].filter(Boolean).map((text, i) => (
-              <div key={i} className={`dv-approach-item flex flex-col gap-6 sm:flex-row sm:gap-12 ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}>
-                {/* Number accent */}
-                <div className="flex shrink-0 items-start sm:w-24">
-                  <span className="text-[64px] font-black leading-none sm:text-[80px]"
+              <div key={i} className="dv-approach-block relative rounded-2xl p-8 sm:p-10"
+                style={{
+                  background: "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(8,145,178,0.03))",
+                  border: "1px solid rgba(30,109,181,0.1)",
+                }}
+              >
+                <div className="flex items-start gap-6">
+                  <span className="hidden shrink-0 text-[56px] font-black leading-none sm:block"
                     style={{
-                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                      fontFamily: "var(--font-geist), system-ui, sans-serif",
                       background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
-                      opacity: 0.15,
+                      opacity: 0.2,
                     }}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                </div>
-                {/* Text */}
-                <div className="flex-1">
-                  <div className="mb-4 h-[2px] w-10 rounded-full"
-                    style={{ background: i % 2 === 0 ? "linear-gradient(to right, var(--primary), transparent)" : "linear-gradient(to right, var(--accent-teal), transparent)" }} />
-                  <p className="text-lg leading-[1.8] sm:text-xl"
-                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#2a3444", fontWeight: 300 }}>
+                  <p className="flex-1 text-base leading-[1.8] sm:text-lg"
+                    style={{
+                      fontFamily: "var(--font-geist), system-ui, sans-serif",
+                      fontWeight: 400,
+                      color: "#2a3444",
+                    }}>
                     {text}
                   </p>
                 </div>
