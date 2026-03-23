@@ -36,9 +36,9 @@ export default function WQualityPage() {
         });
       });
 
-      gsap.utils.toArray<HTMLElement>(".dv-approach-item").forEach((el, i) => {
+      gsap.utils.toArray<HTMLElement>(".dv-approach-block").forEach((el, i) => {
         gsap.from(el, {
-          x: i % 2 === 0 ? -40 : 40, opacity: 0, duration: 0.8, ease: "power2.out",
+          y: 40, opacity: 0, duration: 0.8, delay: i * 0.1, ease: "power2.out",
           scrollTrigger: { trigger: el, start: "top 85%", toggleActions: "play none none reverse" },
         });
       });
@@ -99,100 +99,65 @@ export default function WQualityPage() {
             </h2>
           </div>
 
-          <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
-            {/* Left: large statement */}
-            <div className="dv-fade">
-              <p className="text-2xl leading-[1.5] sm:text-3xl"
-                style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
-                {t("whatWeDo1")}
-              </p>
-            </div>
-
-            {/* Right: detail paragraphs */}
-            <div className="dv-fade space-y-6">
-              <p className="text-base leading-[1.9] sm:text-[17px]"
-                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
-                {t("whatWeDo2")}
-              </p>
-              <p className="text-base leading-[1.9] sm:text-[17px]"
-                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
-                {t("whatWeDo3")}
-              </p>
-            </div>
+          <div className="dv-fade mb-12">
+            <p className="text-2xl leading-[1.5] sm:text-3xl lg:text-4xl"
+              style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
+              {t("whatWeDo1")}
+            </p>
           </div>
+
+          {[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).map((text, i) => (
+            <div key={i} className="dv-fade mb-6 last:mb-0">
+              <p className="text-base leading-[1.9] sm:text-lg"
+                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
+                {text}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
       {/* ===== CORE CAPABILITIES ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/5 blur-[150px]" />
-          <div className="absolute -right-20 bottom-20 h-[300px] w-[300px] rounded-full bg-accent-teal/5 blur-[100px]" />
-        </div>
-
         <div className="relative z-10 mx-auto max-w-6xl px-6">
-          {/* Section header */}
-          <div className="dv-fade mb-16">
-            <div className="flex items-center gap-4">
-              <div className="h-[3px] w-12 rounded-full" style={{ background: "linear-gradient(to right, var(--primary), var(--accent-teal))" }} />
-              <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary"
-                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                {t("capTitle")}
-              </h2>
-            </div>
+          <div className="dv-fade mb-16 flex items-center gap-4">
+            <div className="h-[3px] w-12 rounded-full" style={{ background: "linear-gradient(to right, var(--primary), var(--accent-teal))" }} />
+            <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+              {t("capTitle")}
+            </h2>
           </div>
 
-          {/* Bento grid */}
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-6">
-            {capabilities.map((cap, i) => {
-              // First 2 cards span 3 cols each, last 3 span 2 cols each
-              const colSpan = i < 2 ? "lg:col-span-3" : "lg:col-span-2";
+          <div className="mx-auto max-w-3xl space-y-6">
+            {capabilities.map((cap, i) => (
+              <div
+                key={i}
+                className="dv-cap-card group relative flex items-center gap-8 px-10 py-8 transition-all duration-400 hover:bg-white/[0.02]"
+              >
+                <span className="pointer-events-none absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
+                <span className="pointer-events-none absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
+                <span className="pointer-events-none absolute bottom-0 left-0 h-5 w-5 border-b-2 border-l-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
+                <span className="pointer-events-none absolute bottom-0 right-0 h-5 w-5 border-b-2 border-r-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
 
-              return (
-                <div
-                  key={i}
-                  className={`dv-cap-card group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1 ${colSpan}`}
-                  style={{
-                    background: "linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                    border: "1px solid rgba(255,255,255,0.06)",
-                  }}
-                >
-                  {/* Animated gradient border on hover */}
-                  <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                    style={{ background: "linear-gradient(135deg, rgba(30,109,181,0.1), transparent 40%, rgba(8,145,178,0.08))" }} />
+                <span className="shrink-0 text-3xl font-black text-primary/20 transition-colors duration-300 group-hover:text-primary/40"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
 
+                <div className="h-10 w-px shrink-0 bg-white/8 transition-colors duration-300 group-hover:bg-primary/30" />
 
-                  <div className="relative z-10 p-8 sm:p-10">
-                    {/* Number + indicator */}
-                    <div className="mb-6 flex items-center justify-between">
-                      <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl text-sm font-bold"
-                        style={{
-                          fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                          background: "linear-gradient(135deg, rgba(30,109,181,0.15), rgba(8,145,178,0.1))",
-                          color: "var(--primary)",
-                        }}>
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <img
-                        src="/wgroup/logo.png"
-                        alt=""
-                        className="h-7 w-auto opacity-0 transition-all duration-500 group-hover:opacity-20"
-                      />
-                    </div>
+                <h3 className="flex-1 text-lg font-semibold leading-snug text-white/80 transition-colors duration-300 group-hover:text-white sm:text-xl"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                  {cap}
+                </h3>
 
-                    {/* Capability text */}
-                    <h3 className="text-lg font-semibold leading-snug text-white/90 sm:text-xl"
-                      style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                      {cap}
-                    </h3>
-
-                    {/* Bottom decorative line */}
-                    <div className="mt-6 h-[1px] w-0 rounded-full transition-all duration-700 group-hover:w-full"
-                      style={{ background: "linear-gradient(to right, var(--primary), transparent)" }} />
-                  </div>
-                </div>
-              );
-            })}
+                <img
+                  src="/wgroup/logo.png"
+                  alt=""
+                  className="h-6 w-auto shrink-0 opacity-0 transition-all duration-500 group-hover:opacity-15"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -208,29 +173,32 @@ export default function WQualityPage() {
             </h2>
           </div>
 
-          <div className="space-y-12">
-            {[t("approach1"), t("approach2"), t("approach3")].map((text, i) => (
-              <div key={i} className={`dv-approach-item flex flex-col gap-6 sm:flex-row sm:gap-12 ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}>
-                {/* Number accent */}
-                <div className="flex shrink-0 items-start sm:w-24">
-                  <span className="text-[64px] font-black leading-none sm:text-[80px]"
+          <div className="space-y-6">
+            {[t("approach1"), t("approach2"), t("approach3")].filter(Boolean).map((text, i) => (
+              <div key={i} className="dv-approach-block relative rounded-2xl p-8 sm:p-10"
+                style={{
+                  background: "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(8,145,178,0.03))",
+                  border: "1px solid rgba(30,109,181,0.1)",
+                }}
+              >
+                <div className="flex items-start gap-6">
+                  <span className="hidden shrink-0 text-[56px] font-black leading-none sm:block"
                     style={{
-                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                      fontFamily: "var(--font-geist), system-ui, sans-serif",
                       background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
-                      opacity: 0.15,
+                      opacity: 0.2,
                     }}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                </div>
-                {/* Text */}
-                <div className="flex-1">
-                  <div className="mb-4 h-[2px] w-10 rounded-full"
-                    style={{ background: i % 2 === 0 ? "linear-gradient(to right, var(--primary), transparent)" : "linear-gradient(to right, var(--accent-teal), transparent)" }} />
-                  <p className="text-lg leading-[1.8] sm:text-xl"
-                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#2a3444", fontWeight: 300 }}>
+                  <p className="flex-1 text-base leading-[1.8] sm:text-lg"
+                    style={{
+                      fontFamily: "var(--font-geist), system-ui, sans-serif",
+                      fontWeight: 400,
+                      color: "#2a3444",
+                    }}>
                     {text}
                   </p>
                 </div>

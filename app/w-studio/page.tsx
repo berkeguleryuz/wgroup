@@ -116,11 +116,7 @@ export default function WStudioPage() {
 
       {/* ===== CORE CAPABILITIES ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute left-1/2 top-0 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/5 blur-[150px]" />
-        </div>
-
-        <div className="relative z-10 mx-auto max-w-5xl px-6">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="dv-fade mb-16 flex items-center gap-4">
             <div className="h-[3px] w-12 rounded-full" style={{ background: "linear-gradient(to right, var(--primary), var(--accent-teal))" }} />
             <h2 className="text-sm font-bold uppercase tracking-[0.2em] text-primary"
@@ -129,44 +125,34 @@ export default function WStudioPage() {
             </h2>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="mx-auto max-w-3xl space-y-6">
             {capabilities.map((cap, i) => (
               <div
                 key={i}
-                className="dv-cap-card group relative overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-1"
-                style={{
-                  background: "linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01))",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                }}
+                className="dv-cap-card group relative flex items-center gap-8 px-10 py-8 transition-all duration-400 hover:bg-white/[0.02]"
               >
-                <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                  style={{ background: "linear-gradient(135deg, rgba(30,109,181,0.1), transparent 40%, rgba(8,145,178,0.08))" }} />
+                <span className="pointer-events-none absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
+                <span className="pointer-events-none absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
+                <span className="pointer-events-none absolute bottom-0 left-0 h-5 w-5 border-b-2 border-l-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
+                <span className="pointer-events-none absolute bottom-0 right-0 h-5 w-5 border-b-2 border-r-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
 
-                <div className="relative z-10 p-10 sm:p-12">
-                  <div className="mb-8 flex items-center justify-between">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl text-base font-bold"
-                      style={{
-                        fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                        background: "linear-gradient(135deg, rgba(30,109,181,0.15), rgba(8,145,178,0.1))",
-                        color: "var(--primary)",
-                      }}>
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <img
-                      src="/wgroup/logo.png"
-                      alt=""
-                      className="h-8 w-auto opacity-0 transition-all duration-500 group-hover:opacity-20"
-                    />
-                  </div>
+                <span className="shrink-0 text-3xl font-black text-primary/20 transition-colors duration-300 group-hover:text-primary/40"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                  {String(i + 1).padStart(2, "0")}
+                </span>
 
-                  <h3 className="text-xl font-semibold leading-snug text-white/90 sm:text-2xl"
-                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                    {cap}
-                  </h3>
+                <div className="h-10 w-px shrink-0 bg-white/8 transition-colors duration-300 group-hover:bg-primary/30" />
 
-                  <div className="mt-8 h-[1px] w-0 rounded-full transition-all duration-700 group-hover:w-full"
-                    style={{ background: "linear-gradient(to right, var(--primary), transparent)" }} />
-                </div>
+                <h3 className="flex-1 text-lg font-semibold leading-snug text-white/80 transition-colors duration-300 group-hover:text-white sm:text-xl"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
+                  {cap}
+                </h3>
+
+                <img
+                  src="/wgroup/logo.png"
+                  alt=""
+                  className="h-6 w-auto shrink-0 opacity-0 transition-all duration-500 group-hover:opacity-15"
+                />
               </div>
             ))}
           </div>
@@ -184,18 +170,18 @@ export default function WStudioPage() {
             </h2>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {[t("approach1"), t("approach2"), t("approach3")].filter(Boolean).map((text, i) => (
               <div key={i} className="dv-approach-block relative rounded-2xl p-8 sm:p-10"
                 style={{
-                  background: i === 0 ? "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(8,145,178,0.03))" : "transparent",
-                  border: i === 0 ? "1px solid rgba(30,109,181,0.1)" : "none",
+                  background: "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(8,145,178,0.03))",
+                  border: "1px solid rgba(30,109,181,0.1)",
                 }}
               >
                 <div className="flex items-start gap-6">
                   <span className="hidden shrink-0 text-[56px] font-black leading-none sm:block"
                     style={{
-                      fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                      fontFamily: "var(--font-geist), system-ui, sans-serif",
                       background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
@@ -204,12 +190,11 @@ export default function WStudioPage() {
                     }}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className={`flex-1 leading-[1.8] ${i === 0 ? "text-lg sm:text-xl" : "text-base sm:text-lg"}`}
+                  <p className="flex-1 text-base leading-[1.8] sm:text-lg"
                     style={{
-                      fontFamily: i === 0 ? "var(--font-instrument), Georgia, serif" : "var(--font-barlow), system-ui, sans-serif",
-                      fontStyle: i === 0 ? "italic" : "normal",
-                      fontWeight: i === 0 ? 400 : 300,
-                      color: i === 0 ? "#1e293b" : "#3a4a5c",
+                      fontFamily: "var(--font-geist), system-ui, sans-serif",
+                      fontWeight: 400,
+                      color: "#2a3444",
                     }}>
                     {text}
                   </p>
