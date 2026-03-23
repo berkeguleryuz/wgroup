@@ -3,14 +3,11 @@
 import { useRef, useEffect, useCallback, useState } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import Lottie from "lottie-react";
 import PageLayout from "@/components/layout/PageLayout";
 import { ArrowRight } from "@/components/icons";
 import MorphButton from "@/components/ui/MorphButton";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const statLotties = [
   "/lottie/lightbulb.json",

@@ -3,12 +3,9 @@
 import { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "@/components/icons";
-
-gsap.registerPlugin(ScrollTrigger);
 
 /* ---- Inline brand icons ---- */
 function GradCapIcon(props: React.SVGProps<SVGSVGElement>) {

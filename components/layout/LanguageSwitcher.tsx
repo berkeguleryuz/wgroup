@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { Globe } from "@/components/icons";
-import gsap from "gsap";
+import { gsap } from "@/lib/gsap";
 
 const languages = [
   { code: "en", label: "EN", flag: "🇬🇧" },

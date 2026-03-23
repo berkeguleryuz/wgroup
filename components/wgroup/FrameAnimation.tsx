@@ -1,11 +1,8 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const cardKeys = ["card1", "card2", "card3", "card4"] as const;
 

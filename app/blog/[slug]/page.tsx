@@ -4,13 +4,10 @@ import { use, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import { ArrowLeft } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 import { blogArticles } from "@/lib/blog";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const categoryImages: Record<string, string> = {
   knowledge: "/w/blog/knowledge.webp",

@@ -2,13 +2,15 @@
 
 import { useRef, useEffect, useCallback, useState } from "react";
 import Image from "next/image";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
-import Lottie from "lottie-react";
-import { Sparkles } from "@/components/ui/Sparkles";
+import dynamic from "next/dynamic";
 
-gsap.registerPlugin(ScrollTrigger);
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+const Sparkles = dynamic(
+  () => import("@/components/ui/Sparkles").then((mod) => mod.Sparkles),
+  { ssr: false }
+);
 
 const pillarLotties = ["/lottie/target.json", "/lottie/lightbulb.json", "/lottie/trending-up.json"] as const;
 const pillarColors = ["var(--primary)", "var(--accent-purple)", "var(--accent-teal)"] as const;

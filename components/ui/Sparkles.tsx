@@ -1,8 +1,11 @@
 "use client";
 
-import { useEffect, useId, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+
+let engineReady = false;
+let enginePromise: Promise<void> | null = null;
 
 interface SparklesProps {
   className?: string;
@@ -33,73 +36,58 @@ export function Sparkles({
   background = "transparent",
   options = {},
 }: SparklesProps) {
-  const [isReady, setIsReady] = useState(false);
+  const [isReady, setIsReady] = useState(engineReady);
 
   useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
+    if (engineReady) {
       setIsReady(true);
-    });
+      return;
+    }
+    if (!enginePromise) {
+      enginePromise = initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => {
+        engineReady = true;
+      });
+    }
+    enginePromise.then(() => setIsReady(true));
   }, []);
 
   const id = useId();
 
-  const defaultOptions = {
-    background: {
-      color: {
-        value: background,
-      },
-    },
-    fullScreen: {
-      enable: false,
-      zIndex: 1,
-    },
-    fpsLimit: 120,
-    particles: {
-      color: {
-        value: color,
-      },
-      move: {
-        enable: true,
-        direction: "none" as const,
-        speed: {
-          min: minSpeed || speed / 10,
-          max: speed,
-        },
-        straight: false,
-      },
-      number: {
-        value: density,
-      },
-      opacity: {
-        value: {
-          min: minOpacity || opacity / 10,
-          max: opacity,
-        },
-        animation: {
+  const particleOptions = useMemo(
+    () => ({
+      background: { color: { value: background } },
+      fullScreen: { enable: false, zIndex: 1 },
+      fpsLimit: 120,
+      particles: {
+        color: { value: color },
+        move: {
           enable: true,
-          sync: false,
-          speed: opacitySpeed,
+          direction: "none" as const,
+          speed: { min: minSpeed || speed / 10, max: speed },
+          straight: false,
         },
-      },
-      size: {
-        value: {
-          min: minSize || size / 2.5,
-          max: size,
+        number: { value: density },
+        opacity: {
+          value: { min: minOpacity || opacity / 10, max: opacity },
+          animation: { enable: true, sync: false, speed: opacitySpeed },
         },
+        size: { value: { min: minSize || size / 2.5, max: size } },
       },
-    },
-    detectRetina: true,
-  };
+      detectRetina: true,
+      ...options,
+    }),
+    [background, color, density, minOpacity, minSize, minSpeed, opacity, opacitySpeed, size, speed, options]
+  );
+
+  if (!isReady) return null;
 
   return (
-    isReady && (
-      <Particles
-        id={id}
-        options={{ ...defaultOptions, ...options }}
-        className={className}
-      />
-    )
+    <Particles
+      id={id}
+      options={particleOptions}
+      className={className}
+    />
   );
 }

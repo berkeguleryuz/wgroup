@@ -2,14 +2,11 @@
 
 import { useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 import MorphButton from "@/components/ui/MorphButton";
-
-gsap.registerPlugin(ScrollTrigger);
 
 /* ---------- Cinematic statement (italic, centered) ---------- */
 function StatementBlock({ text }: { text: string }) {

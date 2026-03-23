@@ -3,13 +3,10 @@
 import { useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import { Heart, Leaf, Globe, ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 import MorphButton from "@/components/ui/MorphButton";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const PILLARS = [
   { key: "genderEquality", icon: Heart, color: "#1e6db5" },

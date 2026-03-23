@@ -1,25 +1,26 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
+import Image from "next/image";
 import { ArrowRight } from "@/components/icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import MorphButton from "@/components/ui/MorphButton";
 
-gsap.registerPlugin(ScrollTrigger);
-
 /* ---- Hero Brain Image — full-bleed background cover ---- */
 function BrainVisual() {
   return (
     <div className="brain-visual pointer-events-none absolute inset-0">
-      <img
+      <Image
         src="/w/hero.jpg"
         alt=""
-        className="brain-img h-full w-full object-cover opacity-40"
+        fill
+        priority
+        className="brain-img object-cover opacity-40"
         style={{ filter: "brightness(0.7)" }}
+        sizes="100vw"
       />
       {/* Dark overlay to keep text legible */}
       <div

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
+import { gsap } from "@/lib/gsap";
 import { useGSAP } from "@gsap/react";
 import { ChevronDown, Menu, X, ArrowRight } from "@/components/icons";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -71,8 +71,8 @@ const navItems: NavItem[] = [
   {
     key: "products",
     items: [
-      { key: "studioItem1", href: "/products/digitautopivot" },
-      { key: "studioItem2", href: "/products/digitautopivot" },
+      { key: "qualityItem1", href: "/products/digitautopivot" },
+      { key: "qualityItem2", href: "/products/digitautopivot" },
     ],
     sections: [
       {
@@ -83,10 +83,10 @@ const navItems: NavItem[] = [
         ],
       },
       {
-        label: "W-Quality",
+        label: "W-Studio",
         items: [
-          { key: "qualityItem1", href: "/products/digitautopivot" },
-          { key: "qualityItem2", href: "/products/digitautopivot" },
+          { key: "studioItem1", href: "/products/digitautopivot" },
+          { key: "studioItem2", href: "/products/digitautopivot" },
         ],
       },
     ],
@@ -94,6 +94,288 @@ const navItems: NavItem[] = [
   { key: "blog", href: "/blog" },
   { key: "faq", href: "/faq" },
 ];
+
+function getGroup(key: string): NavGroup | undefined {
+  return navItems.find((i) => isGroup(i) && i.key === key) as
+    | NavGroup
+    | undefined;
+}
+
+/* ---------- Shared panel props ---------- */
+
+interface PanelProps {
+  t: ReturnType<typeof useTranslations>;
+  hoveredItem: string | null;
+  setHoveredItem: (key: string | null) => void;
+  closeDropdown: () => void;
+}
+
+/* ---------- Product link item ---------- */
+
+function ProductLink({
+  item,
+  t,
+  hoveredItem,
+  setHoveredItem,
+  closeDropdown,
+}: PanelProps & { item: NavLink }) {
+  return (
+    <Link
+      href={item.href}
+      data-menu-item
+      className={`group flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200 ${
+        hoveredItem === item.key
+          ? "bg-white/8"
+          : "hover:bg-white/5"
+      }`}
+      onMouseEnter={() => setHoveredItem(item.key)}
+      onClick={closeDropdown}
+    >
+      <div className="flex h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/6">
+        <Image
+          src={navImages[item.key]}
+          alt=""
+          width={36}
+          height={36}
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <div className="min-w-0 flex-1">
+        <div className="text-sm font-medium leading-snug text-white/80 group-hover:text-white">
+          {t(item.key)}
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+/* ==================== COMPANY PANEL ==================== */
+
+function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelProps) {
+  const group = getGroup("company");
+  if (!group) return null;
+  const defaultKey = group.items[0].key;
+  const activeKey =
+    hoveredItem && navImages[hoveredItem] ? hoveredItem : defaultKey;
+
+  return (
+    <div className="mx-auto max-w-5xl px-8 py-8">
+      <div className="grid grid-cols-5 gap-8">
+        {/* Links */}
+        <div className="col-span-3 space-y-1">
+          {group.items.map((item) => (
+            <Link
+              key={item.key}
+              href={item.href}
+              data-menu-item
+              className={`group flex items-center gap-4 rounded-xl px-4 py-3.5 transition-all duration-200 ${
+                hoveredItem === item.key
+                  ? "bg-white/8"
+                  : "hover:bg-white/5"
+              }`}
+              onMouseEnter={() => setHoveredItem(item.key)}
+              onClick={closeDropdown}
+            >
+              <div className="flex h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-white/6 ring-1 ring-white/8">
+                <Image
+                  src={navImages[item.key]}
+                  alt=""
+                  width={44}
+                  height={44}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="text-sm font-semibold text-white/90 group-hover:text-white">
+                  {t(item.key)}
+                </div>
+                <div className="mt-0.5 text-xs text-white/35 group-hover:text-white/50">
+                  {t(`desc.${item.key}`)}
+                </div>
+              </div>
+              <ArrowRight className="h-4 w-4 shrink-0 -translate-x-1 text-white/15 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:text-primary group-hover:opacity-100" />
+            </Link>
+          ))}
+        </div>
+
+        {/* Featured image with crossfade */}
+        <div className="col-span-2 relative min-h-70 overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
+          {group.items.map((item) => (
+            <div
+              key={item.key}
+              className={`absolute inset-0 transition-opacity duration-500 ${
+                activeKey === item.key ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <Image
+                src={navImages[item.key]}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 0px, 400px"
+              />
+            </div>
+          ))}
+          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 60%, transparent)" }} />
+          <div className="absolute bottom-0 left-0 right-0 rounded-b-2xl px-7 pb-7 pt-16" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent)" }}>
+            <p className="font-bold leading-tight text-white" style={{ fontSize: "26px", textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>
+              {t(activeKey)}
+            </p>
+            <p className="mt-2 leading-relaxed text-white" style={{ fontSize: "16px", opacity: 0.85, textShadow: "0 1px 8px rgba(0,0,0,0.7)" }}>
+              {t(`desc.${activeKey}`)}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ==================== DIVISIONS PANEL ==================== */
+
+function DivisionsPanel({ t, closeDropdown }: PanelProps) {
+  const group = getGroup("divisions");
+  if (!group) return null;
+
+  return (
+    <div className="mx-auto max-w-5xl px-8 py-8">
+      <div className="grid grid-cols-3 gap-5">
+        {group.items.map((item) => (
+          <Link
+            key={item.key}
+            href={item.href}
+            data-menu-item
+            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/7 transition-all duration-300 hover:border-white/18 hover:bg-white/10 hover:shadow-xl hover:shadow-primary/10"
+            onClick={closeDropdown}
+          >
+            <div className="aspect-[4/3] overflow-hidden">
+              <Image
+                src={navImages[item.key]}
+                alt={t(item.key)}
+                width={400}
+                height={300}
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-bold text-white group-hover:text-white">
+                {t(item.key)}
+              </h3>
+              <p className="mt-2 text-base leading-relaxed text-white/65 group-hover:text-white/85">
+                {t(`desc.${item.key}`)}
+              </p>
+              <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-[#60b0f0] group-hover:text-white">
+                {t("explore")}
+                <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+/* ==================== PRODUCTS PANEL ==================== */
+
+function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelProps) {
+  const group = getGroup("products");
+  if (!group) return null;
+  const activeImage =
+    hoveredItem && navImages[hoveredItem] ? navImages[hoveredItem] : null;
+
+  return (
+    <div className="mx-auto max-w-6xl px-8 py-8">
+      <div className="grid grid-cols-12 gap-8">
+        {/* Product columns */}
+        <div className="col-span-8 grid grid-cols-3 gap-6">
+          {/* W-Quality */}
+          <div>
+            <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
+              <span className="h-px flex-1 bg-white/8" />
+              <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-QUALITY</span>
+              <span className="h-px flex-1 bg-white/8" />
+            </h4>
+            <div className="space-y-1">
+              {group.items.map((item) => (
+                <ProductLink key={item.key} item={item} t={t} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} closeDropdown={closeDropdown} />
+              ))}
+            </div>
+          </div>
+
+          {/* W-DigiLab */}
+          {group.sections?.[0] && (
+            <div>
+              <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
+                <span className="h-px flex-1 bg-white/8" />
+                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-DIGILAB</span>
+                <span className="h-px flex-1 bg-white/8" />
+              </h4>
+              <div className="space-y-1">
+                {group.sections[0].items.map((item) => (
+                  <ProductLink key={item.key} item={item} t={t} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} closeDropdown={closeDropdown} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* W-Studio */}
+          {group.sections?.[1] && (
+            <div>
+              <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
+                <span className="h-px flex-1 bg-white/8" />
+                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-STUDIO</span>
+                <span className="h-px flex-1 bg-white/8" />
+              </h4>
+              <div className="space-y-1">
+                {group.sections[1].items.map((item) => (
+                  <ProductLink key={item.key} item={item} t={t} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} closeDropdown={closeDropdown} />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Preview image */}
+        <div className="col-span-4">
+          <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
+            {activeImage ? (
+              <>
+                <Image
+                  key={activeImage}
+                  src={activeImage}
+                  alt=""
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 0px, 360px"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5">
+                  <p className="text-xl font-bold text-white">
+                    {hoveredItem ? t(hoveredItem) : ""}
+                  </p>
+                  <p className="mt-2 text-base leading-relaxed text-white/65">
+                    {hoveredItem ? t(`desc.${hoveredItem}`) : ""}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <div className="flex h-full flex-col items-center justify-center gap-3">
+                <div className="h-12 w-12 rounded-xl bg-white/4 p-3">
+                  <ArrowRight className="h-full w-full text-white/15" />
+                </div>
+                <p className="text-xs text-white/20">
+                  {t("hoverToPreview")}
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 /* ---------- Mobile Accordion ---------- */
 
@@ -322,11 +604,12 @@ export default function Navbar() {
     setMobileOpen(false);
   }
 
-  function getGroup(key: string): NavGroup | undefined {
-    return navItems.find((i) => isGroup(i) && i.key === key) as
-      | NavGroup
-      | undefined;
-  }
+  const panelProps: PanelProps = {
+    t,
+    hoveredItem,
+    setHoveredItem,
+    closeDropdown,
+  };
 
   /* ========== Render ========== */
 
@@ -452,9 +735,9 @@ export default function Navbar() {
             onMouseEnter={keepOpen}
             onMouseLeave={startClose}
           >
-            {activeDropdown === "company" && <CompanyPanel />}
-            {activeDropdown === "divisions" && <DivisionsPanel />}
-            {activeDropdown === "products" && <ProductsPanel />}
+            {activeDropdown === "company" && <CompanyPanel {...panelProps} />}
+            {activeDropdown === "divisions" && <DivisionsPanel {...panelProps} />}
+            {activeDropdown === "products" && <ProductsPanel {...panelProps} />}
           </div>
         )}
 
@@ -535,265 +818,4 @@ export default function Navbar() {
       )}
     </>
   );
-
-  /* ==================== COMPANY PANEL ==================== */
-
-  function CompanyPanel() {
-    const group = getGroup("company");
-    if (!group) return null;
-    const defaultKey = group.items[0].key;
-    const activeKey =
-      hoveredItem && navImages[hoveredItem] ? hoveredItem : defaultKey;
-
-    return (
-      <div className="mx-auto max-w-5xl px-8 py-8">
-        <div className="grid grid-cols-5 gap-8">
-          {/* Links */}
-          <div className="col-span-3 space-y-1">
-            {group.items.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                data-menu-item
-                className={`group flex items-center gap-4 rounded-xl px-4 py-3.5 transition-all duration-200 ${
-                  hoveredItem === item.key
-                    ? "bg-white/8"
-                    : "hover:bg-white/5"
-                }`}
-                onMouseEnter={() => setHoveredItem(item.key)}
-                onClick={closeDropdown}
-              >
-                <div className="flex h-11 w-11 shrink-0 overflow-hidden rounded-xl bg-white/6 ring-1 ring-white/8">
-                  <Image
-                    src={navImages[item.key]}
-                    alt=""
-                    width={44}
-                    height={44}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="min-w-0 flex-1">
-                  <div className="text-sm font-semibold text-white/90 group-hover:text-white">
-                    {t(item.key)}
-                  </div>
-                  <div className="mt-0.5 text-xs text-white/35 group-hover:text-white/50">
-                    {t(`desc.${item.key}`)}
-                  </div>
-                </div>
-                <ArrowRight className="h-4 w-4 shrink-0 -translate-x-1 text-white/15 opacity-0 transition-all duration-200 group-hover:translate-x-0 group-hover:text-primary group-hover:opacity-100" />
-              </Link>
-            ))}
-          </div>
-
-          {/* Featured image with crossfade */}
-          <div className="col-span-2 relative min-h-70 overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
-            {group.items.map((item) => (
-              <div
-                key={item.key}
-                className={`absolute inset-0 transition-opacity duration-500 ${
-                  activeKey === item.key ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <Image
-                  src={navImages[item.key]}
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 0px, 400px"
-                />
-              </div>
-            ))}
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 60%, transparent)" }} />
-            <div className="absolute bottom-0 left-0 right-0 rounded-b-2xl px-7 pb-7 pt-16" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent)" }}>
-              <p className="font-bold leading-tight text-white" style={{ fontSize: "26px", textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>
-                {t(activeKey)}
-              </p>
-              <p className="mt-2 leading-relaxed text-white" style={{ fontSize: "16px", opacity: 0.85, textShadow: "0 1px 8px rgba(0,0,0,0.7)" }}>
-                {t(`desc.${activeKey}`)}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  /* ==================== BRANDS PANEL ==================== */
-
-  function DivisionsPanel() {
-    const group = getGroup("divisions");
-    if (!group) return null;
-
-    return (
-      <div className="mx-auto max-w-5xl px-8 py-8">
-        <div className="grid grid-cols-3 gap-5">
-          {group.items.map((item) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              data-menu-item
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/7 transition-all duration-300 hover:border-white/18 hover:bg-white/10 hover:shadow-xl hover:shadow-primary/10"
-              onClick={closeDropdown}
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <Image
-                  src={navImages[item.key]}
-                  alt={t(item.key)}
-                  width={400}
-                  height={300}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-background/60 via-transparent to-transparent" />
-              </div>
-              <div className="p-5">
-                <h3 className="text-xl font-bold text-white group-hover:text-white">
-                  {t(item.key)}
-                </h3>
-                <p className="mt-2 text-base leading-relaxed text-white/65 group-hover:text-white/85">
-                  {t(`desc.${item.key}`)}
-                </p>
-                <div className="mt-4 flex items-center gap-1.5 text-xs font-semibold text-[#60b0f0] group-hover:text-white">
-                  {t("explore")}
-                  <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" />
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  /* ==================== PRODUCTS PANEL ==================== */
-
-  function ProductsPanel() {
-    const group = getGroup("products");
-    if (!group) return null;
-    const activeImage =
-      hoveredItem && navImages[hoveredItem] ? navImages[hoveredItem] : null;
-
-    return (
-      <div className="mx-auto max-w-6xl px-8 py-8">
-        <div className="grid grid-cols-12 gap-8">
-          {/* Product columns */}
-          <div className="col-span-8 grid grid-cols-3 gap-6">
-            {/* W-Studio */}
-            <div>
-              <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
-                <span className="h-px flex-1 bg-white/8" />
-                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-STUDIO</span>
-                <span className="h-px flex-1 bg-white/8" />
-              </h4>
-              <div className="space-y-1">
-                {group.items.map((item) => (
-                  <ProductLink key={item.key} item={item} />
-                ))}
-              </div>
-            </div>
-
-            {/* W-DigiLab */}
-            {group.sections?.[0] && (
-              <div>
-                <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
-                  <span className="h-px flex-1 bg-white/8" />
-                  <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-DIGILAB</span>
-                  <span className="h-px flex-1 bg-white/8" />
-                </h4>
-                <div className="space-y-1">
-                  {group.sections[0].items.map((item) => (
-                    <ProductLink key={item.key} item={item} />
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {/* W-Quality */}
-            {group.sections?.[1] && (
-              <div>
-                <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
-                  <span className="h-px flex-1 bg-white/8" />
-                  <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-QUALITY</span>
-                  <span className="h-px flex-1 bg-white/8" />
-                </h4>
-                <div className="space-y-1">
-                  {group.sections[1].items.map((item) => (
-                    <ProductLink key={item.key} item={item} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-
-          {/* Preview image */}
-          <div className="col-span-4">
-            <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
-              {activeImage ? (
-                <>
-                  <Image
-                    key={activeImage}
-                    src={activeImage}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 0px, 360px"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5">
-                    <p className="text-xl font-bold text-white">
-                      {hoveredItem ? t(hoveredItem) : ""}
-                    </p>
-                    <p className="mt-2 text-base leading-relaxed text-white/65">
-                      {hoveredItem ? t(`desc.${hoveredItem}`) : ""}
-                    </p>
-                  </div>
-                </>
-              ) : (
-                <div className="flex h-full flex-col items-center justify-center gap-3">
-                  <div className="h-12 w-12 rounded-xl bg-white/4 p-3">
-                    <ArrowRight className="h-full w-full text-white/15" />
-                  </div>
-                  <p className="text-xs text-white/20">
-                    {t("hoverToPreview")}
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  /* ---------- Product link item ---------- */
-
-  function ProductLink({ item }: { item: NavLink }) {
-    return (
-      <Link
-        href={item.href}
-        data-menu-item
-        className={`group flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200 ${
-          hoveredItem === item.key
-            ? "bg-white/8"
-            : "hover:bg-white/5"
-        }`}
-        onMouseEnter={() => setHoveredItem(item.key)}
-        onClick={closeDropdown}
-      >
-        <div className="flex h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/6">
-          <Image
-            src={navImages[item.key]}
-            alt=""
-            width={36}
-            height={36}
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="min-w-0 flex-1">
-          <div className="text-sm font-medium leading-snug text-white/80 group-hover:text-white">
-            {t(item.key)}
-          </div>
-        </div>
-      </Link>
-    );
-  }
 }

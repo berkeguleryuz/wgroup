@@ -2,11 +2,8 @@
 
 import { useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import PageLayout from "@/components/layout/PageLayout";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const sections = [
   { titleKey: "scopeTitle", textKey: "scopeText" },
