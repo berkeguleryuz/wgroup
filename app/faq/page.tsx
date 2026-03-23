@@ -3,11 +3,8 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { ChevronDown } from "@/components/icons";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import PageLayout from "@/components/layout/PageLayout";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const faqIds = [
   "q1", "q2", "q3", "q4", "q5", "q6", "q7", "q8", "q9",

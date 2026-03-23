@@ -1,10 +1,7 @@
 "use client";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useEffect, useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 interface AnimatedTitleProps {
   title: string;
@@ -53,8 +50,9 @@ export default function AnimatedTitle({
             <span
               key={i}
               className="animated-word"
-              dangerouslySetInnerHTML={{ __html: word }}
-            />
+            >
+              {word}
+            </span>
           ))}
         </div>
       ))}

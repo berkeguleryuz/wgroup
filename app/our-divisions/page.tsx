@@ -3,12 +3,9 @@
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const DIVISIONS = [
   { key: "wquality", color: "var(--primary)", href: "/w-quality" },

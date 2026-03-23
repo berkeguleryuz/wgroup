@@ -3,11 +3,8 @@
 import { useState, useRef, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin, Linkedin, Instagram, Send } from "@/components/icons";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import PageLayout from "@/components/layout/PageLayout";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactPage() {
   const t = useTranslations("contact");

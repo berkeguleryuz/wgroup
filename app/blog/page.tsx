@@ -5,12 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "@/components/icons";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "@/lib/gsap";
 import PageLayout from "@/components/layout/PageLayout";
 import { blogArticles } from "@/lib/blog";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const categories = [
   { key: "all", label: "allArticles" },

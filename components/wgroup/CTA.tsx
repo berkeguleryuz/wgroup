@@ -3,12 +3,9 @@
 import { useRef, useEffect } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { ArrowRight } from "@/components/icons";
 import MorphButton from "@/components/ui/MorphButton";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function CTA() {
   const sectionRef = useRef<HTMLElement>(null);
