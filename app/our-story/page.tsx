@@ -130,7 +130,7 @@ export default function OurStoryPage() {
       subtitle={t("subtitle")}
       eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
-      heroImage="/w/wstory.webp"
+      heroImage="/w-new/wn10.webp"
     >
       <div ref={sectionRef}>
         {/* P1 — Opening statement */}

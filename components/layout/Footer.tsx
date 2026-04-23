@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { LinkedInIcon, InstagramIcon } from "@/components/icons";
+import { productOrder, productSlugs, type ProductKey } from "@/lib/products";
 
 /* ---------- Link data ---------- */
 
@@ -13,14 +14,9 @@ const divisionLinks = [
   { key: "wstudio", href: "/w-studio" },
 ] as const;
 
-const productLinks = [
-  { key: "studioItem1", href: "/products/digitautopivot" },
-  { key: "studioItem2", href: "/products/digitautopivot" },
-  { key: "digilabItem1", href: "/products/digitautopivot" },
-  { key: "digilabItem2", href: "/products/digitautopivot" },
-  { key: "qualityItem1", href: "/products/digitautopivot" },
-  { key: "qualityItem2", href: "/products/digitautopivot" },
-] as const;
+const productLinks: { key: ProductKey; href: string }[] = productOrder.map(
+  (k) => ({ key: k, href: `/products/${productSlugs[k]}` })
+);
 
 const companyLinks = [
   { key: "about", href: "/about" },
@@ -44,6 +40,7 @@ const legalLinks = [
 
 export default function Footer() {
   const t = useTranslations("footer");
+  const tProducts = useTranslations("wproducts");
 
   return (
     <footer className="bg-secondary">
@@ -111,7 +108,7 @@ export default function Footer() {
                     href={link.href}
                     className="text-sm text-white/50 transition-colors hover:text-white"
                   >
-                    {t(link.key)}
+                    {tProducts(`items.${link.key}.title`)}
                   </Link>
                 </li>
               ))}

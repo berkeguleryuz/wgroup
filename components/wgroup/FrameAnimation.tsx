@@ -108,7 +108,7 @@ export default function FrameAnimation() {
                     className="mb-4 inline-block text-[64px] font-black leading-none"
                     style={{
                       fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                      color: "rgba(30, 109, 181, 0.12)",
+                      color: "rgba(120, 190, 240, 0.28)",
                     }}
                   >
                     0{i + 1}

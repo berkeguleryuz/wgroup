@@ -91,16 +91,16 @@
   },
   "frameAnimation": {
     "loading": "Loading",
-    "card1Label": "01 / Engineering",
+    "card1Label": "Engineering",
     "card1Title": "Engineering Excellence",
     "card1Desc": "Transforming technical expertise into strategic consulting that ensures quality and compliance.",
-    "card2Label": "02 / Digital",
+    "card2Label": "Digital",
     "card2Title": "Digital Transformation",
     "card2Desc": "Developing agile digital tools and lab-tested innovations to lead the industrial evolution.",
-    "card3Label": "03 / Knowledge",
+    "card3Label": "Knowledge",
     "card3Title": "Knowledge Digitization",
     "card3Desc": "Creating seamless platforms to capture, structure, and share complex industrial intelligence.",
-    "card4Label": "04 / Media",
+    "card4Label": "Media",
     "card4Title": "Media-Driven Impact",
     "card4Desc": "Leveraging creative media and digital storytelling to amplify industrial reach and engagement."
   },
@@ -829,7 +829,8 @@
     "contactForPricing": "Contact us for pricing",
     "requiredField": "This field is required",
     "successMessage": "Your message has been sent successfully!",
-    "errorMessage": "There was an error sending your message. Please try again."
+    "errorMessage": "There was an error sending your message. Please try again.",
+    "focusLabel": "Focus"
   },
   "impressum": {
     "title": "Legal Notice",
@@ -936,7 +937,7 @@
     "contactPhone": "Phone: +49 174 177 78 79"
   },
   "wqualityPage": {
-    "title": "W",
+    "title": "W-",
     "eyebrow": "W-QUALITY",
     "titleHighlight": "Quality",
     "subtitle": "Industrial Consulting & Audit for Automotive and Manufacturing.",
@@ -963,7 +964,7 @@
     "ctaLearnMore": "Our Divisions"
   },
   "wdigilabPage": {
-    "title": "W",
+    "title": "W-",
     "eyebrow": "W-DIGILAB",
     "titleHighlight": "DigiLab",
     "subtitle": "Digital Systems and Intelligent Solutions for Modern Industry.",
@@ -990,7 +991,7 @@
     "ctaLearnMore": "Our Divisions"
   },
   "wstudioPage": {
-    "title": "W",
+    "title": "W-",
     "eyebrow": "W-STUDIO",
     "titleHighlight": "Studio",
     "subtitle": "Industry Media, AI Content Production and Knowledge Platforms.",
@@ -1015,5 +1016,168 @@
     "ctaDesc": "Discover how WStudio can help transform your industry expertise into engaging media experiences and scalable knowledge platforms.",
     "contactCta": "Contact Us",
     "ctaLearnMore": "Our Divisions"
+  },
+  "wproducts": {
+    "eyebrow": "Product",
+    "definitionLabel": "Definition",
+    "strategicAdvantageLabel": "Strategic Advantage",
+    "useCasesLabel": "Areas of Use",
+    "contactPricing": "Contact us for pricing",
+    "ctaTitle": "Let's design a tailored solution for your company",
+    "ctaDesc": "Talk to our team, we'll adapt the product to your operations.",
+    "ctaButton": "Get in Touch",
+    "backToDivision": "Back to Division",
+    "relatedProducts": "More Products from This Division",
+    "jumpToUseCases": "Jump to use cases",
+    "items": {
+      "smartOperationalPlatform": {
+        "slug": "smart-operational-platform",
+        "brand": "W-DigiLab",
+        "brandHref": "/w-digilab",
+        "title": "Smart Operational Excellence Platform",
+        "tagline": "A modular operating platform under a single digital roof",
+        "definition": "A modular operating platform that runs all operational processes of the company, from workflows to audits, from supplier management to production planning, under a single digital roof. It transfers processes running on paper forms, Excel files, and email approvals into digital modules with role-based approval flows and AI-driven validation. These modules feed data to each other, forming a shared operational data source.",
+        "strategicAdvantage": "Logs every process step with timestamp, user ID, and approval chain, creating end-to-end traceability. An audit finding automatically triggers the CAPA flow; a CAPA action feeds back into the related workflow; a supplier-originated finding is posted to the supplier risk score. Because modules work together, the same data is never entered twice; operational signals (form quality, completion time) automatically update the competency matrix. Evidence files required in IATF, VDA, and CSR audits are generated in 1-2 clicks.",
+        "useCases": [
+          { "title": "Digital Workflows", "desc": "8D and Ishikawa-based Customer Complaint Management, CAPA, MOC (Management of Change) approval chains, Layered Process Audit (LPA), and field non-conformance reporting." },
+          { "title": "Internal Audit & Governance", "desc": "Annual audit program management; system, process, and product audits; CSR and 2nd party supplier audits; dynamic VDA 6.3 and IATF 16949 checklists." },
+          { "title": "Supplier Risk & Performance", "desc": "Live risk score (PPM, OTD, financial, logistic, geographic), scorecard management, auto-launched development plans, and 2nd party audit triggering." },
+          { "title": "Intelligent Production Scheduling", "desc": "Dynamic scheduling that jointly optimizes machine capacity, raw material, shifts, and lead times; \"What-If\" scenarios and MES/SCADA integration." },
+          { "title": "Competency & Backup", "desc": "Objective ILU matrix fed by digital workflow data; certificate validity tracking; automated backup alerts for critical positions." }
+        ]
+      },
+      "intelligencePerformancePlatform": {
+        "slug": "intelligence-performance-platform",
+        "brand": "W-DigiLab",
+        "brandHref": "/w-digilab",
+        "title": "Intelligence & Performance Platform",
+        "tagline": "A predictive decision layer serving three decision tiers",
+        "definition": "A knowledge and decision-support layer that processes data from the operational platform, shop floor sensors, corporate documentation, and KPI systems through AI. It combines two core capabilities: (1) a corporate knowledge base searchable in natural language (RAG-based), and (2) a predictive performance and command dashboard serving three decision layers simultaneously, shift supervisor, department manager, and executive leadership.",
+        "strategicAdvantage": "Makes corporate memory independent of individuals: captures the senior engineer's implicit \"why do we do it this way\" knowledge into documents and Q&A logs; the system answers only from the current document revision and automatically excludes outdated versions. On the performance side, real-time data is presented to line managers, weekly trends to department heads, and long-term KPI trajectories plus strategic investment ROI to executive leadership. As a result, a machine failure, an audit finding, or a KPI deviation simultaneously triggers both operational actions and strategic decisions.",
+        "useCases": [
+          { "title": "AI-Powered Knowledge Querying (RAG)", "desc": "Natural language search across technical standards, procedures, 8D logs, and solution archives; answer generation with source references." },
+          { "title": "Predictive Performance & Command Dashboard", "desc": "IATF/QMS compliance scoring, OEE, energy consumption, machine downtime alerts; department- and plant-level KPI dashboards." },
+          { "title": "Strategic Governance", "desc": "OKR/BSC-based goal deployment, 3-6-12-month trend analyses, strategic investment ROI and progress tracking." },
+          { "title": "Integrated Training", "desc": "Interactive onboarding connected with WStudio video content; digitalization of engineering know-how through structured Q&A sets." },
+          { "title": "Automated Alerting & Escalation", "desc": "Instant notifications when thresholds are breached; automated CAPA triggering upon non-conformance detection." }
+        ]
+      },
+      "blockchainProducts": {
+        "slug": "blockchain-products",
+        "brand": "W-DigiLab",
+        "brandHref": "/w-digilab",
+        "title": "Blockchain Products",
+        "tagline": "Tokenization, DAO governance, and smart contracts",
+        "definition": "Consolidates the three areas where blockchain technology generates the most direct value in the corporate world into a single product family: tokenization of assets and value, decentralized governance (DAO) systems, and business rules executed automatically via smart contracts. A modular solution suite that enables companies to integrate these tools into their own structures in a controlled way. Operates independently of the Operational Platform (01) and the Intelligence Platform (02); has its own business logic and economic model.",
+        "strategicAdvantage": "Activates in scenarios where trusting a central authority or a single system is not sufficient. An investment decision can be made through tokenized voting; an incentive program can be distributed as tokens; a collaboration agreement can be encoded as a self-executing smart contract. Because decision and transaction history is recorded on-chain immutably, it eliminates the trust gap, particularly in multi-party structures (joint ventures, consortia, supplier networks), and shortens manual approval loops and intermediate trust layers.",
+        "useCases": [
+          { "title": "Asset & Value Tokenization", "desc": "Converting factory equipment, inventory, intellectual property, and financial assets into tokens on the blockchain; enables fractional ownership, secondary markets, and automated transfers." },
+          { "title": "DAO-Based Corporate Governance", "desc": "Critical decisions (investment approval, budget allocation, strategic direction) made through tokenized voting rights; decision history and voting distribution recorded on-chain, transparent and immutable." },
+          { "title": "Smart Contracts", "desc": "Conditional transactions such as payments, deliveries, progress payments, and bonuses encoded and automatically triggered when conditions are met; shortens or eliminates the manual approval loop." },
+          { "title": "Multi-Party Collaboration", "desc": "Decentralized decision ledgers for joint ventures, supplier consortia, or industry alliances; shared governance where no single party can unilaterally manipulate outcomes." },
+          { "title": "Token-Based Incentives", "desc": "Distribution of measurable value as tokens across areas such as employee performance, supplier success, or customer loyalty, usable within the ecosystem." },
+          { "title": "Decentralized Identity (DID)", "desc": "Managing user identities and access rights through distributed identity systems rather than centralized databases; secure and portable authentication across companies." }
+        ]
+      },
+      "systemArchitectureCompliance": {
+        "slug": "system-architecture-compliance",
+        "brand": "W-Quality",
+        "brandHref": "/w-quality",
+        "title": "System Architecture, Operational Excellence and Compliance Assurance",
+        "tagline": "A living quality architecture, audit-ready at all times",
+        "definition": "Rebuilds the organization's Quality Management System (QMS) not as a certificate-compliance formality, but as a living architecture that disciplines daily operations and keeps the company audit-ready at all times. Processes, responsibilities, measurement points, and approval flows are aligned with standards such as ISO 9001 and IATF 16949, with customer-specific requirements (CSR), and with process audit demands like VDA 6.3, yet engineered for the company's actual business logic. QMS implementation and audit readiness are treated not as two separate projects, but as two faces of the same discipline.",
+        "strategicAdvantage": "Directly targets the Cost of Quality (COQ: rejects, rework, warranty, complaints) and moves 3rd-party audits out of the \"stress event\" category. Transfers processes from the founding team's memory into documented, measurable, and transferable form, preserving institutional continuity during growth inflection points such as new plant openings, M&A integration, or OEM customer onboarding. With the \"Zero Critical Finding\" objective, keeps certificate validity and market access continuously under a legal and technical shield; proactively tracks regulatory changes (UNECE, REACH, ESG reporting) to close compliance gaps before they open.",
+        "useCases": [
+          { "title": "QMS Implementation & Certification", "desc": "QMS Implementation, Optimization, and ISO/IATF Certification Preparation." },
+          { "title": "IATF 16949 Compliance", "desc": "Compliance and Transition Program (gap analysis, action plan, audit coaching)." },
+          { "title": "Process Mapping & KPI", "desc": "Process Mapping (SIPOC, turtle charts), Bottleneck Analysis, and KPI Design." },
+          { "title": "Multi-site Standardization", "desc": "Global Standards Roll-out (HQ to local plants) and Multi-site Standardization." },
+          { "title": "Gap Analysis & Mock Audits", "desc": "Gap Analysis and Mock Audits for System, Process, and Product Audits." },
+          { "title": "VDA 6.3 & CSR Integration", "desc": "VDA 6.3 Process Audit Preparation and CSR Integration into the Audit Program." },
+          { "title": "Regulatory Compliance", "desc": "Legal and Technical Regulation Compliance Consulting (UNECE, REACH, ESG)." },
+          { "title": "Internal Auditor Development", "desc": "Internal Auditor Capability Development and Qualification Programs." }
+        ]
+      },
+      "strategicSupplierDevelopment": {
+        "slug": "supplier-development",
+        "brand": "W-Quality",
+        "brandHref": "/w-quality",
+        "title": "Strategic Supplier Development Ecosystem",
+        "tagline": "Turn suppliers from cost items into strategic partners",
+        "definition": "A combined on-site and desk-based program that transforms suppliers from monitored cost items into partners who speak the OEM's technical language and contribute to shared goals. The program engages the supplier's own processes to produce a product- and process-specific development roadmap and tracks it to closure.",
+        "strategicAdvantage": "Resolves supplier-originated quality problems (incoming rejects, line stoppages, customer recalls) at the source. Detects capacity and quality risks early in critical parts or processes, preventing crises before they unfold, and strengthens the OEM's market position by proving supply chain maturity under customer audits.",
+        "useCases": [
+          { "title": "Performance Improvement", "desc": "Supplier Performance Improvement Projects (PPM, OTD, logistics)." },
+          { "title": "New Supplier Onboarding", "desc": "Sourcing, PPAP preparation, and APQP support for new supplier onboarding." },
+          { "title": "On-site Technical Development", "desc": "On-site Technical Development and Capacity Building on Critical Parts or Processes." },
+          { "title": "Supplier Quality Coaching", "desc": "Coaching and Capability Transfer for Supplier Quality Managers." }
+        ]
+      },
+      "strategicPerformanceManagement": {
+        "slug": "strategic-performance-management",
+        "brand": "W-Quality",
+        "brandHref": "/w-quality",
+        "title": "Strategic Performance Management and Corporate Alignment",
+        "tagline": "Management infrastructure that connects strategy to shop floor",
+        "definition": "Builds the management infrastructure that connects executive strategic objectives to shop floor reality, eliminates inter-departmental gaps, and makes decision mechanisms data-driven. Combines policy deployment, OKR or BSC frameworks, and visual management to translate strategy into a shared language across every level.",
+        "strategicAdvantage": "Closes the gap between strategic plan and operational execution, accelerating decision-making. Departmental KPI sets, executive dashboards, and a regular review cadence prioritize resource allocation; solves the \"too many goals, too little focus\" problem by concentrating organizational momentum on 3-5 key objectives.",
+        "useCases": [
+          { "title": "Command Center Design", "desc": "Corporate Command and Decision Center Design (dashboard architecture, review cadence)." },
+          { "title": "Cross-Functional Alignment", "desc": "Cross-Functional Goal Alignment (OKR or BSC deployment)." },
+          { "title": "Strategic Project Governance", "desc": "Strategic Transformation Project Governance (new product, site, or technology integrations)." },
+          { "title": "Decision Hygiene & Ritual", "desc": "Decision Hygiene and Ritual Design for Executive Teams (weekly, monthly, quarterly)." }
+        ]
+      },
+      "aiContentProduction": {
+        "slug": "ai-content-production",
+        "brand": "W-Studio",
+        "brandHref": "/w-studio",
+        "title": "AI-Driven Content Production and Business Storytelling",
+        "tagline": "Cinematic storytelling meets AI video production",
+        "definition": "An end-to-end media production service that combines an AI-powered video production infrastructure with the discipline of cinematic storytelling, helping companies translate their knowledge, experience, and success stories into modern video formats. We convert complex business processes, technical know-how, and leadership insights into watchable, shareable, and memorable content. AI tools deliver speed and scale; storytelling ensures recall and emotional impact.",
+        "strategicAdvantage": "Breaks through the time and budget bottleneck of traditional corporate video production: AI avatar presenters and automated voice-over generate multilingual content from a single shoot, while the storytelling framework turns content from dry information transfer into a story that is watched, shared, and remembered. The result: internal know-how and external reputation stories become scalable media assets, produced to brand standards and ready for international audiences.",
+        "useCases": [
+          { "title": "AI Video Production", "desc": "AI-powered production pipeline from scripting to post-production; minimum shoot, maximum output." },
+          { "title": "AI Avatar Presenters", "desc": "Multilingual digital presenters acting as company spokespeople or trainers without the need for human on-camera talent." },
+          { "title": "Multilingual Content Creation", "desc": "Automated localization from a single master source into English, German, Turkish, and any additional required language." },
+          { "title": "Automated Storytelling", "desc": "AI-driven narrative formats that transform raw data or documents into structured story arcs." },
+          { "title": "Company Stories", "desc": "Cinematic storytelling of the company's founding, transformation, or cultural journey." },
+          { "title": "Innovation Stories", "desc": "Documentary-style presentation of R&D projects, patent journeys, and technological breakthroughs." },
+          { "title": "Leadership Insights", "desc": "First-person delivery of executive vision, strategic decisions, and industry perspective." },
+          { "title": "Industry Documentaries", "desc": "Corporate documentaries covering industry transformations, supply chain narratives, or competitive dynamics." }
+        ]
+      },
+      "businessflix": {
+        "slug": "businessflix",
+        "brand": "W-Studio",
+        "brandHref": "/w-studio",
+        "title": "BusinessFlix: Corporate Content in Show and Series Format",
+        "tagline": "Not a training video, a broadcast experience",
+        "definition": "A premium content production service that takes knowledge and experience out of the classic training or promotional formats and turns them into a real show or mini-series experience. Corporate topics (quality, audit, supplier development, talent management) are structured into seasons with characters, tension, and dramatic arcs. The content is not a training video; it is a broadcast experience produced to be watched.",
+        "strategicAdvantage": "Solves the biggest problem in corporate training and cultural content: low completion rates and zero lasting impact. Because the audience feels they are watching a show or series, content is consumed voluntarily, discussed socially, and rewatched. Topics such as audit pressure in automotive, supplier crises, or quality leadership, when told through characters and story, generate an unforgettable brand experience for both employees and external stakeholders.",
+        "useCases": [
+          { "title": "Audit Drama", "desc": "A training series that reconstructs audit processes through scenes, in a watchable tension-driven format." },
+          { "title": "Supplier Development Stories", "desc": "Character-driven documentary storytelling of supplier development journeys from the field." },
+          { "title": "Quality Queen Show", "desc": "A series featuring quality leaders, delivering mentorship and case discussions in a show format." },
+          { "title": "Industry Mini Series", "desc": "A multi-episode mini-series format designed to make industry topics watchable rather than instructional." },
+          { "title": "Talent Development Series", "desc": "Capability growth, career journeys, and internal mentorship stories presented in series format." }
+        ]
+      },
+      "corporateKnowledgeChannels": {
+        "slug": "corporate-knowledge-channels",
+        "brand": "W-Studio",
+        "brandHref": "/w-studio",
+        "title": "Corporate Knowledge Channels",
+        "tagline": "Branded, sustainable corporate knowledge channels",
+        "definition": "A service that designs and operates branded, sustainable knowledge channels for employees, suppliers, and business partners. Not a one-off video production, but a functioning corporate media channel with a publishing schedule, editorial curation, and subscription experience. Positioned as an internal learning, supplier development, onboarding, or external storytelling channel depending on audience and purpose.",
+        "strategicAdvantage": "Transforms corporate communication, training, and onboarding from scattered video files or PDF documentation into a consistent, searchable, brand-standard channel experience. Employees access content with Netflix- or Spotify-like ease; suppliers follow their development content from a single place; new joiners learn the company through a structured feed in their first weeks. Knowledge, once produced, is not lost; thanks to the channel, it grows over time into an evolving corporate media library.",
+        "useCases": [
+          { "title": "Internal Learning", "desc": "Internal training and micro-learning channels with a regular publishing calendar and role-based content streams." },
+          { "title": "Supplier Development", "desc": "Brand-standard channels for suppliers, delivering development, standard updates, and technical guidance." },
+          { "title": "Onboarding", "desc": "Structured first-30, 60, and 90-day video streams and role-based orientation series for new hires." },
+          { "title": "Corporate Storytelling", "desc": "A regularly published corporate story channel targeting external stakeholders (customers, investors, candidates)." }
+        ]
+      }
+    }
   }
 }

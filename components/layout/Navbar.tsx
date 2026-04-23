@@ -31,21 +31,73 @@ function isGroup(item: NavItem): item is NavGroup {
 /* ---------- Image map ---------- */
 
 const navImages: Record<string, string> = {
-  aboutWgroup: "/w/company/about.webp",
-  whatWeDo: "/w/company/our-mission.webp",
-  ourDivisions: "/w/company/partners.webp",
-  ourStory: "/w/company/our-story.webp",
-  ourVision: "/w/company/career.webp",
-  wquality: "/w/brands/wquality.webp",
-  wdigilab: "/w/brands/wdigilab.webp",
-  wstudio: "/w/brands/wstudio.webp",
-  studioItem1: "/w/products/digitautopivot.webp",
-  studioItem2: "/w/products/digitautopivot.webp",
-  digilabItem1: "/w/products/digitautopivot.webp",
-  digilabItem2: "/w/products/digitautopivot.webp",
-  qualityItem1: "/w/products/digitautopivot.webp",
-  qualityItem2: "/w/products/digitautopivot.webp",
+  aboutWgroup: "/w-new/w1.webp",
+  whatWeDo: "/w-new/w2.webp",
+  ourDivisions: "/w-new/w3.webp",
+  ourStory: "/w-new/wn10.webp",
+  ourVision: "/w-new/wn11.webp",
+  wquality: "/w-new/W-Quality.webp",
+  wdigilab: "/w-new/W-Digilab.webp",
+  wstudio: "/w-new/W-Studio.webp",
+  // W-DigiLab products
+  smartOperationalPlatform: "/w-new/wn1.webp",
+  intelligencePerformancePlatform: "/w-new/wn2.webp",
+  blockchainProducts: "/w-new/wn3.webp",
+  // W-Quality products
+  systemArchitectureCompliance: "/w-new/wn4.webp",
+  strategicSupplierDevelopment: "/w-new/wn5.webp",
+  strategicPerformanceManagement: "/w-new/wn6.webp",
+  // W-Studio products
+  aiContentProduction: "/w-new/wn7.webp",
+  businessflix: "/w-new/wn8.webp",
+  corporateKnowledgeChannels: "/w-new/wn9.webp",
 };
+
+/* ---------- Product definitions ---------- */
+
+type ProductKey =
+  | "smartOperationalPlatform"
+  | "intelligencePerformancePlatform"
+  | "blockchainProducts"
+  | "systemArchitectureCompliance"
+  | "strategicSupplierDevelopment"
+  | "strategicPerformanceManagement"
+  | "aiContentProduction"
+  | "businessflix"
+  | "corporateKnowledgeChannels";
+
+const productSlugs: Record<ProductKey, string> = {
+  smartOperationalPlatform: "smart-operational-platform",
+  intelligencePerformancePlatform: "intelligence-performance-platform",
+  blockchainProducts: "blockchain-products",
+  systemArchitectureCompliance: "system-architecture-compliance",
+  strategicSupplierDevelopment: "supplier-development",
+  strategicPerformanceManagement: "strategic-performance-management",
+  aiContentProduction: "ai-content-production",
+  businessflix: "businessflix",
+  corporateKnowledgeChannels: "corporate-knowledge-channels",
+};
+
+const digilabProducts: ProductKey[] = [
+  "smartOperationalPlatform",
+  "intelligencePerformancePlatform",
+  "blockchainProducts",
+];
+const qualityProducts: ProductKey[] = [
+  "systemArchitectureCompliance",
+  "strategicSupplierDevelopment",
+  "strategicPerformanceManagement",
+];
+const studioProducts: ProductKey[] = [
+  "aiContentProduction",
+  "businessflix",
+  "corporateKnowledgeChannels",
+];
+
+const buildProductLink = (k: ProductKey): NavLink => ({
+  key: k,
+  href: `/products/${productSlugs[k]}`,
+});
 
 /* ---------- Navigation structure ---------- */
 
@@ -70,25 +122,10 @@ const navItems: NavItem[] = [
   },
   {
     key: "products",
-    items: [
-      { key: "qualityItem1", href: "/products/digitautopivot" },
-      { key: "qualityItem2", href: "/products/digitautopivot" },
-    ],
+    items: qualityProducts.map(buildProductLink),
     sections: [
-      {
-        label: "W-DigiLab",
-        items: [
-          { key: "digilabItem1", href: "/products/digitautopivot" },
-          { key: "digilabItem2", href: "/products/digitautopivot" },
-        ],
-      },
-      {
-        label: "W-Studio",
-        items: [
-          { key: "studioItem1", href: "/products/digitautopivot" },
-          { key: "studioItem2", href: "/products/digitautopivot" },
-        ],
-      },
+      { label: "W-DigiLab", items: digilabProducts.map(buildProductLink) },
+      { label: "W-Studio", items: studioProducts.map(buildProductLink) },
     ],
   },
   { key: "blog", href: "/blog" },
@@ -105,9 +142,21 @@ function getGroup(key: string): NavGroup | undefined {
 
 interface PanelProps {
   t: ReturnType<typeof useTranslations>;
+  tProducts: ReturnType<typeof useTranslations>;
   hoveredItem: string | null;
   setHoveredItem: (key: string | null) => void;
   closeDropdown: () => void;
+}
+
+/* Helper: resolve label/description from product or navbar key */
+function resolveLabel(key: string, t: PanelProps["t"], tProducts: PanelProps["tProducts"]) {
+  if (key in productSlugs) {
+    return {
+      name: tProducts(`items.${key}.title`),
+      desc: tProducts(`items.${key}.tagline`),
+    };
+  }
+  return { name: t(key), desc: t(`desc.${key}`) };
 }
 
 /* ---------- Product link item ---------- */
@@ -115,18 +164,18 @@ interface PanelProps {
 function ProductLink({
   item,
   t,
+  tProducts,
   hoveredItem,
   setHoveredItem,
   closeDropdown,
 }: PanelProps & { item: NavLink }) {
+  const { name } = resolveLabel(item.key, t, tProducts);
   return (
     <Link
       href={item.href}
       data-menu-item
       className={`group flex items-center gap-3 rounded-xl px-3 py-2.5 transition-all duration-200 ${
-        hoveredItem === item.key
-          ? "bg-white/8"
-          : "hover:bg-white/5"
+        hoveredItem === item.key ? "bg-white/8" : "hover:bg-white/5"
       }`}
       onMouseEnter={() => setHoveredItem(item.key)}
       onClick={closeDropdown}
@@ -141,8 +190,8 @@ function ProductLink({
         />
       </div>
       <div className="min-w-0 flex-1">
-        <div className="text-sm font-medium leading-snug text-white/80 group-hover:text-white">
-          {t(item.key)}
+        <div className="line-clamp-2 text-sm font-medium leading-snug text-white/80 group-hover:text-white">
+          {name}
         </div>
       </div>
     </Link>
@@ -161,7 +210,6 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
   return (
     <div className="mx-auto max-w-5xl px-8 py-8">
       <div className="grid grid-cols-5 gap-8">
-        {/* Links */}
         <div className="col-span-3 space-y-1">
           {group.items.map((item) => (
             <Link
@@ -169,9 +217,7 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
               href={item.href}
               data-menu-item
               className={`group flex items-center gap-4 rounded-xl px-4 py-3.5 transition-all duration-200 ${
-                hoveredItem === item.key
-                  ? "bg-white/8"
-                  : "hover:bg-white/5"
+                hoveredItem === item.key ? "bg-white/8" : "hover:bg-white/5"
               }`}
               onMouseEnter={() => setHoveredItem(item.key)}
               onClick={closeDropdown}
@@ -198,7 +244,6 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
           ))}
         </div>
 
-        {/* Featured image with crossfade */}
         <div className="col-span-2 relative min-h-70 overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
           {group.items.map((item) => (
             <div
@@ -216,12 +261,33 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
               />
             </div>
           ))}
-          <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 60%, transparent)" }} />
-          <div className="absolute bottom-0 left-0 right-0 rounded-b-2xl px-7 pb-7 pt-16" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent)" }}>
-            <p className="font-bold leading-tight text-white" style={{ fontSize: "26px", textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 35%, rgba(0,0,0,0.2) 60%, transparent)",
+            }}
+          />
+          <div
+            className="absolute bottom-0 left-0 right-0 rounded-b-2xl px-7 pb-7 pt-16"
+            style={{
+              background: "linear-gradient(to top, rgba(0,0,0,0.5), transparent)",
+            }}
+          >
+            <p
+              className="font-bold leading-tight text-white"
+              style={{ fontSize: "26px", textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}
+            >
               {t(activeKey)}
             </p>
-            <p className="mt-2 leading-relaxed text-white" style={{ fontSize: "16px", opacity: 0.85, textShadow: "0 1px 8px rgba(0,0,0,0.7)" }}>
+            <p
+              className="mt-2 leading-relaxed text-white"
+              style={{
+                fontSize: "16px",
+                opacity: 0.85,
+                textShadow: "0 1px 8px rgba(0,0,0,0.7)",
+              }}
+            >
               {t(`desc.${activeKey}`)}
             </p>
           </div>
@@ -279,27 +345,43 @@ function DivisionsPanel({ t, closeDropdown }: PanelProps) {
 
 /* ==================== PRODUCTS PANEL ==================== */
 
-function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelProps) {
+function ProductsPanel({
+  t,
+  tProducts,
+  hoveredItem,
+  setHoveredItem,
+  closeDropdown,
+}: PanelProps) {
   const group = getGroup("products");
   if (!group) return null;
   const activeImage =
     hoveredItem && navImages[hoveredItem] ? navImages[hoveredItem] : null;
+  const active = hoveredItem ? resolveLabel(hoveredItem, t, tProducts) : null;
 
   return (
     <div className="mx-auto max-w-6xl px-8 py-8">
       <div className="grid grid-cols-12 gap-8">
-        {/* Product columns */}
         <div className="col-span-8 grid grid-cols-3 gap-6">
           {/* W-Quality */}
           <div>
             <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
               <span className="h-px flex-1 bg-white/8" />
-              <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-QUALITY</span>
+              <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">
+                W-QUALITY
+              </span>
               <span className="h-px flex-1 bg-white/8" />
             </h4>
             <div className="space-y-1">
               {group.items.map((item) => (
-                <ProductLink key={item.key} item={item} t={t} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} closeDropdown={closeDropdown} />
+                <ProductLink
+                  key={item.key}
+                  item={item}
+                  t={t}
+                  tProducts={tProducts}
+                  hoveredItem={hoveredItem}
+                  setHoveredItem={setHoveredItem}
+                  closeDropdown={closeDropdown}
+                />
               ))}
             </div>
           </div>
@@ -309,12 +391,22 @@ function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelP
             <div>
               <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
                 <span className="h-px flex-1 bg-white/8" />
-                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-DIGILAB</span>
+                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">
+                  W-DIGILAB
+                </span>
                 <span className="h-px flex-1 bg-white/8" />
               </h4>
               <div className="space-y-1">
                 {group.sections[0].items.map((item) => (
-                  <ProductLink key={item.key} item={item} t={t} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} closeDropdown={closeDropdown} />
+                  <ProductLink
+                    key={item.key}
+                    item={item}
+                    t={t}
+                    tProducts={tProducts}
+                    hoveredItem={hoveredItem}
+                    setHoveredItem={setHoveredItem}
+                    closeDropdown={closeDropdown}
+                  />
                 ))}
               </div>
             </div>
@@ -325,19 +417,28 @@ function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelP
             <div>
               <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
                 <span className="h-px flex-1 bg-white/8" />
-                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">W-STUDIO</span>
+                <span className="rounded-full bg-white px-4 py-1.5 text-[#0a0f1e]">
+                  W-STUDIO
+                </span>
                 <span className="h-px flex-1 bg-white/8" />
               </h4>
               <div className="space-y-1">
                 {group.sections[1].items.map((item) => (
-                  <ProductLink key={item.key} item={item} t={t} hoveredItem={hoveredItem} setHoveredItem={setHoveredItem} closeDropdown={closeDropdown} />
+                  <ProductLink
+                    key={item.key}
+                    item={item}
+                    t={t}
+                    tProducts={tProducts}
+                    hoveredItem={hoveredItem}
+                    setHoveredItem={setHoveredItem}
+                    closeDropdown={closeDropdown}
+                  />
                 ))}
               </div>
             </div>
           )}
         </div>
 
-        {/* Preview image */}
         <div className="col-span-4">
           <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
             {activeImage ? (
@@ -353,10 +454,10 @@ function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelP
                 <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
                 <div className="absolute bottom-5 left-5 right-5">
                   <p className="text-xl font-bold text-white">
-                    {hoveredItem ? t(hoveredItem) : ""}
+                    {active?.name ?? ""}
                   </p>
-                  <p className="mt-2 text-base leading-relaxed text-white/65">
-                    {hoveredItem ? t(`desc.${hoveredItem}`) : ""}
+                  <p className="mt-2 line-clamp-3 text-base leading-relaxed text-white/65">
+                    {active?.desc ?? ""}
                   </p>
                 </div>
               </>
@@ -365,9 +466,7 @@ function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelP
                 <div className="h-12 w-12 rounded-xl bg-white/4 p-3">
                   <ArrowRight className="h-full w-full text-white/15" />
                 </div>
-                <p className="text-xs text-white/20">
-                  {t("hoverToPreview")}
-                </p>
+                <p className="text-xs text-white/20">{t("hoverToPreview")}</p>
               </div>
             )}
           </div>
@@ -382,10 +481,12 @@ function ProductsPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelP
 function MobileAccordion({
   group,
   t,
+  tProducts,
   onNavigate,
 }: {
   group: NavGroup;
   t: ReturnType<typeof useTranslations>;
+  tProducts: ReturnType<typeof useTranslations>;
   onNavigate: () => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -401,6 +502,39 @@ function MobileAccordion({
     }
   }, [open]);
 
+  const renderItem = (item: NavLink) => {
+    const { name } = resolveLabel(item.key, t, tProducts);
+    return (
+      <Link
+        key={item.key}
+        href={item.href}
+        className="flex items-center gap-3.5 rounded-lg px-4 py-3 transition-colors hover:bg-white/5"
+        onClick={onNavigate}
+      >
+        {navImages[item.key] && (
+          <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/8">
+            <Image
+              src={navImages[item.key]}
+              alt=""
+              width={36}
+              height={36}
+              className="h-full w-full object-cover"
+            />
+          </div>
+        )}
+        <div className="flex-1 min-w-0">
+          <span
+            className="line-clamp-2 text-[15px] font-medium text-white/75"
+            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+          >
+            {name}
+          </span>
+        </div>
+        <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/15" />
+      </Link>
+    );
+  };
+
   return (
     <div>
       <button
@@ -410,83 +544,42 @@ function MobileAccordion({
       >
         {t(group.key)}
         <ChevronDown
-          className={`h-5 w-5 text-white/30 transition-transform duration-300 ${open ? "rotate-180 text-primary" : ""}`}
+          className={`h-5 w-5 text-white/30 transition-transform duration-300 ${
+            open ? "rotate-180 text-primary" : ""
+          }`}
         />
       </button>
 
       {open && (
         <div ref={contentRef} className="overflow-hidden pb-2">
-          {/* Main items */}
-          <div className="space-y-0.5 px-2">
-            {group.items.map((item) => (
-              <Link
-                key={item.key}
-                href={item.href}
-                className="flex items-center gap-3.5 rounded-lg px-4 py-3 transition-colors hover:bg-white/5"
-                onClick={onNavigate}
-              >
-                {navImages[item.key] && (
-                  <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/8">
-                    <Image
-                      src={navImages[item.key]}
-                      alt=""
-                      width={36}
-                      height={36}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                )}
-                <div className="flex-1 min-w-0">
-                  <span className="text-[15px] font-medium text-white/75"
-                    style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                    {t(item.key)}
+          {group.key === "products" ? (
+            <>
+              <div className="mt-2 px-2">
+                <div className="mx-2 mb-2 mt-1 flex items-center gap-2">
+                  <div className="h-px flex-1 bg-white/6" />
+                  <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50">
+                    W-QUALITY
                   </span>
+                  <div className="h-px flex-1 bg-white/6" />
                 </div>
-                <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/15" />
-              </Link>
-            ))}
-          </div>
-
-          {/* Sections (products sub-groups) */}
-          {group.sections?.map((section) => (
-            <div key={section.label} className="mt-2 px-2">
-              <div className="mx-2 mb-2 mt-1 flex items-center gap-2">
-                <div className="h-px flex-1 bg-white/6" />
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50"
-                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                  {section.label}
-                </span>
-                <div className="h-px flex-1 bg-white/6" />
+                {group.items.map(renderItem)}
               </div>
-              {section.items.map((item) => (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className="flex items-center gap-3.5 rounded-lg px-4 py-3 transition-colors hover:bg-white/5"
-                  onClick={onNavigate}
-                >
-                  {navImages[item.key] && (
-                    <div className="h-9 w-9 shrink-0 overflow-hidden rounded-lg bg-white/6 ring-1 ring-white/8">
-                      <Image
-                        src={navImages[item.key]}
-                        alt=""
-                        width={36}
-                        height={36}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                  )}
-                  <div className="flex-1 min-w-0">
-                    <span className="text-[15px] font-medium text-white/75"
-                      style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-                      {t(item.key)}
+              {group.sections?.map((section) => (
+                <div key={section.label} className="mt-2 px-2">
+                  <div className="mx-2 mb-2 mt-1 flex items-center gap-2">
+                    <div className="h-px flex-1 bg-white/6" />
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary/50">
+                      {section.label}
                     </span>
+                    <div className="h-px flex-1 bg-white/6" />
                   </div>
-                  <ArrowRight className="h-3.5 w-3.5 shrink-0 text-white/15" />
-                </Link>
+                  {section.items.map(renderItem)}
+                </div>
               ))}
-            </div>
-          ))}
+            </>
+          ) : (
+            <div className="space-y-0.5 px-2">{group.items.map(renderItem)}</div>
+          )}
         </div>
       )}
     </div>
@@ -497,6 +590,7 @@ function MobileAccordion({
 
 export default function Navbar() {
   const t = useTranslations("navbar");
+  const tProducts = useTranslations("wproducts");
   const navRef = useRef<HTMLElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -509,8 +603,6 @@ export default function Navbar() {
   useEffect(() => {
     activeDropdownRef.current = activeDropdown;
   }, [activeDropdown]);
-
-  /* --- Dropdown handlers --- */
 
   const openDropdown = useCallback((key: string) => {
     if (leaveTimeout.current) clearTimeout(leaveTimeout.current);
@@ -535,16 +627,12 @@ export default function Navbar() {
     setHoveredItem(null);
   }, []);
 
-  /* --- Scroll handler --- */
-
   const handleScroll = useCallback(() => {
     const currentY = window.scrollY;
-
     if (activeDropdownRef.current) {
       setActiveDropdown(null);
       setHoveredItem(null);
     }
-
     setScrolled(currentY > 50);
   }, []);
 
@@ -552,8 +640,6 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, [handleScroll]);
-
-  /* --- Escape key --- */
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -563,16 +649,12 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", handleKey);
   }, [closeDropdown]);
 
-  /* --- Mobile body lock --- */
-
   useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [mobileOpen]);
-
-  /* --- Panel entrance animation --- */
 
   useEffect(() => {
     if (activeDropdown && panelRef.current) {
@@ -606,16 +688,14 @@ export default function Navbar() {
 
   const panelProps: PanelProps = {
     t,
+    tProducts,
     hoveredItem,
     setHoveredItem,
     closeDropdown,
   };
 
-  /* ========== Render ========== */
-
   return (
     <>
-      {/* Backdrop overlay */}
       {activeDropdown && (
         <div
           className="fixed inset-0 z-40 bg-black/30 backdrop-blur-[2px] transition-opacity duration-300"
@@ -623,11 +703,7 @@ export default function Navbar() {
         />
       )}
 
-      <nav
-        ref={navRef}
-        className="fixed inset-x-0 top-0 z-50"
-      >
-        {/* Pill container - always tube shaped */}
+      <nav ref={navRef} className="fixed inset-x-0 top-0 z-50">
         <div
           className={`mx-3 mt-3 rounded-full transition-all duration-500 sm:mx-4 lg:mx-auto lg:max-w-5xl ${
             activeDropdown
@@ -638,95 +714,84 @@ export default function Navbar() {
           }`}
           style={activeDropdown ? { background: "rgba(10, 15, 30, 0.96)" } : undefined}
         >
-        {/* Main bar */}
-        <div className="flex h-14 items-center justify-between px-3 lg:px-4">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="group flex shrink-0 items-center gap-2.5"
-            onClick={closeDropdown}
-          >
-            <Image
-              src="/wgroup/logo.png"
-              alt="WGroup"
-              width={140}
-              height={65}
-              className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80"
-              priority
-            />
-          </Link>
-
-          {/* Desktop nav links */}
-          <div className="hidden items-center gap-0.5 lg:flex">
-            {navItems.map((item) =>
-              isGroup(item) ? (
-                <button
-                  key={item.key}
-                  onMouseEnter={() => openDropdown(item.key)}
-                  onMouseLeave={startClose}
-                  onClick={() =>
-                    activeDropdown === item.key
-                      ? closeDropdown()
-                      : openDropdown(item.key)
-                  }
-                  className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
-                    activeDropdown === item.key
-                      ? "bg-white/8 text-white"
-                      : "text-white/70 hover:bg-white/6 hover:text-white"
-                  }`}
-                  aria-expanded={activeDropdown === item.key}
-                >
-                  {t(item.key)}
-                  <ChevronDown
-                    className={`h-3.5 w-3.5 transition-transform duration-200 ${
-                      activeDropdown === item.key ? "rotate-180" : ""
-                    }`}
-                  />
-                </button>
-              ) : (
-                <Link
-                  key={item.key}
-                  href={item.href}
-                  className="rounded-lg px-3 py-2 text-sm font-medium text-white/70 transition-all duration-200 hover:bg-white/6 hover:text-white"
-                  onClick={closeDropdown}
-                >
-                  {t(item.key)}
-                </Link>
-              )
-            )}
-          </div>
-
-          {/* Right side */}
-          <div className="hidden items-center gap-3 lg:flex">
-            <LanguageSwitcher dark />
+          <div className="flex h-14 items-center justify-between px-3 lg:px-4">
             <Link
-              href="/contact"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-linear-to-r from-primary to-accent-teal px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-px hover:shadow-xl hover:shadow-primary/30"
+              href="/"
+              className="group flex shrink-0 items-center gap-2.5"
               onClick={closeDropdown}
             >
-              <span className="relative z-10">{t("contact")}</span>
-              <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-              <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              <Image
+                src="/wgroup/logo.png"
+                alt="WGroup"
+                width={140}
+                height={65}
+                className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80"
+                priority
+              />
             </Link>
-          </div>
 
-          {/* Mobile hamburger */}
-          <button
-            className="relative z-10 rounded-lg p-2 text-white transition-all duration-200 hover:bg-white/10 lg:hidden"
-            onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
+            <div className="hidden items-center gap-0.5 lg:flex">
+              {navItems.map((item) =>
+                isGroup(item) ? (
+                  <button
+                    key={item.key}
+                    onMouseEnter={() => openDropdown(item.key)}
+                    onMouseLeave={startClose}
+                    onClick={() =>
+                      activeDropdown === item.key
+                        ? closeDropdown()
+                        : openDropdown(item.key)
+                    }
+                    className={`flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 ${
+                      activeDropdown === item.key
+                        ? "bg-white/8 text-white"
+                        : "text-white/70 hover:bg-white/6 hover:text-white"
+                    }`}
+                    aria-expanded={activeDropdown === item.key}
+                  >
+                    {t(item.key)}
+                    <ChevronDown
+                      className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                        activeDropdown === item.key ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+                ) : (
+                  <Link
+                    key={item.key}
+                    href={item.href}
+                    className="rounded-lg px-3 py-2 text-sm font-medium text-white/70 transition-all duration-200 hover:bg-white/6 hover:text-white"
+                    onClick={closeDropdown}
+                  >
+                    {t(item.key)}
+                  </Link>
+                )
+              )}
+            </div>
+
+            <div className="hidden items-center gap-3 lg:flex">
+              <LanguageSwitcher dark />
+              <Link
+                href="/contact"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-linear-to-r from-primary to-accent-teal px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all duration-300 hover:-translate-y-px hover:shadow-xl hover:shadow-primary/30"
+                onClick={closeDropdown}
+              >
+                <span className="relative z-10">{t("contact")}</span>
+                <ArrowRight className="relative z-10 h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+                <div className="absolute inset-0 -translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
+              </Link>
+            </div>
+
+            <button
+              className="relative z-10 rounded-lg p-2 text-white transition-all duration-200 hover:bg-white/10 lg:hidden"
+              onClick={() => setMobileOpen((v) => !v)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </button>
+          </div>
         </div>
 
-        </div>{/* end pill container */}
-
-        {/* ========== MEGA MENU PANELS (outside pill) ========== */}
         {activeDropdown && (
           <div
             ref={panelRef}
@@ -740,16 +805,13 @@ export default function Navbar() {
             {activeDropdown === "products" && <ProductsPanel {...panelProps} />}
           </div>
         )}
-
       </nav>
 
-      {/* ========== FULL-SCREEN MOBILE MENU ========== */}
       {mobileOpen && (
         <div
           className="fixed inset-0 z-[60] flex flex-col overflow-y-auto lg:hidden"
           style={{ background: "rgba(6, 11, 24, 0.99)" }}
         >
-          {/* Top bar with logo + close */}
           <div className="flex h-20 shrink-0 items-center justify-between px-6">
             <Link href="/" onClick={closeMobile}>
               <Image
@@ -769,10 +831,8 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Divider */}
           <div className="mx-6 h-px bg-white/6" />
 
-          {/* Nav items */}
           <div className="flex-1 px-6 py-6">
             <nav className="space-y-1">
               {navItems.map((item) =>
@@ -781,6 +841,7 @@ export default function Navbar() {
                     key={item.key}
                     group={item}
                     t={t}
+                    tProducts={tProducts}
                     onNavigate={closeMobile}
                   />
                 ) : (
@@ -799,7 +860,6 @@ export default function Navbar() {
             </nav>
           </div>
 
-          {/* Bottom area */}
           <div className="shrink-0 border-t border-white/6 px-6 py-6">
             <Link
               href="/contact"
