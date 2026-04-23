@@ -124,7 +124,7 @@ export default function OurDivisionsPage() {
       subtitle={t("subtitle")}
       eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
-      heroImage="/w-new/w3.png"
+      heroImage="/w-new/w3.webp"
     >
       <div ref={sectionRef}>
         {/* Intro paragraphs */}

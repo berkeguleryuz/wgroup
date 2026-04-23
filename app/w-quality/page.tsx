@@ -57,7 +57,7 @@ export default function WQualityPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/w-new/W-Quality.png"
+            src="/w-new/W-Quality.webp"
             alt=""
             fill
             className="object-cover opacity-[0.12]"

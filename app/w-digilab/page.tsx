@@ -57,7 +57,7 @@ export default function WDigiLabPage() {
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/w-new/W-Digilab.png"
+            src="/w-new/W-Digilab.webp"
             alt=""
             fill
             className="object-cover opacity-[0.12]"

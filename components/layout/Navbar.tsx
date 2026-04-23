@@ -31,26 +31,26 @@ function isGroup(item: NavItem): item is NavGroup {
 /* ---------- Image map ---------- */
 
 const navImages: Record<string, string> = {
-  aboutWgroup: "/w-new/w1.png",
-  whatWeDo: "/w-new/w2.png",
-  ourDivisions: "/w-new/w3.png",
-  ourStory: "/w-new/wn10.png",
-  ourVision: "/w-new/wn11.png",
-  wquality: "/w-new/W-Quality.png",
-  wdigilab: "/w-new/W-Digilab.png",
-  wstudio: "/w-new/W-Studio.png",
+  aboutWgroup: "/w-new/w1.webp",
+  whatWeDo: "/w-new/w2.webp",
+  ourDivisions: "/w-new/w3.webp",
+  ourStory: "/w-new/wn10.webp",
+  ourVision: "/w-new/wn11.webp",
+  wquality: "/w-new/W-Quality.webp",
+  wdigilab: "/w-new/W-Digilab.webp",
+  wstudio: "/w-new/W-Studio.webp",
   // W-DigiLab products
-  smartOperationalPlatform: "/w-new/wn1.png",
-  intelligencePerformancePlatform: "/w-new/wn2.png",
-  blockchainProducts: "/w-new/wn3.png",
+  smartOperationalPlatform: "/w-new/wn1.webp",
+  intelligencePerformancePlatform: "/w-new/wn2.webp",
+  blockchainProducts: "/w-new/wn3.webp",
   // W-Quality products
-  systemArchitectureCompliance: "/w-new/wn4.png",
-  strategicSupplierDevelopment: "/w-new/wn5.png",
-  strategicPerformanceManagement: "/w-new/wn6.png",
+  systemArchitectureCompliance: "/w-new/wn4.webp",
+  strategicSupplierDevelopment: "/w-new/wn5.webp",
+  strategicPerformanceManagement: "/w-new/wn6.webp",
   // W-Studio products
-  aiContentProduction: "/w-new/wn7.png",
-  businessflix: "/w-new/wn8.png",
-  corporateKnowledgeChannels: "/w-new/wn9.png",
+  aiContentProduction: "/w-new/wn7.webp",
+  businessflix: "/w-new/wn8.webp",
+  corporateKnowledgeChannels: "/w-new/wn9.webp",
 };
 
 /* ---------- Product definitions ---------- */
