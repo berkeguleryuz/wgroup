@@ -6,16 +6,17 @@ import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
 import { ArrowRight } from "@/components/icons";
 import MorphButton from "@/components/ui/MorphButton";
+import FeatureDefinition from "@/components/layout/FeatureDefinition";
 
 export default function WStudioPage() {
   const t = useTranslations("wstudioPage");
+  const tCommon = useTranslations("common");
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       const heroTl = gsap.timeline({ delay: 0.3 });
-      heroTl.from(".dv-hero-eyebrow", { y: 20, opacity: 0, duration: 0.6, ease: "power2.out" });
-      heroTl.from(".dv-hero-title", { y: 60, opacity: 0, duration: 0.9, ease: "power3.out" }, "-=0.3");
+      heroTl.from(".dv-hero-title", { y: 60, opacity: 0, duration: 0.9, ease: "power3.out" });
       heroTl.from(".dv-hero-sub", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
       heroTl.from(".dv-hero-line", { scaleX: 0, duration: 0.8, ease: "power3.inOut" }, "-=0.3");
       heroTl.from(".dv-hero-intro", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.3");
@@ -52,10 +53,6 @@ export default function WStudioPage() {
       {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-          <p className="dv-hero-eyebrow mb-5 text-sm font-semibold uppercase tracking-[0.3em] text-primary"
-            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-            {t("eyebrow")}
-          </p>
           <h1 className="dv-hero-title mb-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
             <span style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>{t("title")}</span>
             <span className="text-primary" style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400 }}>
@@ -81,38 +78,16 @@ export default function WStudioPage() {
       </section>
 
       {/* ===== WHAT WE DO ===== */}
-      <section className="relative py-28 sm:py-36" style={{ background: "#f7f9fc" }}>
-        <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",
-          backgroundSize: "40px 40px",
-        }} />
-
-        <div className="relative z-10 mx-auto max-w-5xl px-6">
-          <div className="dv-fade mb-14 flex items-center gap-4">
-            <div className="h-[3px] w-12 rounded-full" style={{ background: "linear-gradient(to right, var(--primary), var(--accent-teal))" }} />
-            <h2 className="text-sm font-bold uppercase tracking-[0.2em]"
-              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "var(--primary)" }}>
-              {t("whatWeDoTitle")}
-            </h2>
-          </div>
-
-          <div className="dv-fade mb-12">
-            <p className="text-2xl leading-[1.5] sm:text-3xl lg:text-4xl"
-              style={{ fontFamily: "var(--font-instrument), Georgia, serif", fontStyle: "italic", fontWeight: 400, color: "#1e293b" }}>
-              {t("whatWeDo1")}
-            </p>
-          </div>
-
-          {[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).map((text, i) => (
-            <div key={i} className="dv-fade mb-6 last:mb-0">
-              <p className="text-base leading-[1.9] sm:text-lg"
-                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif", color: "#3a4a5c" }}>
-                {text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <FeatureDefinition
+        meta={[
+          { label: tCommon("focusLabel"), value: t("subtitle"), italic: true },
+        ]}
+        eyebrow={t("whatWeDoTitle")}
+        rightChip={t("eyebrow")}
+        lead={t("whatWeDo1")}
+        leadCite={t("eyebrow")}
+        body={[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).join(" ")}
+      />
 
       {/* ===== CORE CAPABILITIES ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>

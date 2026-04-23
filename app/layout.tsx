@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Outfit, Barlow, Instrument_Serif } from "next/font/google";
+import { Outfit, Barlow, Instrument_Serif, Fraunces, JetBrains_Mono } from "next/font/google";
 import { Geist } from "next/font/google";
 import { getLocale, getMessages } from "next-intl/server";
 import I18nProvider from "@/components/providers/I18nProvider";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -40,6 +34,21 @@ const geist = Geist({
   display: "swap",
 });
 
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  axes: ["SOFT", "WONK", "opsz"],
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
   title: {
     template: "%s | WGroup GmbH",
@@ -58,7 +67,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} ${outfit.variable} ${barlow.variable} ${instrumentSerif.variable} ${geist.variable} font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${outfit.variable} ${barlow.variable} ${instrumentSerif.variable} ${geist.variable} ${fraunces.variable} ${jetbrainsMono.variable} font-sans antialiased`} suppressHydrationWarning>
         <I18nProvider locale={locale} messages={messages} timeZone="Europe/Berlin">
           <Navbar />
           <main>{children}</main>

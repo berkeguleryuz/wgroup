@@ -30,16 +30,18 @@
   --color-accent-teal: var(--accent-teal);
   --color-card-bg: var(--card-bg);
   --color-card-border: var(--card-border);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-geist);
   --font-heading: var(--font-outfit);
   --font-barlow: var(--font-barlow);
   --font-instrument: var(--font-instrument);
+  --font-fraunces: var(--font-fraunces);
+  --font-jetbrains: var(--font-jetbrains);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-geist), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
@@ -62,14 +64,14 @@ body {
    Premium heading font
    ================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-outfit), var(--font-geist), system-ui, sans-serif;
 }
 
 /* ==================================================================
    AnimatedTitle  word-by-word 3D reveal
    ================================================================== */
 .animated-title {
-  font-family: var(--font-outfit), var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-outfit), var(--font-geist), system-ui, sans-serif;
   font-size: clamp(2rem, 6vw, 4.5rem);
   font-weight: 800;
   line-height: 1.05;
