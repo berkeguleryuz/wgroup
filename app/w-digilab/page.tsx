@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { gsap } from "@/lib/gsap";
@@ -54,6 +55,17 @@ export default function WDigiLabPage() {
     <div ref={pageRef} style={{ background: "var(--background)" }}>
       {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/w-new/W-Digilab.png"
+            alt=""
+            fill
+            className="object-cover opacity-[0.12]"
+            sizes="100vw"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background/70 to-background" />
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
           <h1 className="dv-hero-title mb-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">

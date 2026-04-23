@@ -22,15 +22,15 @@ export const productSlugs: Record<ProductKey, string> = {
 };
 
 export const productImages: Record<ProductKey, string> = {
-  smartOperationalPlatform: "/w/products/digitautopivot.webp",
-  intelligencePerformancePlatform: "/w/products/eduarttransform.webp",
-  blockchainProducts: "/w/products/evolvementor.webp",
-  systemArchitectureCompliance: "/w/products/auditmastermind.webp",
-  strategicSupplierDevelopment: "/w/products/supplierelevate-pro.webp",
-  strategicPerformanceManagement: "/w/products/autopathway-navigator.webp",
-  aiContentProduction: "/w/products/corporate.webp",
-  businessflix: "/w/products/individual.webp",
-  corporateKnowledgeChannels: "/w/brands/wstudio.webp",
+  smartOperationalPlatform: "/w-new/wn1.png",
+  intelligencePerformancePlatform: "/w-new/wn2.png",
+  blockchainProducts: "/w-new/wn3.png",
+  systemArchitectureCompliance: "/w-new/wn4.png",
+  strategicSupplierDevelopment: "/w-new/wn5.png",
+  strategicPerformanceManagement: "/w-new/wn6.png",
+  aiContentProduction: "/w-new/wn7.png",
+  businessflix: "/w-new/wn8.png",
+  corporateKnowledgeChannels: "/w-new/wn9.png",
 };
 
 export type Division = "W-DigiLab" | "W-Quality" | "W-Studio";
