@@ -261,7 +261,14 @@
     "ctaHighlight": "gestalten?",
     "ctaDesc": "Erfahren Sie, wie WGroup industrielle Expertise, digitale Intelligenz und kreatives Denken vereint, um die moderne Industrie zu transformieren.",
     "contactCta": "Kontakt aufnehmen",
-    "ctaLearnMore": "Über WGroup"
+    "ctaLearnMore": "Über WGroup",
+    "labelBelief": "GLAUBE",
+    "labelMoment": "MOMENT",
+    "labelVision": "VISION",
+    "labelOrigin": "URSPRUNG",
+    "labelSynthesis": "SYNTHESE",
+    "labelToday": "HEUTE",
+    "labelCoda": "FINALE"
   },
   "career": {
     "title": "Unsere",
@@ -355,40 +362,44 @@
     "eyebrow": "FAQ",
     "titleHighlight": "Fragen",
     "q1": {
-      "question": "Wie tragen die Kurse der Wedu Factory bei?",
-      "answer": "Die Kurse der Wedu Factory bieten sowohl Einzelpersonen als auch Organisationen verschiedene Vorteile. Fur Einzelpersonen bieten diese Kurse die Moglichkeit, ihre Karriere voranzutreiben und die neuesten technologischen Entwicklungen und Best Practices in der Automobilindustrie kennenzulernen. Die Kurse der Wedu Factory unterstutzen die kontinuierliche Weiterentwicklung der Belegschaft und steigern dadurch die Leistung. Speziell konzipierte Schulungslosungen tragen direkt zu den Geschaftszielen bei und heben die Fahigkeiten und das Wissen der Mitarbeiter an. Mit den Kursen der Wedu Factory helfen wir sowohl Einzelpersonen als auch Organisationen, die fur eine erfolgreiche Zukunft erforderlichen Kompetenzen zu erwerben."
+      "question": "Was macht WGroup?",
+      "answer": "WGroup ist eine innovationsgetriebene Organisation an der Schnittstelle von industrieller Beratung, digitalen Systemen und kreativen Medien. Durch die Verbindung von Ingenieursexpertise und kreativem Denken verändern wir, wie industrielles Wissen entsteht, digitalisiert und geteilt wird. Mit Sitz in Berlin arbeiten wir mit Partnern in über 40 Ländern."
     },
     "q2": {
-      "question": "Wie wird man Teil der automobilen Lieferkette?",
-      "answer": "Die Einbindung in die automobile Lieferkette umfasst ein tiefgreifendes Verstandnis der Marktdynamik, die Durchfuhrung von Analysen potenzieller Kunden und Lieferanten sowie die Einhaltung branchenweit anerkannter Qualitatsstandards. Dieser Prozess erfordert strategische Planung, die Einhaltung branchenspezifischer Vorschriften und den Aufbau starker Geschaftsbeziehungen. Mit unserer Expertise bieten wir strategische Beratung, um Sie auf dieser Reise zu unterstutzen."
+      "question": "Wie unterscheiden sich die drei Bereiche WQuality, WDigiLab und WStudio?",
+      "answer": "Jeder Bereich hat einen eigenen Fokus: WQuality bietet Beratung zu Qualitätsmanagement und operativer Exzellenz; WDigiLab entwickelt intelligente Systeme, digitale Plattformen und KI-gestützte Lösungen; WStudio produziert Unternehmensgeschichten in Form von Filmen, Serien und interaktiven Inhalten. Zusammen bilden sie eine integrierte Wertschöpfungskette."
     },
     "q3": {
-      "question": "Welche Schritte sind fur einen strategischen Markteintritt in die Automobilindustrie erforderlich?",
-      "answer": "Fur einen erfolgreichen Eintritt in die Automobilindustrie ist der erste Schritt eine umfassende Analyse des Zielmarktes und der Hauptwettbewerber. Anschliessend sollten Sie das einzigartige Wertversprechen Ihres Unternehmens verfeinern und auf dieser Grundlage einen umfassenden Geschaftsplan entwickeln. Dabei werden innovative Produkte und Dienstleistungen entwickelt, die den Branchenbedurfnissen entsprechen, und Strategien zur Starkung Ihrer Marktposition identifiziert."
+      "question": "Welche Leistungen bietet WQuality?",
+      "answer": "WQuality liefert ganzheitliche Beratung zu IATF-16949- und ISO-Compliance, Systemarchitektur, operativer Exzellenz, Lieferantenentwicklung und strategischem Performance-Management. Von der Gap-Analyse bis zur Umsetzung und zum Audit richten wir Ihre Prozesse an internationalen Standards aus und verankern messbare, nachhaltige Verbesserung."
     },
     "q4": {
-      "question": "Was ist das IATF 16949 Qualitatsmanagementsystem und wie verlauft der Implementierungsprozess?",
-      "answer": "IATF 16949 ist ein Qualitatsmanagementsystem, das speziell fur die Automobilindustrie entwickelt wurde. Dieses System zielt darauf ab, das Management aller Geschaftsprozesse von der Produktion bis zur Lieferung in Ubereinstimmung mit internationalen Standards sicherzustellen und kontinuierlich zu verbessern. Der Implementierungsprozess umfasst Schritte wie Prozessoptimierung, Risikomanagement und Mitarbeiterschulung unter Berucksichtigung der spezifischen Anforderungen Ihres Unternehmens."
+      "question": "Welche digitalen und KI-Lösungen entwickelt WDigiLab?",
+      "answer": "WDigiLab entwickelt intelligente operative Plattformen, Performance-Management-Systeme, Blockchain-basierte Anwendungen und Datenanalyse-Lösungen. Wir digitalisieren Ihre Prozesse, integrieren intelligente Systeme und bauen Wissensplattformen, die speziell für das KI-Zeitalter konzipiert sind — von der Architektur bis zum Rollout."
     },
     "q5": {
-      "question": "Welche Anforderungen gelten fur die Einhaltung von Qualitatsstandards in der Automobilindustrie?",
-      "answer": "Die Einhaltung von Qualitatsstandards erfordert eine detaillierte Ist-Zustandsanalyse (GAP-Analyse), die Uberprufung von Geschaftsprozessen und die Umsetzung kontinuierlicher Verbesserungsaktivitaten. Dabei ist es wesentlich, die notwendigen Anderungen zur Gewahrleistung der Standardkonformitat zu identifizieren und umzusetzen."
+      "question": "Was produziert WStudio?",
+      "answer": "WStudio erstellt KI-gestützte Content-Produktion, Corporate Storytelling, BusinessFlix-Serienformate und Corporate Knowledge Channels. Wir verwandeln komplexes Industriewissen in sehenswerte, teilbare und einprägsame Medien — von der internen Kommunikation bis zur Customer Experience."
     },
     "q6": {
-      "question": "Wie sollten interne und externe Auditstrategien entwickelt und umgesetzt werden?",
-      "answer": "Effektive interne und externe Auditstrategien bestehen aus Schritten wie Risikobewertung, Festlegung der Audithaufigkeit und Analyse der Auditergebnisse. Diese Strategien tragen dazu bei, die Effektivitat der Managementsysteme Ihres Unternehmens zu verbessern, indem sie die kontinuierliche Verbesserung von Prozessen und Praktiken unterstutzen."
+      "question": "Welche Branchen bedient WGroup?",
+      "answer": "WGroup verfügt über tiefe Wurzeln in der Automobil-, Fertigungs- und Ingenieursindustrie und bedient zudem Kunden in den Bereichen Energie, Logistik, Verteidigung und Technologie — überall dort, wo Standards entscheidend, Wissen wertvoll und kontinuierliche Verbesserung unverzichtbar sind."
     },
     "q7": {
-      "question": "Welche digitalen Transformationsstrategien gibt es in der Automobilindustrie?",
-      "answer": "Die digitale Transformation in der Automobilindustrie umfasst die Integration technologischer Innovationen zur Steigerung der Effizienz, Kostensenkung und Verbesserung der Kundenzufriedenheit. Dieser Prozess beinhaltet die Starkung der digitalen Infrastruktur Ihres Unternehmens, die Automatisierung von Prozessen und die Integration intelligenter Entscheidungsmechanismen durch Datenanalytik. Mit unseren branchenspezifischen Losungen helfen wir Ihnen, auf der digitalen Transformationsreise Ihres Unternehmens einen Wettbewerbsvorteil zu erlangen."
+      "question": "Wie beginnt eine Zusammenarbeit?",
+      "answer": "Den Einstieg bildet ein kurzes Discovery-Gespräch; abhängig von Ihren Zielen wird der passende Bereich eingebunden. Anschließend folgt eine Vorbereitungsphase mit Gap-Analyse, Scope-Definition, Roadmap und Priorisierung. Umsetzung und kontinuierliche Verbesserung werden für jedes Projekt individuell aufgesetzt."
     },
     "q8": {
-      "question": "Warum sind Programme zur beruflichen Weiterentwicklung fur Mitarbeiter in der Automobilindustrie wichtig?",
-      "answer": "Die kontinuierliche Entwicklung der Fahigkeiten und Kompetenzen der Mitarbeiter ist entscheidend fur die Aufrechterhaltung der Wettbewerbsfahigkeit und Innovation in der Automobilindustrie. Durch unsere auf technische Kompetenzen, Qualitatsmanagement, Fuhrungsqualitaten und digitale Transformation zugeschnittenen Schulungs- und Entwicklungsprogramme unterstutzen wir die berufliche Entwicklung Ihrer Mitarbeiter. Diese Kurse sind speziell darauf ausgelegt, die aktuellen und zukunftigen Bedurfnisse der Branche zu erfullen."
+      "question": "Welche Rolle spielt WGroup bei KI und digitaler Transformation?",
+      "answer": "Wir verstehen digitale Transformation nicht als reine Werkzeugintegration, sondern als Neugestaltung des Wissens, der Prozesse und der menschlichen Fähigkeiten einer Organisation. Damit KI zu messbarem Geschäftswert wird, verzahnen wir Strategie, Systemarchitektur, Inhalt und organisatorische Bereitschaft."
     },
     "q9": {
-      "question": "Was sind die effektivsten Methoden zur Entwicklung von Mitarbeiterfahigkeiten und -kompetenzen?",
-      "answer": "Die Mitarbeiterentwicklung sollte durch interaktive Schulungen, Mentoring, Workshops und kontinuierliche Lernmoglichkeiten unterstutzt werden. Dieser Ansatz festigt theoretisches Wissen mit praktischen Anwendungen und ermoglicht es Mitarbeitern, neue Fahigkeiten zu erwerben und bestehende zu verbessern. Daruber hinaus stellen wir die notwendigen Werkzeuge und Informationen bereit, damit sich Mitarbeiter an technologische Fortschritte und Branchentrends anpassen konnen."
+      "question": "In welchen Ländern ist WGroup tätig?",
+      "answer": "WGroup hat seinen Hauptsitz in Berlin, ist europäisch ausgerichtet und arbeitet aktiv in über 40 Ländern. Wir wählen je nach Projekt das passende Modell — remote, vor Ort oder hybrid — abhängig von den Anforderungen."
+    },
+    "q10": {
+      "question": "Wie kann ich Kontakt aufnehmen?",
+      "answer": "Sie erreichen uns über die Kontaktseite, per E-Mail an info@wgroupgmbh.eu oder telefonisch unter +49 174 177 78 79. Das erste Gespräch ist ein unverbindlicher Discovery-Call zur gemeinsamen Zielabstimmung — und um zu prüfen, ob wir der richtige Partner für Sie sind."
     }
   },
   "weduFactory": {

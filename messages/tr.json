@@ -261,7 +261,14 @@
     "ctaHighlight": "Hazır Mısınız?",
     "ctaDesc": "WGroup'un endüstriyel uzmanlık, dijital zekâ ve yaratıcı düşünceyi bir araya getirerek modern endüstriyi nasıl dönüştürdüğünü keşfedin.",
     "contactCta": "Bize Ulaşın",
-    "ctaLearnMore": "WGroup Hakkında"
+    "ctaLearnMore": "WGroup Hakkında",
+    "labelBelief": "İNANÇ",
+    "labelMoment": "DÖNÜŞÜM",
+    "labelVision": "VİZYON",
+    "labelOrigin": "KÖKEN",
+    "labelSynthesis": "SENTEZ",
+    "labelToday": "BUGÜN",
+    "labelCoda": "FİNAL"
   },
   "career": {
     "title": "Bizim",
@@ -355,40 +362,44 @@
     "eyebrow": "SSS",
     "titleHighlight": "Sorular",
     "q1": {
-      "question": "Wedu Factory eğitimleri nasıl katkı sağlıyor?",
-      "answer": "Wedu Factory eğitimleri hem bireylere hem de kuruluşlara çeşitli faydalar sağlar. Bireyler için bu eğitimler, kariyerlerini ilerletme ve otomotiv sektöründeki en son teknolojik gelişmeleri ve en iyi uygulamaları öğrenme fırsatı sunar. Wedu Factory eğitimleri iş gücünün sürekli gelişmesini destekleyerek performansı arttırır. Özel olarak tasarlanmış eğitim çözümleri doğrudan iş hedeflerine katkı sağlar ve çalışanların beceri ve bilgilerini yükseltir. Wedu Factory eğitimleriyle, hem bireylerin hem de kuruluşların başarılı bir gelecek için gerekli yetkinlikleri edinmesine yardımcı oluyoruz."
+      "question": "WGroup nedir ve hangi alanda faaliyet gösterir?",
+      "answer": "WGroup; endüstriyel danışmanlık, dijital sistemler ve yaratıcı medya alanlarının kesişiminde faaliyet gösteren, inovasyon odaklı bir kuruluştur. Mühendislik bilgisini yaratıcı düşünceyle birleştirerek endüstri bilgisinin nasıl üretildiğini, dijitalleştirildiğini ve paylaşıldığını dönüştüren çözümler geliştiriyoruz. Berlin merkezli olarak 40'tan fazla ülkede iş ortaklarıyla çalışıyoruz."
     },
     "q2": {
-      "question": "Otomotiv Tedarik Zincirine Nasıl Dahil Olunur?",
-      "answer": "Otomotiv tedarik zincirine dahil olmak, piyasa dinamiklerini derinlemesine anlamayı, potansiyel müşteriler ve tedarikçiler hakkında analizler yapmayı ve sektör tarafından kabul gören kalite standartlarına uymayı içerir. Bu süreç, stratejik planlama, sektöre özgü düzenlemelere uyum ve güçlü iş ilişkileri kurmayı gerektirir. Uzmanlığımızla, bu yolculukta sizi desteklemek için stratejik rehberlik sağlıyoruz."
+      "question": "WGroup'un üç birimi (WQuality, WDigiLab, WStudio) birbirinden nasıl ayrılır?",
+      "answer": "Her birim farklı bir uzmanlık alanına odaklanır: WQuality kalite yönetimi ve süreç mükemmeliyeti üzerine danışmanlık sunar; WDigiLab akıllı sistemler, dijital platformlar ve yapay zeka destekli çözümler geliştirir; WStudio ise kurumsal hikayeleri film, dizi ve interaktif içerik formatlarında üreterek bilginin etkili biçimde paylaşılmasını sağlar. Üçü, tek bir entegre değer zinciri olarak birlikte çalışır."
     },
     "q3": {
-      "question": "Otomotiv Sektörüne Stratejik Pazar Girişi İçin Adımlar Nelerdir?",
-      "answer": "Otomotiv sektörüne başarılı bir giriş için ilk adım, hedef pazar ve ana rakiplerin kapsamlı bir analizini yapmaktır. Ardından, şirketinizin benzersiz değer önergesini geliştirmeli ve bu bilgilere dayanarak kapsamlı bir iş planı hazırlamalısınız. Bu süreçte, sektör ihtiyaçlarını karşılayan yenilikçi ürün ve hizmetler geliştirilir ve pazardaki konumunuzu güçlendirmek için stratejiler belirlenir."
+      "question": "WQuality hangi tür kalite ve danışmanlık hizmetleri sunar?",
+      "answer": "WQuality; IATF 16949 ve ISO standartlarına uyum, sistem mimarisi, operasyonel mükemmeliyet, tedarikçi geliştirme ve stratejik performans yönetimi alanlarında uçtan uca danışmanlık sunar. Mevcut durum analizinden uygulama ve denetime kadar süreçlerinizi uluslararası standartlara taşıyarak ölçülebilir ve sürdürülebilir iyileştirme sağlar."
     },
     "q4": {
-      "question": "IATF 16949 Kalite Yönetim Sistemi Nedir ve Uygulama Süreci Nasıl İşler?",
-      "answer": "IATF 16949, otomotiv sektörü için belirlenmiş bir kalite yönetim sistemidir. Bu sistem, üretimden teslimata kadar tüm iş süreçlerinin uluslararası standartlara uygun olarak yönetilmesini ve sürekli iyileştirilmesini amaçlamaktadır. Uygulama süreci, şirketinizin özel gereksinimlerini dikkate alarak süreç optimizasyonu, risk yönetimi ve çalışan eğitimi gibi adımları içerir."
+      "question": "WDigiLab hangi dijital ve yapay zeka çözümlerini geliştirir?",
+      "answer": "WDigiLab; akıllı operasyonel platformlar, performans yönetimi sistemleri, blokzincir tabanlı uygulamalar ve veri analitiği çözümleri tasarlar. Süreçlerinizi dijitalleştirir, akıllı sistemleri entegre eder ve yapay zeka çağına özgü kurumsal bilgi platformlarını sıfırdan kurarız."
     },
     "q5": {
-      "question": "Otomotiv Sektöründe Kalite Standartlarına Uyum İçin Gereksinimler Nelerdir?",
-      "answer": "Kalite standartlarına uyum, detaylı mevcut durum (GAP) analizi, iş süreçlerinin gözden geçirilmesi ve sürekli iyileştirme faaliyetlerinin uygulanmasını gerektirir. Bu süreçte, standartlara uyumu sağlamak için gerekli değişikliklerin belirlenmesi ve uygulanması esastır."
+      "question": "WStudio hangi tür medya ve içerik hizmetlerini sunar?",
+      "answer": "WStudio; AI destekli içerik üretimi, kurumsal hikaye anlatımı, BusinessFlix formatında dizi ve şov içerikleri ile kurumsal bilgi kanalları üretir. Karmaşık endüstri bilgisini izlenebilir, paylaşılabilir ve etkileyici medya formatlarına dönüştürerek iç iletişimden müşteri deneyimine kadar her temas noktasında değer yaratır."
     },
     "q6": {
-      "question": "İç ve Dış Denetim Stratejileri Nasıl Geliştirilmeli ve Uygulanmalıdır?",
-      "answer": "Etkili iç ve dış denetim stratejileri, risk değerlendirmesi, denetimlerin sıklığının belirlenmesi ve denetim sonuçlarının analizi gibi adımlardan oluşur. Bu stratejiler, süreçlerin ve uygulamaların sürekli iyileştirilmesini destekleyerek şirketinizin yönetim sistemlerinin etkinliğinin arttırılmasına katkı sağlar."
+      "question": "WGroup hangi sektörlere hizmet veriyor?",
+      "answer": "WGroup; otomotiv, üretim ve mühendislik sektörlerinde derinleşmiş olmakla birlikte enerji, lojistik, savunma ve teknoloji alanlarında da süreç dönüşümüne ihtiyaç duyan kuruluşlara hizmet sağlar. Ortak nokta; standartların kritik, bilginin değerli ve sürekli gelişimin zorunlu olduğu sektörlerdir."
     },
     "q7": {
-      "question": "Otomotiv Sektöründe Dijital Dönüşüm Stratejileri Nelerdir?",
-      "answer": "Otomotiv sektöründe dijital dönüşüm, verimliliği artırmak, maliyetleri düşürmek ve müşteri memnuniyetini yükseltmek için teknolojik yeniliklerin entegrasyonunu içerir. Bu süreç, işletmenizin dijital altyapısını güçlendirmeyi, süreçleri otomatikleştirmeyi ve veri analitiği aracılığıyla akıllı karar alma mekanizmalarını entegre etmeyi kapsar. Sektöre özgü çözümlerimizle, işletmenizin dijital dönüşüm yolculuğunda rekabet avantajı kazanmanıza yardımcı oluyoruz."
+      "question": "Bir proje süreci nasıl başlatılır?",
+      "answer": "İlk adım kısa bir keşif görüşmesidir; ihtiyacınıza ve hedeflerinize göre ilgili birim sürece dahil olur. Ardından mevcut durum analizi, kapsam tanımı, yol haritası ve önceliklendirme adımlarından oluşan bir hazırlık çalışması yapılır. Uygulama, teslimat ve sürekli iyileştirme aşamaları her proje için özel olarak yapılandırılır."
     },
     "q8": {
-      "question": "Otomotiv Sektöründe Çalışanlar İçin Mesleki Gelişim Programları Neden Önemlidir?",
-      "answer": "Otomotiv sektöründe rekabet gücü ve yenilikçilik için çalışanların beceri ve yetkinliklerinin sürekli geliştirilmesi hayati önem taşır. Teknik yetkinlikler, kalite yönetimi, liderlik becerileri ve dijital dönüşüme yönelik eğitim ve gelişim programlarımızla çalışanlarınızın mesleki gelişimine destek oluyoruz. Bu eğitimler, sektörün mevcut ve gelecekteki ihtiyaçlarını karşılamak üzere özel olarak tasarlanmıştır."
+      "question": "WGroup'un yapay zeka ve dijital dönüşümdeki rolü nedir?",
+      "answer": "WGroup, dijital dönüşümü yalnızca araç entegrasyonu olarak değil; kurumun bilgisinin, süreçlerinin ve insan kabiliyetlerinin yeniden tasarlanması olarak ele alır. Yapay zekanın iş değerine dönüşmesi için strateji, sistem mimarisi, içerik üretimi ve organizasyonel hazırlığı bütünleşik biçimde kurgular."
     },
     "q9": {
-      "question": "Çalışan Beceri ve Yetkinliklerini Geliştirmek İçin En Etkili Yöntemler Nelerdir?",
-      "answer": "Çalışan gelişimi, interaktif eğitimler, mentorluk, atölye çalışmaları ve sürekli öğrenme fırsatları aracılığıyla desteklenmelidir. Bu yaklaşım, teorik bilgiyi pratik uygulamalarla pekiştirir ve çalışanların yeni beceriler edinmesini ve mevcut olanları geliştirmesini sağlar. Ayrıca, çalışanların teknolojik gelişmelere ve sektör trendlerine adapte olması için gerekli araç ve bilgileri sağlıyoruz."
+      "question": "WGroup hangi coğrafyalarda faaliyet gösteriyor?",
+      "answer": "Almanya'nın Berlin şehrinde merkezi bulunan WGroup, Avrupa odaklı çalışmakla birlikte 40'tan fazla ülkede iş ortakları ve müşterilerle projeler yürütür. Uzaktan çalışma, yerinde danışmanlık ve hibrit modeller arasından her projeye uygun yapı seçilir."
+    },
+    "q10": {
+      "question": "WGroup ile nasıl iletişime geçebilirim?",
+      "answer": "Web sitesindeki İletişim sayfasından doğrudan ulaşabilir, info@wgroupgmbh.eu adresine e-posta gönderebilir veya +49 174 177 78 79 numaradan bize yazabilirsiniz. İlk görüşmeniz; tanışma sohbeti niteliğinde, ücretsiz ve karşılıklı hedef hizalama amaçlıdır."
     }
   },
   "weduFactory": {

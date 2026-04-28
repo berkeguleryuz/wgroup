@@ -261,7 +261,14 @@
     "ctaHighlight": "Future?",
     "ctaDesc": "Discover how WGroup combines industrial expertise, digital intelligence and creative thinking to transform modern industry.",
     "contactCta": "Contact Us",
-    "ctaLearnMore": "About WGroup"
+    "ctaLearnMore": "About WGroup",
+    "labelBelief": "BELIEF",
+    "labelMoment": "MOMENT",
+    "labelVision": "VISION",
+    "labelOrigin": "ORIGIN",
+    "labelSynthesis": "SYNTHESIS",
+    "labelToday": "TODAY",
+    "labelCoda": "CODA"
   },
   "career": {
     "title": "Our",
@@ -355,40 +362,44 @@
     "eyebrow": "FAQ",
     "titleHighlight": "Questions",
     "q1": {
-      "question": "How do Wedu Factory's courses contribute?",
-      "answer": "Wedu Factory's courses provide various benefits to both individuals and organizations. For individuals, these courses offer an opportunity to advance their careers and learn about the latest technological developments and best practices in the automotive industry. Wedu Factory's courses support the continuous development of the workforce, thereby enhancing performance. Specially designed training solutions directly contribute to business goals and elevate the skills and knowledge of employees. With Wedu Factory's courses, we help both individuals and organizations acquire the competencies necessary for a successful future."
+      "question": "What does WGroup do?",
+      "answer": "WGroup is an innovation-driven organization operating at the intersection of industrial consulting, digital systems and creative media. By combining engineering expertise with creative thinking, we transform how industrial knowledge is produced, digitized and shared. We are headquartered in Berlin and partner with clients across more than 40 countries."
     },
     "q2": {
-      "question": "How to Get Involved in the Automotive Supply Chain?",
-      "answer": "Getting involved in the automotive supply chain involves understanding market dynamics in-depth, conducting analyses of potential customers and suppliers, and complying with industry-accepted quality standards. This process requires strategic planning, compliance with industry-specific regulations, and establishing strong business relationships. With our expertise, we provide strategic guidance to support you on this journey."
+      "question": "How do WGroup's three divisions — WQuality, WDigiLab and WStudio — differ?",
+      "answer": "Each division has a distinct focus: WQuality delivers consulting on quality management and operational excellence; WDigiLab builds intelligent systems, digital platforms and AI-driven solutions; WStudio produces corporate stories as films, series and interactive content. Together they form a single, integrated value chain."
     },
     "q3": {
-      "question": "What Are the Steps for Strategic Market Entry into the Automotive Industry?",
-      "answer": "For a successful entry into the automotive industry, the first step is to conduct a comprehensive analysis of the target market and main competitors. Subsequently, you should refine your company's unique value proposition and develop a comprehensive business plan based on this information. During this process, innovative products and services meeting industry needs are developed, and strategies to strengthen your position in the market are identified."
+      "question": "What kind of services does WQuality offer?",
+      "answer": "WQuality provides end-to-end consulting on IATF 16949 and ISO compliance, system architecture, operational excellence, supplier development and strategic performance management. From gap analysis to implementation and audit, we align your processes with international standards and embed measurable, sustainable improvement."
     },
     "q4": {
-      "question": "What Is the IATF 16949 Quality Management System and How Is the Implementation Process?",
-      "answer": "IATF 16949 is a quality management system specified for the automotive industry. This system aims to ensure the management of all business processes from production to delivery in compliance with international standards and to continuously improve them. The implementation process includes steps such as process optimization, risk management, and employee training, taking into account the specific requirements of your company."
+      "question": "What digital and AI solutions does WDigiLab build?",
+      "answer": "WDigiLab designs intelligent operational platforms, performance management systems, blockchain-based applications and data analytics solutions. We digitize your processes, integrate intelligent systems and build the corporate knowledge platforms purpose-built for the AI era — from architecture to deployment."
     },
     "q5": {
-      "question": "What Are the Requirements for Compliance with Quality Standards in the Automotive Industry?",
-      "answer": "Compliance with quality standards requires a detailed current state (GAP) analysis, reviewing business processes, and implementing continuous improvement activities. During this process, identifying and implementing necessary changes to ensure compliance with standards is essential."
+      "question": "What does WStudio produce?",
+      "answer": "WStudio creates AI-assisted content production, corporate storytelling, BusinessFlix-style episodic shows and corporate knowledge channels. We turn complex industrial knowledge into watchable, shareable and memorable media — across internal communications and customer-facing experiences."
     },
     "q6": {
-      "question": "How Should Internal and External Audit Strategies be Developed and Implemented?",
-      "answer": "Effective internal and external audit strategies consist of steps such as risk assessment, determining the frequency of audits, and analyzing audit results. These strategies contribute to enhancing the effectiveness of your company's management systems by supporting the continuous improvement of processes and practices."
+      "question": "Which industries does WGroup serve?",
+      "answer": "WGroup has deep roots in automotive, manufacturing and engineering, and also serves clients in energy, logistics, defense and technology — sectors where standards are critical, knowledge is valuable and continuous improvement is non-negotiable."
     },
     "q7": {
-      "question": "What Are the Digital Transformation Strategies in the Automotive Industry?",
-      "answer": "Digital transformation in the automotive industry involves integrating technological innovations to increase efficiency, reduce costs, and enhance customer satisfaction. This process includes strengthening your business's digital infrastructure, automating processes, and integrating smart decision-making mechanisms through data analytics. With our industry-specific solutions, we help you gain a competitive advantage in your business's digital transformation journey."
+      "question": "How does an engagement typically begin?",
+      "answer": "It starts with a short discovery call; based on your needs and goals, the relevant division joins the conversation. We then run a preparatory phase covering gap analysis, scope definition, roadmap and prioritization. Delivery and continuous improvement are tailored for every project."
     },
     "q8": {
-      "question": "Why Are Professional Development Programs Important for Employees in the Automotive Industry?",
-      "answer": "Continuous development of employees' skills and competencies is crucial for maintaining competitiveness and innovation in the automotive industry. Through our training and development programs tailored to technical competencies, quality management, leadership skills, and digital transformation, we support the professional development of your employees. These courses are specifically designed to meet the current and future needs of the industry."
+      "question": "What is WGroup's role in AI and digital transformation?",
+      "answer": "We treat digital transformation not as tool integration, but as a re-design of an organization's knowledge, processes and human capabilities. To turn AI into measurable business value, we orchestrate strategy, system architecture, content and organizational readiness as one connected effort."
     },
     "q9": {
-      "question": "What Are the Most Effective Methods for Developing Employee Skills and Competencies?",
-      "answer": "Employee development should be supported through interactive training, mentorship, workshops, and continuous learning opportunities. This approach reinforces theoretical knowledge with practical applications and enables employees to acquire new skills and enhance existing ones. Additionally, we provide the necessary tools and information for employees to adapt to technological advancements and industry trends."
+      "question": "Where does WGroup operate geographically?",
+      "answer": "WGroup is headquartered in Berlin, Germany, with a European core and active projects in over 40 countries. We tailor each engagement to the right delivery model — remote, on-site, or hybrid — based on the project's needs."
+    },
+    "q10": {
+      "question": "How can I get in touch with WGroup?",
+      "answer": "You can reach us through the contact page, write to info@wgroupgmbh.eu or call +49 174 177 78 79. Your first conversation is a no-pressure discovery call to mutually align on goals — and explore whether we are the right fit."
     }
   },
   "weduFactory": {

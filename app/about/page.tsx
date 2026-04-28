@@ -16,6 +16,39 @@ const statLotties = [
   "/lottie/target.json",
 ] as const;
 
+const BRAND_PILLS: { name: string; color: string; tint: string }[] = [
+  { name: "WQuality", color: "var(--primary)", tint: "rgba(30, 109, 181, 0.1)" },
+  { name: "WDigiLab", color: "var(--accent-teal)", tint: "rgba(8, 145, 178, 0.1)" },
+  { name: "WStudio", color: "var(--accent-purple)", tint: "rgba(99, 102, 241, 0.1)" },
+];
+
+/* ---------- Render p3 paragraph with brand-name highlight pills ---------- */
+function renderWithBrandPills(text: string) {
+  const pattern = new RegExp(
+    `(${BRAND_PILLS.map((b) => b.name).join("|")})`,
+    "g"
+  );
+  const parts = text.split(pattern);
+  return parts.map((part, i) => {
+    const brand = BRAND_PILLS.find((b) => b.name === part);
+    if (!brand) return <span key={i}>{part}</span>;
+    return (
+      <span
+        key={i}
+        className="mx-[1px] inline-block rounded-md px-2 py-[2px] font-bold"
+        style={{
+          background: brand.tint,
+          color: brand.color,
+          fontFamily: "var(--font-barlow), system-ui, sans-serif",
+          letterSpacing: "-0.005em",
+        }}
+      >
+        {part}
+      </span>
+    );
+  });
+}
+
 /* ---------- Corner bracket ---------- */
 function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
   const color = "rgba(30,109,181,0.4)";
@@ -201,22 +234,65 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Content paragraphs */}
-        <div className="page-content-block space-y-6">
-          <p className="about-paragraph text-lg leading-relaxed text-muted">{t("p2")}</p>
+        {/* Content — editorial spread: large lead statement + structured body with brand pills */}
+        <div className="page-content-block">
+          {/* p2 — display lead, restrained typography */}
+          <div className="about-paragraph relative mx-auto max-w-[58ch]">
+            <span
+              aria-hidden
+              className="mb-7 inline-block text-2xl leading-none"
+              style={{
+                color: "var(--primary)",
+                fontFamily: "var(--font-instrument), Georgia, serif",
+                fontStyle: "italic",
+              }}
+            >
+              &lowast;
+            </span>
 
-          <div className="about-paragraph">
-            <div className="relative rounded-2xl p-[1px] overflow-hidden">
-              <div
-                className="pointer-events-none absolute inset-[-50%] animate-[borderSpin_6s_linear_infinite]"
-                style={{
-                  background: "conic-gradient(from 0deg, transparent 0%, #1E6DB540 15%, #1E6DB5 30%, transparent 45%, transparent 55%, #1E6DB5 70%, #1E6DB540 85%, transparent 100%)",
-                }}
+            <p
+              className="text-[26px] leading-[1.4] tracking-[-0.015em] sm:text-[34px] sm:leading-[1.32] lg:text-[38px]"
+              style={{
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                color: "#0f172a",
+                fontWeight: 500,
+              }}
+            >
+              {t("p2")}
+            </p>
+          </div>
+
+          {/* divider — generous space, single hairline */}
+          <div className="about-paragraph mx-auto my-16 flex max-w-[58ch] items-center gap-4 sm:my-20">
+            <span className="h-px flex-1 bg-[rgba(15,23,42,0.08)]" />
+            <span className="flex items-center gap-1.5" aria-hidden>
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: "var(--primary)" }}
               />
-              <div className="relative rounded-2xl bg-[var(--background)] py-6 px-7 sm:px-8">
-                <p className="text-lg leading-relaxed text-muted">{t("p3")}</p>
-              </div>
-            </div>
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: "var(--accent-teal)" }}
+              />
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: "var(--accent-purple)" }}
+              />
+            </span>
+            <span className="h-px flex-1 bg-[rgba(15,23,42,0.08)]" />
+          </div>
+
+          {/* p3 — body with inline brand pills */}
+          <div className="about-paragraph relative mx-auto max-w-[58ch]">
+            <p
+              className="text-base leading-[1.95] sm:text-[18px] sm:leading-[1.85]"
+              style={{
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                color: "#3a4a5c",
+              }}
+            >
+              {renderWithBrandPills(t("p3"))}
+            </p>
           </div>
         </div>
 
@@ -282,12 +358,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <style jsx global>{`
-          @keyframes borderSpin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-          }
-        `}</style>
       </div>
     </PageLayout>
   );

@@ -84,12 +84,12 @@ export default function OurVisionPage() {
     >
       <div ref={sectionRef}>
         {/* Opening — full width large text */}
-        <div className="vision-intro mb-16 text-center">
+        <div className="vision-intro mb-20 text-center">
           <p
-            className="text-xl leading-[1.7] sm:text-2xl"
+            className="text-2xl leading-[1.45] tracking-[-0.01em] sm:text-[34px] sm:leading-[1.35] lg:text-[40px]"
             style={{
-              fontFamily: "var(--font-barlow), system-ui, sans-serif",
-              color: "#2a3444",
+              fontFamily: "var(--font-fraunces), Georgia, serif",
+              color: "#1a2535",
               fontWeight: 400,
             }}
           >
@@ -112,8 +112,11 @@ export default function OurVisionPage() {
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                     WebkitBackgroundClip: "text",
+                    backgroundClip: "text",
                     WebkitTextFillColor: "transparent",
-                    opacity: 1,
+                    color: "transparent",
+                    transform: "translateZ(0)",
+                    willChange: "transform",
                   }}
                 >
                   {String(i + 1).padStart(2, "0")}
@@ -137,10 +140,11 @@ export default function OurVisionPage() {
                   }}
                 />
                 <p
-                  className="text-base leading-[1.9] sm:text-[17px]"
+                  className="text-lg leading-[1.75] sm:text-[21px] sm:leading-[1.7]"
                   style={{
-                    fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                    color: "#3a4a5c",
+                    fontFamily: "var(--font-fraunces), Georgia, serif",
+                    color: "#2a3444",
+                    fontWeight: 400,
                   }}
                 >
                   {text}
@@ -167,8 +171,11 @@ export default function OurVisionPage() {
                     fontFamily: "var(--font-barlow), system-ui, sans-serif",
                     background: "linear-gradient(135deg, var(--primary), var(--accent-teal))",
                     WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    color: "transparent",
+                    transform: "translateZ(0)",
+                    willChange: "transform",
                   }}
                 >
                   {word.trim()}

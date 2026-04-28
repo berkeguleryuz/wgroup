@@ -95,6 +95,25 @@ export default function OurDivisionsPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      const intros = gsap.utils.toArray<HTMLElement>(".intro-block");
+      if (intros.length) {
+        gsap.set(intros, { opacity: 0, y: 24 });
+        ScrollTrigger.create({
+          trigger: intros[0],
+          start: "top 90%",
+          once: true,
+          onEnter: () => {
+            gsap.to(intros, {
+              y: 0,
+              opacity: 1,
+              stagger: 0.1,
+              duration: 0.8,
+              ease: "power3.out",
+            });
+          },
+        });
+      }
+
       const cards = gsap.utils.toArray<HTMLElement>(".division-card");
       if (cards.length) {
         gsap.set(cards, { opacity: 0, y: 40 });
@@ -127,17 +146,68 @@ export default function OurDivisionsPage() {
       heroImage="/w-new/w3.webp"
     >
       <div ref={sectionRef}>
-        {/* Intro paragraphs */}
-        <div className="page-content-block mb-12 space-y-4">
-          <p className="text-lg leading-relaxed text-muted" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-            {t("p1")}
-          </p>
-          <p className="text-lg leading-relaxed text-muted" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-            {t("p2")}
-          </p>
-          <p className="text-lg leading-relaxed text-muted" style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
-            {t("p3")}
-          </p>
+        {/* Intro — editorial spread */}
+        <div className="page-content-block relative mb-20 sm:mb-24">
+          <div className="relative grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-12 lg:gap-y-16">
+            {/* Marker column — three-color rhythm */}
+            <div className="intro-block lg:col-span-3">
+              <div className="flex flex-row items-center gap-3 lg:flex-col lg:items-start lg:gap-4">
+                <span className="flex items-center gap-1.5">
+                  <span className="h-2 w-2 rounded-full" style={{ background: "var(--primary)" }} />
+                  <span className="h-2 w-2 rounded-full" style={{ background: "var(--accent-teal)" }} />
+                  <span className="h-2 w-2 rounded-full" style={{ background: "var(--accent-purple)" }} />
+                </span>
+                <span className="h-px w-12 bg-border lg:h-[2px] lg:w-20" />
+              </div>
+            </div>
+
+            {/* Lead statement — large display */}
+            <div className="intro-block lg:col-span-9">
+              <p
+                className="text-2xl leading-[1.4] tracking-[-0.01em] text-foreground sm:text-[30px] sm:leading-[1.35] lg:text-[34px]"
+                style={{
+                  fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                  fontWeight: 500,
+                }}
+              >
+                {t("p1")}
+              </p>
+            </div>
+
+            {/* p2 — indented right block, with leading horizontal accent */}
+            <div className="intro-block lg:col-span-7 lg:col-start-3">
+              <div className="flex items-start gap-5 sm:gap-6">
+                <span
+                  aria-hidden
+                  className="mt-3 h-[2px] w-8 shrink-0 sm:w-10"
+                  style={{ background: "var(--accent-teal)" }}
+                />
+                <p
+                  className="text-base leading-[1.9] text-muted sm:text-[17px]"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+                >
+                  {t("p2")}
+                </p>
+              </div>
+            </div>
+
+            {/* p3 — further indented, purple accent */}
+            <div className="intro-block lg:col-span-7 lg:col-start-5">
+              <div className="flex items-start gap-5 sm:gap-6">
+                <span
+                  aria-hidden
+                  className="mt-3 h-[2px] w-8 shrink-0 sm:w-10"
+                  style={{ background: "var(--accent-purple)" }}
+                />
+                <p
+                  className="text-base leading-[1.9] text-muted sm:text-[17px]"
+                  style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+                >
+                  {t("p3")}
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {DIVISIONS.map(({ key, color, href }, i) => (
