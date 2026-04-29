@@ -147,6 +147,34 @@ h1, h2, h3, h4, h5, h6 {
   100% { background-position: -200% 0; }
 }
 
+/* Strategic-advantage decorations */
+@keyframes adv-spin-slow {
+  to { transform: rotate(360deg); }
+}
+@keyframes adv-spin-rev {
+  to { transform: rotate(-360deg); }
+}
+@keyframes adv-pulse-soft {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+@keyframes adv-pulse-ring {
+  0% { transform: scale(0.6); opacity: 0.85; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+@keyframes adv-twinkle {
+  0%, 100% { opacity: 0.25; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+@keyframes adv-orbit {
+  from { transform: rotate(0deg) translateX(var(--orbit-r, 60px)) rotate(0deg); }
+  to   { transform: rotate(360deg) translateX(var(--orbit-r, 60px)) rotate(-360deg); }
+}
+@keyframes adv-drift {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-6px); }
+}
+
 /* ==================================================================
    Corner border  onchainwin-style corner-only borders
    ================================================================== */

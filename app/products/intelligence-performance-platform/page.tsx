@@ -1,5 +1,6 @@
-import ProductDetailLayout from "@/components/layout/ProductDetailLayout";
+import { redirect } from "next/navigation";
 
+// Legacy slug — merged into Smart Operational and Performance Platform.
 export default function Page() {
-  return <ProductDetailLayout productKey="intelligencePerformancePlatform" />;
+  redirect("/products/smart-operational-platform");
 }

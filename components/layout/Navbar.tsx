@@ -39,59 +39,51 @@ const navImages: Record<string, string> = {
   wquality: "/w-new/W-Quality.webp",
   wdigilab: "/w-new/W-Digilab.webp",
   wstudio: "/w-new/W-Studio.webp",
-  // W-DigiLab products
+  // W-Quality solutions
+  operationalExcellence: "/w-new/wn4.webp",
+  wQualityAiAdvisor: "/w-new/wn5.webp",
+  // W-DigiLab solutions
   smartOperationalPlatform: "/w-new/wn1.webp",
-  intelligencePerformancePlatform: "/w-new/wn2.webp",
   blockchainProducts: "/w-new/wn3.webp",
-  // W-Quality products
-  systemArchitectureCompliance: "/w-new/wn4.webp",
-  strategicSupplierDevelopment: "/w-new/wn5.webp",
-  strategicPerformanceManagement: "/w-new/wn6.webp",
-  // W-Studio products
+  // W-Studio solutions
   aiContentProduction: "/w-new/wn7.webp",
   businessflix: "/w-new/wn8.webp",
-  corporateKnowledgeChannels: "/w-new/wn9.webp",
+  talentManagement: "/w-new/wn9.webp",
 };
 
 /* ---------- Product definitions ---------- */
 
 type ProductKey =
+  | "operationalExcellence"
+  | "wQualityAiAdvisor"
   | "smartOperationalPlatform"
-  | "intelligencePerformancePlatform"
   | "blockchainProducts"
-  | "systemArchitectureCompliance"
-  | "strategicSupplierDevelopment"
-  | "strategicPerformanceManagement"
   | "aiContentProduction"
   | "businessflix"
-  | "corporateKnowledgeChannels";
+  | "talentManagement";
 
 const productSlugs: Record<ProductKey, string> = {
+  operationalExcellence: "operational-excellence",
+  wQualityAiAdvisor: "w-quality-ai-advisor",
   smartOperationalPlatform: "smart-operational-platform",
-  intelligencePerformancePlatform: "intelligence-performance-platform",
   blockchainProducts: "blockchain-products",
-  systemArchitectureCompliance: "system-architecture-compliance",
-  strategicSupplierDevelopment: "supplier-development",
-  strategicPerformanceManagement: "strategic-performance-management",
   aiContentProduction: "ai-content-production",
   businessflix: "businessflix",
-  corporateKnowledgeChannels: "corporate-knowledge-channels",
+  talentManagement: "talent-management",
 };
 
+const qualityProducts: ProductKey[] = [
+  "operationalExcellence",
+  "wQualityAiAdvisor",
+];
 const digilabProducts: ProductKey[] = [
   "smartOperationalPlatform",
-  "intelligencePerformancePlatform",
   "blockchainProducts",
-];
-const qualityProducts: ProductKey[] = [
-  "systemArchitectureCompliance",
-  "strategicSupplierDevelopment",
-  "strategicPerformanceManagement",
 ];
 const studioProducts: ProductKey[] = [
   "aiContentProduction",
   "businessflix",
-  "corporateKnowledgeChannels",
+  "talentManagement",
 ];
 
 const buildProductLink = (k: ProductKey): NavLink => ({
@@ -128,7 +120,6 @@ const navItems: NavItem[] = [
       { label: "W-Studio", items: studioProducts.map(buildProductLink) },
     ],
   },
-  { key: "blog", href: "/blog" },
   { key: "faq", href: "/faq" },
 ];
 

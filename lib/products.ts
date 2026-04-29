@@ -1,50 +1,42 @@
 export type ProductKey =
+  | "operationalExcellence"
+  | "wQualityAiAdvisor"
   | "smartOperationalPlatform"
-  | "intelligencePerformancePlatform"
   | "blockchainProducts"
-  | "systemArchitectureCompliance"
-  | "strategicSupplierDevelopment"
-  | "strategicPerformanceManagement"
   | "aiContentProduction"
   | "businessflix"
-  | "corporateKnowledgeChannels";
+  | "talentManagement";
 
 export const productSlugs: Record<ProductKey, string> = {
+  operationalExcellence: "operational-excellence",
+  wQualityAiAdvisor: "w-quality-ai-advisor",
   smartOperationalPlatform: "smart-operational-platform",
-  intelligencePerformancePlatform: "intelligence-performance-platform",
   blockchainProducts: "blockchain-products",
-  systemArchitectureCompliance: "system-architecture-compliance",
-  strategicSupplierDevelopment: "supplier-development",
-  strategicPerformanceManagement: "strategic-performance-management",
   aiContentProduction: "ai-content-production",
   businessflix: "businessflix",
-  corporateKnowledgeChannels: "corporate-knowledge-channels",
+  talentManagement: "talent-management",
 };
 
 export const productImages: Record<ProductKey, string> = {
+  operationalExcellence: "/w-new/wn4.webp",
+  wQualityAiAdvisor: "/w-new/wn5.webp",
   smartOperationalPlatform: "/w-new/wn1.webp",
-  intelligencePerformancePlatform: "/w-new/wn2.webp",
   blockchainProducts: "/w-new/wn3.webp",
-  systemArchitectureCompliance: "/w-new/wn4.webp",
-  strategicSupplierDevelopment: "/w-new/wn5.webp",
-  strategicPerformanceManagement: "/w-new/wn6.webp",
   aiContentProduction: "/w-new/wn7.webp",
   businessflix: "/w-new/wn8.webp",
-  corporateKnowledgeChannels: "/w-new/wn9.webp",
+  talentManagement: "/w-new/wn9.webp",
 };
 
 export type Division = "W-DigiLab" | "W-Quality" | "W-Studio";
 
 export const productDivision: Record<ProductKey, Division> = {
+  operationalExcellence: "W-Quality",
+  wQualityAiAdvisor: "W-Quality",
   smartOperationalPlatform: "W-DigiLab",
-  intelligencePerformancePlatform: "W-DigiLab",
   blockchainProducts: "W-DigiLab",
-  systemArchitectureCompliance: "W-Quality",
-  strategicSupplierDevelopment: "W-Quality",
-  strategicPerformanceManagement: "W-Quality",
   aiContentProduction: "W-Studio",
   businessflix: "W-Studio",
-  corporateKnowledgeChannels: "W-Studio",
+  talentManagement: "W-Studio",
 };
 
 export const divisionHref: Record<Division, string> = {
@@ -54,15 +46,13 @@ export const divisionHref: Record<Division, string> = {
 };
 
 export const productOrder: ProductKey[] = [
+  "operationalExcellence",
+  "wQualityAiAdvisor",
   "smartOperationalPlatform",
-  "intelligencePerformancePlatform",
   "blockchainProducts",
-  "systemArchitectureCompliance",
-  "strategicSupplierDevelopment",
-  "strategicPerformanceManagement",
   "aiContentProduction",
   "businessflix",
-  "corporateKnowledgeChannels",
+  "talentManagement",
 ];
 
 export function relatedProducts(key: ProductKey): ProductKey[] {

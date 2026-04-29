@@ -386,14 +386,87 @@ export default function About() {
           </div>
         </div>
 
-        {/* Body text */}
-        <div className="mx-auto mt-16 max-w-3xl space-y-4 text-center">
-          <p className="about-text text-base leading-relaxed text-white/50">
-            {t("body1")}
-          </p>
-          <p className="about-text text-base leading-relaxed text-white/50">
-            {t("body2")}
-          </p>
+        {/* Body block — animated convergence + editorial typography */}
+        <div className="relative mx-auto mt-24 max-w-5xl">
+          <div className="relative z-10 flex flex-col items-center">
+            {/* Animated convergence network SVG */}
+            <ConvergenceNetwork />
+
+            {/* Decorative trio dots */}
+            <div className="about-text mt-2 flex items-center gap-2">
+              <span
+                className="block h-1 w-1 rounded-full"
+                style={{ background: "var(--primary)" }}
+              />
+              <span
+                className="block h-1 w-1 rounded-full"
+                style={{ background: "var(--accent-teal)", opacity: 0.7 }}
+              />
+              <span
+                className="block h-1 w-1 rounded-full"
+                style={{ background: "var(--accent-purple)", opacity: 0.45 }}
+              />
+            </div>
+
+            {/* Editorial lead pull-quote */}
+            <p
+              className="about-text mt-10 max-w-3xl text-center text-2xl leading-[1.4] text-white/85 sm:text-[28px] sm:leading-[1.32] lg:text-[32px] lg:leading-[1.28]"
+              style={{
+                fontFamily: "var(--font-fraunces), Georgia, serif",
+                fontWeight: 400,
+                letterSpacing: "-0.014em",
+                fontVariationSettings: "'SOFT' 30, 'opsz' 144",
+              }}
+            >
+              {t("body1")}
+            </p>
+
+            {/* Hairline divider with diamond ornament */}
+            <div className="about-text mt-12 flex w-full max-w-2xl items-center gap-4">
+              <span className="block h-px flex-1 bg-gradient-to-r from-transparent via-white/15 to-white/15" />
+              <span
+                aria-hidden
+                className="block h-1.5 w-1.5 rotate-45"
+                style={{
+                  background:
+                    "linear-gradient(135deg, var(--primary), var(--accent-teal))",
+                }}
+              />
+              <span className="block h-px flex-1 bg-gradient-to-r from-white/15 via-white/15 to-transparent" />
+            </div>
+
+            {/* Three division blurbs */}
+            <div className="mt-12 grid w-full grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:gap-10 sm:text-left">
+              <DivisionBlurb
+                label="W-Quality"
+                color="var(--primary)"
+                text={t("qualityLine")}
+              />
+              <DivisionBlurb
+                label="W-DigiLab"
+                color="var(--accent-purple)"
+                text={t("digilabLine")}
+              />
+              <DivisionBlurb
+                label="W-Studio"
+                color="var(--accent-teal)"
+                text={t("studioLine")}
+              />
+            </div>
+
+            {/* Closing tagline */}
+            <p
+              className="about-text mt-14 max-w-2xl text-center text-base text-white/55 sm:text-lg"
+              style={{
+                fontFamily: "var(--font-fraunces), Georgia, serif",
+                fontStyle: "italic",
+                fontWeight: 400,
+                letterSpacing: "-0.005em",
+              }}
+            >
+              {t("body2")}
+            </p>
+          </div>
         </div>
 
         {/* Pillar cards */}
@@ -411,5 +484,328 @@ export default function About() {
       </div>
     </section>
     </>
+  );
+}
+
+/* ---------- Division blurb ---------- */
+function DivisionBlurb({
+  label,
+  color,
+  text,
+}: {
+  label: string;
+  color: string;
+  text: string;
+}) {
+  return (
+    <div className="about-text relative">
+      <div className="mb-3 flex items-center justify-center gap-2.5 sm:justify-start">
+        <span
+          aria-hidden
+          className="block h-1.5 w-1.5 rotate-45"
+          style={{ background: color }}
+        />
+        <span
+          className="text-[10px] font-bold uppercase tracking-[0.32em]"
+          style={{
+            fontFamily: "var(--font-jetbrains), monospace",
+            color,
+          }}
+        >
+          {label}
+        </span>
+        <span
+          aria-hidden
+          className="hidden h-px flex-1 sm:block"
+          style={{
+            background: `linear-gradient(to right, ${color}, transparent)`,
+            opacity: 0.6,
+          }}
+        />
+      </div>
+      <p
+        className="text-[14.5px] leading-[1.7] text-white/65 sm:text-[15px]"
+        style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+      >
+        {text}
+      </p>
+    </div>
+  );
+}
+
+/* ---------- Animated Convergence Network ----------
+   Visualizes the WGroup ↔ three-division ecosystem:
+   one luminous central hub with three orbital satellites
+   connected by flowing dashed lines and traveling particles.
+   Pure SVG + CSS keyframes, no JS animations.
+*/
+function ConvergenceNetwork() {
+  const cx = 160;
+  const cy = 160;
+  const r = 110;
+  // Three points equally spaced (120° apart): top, lower-left, lower-right
+  const sin60 = Math.sin(Math.PI / 3);
+  const cos60 = Math.cos(Math.PI / 3);
+  const nodes: { x: number; y: number; color: string; coreId: string; label: string; pathId: string; delay: string }[] = [
+    {
+      x: cx,
+      y: cy - r,
+      color: "var(--primary)",
+      coreId: "convQualityCore",
+      label: "W-Quality",
+      pathId: "convPath1",
+      delay: "0s",
+    },
+    {
+      x: cx - r * sin60,
+      y: cy + r * cos60,
+      color: "var(--accent-purple)",
+      coreId: "convDigilabCore",
+      label: "W-DigiLab",
+      pathId: "convPath2",
+      delay: "1s",
+    },
+    {
+      x: cx + r * sin60,
+      y: cy + r * cos60,
+      color: "var(--accent-teal)",
+      coreId: "convStudioCore",
+      label: "W-Studio",
+      pathId: "convPath3",
+      delay: "2s",
+    },
+  ];
+
+  return (
+    <div
+      aria-hidden
+      className="relative mx-auto"
+      style={{
+        width: "clamp(240px, 30vw, 340px)",
+        height: "clamp(240px, 30vw, 340px)",
+      }}
+    >
+      <svg viewBox="0 0 320 320" className="absolute inset-0 h-full w-full">
+        <defs>
+          <radialGradient id="convCoreHub" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="55%" stopColor="var(--primary)" stopOpacity="0.7" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="convQualityCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.9" />
+            <stop offset="60%" stopColor="var(--primary)" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="convDigilabCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.9" />
+            <stop offset="60%" stopColor="var(--accent-purple)" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="var(--accent-purple)" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="convStudioCore" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.9" />
+            <stop offset="60%" stopColor="var(--accent-teal)" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0" />
+          </radialGradient>
+          <linearGradient id="convLineGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.7" />
+            <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0.4" />
+          </linearGradient>
+
+          {/* Hidden paths for animateMotion to follow */}
+          {nodes.map((n) => (
+            <path
+              key={n.pathId}
+              id={n.pathId}
+              d={`M${cx} ${cy} L${n.x} ${n.y}`}
+              fill="none"
+            />
+          ))}
+        </defs>
+
+        {/* Outer dotted ring — slow rotation */}
+        <g
+          style={{
+            transformOrigin: "center",
+            animation: "adv-spin-slow 70s linear infinite",
+          }}
+        >
+          <circle
+            cx={cx}
+            cy={cy}
+            r="148"
+            fill="none"
+            stroke="url(#convLineGrad)"
+            strokeWidth="1"
+            strokeDasharray="2 7"
+            opacity="0.35"
+          />
+        </g>
+
+        {/* Mid orbital ring — counter rotation */}
+        <g
+          style={{
+            transformOrigin: "center",
+            animation: "adv-spin-rev 45s linear infinite",
+          }}
+        >
+          <circle
+            cx={cx}
+            cy={cy}
+            r={r}
+            fill="none"
+            stroke="url(#convLineGrad)"
+            strokeWidth="0.8"
+            strokeDasharray="1 5"
+            opacity="0.32"
+          />
+        </g>
+
+        {/* Connection lines from center to each node */}
+        {nodes.map((n, i) => (
+          <g key={`line-${i}`}>
+            <line
+              x1={cx}
+              y1={cy}
+              x2={n.x}
+              y2={n.y}
+              stroke={n.color}
+              strokeWidth="1.4"
+              strokeDasharray="4 5"
+              opacity="0.55"
+              style={{
+                animation: `adv-spin-slow 0s linear infinite`,
+              }}
+            >
+              <animate
+                attributeName="stroke-dashoffset"
+                from="0"
+                to="-18"
+                dur="2.4s"
+                repeatCount="indefinite"
+              />
+            </line>
+          </g>
+        ))}
+
+        {/* Traveling particles along each line — bidirectional */}
+        {nodes.map((n, i) => (
+          <g key={`particle-${i}`}>
+            {/* Outward particle (center → node) */}
+            <circle r="2.4" fill={n.color}>
+              <animateMotion
+                dur="3.2s"
+                repeatCount="indefinite"
+                begin={n.delay}
+              >
+                <mpath href={`#${n.pathId}`} />
+              </animateMotion>
+              <animate
+                attributeName="opacity"
+                values="0;1;1;0"
+                dur="3.2s"
+                repeatCount="indefinite"
+                begin={n.delay}
+              />
+            </circle>
+            {/* Inward particle (node → center) */}
+            <circle r="1.8" fill="white" opacity="0.85">
+              <animateMotion
+                dur="3.2s"
+                repeatCount="indefinite"
+                begin={`${parseFloat(n.delay) + 1.6}s`}
+                keyPoints="1;0"
+                keyTimes="0;1"
+              >
+                <mpath href={`#${n.pathId}`} />
+              </animateMotion>
+              <animate
+                attributeName="opacity"
+                values="0;0.85;0.85;0"
+                dur="3.2s"
+                repeatCount="indefinite"
+                begin={`${parseFloat(n.delay) + 1.6}s`}
+              />
+            </circle>
+          </g>
+        ))}
+
+        {/* Satellite nodes — pulsing core + halo */}
+        {nodes.map((n, i) => (
+          <g key={`node-${i}`}>
+            {/* Halo */}
+            <circle
+              cx={n.x}
+              cy={n.y}
+              r="14"
+              fill={`url(#${n.coreId})`}
+            />
+            {/* Solid core */}
+            <circle cx={n.x} cy={n.y} r="5" fill={n.color}>
+              <animate
+                attributeName="r"
+                values="4.5;6.5;4.5"
+                dur="3s"
+                repeatCount="indefinite"
+                begin={`${i * 0.5}s`}
+              />
+            </circle>
+            {/* Bright pip */}
+            <circle cx={n.x} cy={n.y} r="1.6" fill="white" opacity="0.95" />
+          </g>
+        ))}
+
+        {/* Center hub — luminous WGroup core */}
+        <circle cx={cx} cy={cy} r="26" fill="url(#convCoreHub)">
+          <animate
+            attributeName="r"
+            values="22;30;22"
+            dur="3.6s"
+            repeatCount="indefinite"
+          />
+        </circle>
+        <circle cx={cx} cy={cy} r="9" fill="white" opacity="0.92" />
+        <circle cx={cx} cy={cy} r="3" fill="var(--primary)" />
+
+        {/* Scattered ambient sparkles */}
+        <circle
+          cx="40"
+          cy="70"
+          r="1.2"
+          fill="white"
+          style={{ animation: "adv-twinkle 2.6s ease-in-out infinite" }}
+        />
+        <circle
+          cx="280"
+          cy="80"
+          r="1"
+          fill="white"
+          style={{
+            animation: "adv-twinkle 3s ease-in-out infinite",
+            animationDelay: "0.5s",
+          }}
+        />
+        <circle
+          cx="50"
+          cy="270"
+          r="1.4"
+          fill="white"
+          style={{
+            animation: "adv-twinkle 2.4s ease-in-out infinite",
+            animationDelay: "1.1s",
+          }}
+        />
+        <circle
+          cx="270"
+          cy="260"
+          r="1.1"
+          fill="white"
+          style={{
+            animation: "adv-twinkle 2.8s ease-in-out infinite",
+            animationDelay: "1.7s",
+          }}
+        />
+      </svg>
+    </div>
   );
 }
