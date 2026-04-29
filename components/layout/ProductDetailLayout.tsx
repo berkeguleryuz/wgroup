@@ -1030,8 +1030,8 @@ function RelatedCard({
             className="relative z-10 flex flex-1 flex-col"
             style={{ transform: "translateZ(15px)" }}
           >
-            {/* Cover image — contained inside the card with margin */}
-            <div className="relative mb-4 h-36 w-full overflow-hidden rounded-xl">
+            {/* Cover image — square aspect to fit 1:1 source images */}
+            <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-xl">
               <Image
                 src={image}
                 alt={title}
@@ -1039,7 +1039,7 @@ function RelatedCard({
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
 
             {/* Brand pill */}

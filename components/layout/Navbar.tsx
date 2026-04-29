@@ -31,24 +31,24 @@ function isGroup(item: NavItem): item is NavGroup {
 /* ---------- Image map ---------- */
 
 const navImages: Record<string, string> = {
-  aboutWgroup: "/w-new/w1.webp",
-  whatWeDo: "/w-new/w2.webp",
-  ourDivisions: "/w-new/w3.webp",
-  ourStory: "/w-new/wn10.webp",
-  ourVision: "/w-new/wn11.webp",
+  aboutWgroup: "/w-new/a1.webp",
+  whatWeDo: "/w-new/a2.webp",
+  ourDivisions: "/w-new/a3.webp",
+  ourStory: "/w-new/a4.webp",
+  ourVision: "/w-new/a5.webp",
   wquality: "/w-new/W-Quality.webp",
   wdigilab: "/w-new/W-Digilab.webp",
   wstudio: "/w-new/W-Studio.webp",
   // W-Quality solutions
-  operationalExcellence: "/w-new/wn4.webp",
-  wQualityAiAdvisor: "/w-new/wn5.webp",
+  operationalExcellence: "/w-new/n0.webp",
+  wQualityAiAdvisor: "/w-new/n1.webp",
   // W-DigiLab solutions
-  smartOperationalPlatform: "/w-new/wn1.webp",
-  blockchainProducts: "/w-new/wn3.webp",
+  smartOperationalPlatform: "/w-new/n2.webp",
+  blockchainProducts: "/w-new/n3.webp",
   // W-Studio solutions
-  aiContentProduction: "/w-new/wn7.webp",
-  businessflix: "/w-new/wn8.webp",
-  talentManagement: "/w-new/wn9.webp",
+  aiContentProduction: "/w-new/n4.webp",
+  businessflix: "/w-new/n5.webp",
+  talentManagement: "/w-new/n6.webp",
 };
 
 /* ---------- Product definitions ---------- */
@@ -235,7 +235,7 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
           ))}
         </div>
 
-        <div className="col-span-2 relative min-h-70 overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
+        <div className="col-span-2 relative aspect-square overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
           {group.items.map((item) => (
             <div
               key={item.key}
@@ -431,7 +431,7 @@ function ProductsPanel({
         </div>
 
         <div className="col-span-4">
-          <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
+          <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
             {activeImage ? (
               <>
                 <Image

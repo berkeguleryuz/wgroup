@@ -18,13 +18,13 @@ export const productSlugs: Record<ProductKey, string> = {
 };
 
 export const productImages: Record<ProductKey, string> = {
-  operationalExcellence: "/w-new/wn4.webp",
-  wQualityAiAdvisor: "/w-new/wn5.webp",
-  smartOperationalPlatform: "/w-new/wn1.webp",
-  blockchainProducts: "/w-new/wn3.webp",
-  aiContentProduction: "/w-new/wn7.webp",
-  businessflix: "/w-new/wn8.webp",
-  talentManagement: "/w-new/wn9.webp",
+  operationalExcellence: "/w-new/n0.webp",
+  wQualityAiAdvisor: "/w-new/n1.webp",
+  smartOperationalPlatform: "/w-new/n2.webp",
+  blockchainProducts: "/w-new/n3.webp",
+  aiContentProduction: "/w-new/n4.webp",
+  businessflix: "/w-new/n5.webp",
+  talentManagement: "/w-new/n6.webp",
 };
 
 export type Division = "W-DigiLab" | "W-Quality" | "W-Studio";
