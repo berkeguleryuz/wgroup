@@ -11,7 +11,7 @@
     "wquality": "W-Quality",
     "wdigilab": "W-DigiLab",
     "wstudio": "W-Studio",
-    "products": "Ürünler",
+    "products": "Çözümlerimiz",
     "studioItem1": "Ürün 1",
     "studioItem2": "Ürün 2",
     "digilabItem1": "Ürün 1",
@@ -42,7 +42,7 @@
   },
   "footer": {
     "divisions": "Birimler",
-    "products": "Ürünler",
+    "products": "Çözümlerimiz",
     "company": "Şirket",
     "followUs": "Bizi Takip Edin",
     "studioItem1": "Ürün 1",
@@ -110,8 +110,8 @@
     "titleHighlight": "Sanatı",
     "description": "Wgroup GmbH, çeşitliliğin birleştirici gücüne inanır ve projelerinde analitik düşünürleri ve yaratıcı sanatçıları bir araya getirir.",
     "imageCaption": "Berlin, Almanya",
-    "body1": "WGroup, mühendislik hassasiyeti ile yaratıcı inovasyonu birleştirerek endüstriyel bilginin oluşturulma, dijitalleşme ve paylaşılma süreçlerini yeniden tanımlıyor. WQuality'nin uzmanlık odaklı danışmanlığı, WDigiLab'in dijital çevikliği ve WStudio'nun medya gücüyle; sürekli gelişen endüstriyel dünyayı geleceğe hazır bir dijital gerçekliğe dönüştüren bütünsel bir ekosistem sunuyoruz.",
-    "body2": "",
+    "body1": "Mühendislik hassasiyetini yaratıcı düşünceyle birleştiriyoruz; endüstri bilgisinin nasıl üretildiğini, dijitalleştirildiğini ve paylaşıldığını yeniden tasarlıyoruz.",
+    "body2": "Üç ekip, tek bir ekosistem; endüstrinin gerisinden değil, yanından yürüyor.",
     "pillar1Title": "Endüstri",
     "pillar1Desc": "Modern endüstriyel ortamlarda operasyonel performansı güçlendiren sağlam sistemler ve süreçler inşa ediyoruz.",
     "pillar2Title": "Zekâ",
@@ -120,7 +120,10 @@
     "pillar3Desc": "Endüstri bilgisini yenilikçi medya formatları ve dijital deneyimler aracılığıyla paylaşmanın yeni yollarını keşfediyoruz.",
     "weduFactoryDesc": "IATF 16949 odaklı otomotiv sektöründe nitelikli eğitim. Profesyonelleri en son bilgilerle güçlendirme.",
     "warticodeDesc": "Otomotiv sektöründe lider eğitim ve yazılım çözümleri. İnovasyonla güçlendirilmiş dijital dönüşüm.",
-    "wqualitysphereDesc": "Otomotiv sektörü için stratejik dönüşüm ve danışmanlık. En yüksek standartta kalite yönetimi."
+    "wqualitysphereDesc": "Otomotiv sektörü için stratejik dönüşüm ve danışmanlık. En yüksek standartta kalite yönetimi.",
+    "qualityLine": "Süreçleri ve standartları rafine ediyor; kaliteyi günlük operasyonun parçası yapıyor.",
+    "digilabLine": "Akıllı sistemleri ve dijital platformları hayata geçiriyor; veriden karara giden yolu kısaltıyor.",
+    "studioLine": "Karmaşık endüstri bilgisini izlenmeye değer hikayelere dönüştürüyor."
   },
   "brands": {
     "label": "BİRİMLERİMİZ",
@@ -261,7 +264,14 @@
     "ctaHighlight": "Hazır Mısınız?",
     "ctaDesc": "WGroup'un endüstriyel uzmanlık, dijital zekâ ve yaratıcı düşünceyi bir araya getirerek modern endüstriyi nasıl dönüştürdüğünü keşfedin.",
     "contactCta": "Bize Ulaşın",
-    "ctaLearnMore": "WGroup Hakkında"
+    "ctaLearnMore": "WGroup Hakkında",
+    "labelBelief": "İNANÇ",
+    "labelMoment": "DÖNÜŞÜM",
+    "labelVision": "VİZYON",
+    "labelOrigin": "KÖKEN",
+    "labelSynthesis": "SENTEZ",
+    "labelToday": "BUGÜN",
+    "labelCoda": "FİNAL"
   },
   "career": {
     "title": "Bizim",
@@ -355,40 +365,44 @@
     "eyebrow": "SSS",
     "titleHighlight": "Sorular",
     "q1": {
-      "question": "Wedu Factory eğitimleri nasıl katkı sağlıyor?",
-      "answer": "Wedu Factory eğitimleri hem bireylere hem de kuruluşlara çeşitli faydalar sağlar. Bireyler için bu eğitimler, kariyerlerini ilerletme ve otomotiv sektöründeki en son teknolojik gelişmeleri ve en iyi uygulamaları öğrenme fırsatı sunar. Wedu Factory eğitimleri iş gücünün sürekli gelişmesini destekleyerek performansı arttırır. Özel olarak tasarlanmış eğitim çözümleri doğrudan iş hedeflerine katkı sağlar ve çalışanların beceri ve bilgilerini yükseltir. Wedu Factory eğitimleriyle, hem bireylerin hem de kuruluşların başarılı bir gelecek için gerekli yetkinlikleri edinmesine yardımcı oluyoruz."
+      "question": "WGroup nedir, hangi alanda çalışıyorsunuz?",
+      "answer": "Biz, endüstriyel danışmanlık, dijital sistemler ve yaratıcı medya alanlarını birleştiren Berlin merkezli bir ekibiz. Mühendislik bilgisini yaratıcı düşünceyle birleştiriyor; endüstri bilgisinin nasıl üretildiğini, dijitalleştirildiğini ve paylaşıldığını yeniden tasarlıyoruz. Bugün 40'tan fazla ülkede iş ortaklarımızla birlikte projeler yürütüyoruz."
     },
     "q2": {
-      "question": "Otomotiv Tedarik Zincirine Nasıl Dahil Olunur?",
-      "answer": "Otomotiv tedarik zincirine dahil olmak, piyasa dinamiklerini derinlemesine anlamayı, potansiyel müşteriler ve tedarikçiler hakkında analizler yapmayı ve sektör tarafından kabul gören kalite standartlarına uymayı içerir. Bu süreç, stratejik planlama, sektöre özgü düzenlemelere uyum ve güçlü iş ilişkileri kurmayı gerektirir. Uzmanlığımızla, bu yolculukta sizi desteklemek için stratejik rehberlik sağlıyoruz."
+      "question": "Üç biriminiz birbirinden nasıl ayrılır?",
+      "answer": "Her birimin kendi uzmanlık alanı var. WQuality, kalite yönetimi ve süreç mükemmeliyetinde danışmanlık veriyor. WDigiLab, akıllı sistemler, dijital platformlar ve yapay zeka çözümleri geliştiriyor. WStudio ise kurumsal hikayeleri film, dizi ve interaktif içerik formatlarına taşıyor. Üçü ayrı görünse de aslında aynı bütünün parçaları; birlikte tek bir değer zinciri oluşturuyorlar."
     },
     "q3": {
-      "question": "Otomotiv Sektörüne Stratejik Pazar Girişi İçin Adımlar Nelerdir?",
-      "answer": "Otomotiv sektörüne başarılı bir giriş için ilk adım, hedef pazar ve ana rakiplerin kapsamlı bir analizini yapmaktır. Ardından, şirketinizin benzersiz değer önergesini geliştirmeli ve bu bilgilere dayanarak kapsamlı bir iş planı hazırlamalısınız. Bu süreçte, sektör ihtiyaçlarını karşılayan yenilikçi ürün ve hizmetler geliştirilir ve pazardaki konumunuzu güçlendirmek için stratejiler belirlenir."
+      "question": "WQuality hangi hizmetleri sunuyor?",
+      "answer": "IATF 16949 ve ISO uyumu, sistem mimarisi, operasyonel mükemmeliyet, tedarikçi geliştirme ve stratejik performans yönetimi. İlk durum analizinden başlayıp uygulamaya ve denetime kadar her aşamada ekibinizin yanında duruyoruz. Hedefimiz, süreçlerinizi uluslararası standartlara taşıyıp ölçülebilir, kalıcı bir iyileşme sağlamak."
     },
     "q4": {
-      "question": "IATF 16949 Kalite Yönetim Sistemi Nedir ve Uygulama Süreci Nasıl İşler?",
-      "answer": "IATF 16949, otomotiv sektörü için belirlenmiş bir kalite yönetim sistemidir. Bu sistem, üretimden teslimata kadar tüm iş süreçlerinin uluslararası standartlara uygun olarak yönetilmesini ve sürekli iyileştirilmesini amaçlamaktadır. Uygulama süreci, şirketinizin özel gereksinimlerini dikkate alarak süreç optimizasyonu, risk yönetimi ve çalışan eğitimi gibi adımları içerir."
+      "question": "WDigiLab hangi çözümleri geliştiriyor?",
+      "answer": "Akıllı operasyonel platformlar, performans yönetimi sistemleri, blokzincir tabanlı uygulamalar ve veri analitiği çözümleri. Süreçlerinizi dijitalleştiriyor, akıllı sistemleri birbiriyle konuşturuyor ve yapay zeka çağına özgü kurumsal bilgi platformlarını sıfırdan kuruyoruz."
     },
     "q5": {
-      "question": "Otomotiv Sektöründe Kalite Standartlarına Uyum İçin Gereksinimler Nelerdir?",
-      "answer": "Kalite standartlarına uyum, detaylı mevcut durum (GAP) analizi, iş süreçlerinin gözden geçirilmesi ve sürekli iyileştirme faaliyetlerinin uygulanmasını gerektirir. Bu süreçte, standartlara uyumu sağlamak için gerekli değişikliklerin belirlenmesi ve uygulanması esastır."
+      "question": "WStudio ne üretiyor?",
+      "answer": "AI destekli içerik üretimi, kurumsal hikaye anlatımı, BusinessFlix tarzı dizi formatlı içerikler ve kurumsal bilgi kanalları. Karmaşık endüstri bilgisini izlenebilir, paylaşılabilir ve akılda kalan medya formatlarına dönüştürüyoruz. İç iletişimden müşteri deneyimine kadar her noktada işe yarayan bir kurumsal medya kütüphanesi yaratıyoruz."
     },
     "q6": {
-      "question": "İç ve Dış Denetim Stratejileri Nasıl Geliştirilmeli ve Uygulanmalıdır?",
-      "answer": "Etkili iç ve dış denetim stratejileri, risk değerlendirmesi, denetimlerin sıklığının belirlenmesi ve denetim sonuçlarının analizi gibi adımlardan oluşur. Bu stratejiler, süreçlerin ve uygulamaların sürekli iyileştirilmesini destekleyerek şirketinizin yönetim sistemlerinin etkinliğinin arttırılmasına katkı sağlar."
+      "question": "Hangi sektörlere hizmet veriyorsunuz?",
+      "answer": "Otomotiv, üretim ve mühendislik bizim köklerimiz. Bunların yanında enerji, lojistik, savunma ve teknoloji alanlarındaki kuruluşlarla da çalışıyoruz. Ortak nokta şu: standartların kritik, bilginin değerli ve sürekli iyileşmenin zorunlu olduğu sektörler."
     },
     "q7": {
-      "question": "Otomotiv Sektöründe Dijital Dönüşüm Stratejileri Nelerdir?",
-      "answer": "Otomotiv sektöründe dijital dönüşüm, verimliliği artırmak, maliyetleri düşürmek ve müşteri memnuniyetini yükseltmek için teknolojik yeniliklerin entegrasyonunu içerir. Bu süreç, işletmenizin dijital altyapısını güçlendirmeyi, süreçleri otomatikleştirmeyi ve veri analitiği aracılığıyla akıllı karar alma mekanizmalarını entegre etmeyi kapsar. Sektöre özgü çözümlerimizle, işletmenizin dijital dönüşüm yolculuğunda rekabet avantajı kazanmanıza yardımcı oluyoruz."
+      "question": "Bir proje nasıl başlıyor?",
+      "answer": "Her şey kısa bir tanışma görüşmesiyle başlıyor. Önce sizi ve hedeflerinizi dinliyoruz, sonra ihtiyacınıza uygun birim sürece dahil oluyor. Ardından kısa bir hazırlık aşaması: kapsamı tanımlıyor, mevcut durumu analiz ediyor, yol haritası ve öncelikleri çıkarıyoruz. Her proje kendine özgü tasarlanıyor; tek tip paket sunmuyoruz."
     },
     "q8": {
-      "question": "Otomotiv Sektöründe Çalışanlar İçin Mesleki Gelişim Programları Neden Önemlidir?",
-      "answer": "Otomotiv sektöründe rekabet gücü ve yenilikçilik için çalışanların beceri ve yetkinliklerinin sürekli geliştirilmesi hayati önem taşır. Teknik yetkinlikler, kalite yönetimi, liderlik becerileri ve dijital dönüşüme yönelik eğitim ve gelişim programlarımızla çalışanlarınızın mesleki gelişimine destek oluyoruz. Bu eğitimler, sektörün mevcut ve gelecekteki ihtiyaçlarını karşılamak üzere özel olarak tasarlanmıştır."
+      "question": "Yapay zeka ve dijital dönüşümde nasıl bir rol üstleniyorsunuz?",
+      "answer": "Bizim için dijital dönüşüm, yalnızca yeni araçları kullanmak demek değil. Asıl mesele, kurumun bilgisini, süreçlerini ve insan kabiliyetlerini birlikte yeniden tasarlamak. Yapay zekanın gerçek bir iş değerine dönüşmesi için stratejiyi, sistem mimarisini, içeriği ve organizasyonel hazırlığı tek bir bütün olarak ele alıyoruz."
     },
     "q9": {
-      "question": "Çalışan Beceri ve Yetkinliklerini Geliştirmek İçin En Etkili Yöntemler Nelerdir?",
-      "answer": "Çalışan gelişimi, interaktif eğitimler, mentorluk, atölye çalışmaları ve sürekli öğrenme fırsatları aracılığıyla desteklenmelidir. Bu yaklaşım, teorik bilgiyi pratik uygulamalarla pekiştirir ve çalışanların yeni beceriler edinmesini ve mevcut olanları geliştirmesini sağlar. Ayrıca, çalışanların teknolojik gelişmelere ve sektör trendlerine adapte olması için gerekli araç ve bilgileri sağlıyoruz."
+      "question": "Hangi coğrafyalarda çalışıyorsunuz?",
+      "answer": "Merkezimiz Berlin'de. Avrupa odaklı çalışıyoruz; ama 40'tan fazla ülkede iş ortaklarımız ve müşterilerimizle aktif projelerimiz var. Uzaktan, yerinde ya da hibrit, hangi model size uygunsa onu birlikte seçiyoruz."
+    },
+    "q10": {
+      "question": "Sizinle nasıl iletişime geçilir?",
+      "answer": "Sitedeki İletişim sayfasından doğrudan ulaşabilirsiniz. info@wgroupgmbh.eu adresine yazabilir veya +49 174 177 78 79 numarasından bize ulaşabilirsiniz. İlk görüşmemiz baskısız bir tanışma sohbeti; hedefleriniz birbiriyle örtüşüyorsa birlikte yola devam ederiz, örtüşmüyorsa hiç sorun değil."
     }
   },
   "weduFactory": {
@@ -1030,36 +1044,157 @@
     "relatedProducts": "Bu Birime Ait Diğer Ürünler",
     "jumpToUseCases": "Kullanım alanlarına git",
     "items": {
+      "operationalExcellence": {
+        "slug": "operational-excellence",
+        "brand": "W-Quality",
+        "brandHref": "/w-quality",
+        "title": "Operasyonel Mükemmeliyet",
+        "tagline": "QMS, tedarikçi ekosistemi ve stratejik performansı tek disiplinde birleştiren bütünleşik dönüşüm programı",
+        "definition": "Operasyonel Mükemmeliyet; kurumun kalite yönetim sistemini, tedarik zincirini ve stratejik karar mekanizmalarını tek bir disiplin altında birleştiren bütünleşik bir dönüşüm programıdır. Sistem mimarisi (QMS), tedarikçi ekosistemi ve stratejik performans yönetimi; üç ayrı proje olarak değil, aynı operasyonel nefesin üç koordineli kası olarak ele alınır. Süreçler, sorumluluklar, ölçüm noktaları ve onay akışları; ISO 9001, IATF 16949 gibi standartlarla, müşteri özel istekleri (CSR) ile ve VDA 6.3 gibi proses denetim gereklilikleriyle hizalı biçimde, şirketin gerçek iş mantığına özel tasarlanır. Tedarikçiler denetlenen birer maliyet kaleminden, ana sanayinin teknik dilini konuşan partnerlere dönüştürülür. Üst yönetimin stratejik hedefleri saha gerçekliğine bağlanır; politika yayılımı, OKR / BSC çerçeveleri ve görsel yönetim ile her seviyeye ortak bir dile çevrilir.",
+        "strategicAdvantage": "Kalite uyumsuzluk maliyetini (COQ: ret, yeniden işleme, garanti, şikayet) doğrudan hedefler; 3. taraf denetimleri stres üreten bir olay olmaktan çıkarır ve \"Sıfır Kritik Bulgu\" hedefiyle sertifika geçerliliğini ile pazar erişimini sürekli koruma altında tutar. Tedarik kaynaklı problemleri (giriş ret, hat durdurma, geri çağırma) kaynağında çözer; kritik parça veya süreçlerde kapasite ve kalite riskini erken tespit ederek krizi patlamadan engeller. Stratejik plan ile operasyonel uygulama arasındaki boşluğu kapatır; \"çok hedef, az odak\" sorununu aşarak kurumun ivmesini 3-5 kritik hedefte yoğunlaştırır. Süreçleri kurucu hafızasından çıkararak dokümante, ölçülebilir ve devredilebilir hale getirir; yeni tesis, M&A entegrasyonu veya OEM müşteri kazanımı eşiklerinde operasyonel hazırlığı kanıtlanabilir kılar.",
+        "useCases": [
+          {
+            "title": "QMS Kurulumu ve Sertifikasyon",
+            "desc": "QMS Kurulumu, Optimizasyonu ve ISO / IATF Sertifikasyon Hazırlığı."
+          },
+          {
+            "title": "IATF 16949 Uyumu",
+            "desc": "Otomotiv Standart Uyumu ve Geçiş Programı (gap analizi, aksiyon planı, denetim koçluğu)."
+          },
+          {
+            "title": "Süreç Haritalama ve KPI",
+            "desc": "Süreç Haritalama (SIPOC, turtle chart), Darboğaz Analizi ve KPI Tasarımı."
+          },
+          {
+            "title": "Çok Lokasyonlu Standartlaştırma",
+            "desc": "Global Standart Yayılımı (HQ - lokal tesis) ve çok lokasyonlu standartlaştırma."
+          },
+          {
+            "title": "Gap Analizi ve Mock Denetim",
+            "desc": "Sistem, proses ve ürün denetimlerinde gap analizi ve deneme (mock) denetimleri."
+          },
+          {
+            "title": "VDA 6.3 ve CSR",
+            "desc": "VDA 6.3 Proses Denetimi hazırlığı ve müşteri özel isteklerinin (CSR) denetim programına entegrasyonu."
+          },
+          {
+            "title": "Regülasyon Uyumu",
+            "desc": "Yasal mevzuat ve teknik regülasyon uyum danışmanlığı (UNECE, REACH, ESG)."
+          },
+          {
+            "title": "İç Denetçi Yetkinliği",
+            "desc": "İç denetçi yetkinlik gelişimi ve kalifikasyon programları."
+          },
+          {
+            "title": "Tedarikçi Performans İyileştirme",
+            "desc": "Tedarikçi performans iyileştirme projeleri (PPM, OTD, lojistik)."
+          },
+          {
+            "title": "Yeni Tedarikçi Devreye Alma",
+            "desc": "Sourcing, PPAP hazırlık ve APQP desteği ile yeni tedarikçi devreye alma."
+          },
+          {
+            "title": "Yerinde Teknik Gelişim",
+            "desc": "Kritik parça veya süreç bazlı yerinde teknik gelişim ve kapasite inşası."
+          },
+          {
+            "title": "Stratejik Performans Yönetimi",
+            "desc": "Komuta merkezi tasarımı, OKR / BSC dağıtımı ve karar hijyeni; stratejiyi saha gerçekliğine bağlar."
+          }
+        ]
+      },
+      "wQualityAiAdvisor": {
+        "slug": "w-quality-ai-advisor",
+        "brand": "W-Quality",
+        "brandHref": "/w-quality",
+        "title": "AI Advisor",
+        "tagline": "Saha danışmanlık birikimini ölçeklenebilir bir kalite ve uyum asistanına dönüştüren yapay zekâ",
+        "definition": "W-Quality AI Advisor, W-Quality'nin saha danışmanlık birikimini ölçeklenebilir bir yapay zekâ çözümüne dönüştüren akıllı kalite ve uyum asistanıdır. ISO 9001, IATF 16949, VDA 6.3, CSR ve UNECE / REACH / ESG gibi gereklilikleri okuyan bilgi tabanı; kurumun QMS dokümanları, denetim raporları, tedarikçi skorkartları ve KPI verileri ile birleşerek yöneticiye gerçek zamanlı bir \"kalite akıl hocası\" sağlar. Sistem; doküman zekâsı, denetim hazırlık skorlaması, tedarikçi risk modeli ve regülasyon takibi olmak üzere dört çekirdek modül üzerinde çalışır ve her cevabı kaynak gösterimi (paragraf, klozül, denetim bulgusu) ile birlikte üretir.",
+        "strategicAdvantage": "Danışmanın saatleriyle ölçülen tepkiyi, dakikalarla ölçülen sürekli bir kontrol katmanına dönüştürür. \"Denetime kaç gün?\" belirsizliğini, gerçek zamanlı bir hazırlık skoru ve kapatılması gereken bulgu listesiyle değiştirir. Kurucu hafızası ve uzman silosunda kilitli kalan kalite bilgisini her vardiyada erişilebilir, sorgulanabilir ve devredilebilir bir kuruma dönüştürür. Regülasyon değişikliklerini ve müşteri özel isteklerini insan takibine bırakmadan izler; uyum boşluklarını ortaya çıkmadan kapatır. Tedarikçi performansı ve sapma sinyalleri için erken uyarı üreterek hat durdurma ve geri çağırma maliyetini doğrudan düşürür. W-Quality'nin bütüncül yöntem bilgisini bir SaaS-benzeri ürüne dönüştürerek danışmanlık ilişkisini sözleşme süresinden bağımsız sürekli bir değer üretimine taşır.",
+        "useCases": [
+          {
+            "title": "Doküman Zekâsı",
+            "desc": "QMS prosedürleri, çalışma talimatları, kontrol planları ve denetim raporları üzerinden doğal dilde sorgu, çelişki tespiti ve eksik klozül önerisi."
+          },
+          {
+            "title": "Denetim Hazırlık Skoru",
+            "desc": "ISO 9001 / IATF 16949 / VDA 6.3 ve CSR gerekliliklerine karşı sürekli olgunluk ölçümü, kritik bulgu erken uyarısı ve aksiyon önceliklendirmesi."
+          },
+          {
+            "title": "Mock Audit Kopilotu",
+            "desc": "Denetçi sorularını simüle eder, beklenen kanıtları listeler, ekibin cevaplarını standartlara göre puanlar ve boşlukları aksiyon olarak açar."
+          },
+          {
+            "title": "Tedarikçi Risk Motoru",
+            "desc": "PPAP, APQP, PPM, OTD ve şikayet verilerinden risk skoru üretir; tedarikçi gelişim yol haritası önerileri çıkarır."
+          },
+          {
+            "title": "Regülasyon ve CSR İzleme",
+            "desc": "UNECE, REACH, ESG ve müşteri özel istekleri için değişiklik bildirimleri; kurum dokümanına etkilerini özetler."
+          },
+          {
+            "title": "KPI ve Karar Asistanı",
+            "desc": "Üst yönetim dashboard'unu doğal dilde anlatan, varyans nedenlerini ve önerilen aksiyonu üreten karar destek katmanı."
+          },
+          {
+            "title": "İç Denetçi Koçu",
+            "desc": "İç denetçilere senaryo bazlı uygulama, rol yapma ve geri bildirim ile yetkinlik gelişimi."
+          },
+          {
+            "title": "Sistem Entegrasyonu",
+            "desc": "ERP, MES, QMS ve doküman yönetim sistemleri ile API üzerinden bağlantı; rol bazlı erişim ve denetim izi."
+          }
+        ]
+      },
       "smartOperationalPlatform": {
         "slug": "smart-operational-platform",
         "brand": "W-DigiLab",
         "brandHref": "/w-digilab",
-        "title": "Akıllı Operasyonel İşletim Platformu",
-        "tagline": "Tek dijital çatı altında modüler işletim platformu",
-        "definition": "Şirketin tüm operasyonel süreçlerini, iş akışlarından denetime, tedarikçi yönetiminden üretim planlamasına kadar, tek bir dijital çatıda yürüten modüler işletim platformudur. Kağıt formlar, Excel dosyaları ve e-posta onaylarıyla yürüyen süreçleri; rol bazlı onay akışları ve yapay zeka doğrulaması olan dijital modüllere taşır. Bu modüller birbirine veri besleyerek ortak bir operasyonel veri kaynağı oluşturur.",
-        "strategicAdvantage": "Her süreç adımını zaman damgası, kullanıcı bilgisi ve onay zinciriyle kayıt altına alarak uçtan uca izlenebilirlik sağlar. Bir denetimde çıkan bulgu otomatik olarak DÖF akışını tetikler; DÖF aksiyonu ilgili iş akışına yansır; tedarikçi kaynaklı bulgu ise tedarikçi risk skoruna işlenir. Modüller birlikte çalıştığı için aynı veri iki kez girilmez; operasyonel sinyaller (form kalitesi, tamamlanma süresi) yetkinlik matrisini otomatik günceller. IATF, VDA ve CSR denetimlerinde talep edilen kanıt dosyaları 1-2 tıkla üretilir.",
+        "title": "Akıllı Operasyonel ve Performans Platformu",
+        "tagline": "Operasyon ve karar destek katmanını tek dijital çatıda birleştiren modüler işletim platformu",
+        "definition": "Şirketin tüm operasyonel süreçlerini (iş akışları, denetim, tedarikçi yönetimi, üretim planlama) ve karar destek katmanını (kurumsal bilgi bankası, öngörücü performans paneli) tek bir dijital çatıda birleştiren modüler işletim ve zekâ platformudur. Operasyon tarafı; kağıt formlar, Excel dosyaları ve e-posta onaylarıyla yürüyen süreçleri rol bazlı onay akışları ve yapay zeka doğrulaması olan dijital modüllere taşır. Zekâ tarafı; bu modüllerden, saha sensörlerinden ve kurumsal dokümantasyondan gelen veriyi yapay zeka ile işleyerek hem doğal dilde sorgulanabilir bir bilgi bankası hem de üç karar katmanına (vardiya amiri, bölüm müdürü, üst yönetim) aynı anda hizmet eden öngörücü performans paneli sunar. İki katman aynı veri kaynağını paylaştığı için iş yapma ile kararı izleme arasında kopukluk kalmaz.",
+        "strategicAdvantage": "Her süreç adımı zaman damgası, kullanıcı bilgisi ve onay zinciriyle kayıt altına alınır; bu kayıtlar hem uçtan uca izlenebilirlik hem de zekâ katmanının veri yakıtı olur. Bir denetimde çıkan bulgu otomatik olarak DÖF akışını tetikler, DÖF aksiyonu ilgili iş akışına yansır, tedarikçi kaynaklı bulgu tedarikçi risk skoruna işlenir; aynı olay anında yönetim panelindeki uyum skorunu ve uyarı listesini günceller. Modüller birlikte çalıştığı için aynı veri iki kez girilmez. Operasyonel sinyaller (form kalitesi, tamamlanma süresi) yetkinlik matrisini otomatik günceller. IATF, VDA ve CSR denetimlerinde talep edilen kanıt dosyaları 1-2 tıkla üretilirken, üst yönetim aynı anda KPI eğilimlerini, ROI takibini ve makine duruş uyarılarını tek panelden izler. Kurumsal hafıza kişilerden bağımsız hale gelir.",
         "useCases": [
-          { "title": "Dijital İş Akışları", "desc": "8D ve Balık Kılçığı (Fishbone) ile Müşteri Şikayeti Yönetimi, DÖF, MOC (Management of Change) onay zincirleri, Katmanlı Süreç Denetimi (LPA) ve saha uygunsuzluk raporlama." },
-          { "title": "İç Denetim ve Yönetişim", "desc": "Yıllık denetim programı yönetimi; sistem, proses ve ürün denetimleri; CSR ve 2. taraf tedarikçi denetimleri; VDA 6.3 ve IATF 16949 dinamik checklistler." },
-          { "title": "Tedarikçi Risk ve Performans", "desc": "Canlı risk skoru (PPM, OTD, finansal, lojistik, coğrafi), scorecard yönetimi, otomatik gelişim planları ve 2. taraf denetim tetikleme." },
-          { "title": "Akıllı Üretim Planlama", "desc": "Makine kapasitesi, hammadde, vardiya ve termini birlikte optimize eden dinamik çizelgeleme; \"What-If\" senaryoları ve MES/SCADA entegrasyonu." },
-          { "title": "Yetkinlik ve Yedekleme", "desc": "Dijital iş akışı verilerinden beslenen objektif ILU matrisi; sertifika geçerlilik takibi; kritik pozisyonlar için otomatik yedekleme alarmı." }
-        ]
-      },
-      "intelligencePerformancePlatform": {
-        "slug": "intelligence-performance-platform",
-        "brand": "W-DigiLab",
-        "brandHref": "/w-digilab",
-        "title": "Akıllı Zekâ ve Performans Platformu",
-        "tagline": "Üç karar katmanı için öngörücü karar destek katmanı",
-        "definition": "Operasyonel platformdan, saha sensörlerinden, kurumsal dokümantasyondan ve KPI sistemlerinden gelen verileri yapay zeka ile işleyen bir bilgi ve karar destek katmanıdır. İki temel yetenekten oluşur: (1) doğal dil ile sorgulanabilir RAG tabanlı kurumsal bilgi bankası, (2) üç karar katmanına (vardiya amiri, bölüm müdürü, üst yönetim) aynı anda hizmet eden öngörücü performans ve komuta paneli.",
-        "strategicAdvantage": "Kurumsal hafızayı kişilerden bağımsız hale getirir: kıdemli mühendisin \"neden böyle yapıyoruz\" bilgisini belgelere ve soru-cevap kayıtlarına aktarır; sistem yalnızca güncel doküman revizyonundan cevap üretir, eski sürümleri otomatik dışlar. Performans tarafında saha verisi hat yöneticisine, haftalık trendler departman müdürüne, uzun vadeli KPI eğilimleri ve stratejik yatırım ROI'si üst yönetime sunulur. Böylece bir makine arızası, bir denetim bulgusu veya bir KPI sapması; hem operasyonel aksiyona hem de stratejik kararlara aynı anda yansır.",
-        "useCases": [
-          { "title": "AI Destekli Bilgi Sorgulama (RAG)", "desc": "Teknik standart, prosedür, 8D kaydı ve çözüm arşivi üzerinde doğal dil sorgulama; kaynak referanslı cevap üretimi." },
-          { "title": "Öngörücü Performans ve Komuta Paneli", "desc": "IATF/QMS uyum skoru, OEE, enerji tüketimi, makine duruş uyarıları; departman ve fabrika bazlı KPI dashboardları." },
-          { "title": "Stratejik Yönetişim", "desc": "OKR/BSC üzerinden hedef yayılımı, 3-6-12 aylık trend analizleri, stratejik yatırım ROI ve ilerleme takibi." },
-          { "title": "Entegre Eğitim", "desc": "WStudio video içerikleriyle bağlı etkileşimli onboarding; mühendislik know-how'ının yapılandırılmış Q&A setleriyle dijitalleştirilmesi." },
-          { "title": "Otomatik Uyarı ve Eskalasyon", "desc": "Eşik değer aşıldığında ilgili ekibe anlık bildirim; uygunsuzluk tespitinde otomatik DÖF tetikleme." }
+          {
+            "title": "Dijital İş Akışları",
+            "desc": "8D ve Balık Kılçığı ile müşteri şikayeti yönetimi, DÖF, MOC (Management of Change) onay zincirleri, Katmanlı Süreç Denetimi (LPA) ve saha uygunsuzluk raporlama."
+          },
+          {
+            "title": "İç Denetim ve Yönetişim",
+            "desc": "Yıllık denetim programı yönetimi; sistem, proses ve ürün denetimleri; CSR ve 2. taraf tedarikçi denetimleri; VDA 6.3 ve IATF 16949 dinamik checklistler."
+          },
+          {
+            "title": "Tedarikçi Risk ve Performans",
+            "desc": "Canlı risk skoru (PPM, OTD, finansal, lojistik, coğrafi), scorecard yönetimi, otomatik gelişim planları ve 2. taraf denetim tetikleme."
+          },
+          {
+            "title": "Akıllı Üretim Planlama",
+            "desc": "Makine kapasitesi, hammadde, vardiya ve termini birlikte optimize eden dinamik çizelgeleme; \"What-If\" senaryoları ve MES / SCADA entegrasyonu."
+          },
+          {
+            "title": "Yetkinlik ve Yedekleme",
+            "desc": "Dijital iş akışı verilerinden beslenen objektif ILU matrisi; sertifika geçerlilik takibi; kritik pozisyonlar için otomatik yedekleme alarmı."
+          },
+          {
+            "title": "AI Destekli Bilgi Sorgulama (RAG)",
+            "desc": "Teknik standart, prosedür, 8D kaydı ve çözüm arşivi üzerinde doğal dil sorgulama; kaynak referanslı cevap üretimi."
+          },
+          {
+            "title": "Öngörücü Performans Paneli",
+            "desc": "IATF / QMS uyum skoru, OEE, enerji tüketimi, makine duruş uyarıları; departman ve fabrika bazlı KPI dashboardları."
+          },
+          {
+            "title": "Stratejik Yönetişim",
+            "desc": "OKR / BSC üzerinden hedef yayılımı, 3-6-12 aylık trend analizleri, stratejik yatırım ROI ve ilerleme takibi."
+          },
+          {
+            "title": "Entegre Eğitim",
+            "desc": "WStudio video içerikleriyle bağlı etkileşimli onboarding; mühendislik know-how'ının yapılandırılmış Q&A setleriyle dijitalleştirilmesi."
+          },
+          {
+            "title": "Otomatik Uyarı ve Eskalasyon",
+            "desc": "Eşik değer aşıldığında ilgili ekibe anlık bildirim; uygunsuzluk tespitinde otomatik DÖF tetikleme."
+          }
         ]
       },
       "blockchainProducts": {
@@ -1067,117 +1202,174 @@
         "brand": "W-DigiLab",
         "brandHref": "/w-digilab",
         "title": "Blokzincir Ürünleri",
-        "tagline": "Tokenizasyon, DAO yönetişimi ve akıllı sözleşmeler",
-        "definition": "Blockchain teknolojisinin kurumsal dünyada en doğrudan değer ürettiği üç alanı tek bir ürün ailesinde toplar: varlık ve değer tokenizasyonu, merkeziyetsiz yönetişim (DAO) sistemleri ve akıllı sözleşmelerle otomatik çalışan iş kuralları. Şirketlerin bu araçları kendi yapılarına kontrollü biçimde entegre etmesini sağlayan modüler bir çözüm paketidir. Operasyonel Platform (01) ve Zekâ Platformundan (02) bağımsız çalışır; kendi iş mantığı ve ekonomik modeli vardır.",
+        "tagline": "Tokenizasyon, DAO yönetişimi ve akıllı sözleşmeler tek üründe",
+        "definition": "Blockchain teknolojisinin kurumsal dünyada en doğrudan değer ürettiği üç alanı tek bir ürün ailesinde toplar: varlık ve değer tokenizasyonu, merkeziyetsiz yönetişim (DAO) sistemleri ve akıllı sözleşmelerle otomatik çalışan iş kuralları. Şirketlerin bu araçları kendi yapılarına kontrollü biçimde entegre etmesini sağlayan modüler bir çözüm paketidir. Operasyonel ve Performans Platformundan bağımsız çalışır; kendi iş mantığı ve ekonomik modeli vardır.",
         "strategicAdvantage": "Merkezi otoriteye veya tek bir sisteme güvenmenin yeterli olmadığı senaryolarda devreye girer. Bir yatırım kararı tokenize edilmiş oyla alınabilir, bir teşvik programı token olarak dağıtılabilir, bir işbirliği sözleşmesi kendi kendine çalışan smart contract olarak kodlanabilir. Karar ve işlem geçmişi değiştirilemez şekilde on-chain kaydedildiği için, özellikle çok taraflı yapılarda (ortak girişim, konsorsiyum, tedarikçi ağı) güven ihtiyacını ortadan kaldırır; manuel onay döngülerini ve ara güven katmanlarını kısaltır.",
         "useCases": [
-          { "title": "Varlık ve Değer Tokenizasyonu", "desc": "Fabrika ekipmanları, envanter, fikri mülkiyet ve finansal varlıkların blockchain üzerinde tokenlere dönüştürülmesi; kısmi mülkiyet, ikincil piyasa ve otomatik transferler mümkün hale gelir." },
-          { "title": "DAO Tabanlı Kurumsal Yönetişim", "desc": "Kritik kararların (yatırım onayı, bütçe tahsisi, stratejik yön) tokenize oy hakları üzerinden alınması; karar geçmişi ve oy dağılımı on-chain, şeffaf ve değiştirilemez." },
-          { "title": "Akıllı Sözleşmeler", "desc": "Ödeme, teslimat, hakediş ve bonus gibi koşullu işlemlerin kod olarak yazılıp koşul oluştuğunda otomatik tetiklenmesi; manuel onay döngüsünü kısaltır veya ortadan kaldırır." },
-          { "title": "Çoklu-Taraf İşbirliği", "desc": "Ortak girişim, tedarikçi konsorsiyumu veya sektörel ittifaklar için merkeziyetsiz karar defterleri; hiçbir tarafın tek başına manipüle edemeyeceği ortak yönetişim." },
-          { "title": "Token Tabanlı Teşvik", "desc": "Çalışan performansı, tedarikçi başarısı veya müşteri bağlılığı gibi alanlarda ölçülebilir değerin token olarak dağıtılması ve ekosistem içinde kullanılabilmesi." },
-          { "title": "Merkeziyetsiz Kimlik (DID)", "desc": "Kullanıcı kimliklerinin ve erişim haklarının merkezi veritabanı yerine dağıtık kimlik sistemleriyle yönetilmesi; şirketler arası güvenli ve taşınabilir kimlik doğrulama." }
-        ]
-      },
-      "systemArchitectureCompliance": {
-        "slug": "system-architecture-compliance",
-        "brand": "W-Quality",
-        "brandHref": "/w-quality",
-        "title": "Sistem Mimarisi, Operasyonel Mükemmeliyet ve Uyum Güvencesi",
-        "tagline": "Her an denetime hazır, yaşayan bir kalite mimarisi",
-        "definition": "Kurumun kalite yönetim sistemini (QMS), yalnızca sertifika almaya değil, günlük operasyonu disiplin altına almaya ve denetimlere her an hazır tutmaya hizmet eden yaşayan bir mimari olarak yeniden kurgular. Süreçler, sorumluluklar, ölçüm noktaları ve onay akışları; ISO 9001 ve IATF 16949 gibi standartlarla, müşteri özel istekleri (CSR) ile ve VDA 6.3 gibi proses denetim gereklilikleriyle hizalı biçimde, şirketin gerçek iş mantığına özel olarak tasarlanır. QMS kurulumu ile denetim hazırlığı ayrı iki proje değil, aynı disiplinin iki yüzü olarak ele alınır.",
-        "strategicAdvantage": "Kalite uyumsuzluk maliyetini (COQ: ret, yeniden işleme, garanti, şikayet) doğrudan hedefler ve 3. taraf denetim sürecini stres üreten bir olay olmaktan çıkarır. Süreçleri kurucu kadronun hafızasından çıkarıp dokümante, ölçülebilir ve devredilebilir hale getirerek büyüme dönemindeki kurumsal sürekliliği korur; yeni tesis açılışı, M&A entegrasyonu veya OEM müşteri kazanımı gibi eşiklerde operasyonel hazırlığı kanıtlanabilir kılar. \"Sıfır Kritik Bulgu\" hedefiyle sertifika geçerliliğini ve pazar erişimini sürekli güvence altında tutar; regülasyon değişikliklerini (UNECE, REACH, ESG raporlama) önceden takip ederek uyum boşluğu oluşmadan kapatır.",
-        "useCases": [
-          { "title": "QMS Kurulumu ve Sertifikasyon", "desc": "QMS Kurulumu, Optimizasyonu ve ISO/IATF Sertifikasyon Hazırlığı." },
-          { "title": "IATF 16949 Uyumu", "desc": "Otomotiv Standart Uyumu ve Geçiş Programı (gap analizi, aksiyon planı, denetim koçluğu)." },
-          { "title": "Süreç Haritalama ve KPI", "desc": "Süreç Haritalama (SIPOC, turtle chart), Darboğaz Analizi ve KPI Tasarımı." },
-          { "title": "Çok Lokasyonlu Standartlaştırma", "desc": "Global Standart Yayılımı (HQ, lokal tesis) ve Çok Lokasyonlu Standartlaştırma." },
-          { "title": "Gap Analizi ve Mock Denetim", "desc": "Sistem, Proses ve Ürün Denetimlerinde Gap Analizi ve Deneme (Mock) Denetimleri." },
-          { "title": "VDA 6.3 ve CSR", "desc": "VDA 6.3 Proses Denetimi Hazırlığı ve Müşteri Özel İsteklerinin (CSR) Denetim Programına Entegrasyonu." },
-          { "title": "Regülasyon Uyumu", "desc": "Yasal Mevzuat ve Teknik Regülasyon Uyum Danışmanlığı (UNECE, REACH, ESG)." },
-          { "title": "İç Denetçi Yetkinliği", "desc": "İç Denetçi Yetkinlik Gelişimi ve Kalifikasyon Programları." }
-        ]
-      },
-      "strategicSupplierDevelopment": {
-        "slug": "supplier-development",
-        "brand": "W-Quality",
-        "brandHref": "/w-quality",
-        "title": "Stratejik Tedarikçi Gelişim Ekosistemi",
-        "tagline": "Tedarikçileri maliyet kaleminden stratejik partnere dönüştürün",
-        "definition": "Tedarikçileri denetlenen bir maliyet kalemi olmaktan çıkarıp, ana sanayinin teknik dilini konuşan ve ortak hedeflere katkı veren partnerlere dönüştüren saha ve masa başı çalışma programıdır. Tedarikçinin kendi süreçlerine girilir; ürün ve proses bazlı gelişim yol haritası çıkarılır, kapanışa kadar takibe alınır.",
-        "strategicAdvantage": "Tedarik kaynaklı kalite problemlerini (giriş ret, hat durdurma, müşteri geri çağırması) kaynağında çözer. Kritik parça veya süreçte kapasite ve kalite riskini erken tespit ederek krizi patlamadan engeller; müşteri denetiminde tedarik zinciri olgunluğunu kanıtlayarak ana sanayinin pazar konumunu güçlendirir.",
-        "useCases": [
-          { "title": "Performans İyileştirme", "desc": "Tedarikçi Performans İyileştirme Projeleri (PPM, OTD, lojistik)." },
-          { "title": "Yeni Tedarikçi Devreye Alma", "desc": "Sourcing, PPAP hazırlık ve APQP desteği ile yeni tedarikçi devreye alma." },
-          { "title": "Yerinde Teknik Gelişim", "desc": "Kritik Parça veya Süreç Bazlı Yerinde Teknik Gelişim ve Kapasite İnşası." },
-          { "title": "Kalite Yöneticisi Koçluğu", "desc": "Tedarikçi Kalite Yöneticileri için Koçluk ve Yetkinlik Transferi." }
-        ]
-      },
-      "strategicPerformanceManagement": {
-        "slug": "strategic-performance-management",
-        "brand": "W-Quality",
-        "brandHref": "/w-quality",
-        "title": "Stratejik Performans Yönetimi ve Kurumsal Hizalanma",
-        "tagline": "Stratejiyi saha gerçekliğine bağlayan yönetim altyapısı",
-        "definition": "Üst yönetimin stratejik hedeflerini saha gerçekliğine bağlayan, departmanlar arası kopukluğu gideren ve karar mekanizmalarını veri temelli hale getiren yönetim altyapısını kurar. Politika yayılımı (policy deployment), OKR veya BSC çerçeveleri ve görsel yönetim kombinasyonuyla stratejiyi her seviyeye ortak bir dile dönüştürür.",
-        "strategicAdvantage": "Stratejik plan ile operasyonel uygulama arasındaki boşluğu kapatarak karar alma hızını artırır. Bölüm bazlı KPI seti, üst yönetim dashboard'u ve düzenli gözden geçirme ritmi ile kaynak kullanımını önceliklendirir; \"çok hedef, az odak\" sorununu aşarak kurumun ivmesini önemli 3-5 hedefte yoğunlaştırır.",
-        "useCases": [
-          { "title": "Komuta Merkezi Tasarımı", "desc": "Kurumsal Komuta ve Karar Merkezlerinin Tasarımı (dashboard mimarisi, gözden geçirme rutinleri)." },
-          { "title": "Çapraz Fonksiyonel Hizalanma", "desc": "Çapraz Fonksiyonel Hedef Hizalanması (OKR veya BSC deployment)." },
-          { "title": "Stratejik Proje Yönetişimi", "desc": "Stratejik Dönüşüm Proje Yönetişimi (yeni ürün, lokasyon veya teknoloji entegrasyonları)." },
-          { "title": "Karar Hijyeni ve Ritüel", "desc": "Yönetim Ekibi için Karar Hijyeni ve Ritüel Tasarımı (haftalık, aylık, çeyreklik)." }
+          {
+            "title": "Varlık ve Değer Tokenizasyonu",
+            "desc": "Fabrika ekipmanları, envanter, fikri mülkiyet ve finansal varlıkların blockchain üzerinde tokenlere dönüştürülmesi; kısmi mülkiyet, ikincil piyasa ve otomatik transferler mümkün hale gelir."
+          },
+          {
+            "title": "DAO Tabanlı Kurumsal Yönetişim",
+            "desc": "Kritik kararların (yatırım onayı, bütçe tahsisi, stratejik yön) tokenize oy hakları üzerinden alınması; karar geçmişi ve oy dağılımı on-chain, şeffaf ve değiştirilemez."
+          },
+          {
+            "title": "Akıllı Sözleşmeler",
+            "desc": "Ödeme, teslimat, hakediş ve bonus gibi koşullu işlemlerin kod olarak yazılıp koşul oluştuğunda otomatik tetiklenmesi; manuel onay döngüsünü kısaltır veya ortadan kaldırır."
+          },
+          {
+            "title": "Çoklu-Taraf İşbirliği",
+            "desc": "Ortak girişim, tedarikçi konsorsiyumu veya sektörel ittifaklar için merkeziyetsiz karar defterleri; hiçbir tarafın tek başına manipüle edemeyeceği ortak yönetişim."
+          },
+          {
+            "title": "Token Tabanlı Teşvik",
+            "desc": "Çalışan performansı, tedarikçi başarısı veya müşteri bağlılığı gibi alanlarda ölçülebilir değerin token olarak dağıtılması ve ekosistem içinde kullanılabilmesi."
+          },
+          {
+            "title": "Merkeziyetsiz Kimlik (DID)",
+            "desc": "Kullanıcı kimliklerinin ve erişim haklarının merkezi veritabanı yerine dağıtık kimlik sistemleriyle yönetilmesi; şirketler arası güvenli ve taşınabilir kimlik doğrulama."
+          }
         ]
       },
       "aiContentProduction": {
         "slug": "ai-content-production",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "AI Destekli Content Production ve Business Storytelling",
-        "tagline": "Sinematik hikaye anlatımı ile yapay zeka üretim altyapısı",
-        "definition": "Şirketlerin bilgi, deneyim ve başarı hikayelerini; yapay zeka destekli video üretim altyapısı ile sinematik hikaye anlatımı disiplinini birleştiren uçtan uca medya üretim hizmetidir. Karmaşık iş süreçlerini, teknik know-how'ı ve liderlik içgörülerini modern, izlenebilir ve etkileyici video formatlarına dönüştürürüz. AI araçları üretim hızını ve ölçeği sağlar; storytelling ise içeriğin akılda kalıcılığını ve duygusal etkisini belirler.",
-        "strategicAdvantage": "Klasik kurumsal video yapımının zaman ve bütçe darboğazını aşar: AI avatar sunucular ve otomatik seslendirme ile çok dilli içerik tek bir çekimden türetilir; storytelling çerçevesi ise içeriğin sıkıcı bir bilgi aktarımı olmaktan çıkıp izlenen, paylaşılan ve hatırlanan bir hikayeye dönüşmesini sağlar. Sonuç: şirketin iç bilgi birikimi ve dış itibar hikayeleri; ölçeklenebilir, marka standardında ve uluslararası pazara doğrudan hitap eden bir medya varlığına dönüşür.",
+        "title": "AI Destekli Content Production, Business Storytelling ve Knowledge Channels",
+        "tagline": "Yapay zeka, sinematik storytelling ve markalı yayın kanalları tek hizmette",
+        "definition": "Şirketlerin bilgi, deneyim ve başarı hikayelerini; yapay zeka destekli video üretim altyapısı, sinematik hikaye anlatımı disiplini ve markalı kurumsal yayın kanalları ile birleştiren uçtan uca medya hizmetidir. Karmaşık iş süreçlerini, teknik know-how'ı ve liderlik içgörülerini modern, izlenebilir ve etkileyici video formatlarına dönüştürürüz; ardından bu içerikleri çalışanlara, tedarikçilere ve dış paydaşlara yönelik sürdürülebilir, abone olunabilir kanallar üzerinden yayınlarız. AI araçları üretim hızını ve ölçeği sağlar; storytelling içeriğin akılda kalıcılığını ve duygusal etkisini belirler; kanal yapısı ise üretilen bilginin zamanla büyüyen, marka standardında bir kurumsal medya kütüphanesine dönüşmesini sağlar.",
+        "strategicAdvantage": "Klasik kurumsal video yapımının zaman ve bütçe darboğazını aşar: AI avatar sunucular ve otomatik seslendirme ile çok dilli içerik tek bir çekimden türetilir; storytelling çerçevesi içeriği sıkıcı bilgi aktarımı olmaktan çıkarıp izlenen, paylaşılan ve hatırlanan bir hikayeye dönüştürür. Kanal yapısı ile içerik tek seferlik bir üretim olmaktan çıkar; düzenli yayın takvimi, içerik editörlüğü ve abonelik deneyimiyle çalışan bir kurumsal medya operasyonu kurulur. Çalışan bir Netflix veya Spotify mantığıyla içeriğe erişir; tedarikçi kendi geliştirme içeriklerini tek noktadan takip eder; yeni katılanlar yapılandırılmış bir akışla şirketi öğrenir.",
         "useCases": [
-          { "title": "AI Video Production", "desc": "Senaryo geliştirmeden post-prodüksiyona kadar yapay zeka destekli üretim akışı; minimum çekim, maksimum çıktı." },
-          { "title": "AI Avatar Sunucular", "desc": "Gerçek sunucu ihtiyacı olmadan, şirket sözcüsü veya eğitmen rolünde çok dilli dijital sunucular." },
-          { "title": "Çok Dilli İçerik Üretimi", "desc": "Tek ana kaynaktan İngilizce, Almanca, Türkçe ve talep edilen diğer dillerde otomatik lokalizasyon." },
-          { "title": "Otomatik Storytelling", "desc": "Veriden veya dokümandan hikaye kurgusuna, AI destekli otomatik anlatım formatları." },
-          { "title": "Company Stories", "desc": "Şirketin kuruluş, dönüşüm veya kültür hikayelerinin sinematik anlatımı." },
-          { "title": "Innovation Stories", "desc": "Ar-Ge projelerinin, patent süreçlerinin ve teknolojik atılımların belgesel formatında sunumu." },
-          { "title": "Leadership Insights", "desc": "Üst yönetim vizyonunun, stratejik kararların ve sektörel içgörülerin birinci ağızdan aktarımı." },
-          { "title": "Industry Documentaries", "desc": "Sektörel dönüşümlerin, tedarik zinciri hikayelerinin veya rekabet dinamiklerinin kurumsal belgeselleri." }
+          {
+            "title": "AI Video Production",
+            "desc": "Senaryo geliştirmeden post-prodüksiyona kadar yapay zeka destekli üretim akışı; minimum çekim, maksimum çıktı."
+          },
+          {
+            "title": "AI Avatar Sunucular",
+            "desc": "Gerçek sunucu ihtiyacı olmadan, şirket sözcüsü veya eğitmen rolünde çok dilli dijital sunucular."
+          },
+          {
+            "title": "Çok Dilli İçerik Üretimi",
+            "desc": "Tek ana kaynaktan İngilizce, Almanca, Türkçe ve talep edilen diğer dillerde otomatik lokalizasyon."
+          },
+          {
+            "title": "Otomatik Storytelling Videoları",
+            "desc": "Veriden veya dokümandan hikaye kurgusuna, AI destekli otomatik anlatım formatları."
+          },
+          {
+            "title": "Company Stories",
+            "desc": "Şirketin kuruluş, dönüşüm veya kültür hikayelerinin sinematik anlatımı."
+          },
+          {
+            "title": "Innovation Stories",
+            "desc": "Ar-Ge projelerinin, patent süreçlerinin ve teknolojik atılımların belgesel formatında sunumu."
+          },
+          {
+            "title": "Leadership Insights",
+            "desc": "Üst yönetim vizyonunun, stratejik kararların ve sektörel içgörülerin birinci ağızdan aktarımı."
+          },
+          {
+            "title": "Industry Documentaries",
+            "desc": "Sektörel dönüşümlerin, tedarik zinciri hikayelerinin veya rekabet dinamiklerinin kurumsal belgeselleri."
+          },
+          {
+            "title": "Internal Learning Channels",
+            "desc": "Düzenli yayın takvimi olan iç eğitim ve mikro öğrenme kanalları; rol bazlı içerik akışı."
+          },
+          {
+            "title": "Supplier Development Channels",
+            "desc": "Tedarikçiler için marka standardında gelişim, standart güncellemesi ve teknik rehberlik kanalı."
+          },
+          {
+            "title": "Onboarding Channels",
+            "desc": "Yeni çalışanlara yapılandırılmış ilk 30, 60 ve 90 gün video akışı ve rol bazlı oryantasyon serisi."
+          },
+          {
+            "title": "Corporate Storytelling Channels",
+            "desc": "Dış paydaşlara (müşteri, yatırımcı, aday çalışan) yönelik düzenli yayınlanan kurumsal hikaye kanalı."
+          }
         ]
       },
       "businessflix": {
         "slug": "businessflix",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "BusinessFlix: Show ve Dizi Formatında Kurumsal İçerik",
+        "title": "BusinessFlix",
         "tagline": "Eğitim videosu değil, izlenmek için üretilmiş yayın deneyimi",
         "definition": "Bilgi ve deneyimi klasik eğitim veya tanıtım formatlarından çıkarıp, gerçek bir show veya mini dizi deneyimine dönüştüren premium içerik üretim servisidir. Kurumsal konuları (kalite, denetim, tedarikçi gelişimi, yetenek yönetimi) sezonluk yapıda, karakterler, gerilim ve dramatik yapı ile kurgular. İçerik; eğitim videosu değil, izlenmek için üretilmiş bir yayın deneyimidir.",
         "strategicAdvantage": "Şirket içi eğitim ve kültürel içerik alanındaki en büyük sorunu (tamamlanma oranı düşüklüğü ve geride bir şey bırakmama) çözer. İzleyici bir show ya da dizi izlediğini hissettiği için içerik gönüllü tüketilir, sosyal olarak konuşulur ve tekrar izlenir. Otomotivdeki denetim stresi, tedarikçi krizi veya kalite liderliği gibi konular; karakter ve hikaye üzerinden anlatıldığında hem çalışan hem dış paydaş için unutulmaz bir marka deneyimi üretir.",
         "useCases": [
-          { "title": "Audit Drama", "desc": "Denetim süreçlerini sahnelerle yeniden kurgulayan, izlenebilir gerilim formatındaki eğitim dizisi." },
-          { "title": "Supplier Development Stories", "desc": "Tedarikçi gelişim hikayelerinin saha gerçekliğinden, karakterli belgesel anlatımı." },
-          { "title": "Quality Queen Show", "desc": "Kalite liderlerini öne çıkaran, mentorluk ve vaka tartışmalarını show formatında sunan dizi." },
-          { "title": "Industry Mini Series", "desc": "Sektörel konuların çok bölümlü mini dizi halinde işlendiği, izlenmek için üretilen format." },
-          { "title": "Talent Development Series", "desc": "Yetkinlik gelişimi, kariyer yolculuğu ve iç mentorluk hikayelerinin dizi formatında sunumu." }
+          {
+            "title": "Audit Drama",
+            "desc": "Denetim süreçlerini sahnelerle yeniden kurgulayan, izlenebilir gerilim formatındaki eğitim dizisi."
+          },
+          {
+            "title": "Supplier Development Stories",
+            "desc": "Tedarikçi gelişim hikayelerinin saha gerçekliğinden, karakterli belgesel anlatımı."
+          },
+          {
+            "title": "Quality Queen Show",
+            "desc": "Kalite liderlerini öne çıkaran, mentorluk ve vaka tartışmalarını show formatında sunan dizi."
+          },
+          {
+            "title": "Industry Mini Series",
+            "desc": "Sektörel konuların çok bölümlü mini dizi halinde işlendiği, izlenmek için üretilen format."
+          },
+          {
+            "title": "Talent Development Series",
+            "desc": "Yetkinlik gelişimi, kariyer yolculuğu ve iç mentorluk hikayelerinin dizi formatında sunumu."
+          }
         ]
       },
-      "corporateKnowledgeChannels": {
-        "slug": "corporate-knowledge-channels",
+      "talentManagement": {
+        "slug": "talent-management",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "Corporate Knowledge Channels",
-        "tagline": "Markalı, sürdürülebilir kurumsal bilgi kanalları",
-        "definition": "Şirketler için çalışanlara, tedarikçilere ve iş ortaklarına yönelik markalı, sürdürülebilir bilgi kanalları tasarlayan ve işleten servistir. Tek seferlik video üretimi değil; yayın planı, içerik editörlüğü ve abonelik deneyimi ile çalışan bir kurumsal medya kanalıdır. Hedef kitle ve amaca göre iç öğrenme, tedarikçi gelişimi, oryantasyon veya dış hikaye anlatımı kanalı olarak konumlanır.",
-        "strategicAdvantage": "Kurumsal iletişim, eğitim ve onboarding'i dağınık video dosyaları ya da PDF dokümantasyonundan; düzenli, aranabilir ve marka standardında bir kanal deneyimine dönüştürür. Çalışan bir Netflix veya Spotify mantığıyla içeriğe erişir; tedarikçi kendi geliştirme içeriklerini tek noktadan takip eder; yeni katılanlar ilk haftalarda yapılandırılmış bir akışla şirketi öğrenir. Bilgi bir kez üretildiğinde kaybolmaz; kanal varlığı sayesinde zamanla büyüyen bir kurumsal medya kütüphanesine dönüşür.",
+        "title": "Talent Management Platformu",
+        "tagline": "AI mentor, beceri ölçümü ve yetkinlik haritası tek platformda",
+        "definition": "Çalışanların yetkinlik gelişimini, beceri ölçümünü ve mentorluk deneyimini tek bir dijital platformda birleştiren AI destekli yetenek yönetimi servisidir. Çalışan bir konuda gelişmek istediğinde, AI mentor ile yazılı, sesli veya görüntülü görüşme yaparak kişisel öğrenme yolunu çizer; eğitmenler ve iç uzmanlar gerektiğinde mikro video içerikler yükleyerek platformu zenginleştirir; sistem, hem AI mülakatları hem de pratik görevler üzerinden çalışanın gerçek beceri seviyesini ölçer ve gelişim eğrisini görünür kılar.",
+        "strategicAdvantage": "Klasik eğitim platformlarının iki temel zayıflığını (ölçülemeyen öğrenme ve kişiye özelleşmeyen içerik) ortadan kaldırır. Her çalışan kendi seviyesinden başlayan, AI mentorun konuşma yoluyla ilerlettiği bir gelişim yolculuğuna sahip olur; eğitmen sadece kritik bilgi alanlarına video yükleyerek ölçeklenir, yüzlerce kişiye birebir vakit ayırmak zorunda kalmaz. Yönetici tarafında ise yetkinlik haritası gerçek zamanlı: kim hangi konuda hazır, kim hangi konuda eksik, hangi pozisyon için yedekleme var, tek dashboard'dan görünür. Bu sayede terfi, rotasyon, yedekleme ve eğitim yatırımı kararları sezgiye değil, ölçülmüş veriye dayanır.",
         "useCases": [
-          { "title": "Internal Learning", "desc": "Düzenli yayın takvimi olan iç eğitim ve mikro öğrenme kanalları; rol bazlı içerik akışı." },
-          { "title": "Supplier Development", "desc": "Tedarikçiler için marka standardında gelişim, standart güncellemesi ve teknik rehberlik kanalı." },
-          { "title": "Onboarding", "desc": "Yeni çalışanlara yapılandırılmış ilk 30, 60 ve 90 gün video akışı ve rol bazlı oryantasyon serisi." },
-          { "title": "Corporate Storytelling", "desc": "Dış paydaşlara (müşteri, yatırımcı, aday çalışan) yönelik, düzenli yayınlanan kurumsal hikaye kanalı." }
+          {
+            "title": "AI Mentor",
+            "desc": "Çalışanın AI mentor ile metin, sesli veya video tabanlı 1-1 görüşme yaparak konu öğrenmesi, soru sorması ve geri bildirim alması."
+          },
+          {
+            "title": "Beceri Ölçme ve Sertifikasyon",
+            "desc": "AI tarafından yürütülen yapılandırılmış değerlendirmeler, vaka çözümleri ve pratik görevlerle çalışanın gerçek beceri seviyesinin ölçülmesi."
+          },
+          {
+            "title": "Eğitmen Video ve Mikro İçerik",
+            "desc": "İç uzmanların ve dış eğitmenlerin kısa, konu odaklı video parçaları yüklediği; AI mentorun bu içerikleri ilgili sorulara bağladığı içerik altyapısı."
+          },
+          {
+            "title": "Kişiselleştirilmiş Gelişim Yolu",
+            "desc": "Çalışanın rolüne, mevcut beceri seviyesine ve kariyer hedefine göre AI tarafından dinamik olarak oluşturulan, sürekli güncellenen öğrenme yolu."
+          },
+          {
+            "title": "Yetkinlik Haritası ve Yedekleme",
+            "desc": "Departman ve şirket genelinde yetkinlik dağılımının, kritik pozisyon yedeklemelerinin ve gelişim eğrilerinin görsel olarak izlenmesi."
+          },
+          {
+            "title": "Mülakat Simülasyonu",
+            "desc": "Çalışanların önemli görüşmeler, sunumlar veya yeni rol mülakatları öncesinde AI ile pratik mülakat yapabilmesi; ses tonu, akıcılık ve içerik geri bildirimi."
+          },
+          {
+            "title": "Mentorluk ve Koçluk Akışı",
+            "desc": "AI mentorun çözemediği veya insan dokunuşu gereken durumlarda iç mentor veya dış koçla otomatik eşleştirme."
+          }
         ]
       }
     }
+  },
+  "notFoundPage": {
+    "eyebrow": "HATA · 404",
+    "title": "Sayfa Bulunamadı",
+    "subtitle": "Off the grid",
+    "description": "Aradığınız sayfa burada değil. Link yanlış olabilir ya da sayfa taşınmış olabilir. Endişelenmeyin; aşağıdan ana sayfaya dönebilir veya doğrudan bize ulaşabilirsiniz.",
+    "homeCta": "Ana Sayfaya Dön",
+    "contactCta": "İletişime Geç",
+    "signalLabel": "TRANSMISSION LOST"
   }
 }

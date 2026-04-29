@@ -1,5 +1,6 @@
-import ProductDetailLayout from "@/components/layout/ProductDetailLayout";
+import { redirect } from "next/navigation";
 
+// Legacy slug — merged into AI Content Production & Knowledge Channels.
 export default function Page() {
-  return <ProductDetailLayout productKey="corporateKnowledgeChannels" />;
+  redirect("/products/ai-content-production");
 }

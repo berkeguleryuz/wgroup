@@ -18,9 +18,9 @@ const categories = [
 ] as const;
 
 const categoryImages: Record<string, string> = {
-  knowledge: "/w/blog/knowledge.webp",
-  digitalization: "/w/blog/digitalization.webp",
-  qualityManagement: "/w/blog/quality-management.webp",
+  knowledge: "/w-new/wn3.webp",
+  digitalization: "/w-new/wn2.webp",
+  qualityManagement: "/w-new/wn1.webp",
 };
 
 const categoryColors: Record<string, string> = {

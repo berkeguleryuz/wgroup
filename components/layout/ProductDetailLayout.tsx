@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -14,6 +14,7 @@ import {
   productSlugs,
   productDivision,
   divisionHref,
+  divisionAccent,
   relatedProducts,
 } from "@/lib/products";
 
@@ -133,6 +134,22 @@ export default function ProductDetailLayout({ productKey }: Props) {
   const definitionParts = definition.split(/(?<=[.!?])\s+/);
   const definitionLead = definitionParts.slice(0, 1).join(" ");
   const definitionRest = definitionParts.slice(1).join(" ");
+
+  /* Group strategic-advantage sentences into ~3 readable chunks */
+  const strategicSentences = strategic
+    .split(/(?<=[.!?])\s+/)
+    .map((s) => s.trim())
+    .filter(Boolean);
+  const strategicChunks: string[] = (() => {
+    if (strategicSentences.length <= 3) return strategicSentences;
+    const target = 3;
+    const perGroup = Math.ceil(strategicSentences.length / target);
+    const out: string[] = [];
+    for (let i = 0; i < strategicSentences.length; i += perGroup) {
+      out.push(strategicSentences.slice(i, i + perGroup).join(" "));
+    }
+    return out;
+  })();
 
   return (
     <div ref={pageRef} style={{ background: "var(--background)" }}>
@@ -278,9 +295,30 @@ export default function ProductDetailLayout({ productKey }: Props) {
         className="relative py-28 sm:py-36"
         style={{ background: "var(--background)" }}
       >
+        {/* Atmospheric backdrop */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div
+            className="absolute -left-40 top-16 h-[440px] w-[440px] rounded-full blur-[130px]"
+            style={{ background: "rgba(30,109,181,0.07)" }}
+          />
+          <div
+            className="absolute -right-40 bottom-16 h-[400px] w-[400px] rounded-full blur-[130px]"
+            style={{ background: "rgba(8,145,178,0.06)" }}
+          />
+          {/* Drafting grid */}
+          <div
+            className="absolute inset-0 opacity-[0.025]"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
+              backgroundSize: "80px 80px",
+            }}
+          />
+        </div>
 
-        <div className="relative z-10 mx-auto max-w-5xl px-6">
-          <div className="pd-fade mb-14 flex items-center gap-4">
+        <div className="relative z-10 mx-auto max-w-6xl px-6">
+          {/* Eyebrow */}
+          <div className="pd-fade mb-16 flex items-center gap-4">
             <div
               className="h-[3px] w-12 rounded-full"
               style={{
@@ -294,34 +332,44 @@ export default function ProductDetailLayout({ productKey }: Props) {
             >
               {t("strategicAdvantageLabel")}
             </h2>
+            <div className="h-px flex-1 bg-gradient-to-r from-primary/25 via-white/[0.06] to-transparent" />
+            <span
+              aria-hidden
+              className="hidden items-center gap-1.5 sm:inline-flex"
+            >
+              <span
+                className="block h-1 w-1 rounded-full"
+                style={{ background: "var(--primary)" }}
+              />
+              <span
+                className="block h-1 w-1 rounded-full"
+                style={{ background: "var(--accent-teal)", opacity: 0.7 }}
+              />
+              <span
+                className="block h-1 w-1 rounded-full"
+                style={{ background: "var(--accent-purple)", opacity: 0.4 }}
+              />
+            </span>
           </div>
 
-          <div
-            className="pd-approach-block relative overflow-hidden rounded-3xl p-8 sm:p-14"
-            style={{
-              background:
-                "linear-gradient(135deg, rgba(30,109,181,0.06), rgba(8,145,178,0.03))",
-              border: "1px solid rgba(30,109,181,0.14)",
-            }}
-          >
-            <div className="relative z-10 flex items-start gap-6">
-              <span
-                className="mt-2 hidden shrink-0 self-stretch sm:block"
-                style={{
-                  width: "3px",
-                  borderRadius: "3px",
-                  background:
-                    "linear-gradient(to bottom, var(--primary), var(--accent-teal))",
-                  opacity: 0.8,
-                }}
+          {/* Editorial strata composition */}
+          <div className="relative">
+            {/* Vertical thread on the left edge — runs through all strata */}
+            <div
+              className="pointer-events-none absolute bottom-0 left-0 top-0 hidden w-px sm:block"
+              style={{
+                background:
+                  "linear-gradient(to bottom, transparent 0%, rgba(30,109,181,0.45) 18%, rgba(8,145,178,0.45) 82%, transparent 100%)",
+              }}
+            />
+            {strategicChunks.map((chunk, i) => (
+              <AdvantageStrata
+                key={i}
+                index={i}
+                text={chunk}
+                total={strategicChunks.length}
               />
-              <p
-                className="flex-1 text-lg leading-[1.85] text-white/80 sm:text-xl"
-                style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-              >
-                {strategic}
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -403,7 +451,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((rk) => (
                 <RelatedCard
                   key={rk}
@@ -413,6 +461,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
                   title={t(`items.${rk}.title`)}
                   tagline={t(`items.${rk}.tagline`)}
                   cta={t("eyebrow")}
+                  accentColor={divisionAccent[productDivision[rk]].solid}
                 />
               ))}
             </div>
@@ -492,6 +541,347 @@ export default function ProductDetailLayout({ productKey }: Props) {
   );
 }
 
+/* ---------- Strategic-advantage editorial strata ----------
+   No cards. A magazine-spread typographic composition where each
+   chunk becomes its own asymmetric "strata": animated SVG decoration
+   on the outer side (alternating left/right), and Barlow body text.
+   Hairline rule dividers + a vertical thread create editorial cadence.
+*/
+
+const ADV_DECORATIONS = [StarBurstDecoration, OrbitalDecoration, ConstellationDecoration];
+
+function AdvantageStrata({
+  index,
+  text,
+  total,
+}: {
+  index: number;
+  text: string;
+  total: number;
+}) {
+  const isLast = index === total - 1;
+  const flipped = index % 2 === 1;
+  const Decoration = ADV_DECORATIONS[index % ADV_DECORATIONS.length];
+
+  const decoration = (
+    <div
+      className={`pd-approach-block relative flex ${
+        flipped ? "sm:justify-end" : "sm:justify-start"
+      }`}
+    >
+      <Decoration />
+    </div>
+  );
+
+  const body = (
+    <div className="pd-approach-block relative max-w-2xl">
+      {/* Subtle leading rule */}
+      <div
+        className={`mb-6 flex items-center gap-3 ${
+          flipped ? "sm:justify-end" : ""
+        }`}
+      >
+        <span
+          aria-hidden
+          className="block h-px w-12"
+          style={{
+            background: flipped
+              ? "linear-gradient(to left, var(--primary), transparent)"
+              : "linear-gradient(to right, var(--primary), transparent)",
+            order: flipped ? 2 : 0,
+          }}
+        />
+        <span
+          aria-hidden
+          className="block h-1.5 w-1.5 rotate-45"
+          style={{
+            background:
+              "linear-gradient(135deg, var(--primary), var(--accent-teal))",
+          }}
+        />
+      </div>
+
+      {/* Body */}
+      <p
+        className={`text-[17px] leading-[1.78] text-white/85 sm:text-[19px] sm:leading-[1.72] ${
+          flipped ? "sm:text-right" : ""
+        }`}
+        style={{
+          fontFamily: "var(--font-barlow), system-ui, sans-serif",
+          letterSpacing: "-0.003em",
+        }}
+      >
+        {text}
+      </p>
+
+      {/* Trailing accent dot row */}
+      <div
+        className={`mt-7 flex items-center gap-1.5 ${
+          flipped ? "sm:justify-end" : ""
+        }`}
+      >
+        <span
+          className="block h-1 w-1 rounded-full"
+          style={{ background: "var(--primary)", opacity: 0.85 }}
+        />
+        <span
+          className="block h-1 w-1 rounded-full"
+          style={{ background: "var(--accent-teal)", opacity: 0.55 }}
+        />
+        <span
+          className="block h-1 w-1 rounded-full"
+          style={{ background: "var(--accent-purple)", opacity: 0.35 }}
+        />
+      </div>
+    </div>
+  );
+
+  return (
+    <div
+      className={`relative py-12 sm:py-20 ${
+        isLast ? "" : "border-b border-white/[0.06]"
+      }`}
+    >
+      <div
+        className={`grid items-center gap-8 sm:gap-14 ${
+          flipped
+            ? "sm:grid-cols-[minmax(0,1fr)_clamp(160px,18vw,240px)]"
+            : "sm:grid-cols-[clamp(160px,18vw,240px)_minmax(0,1fr)]"
+        }`}
+      >
+        {flipped ? (
+          <>
+            {body}
+            {decoration}
+          </>
+        ) : (
+          <>
+            {decoration}
+            {body}
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ---------- Animated SVG decorations (replace numerals) ---------- */
+
+function StarBurstDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      {/* Soft glow halo */}
+      <div
+        className="absolute inset-[18%] rounded-full blur-2xl"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in srgb, var(--primary) 38%, transparent), transparent 70%)",
+          animation: "adv-pulse-soft 4.5s ease-in-out infinite",
+        }}
+      />
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--accent-teal)" />
+          </linearGradient>
+          <radialGradient id="advCore1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="60%" stopColor="var(--primary)" stopOpacity="0.6" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Slow-rotating outer ring */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-slow 40s linear infinite" }}>
+          <circle
+            cx="100"
+            cy="100"
+            r="78"
+            fill="none"
+            stroke="url(#advGrad1)"
+            strokeWidth="1"
+            strokeDasharray="2 6"
+            opacity="0.55"
+          />
+        </g>
+
+        {/* Counter-rotating star burst */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-rev 28s linear infinite" }}>
+          <path
+            d="M100 28 L106 92 L168 100 L106 108 L100 172 L94 108 L32 100 L94 92 Z"
+            fill="url(#advGrad1)"
+            opacity="0.85"
+          />
+          <path
+            d="M100 50 L103 96 L150 100 L103 104 L100 150 L97 104 L50 100 L97 96 Z"
+            fill="white"
+            opacity="0.18"
+          />
+        </g>
+
+        {/* Glowing core */}
+        <circle cx="100" cy="100" r="14" fill="url(#advCore1)">
+          <animate attributeName="r" values="12;16;12" dur="3.2s" repeatCount="indefinite" />
+        </circle>
+
+        {/* Twinkling sparkles */}
+        <circle cx="40" cy="60" r="1.8" fill="white" style={{ animation: "adv-twinkle 2.4s ease-in-out infinite" }} />
+        <circle cx="160" cy="55" r="1.5" fill="white" style={{ animation: "adv-twinkle 3s ease-in-out infinite", animationDelay: "0.6s" }} />
+        <circle cx="50" cy="160" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.8s ease-in-out infinite", animationDelay: "1.2s" }} />
+        <circle cx="155" cy="150" r="1.6" fill="white" style={{ animation: "adv-twinkle 2.2s ease-in-out infinite", animationDelay: "0.3s" }} />
+      </svg>
+    </div>
+  );
+}
+
+function OrbitalDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      <div
+        className="absolute inset-[20%] rounded-full blur-2xl"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in srgb, var(--accent-teal) 42%, transparent), transparent 70%)",
+          animation: "adv-pulse-soft 5s ease-in-out infinite",
+          animationDelay: "0.4s",
+        }}
+      />
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--accent-teal)" />
+            <stop offset="100%" stopColor="var(--primary)" />
+          </linearGradient>
+          <radialGradient id="advCore2" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Three concentric pulse rings */}
+        <circle cx="100" cy="100" r="40" fill="none" stroke="url(#advGrad2)" strokeWidth="1.2" opacity="0.7"
+                style={{ transformOrigin: "100px 100px", animation: "adv-pulse-ring 3.4s ease-out infinite" }} />
+        <circle cx="100" cy="100" r="40" fill="none" stroke="url(#advGrad2)" strokeWidth="1.2" opacity="0.7"
+                style={{ transformOrigin: "100px 100px", animation: "adv-pulse-ring 3.4s ease-out infinite", animationDelay: "1.1s" }} />
+        <circle cx="100" cy="100" r="40" fill="none" stroke="url(#advGrad2)" strokeWidth="1.2" opacity="0.7"
+                style={{ transformOrigin: "100px 100px", animation: "adv-pulse-ring 3.4s ease-out infinite", animationDelay: "2.2s" }} />
+
+        {/* Counter-rotating orbital ring with two satellite dots */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-slow 18s linear infinite" }}>
+          <circle cx="100" cy="100" r="62" fill="none" stroke="url(#advGrad2)" strokeWidth="1" opacity="0.4" />
+          <circle cx="100" cy="38" r="3.5" fill="var(--primary)" />
+          <circle cx="100" cy="162" r="2.5" fill="var(--accent-teal)" opacity="0.85" />
+        </g>
+
+        {/* Outer dotted ring */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-rev 32s linear infinite" }}>
+          <circle cx="100" cy="100" r="86" fill="none" stroke="url(#advGrad2)" strokeWidth="1" strokeDasharray="1 5" opacity="0.5" />
+        </g>
+
+        {/* Center crosshair */}
+        <line x1="100" y1="86" x2="100" y2="114" stroke="white" strokeWidth="1" opacity="0.55" />
+        <line x1="86" y1="100" x2="114" y2="100" stroke="white" strokeWidth="1" opacity="0.55" />
+
+        {/* Glowing core */}
+        <circle cx="100" cy="100" r="9" fill="url(#advCore2)">
+          <animate attributeName="r" values="7;11;7" dur="2.8s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    </div>
+  );
+}
+
+function ConstellationDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      <div
+        className="absolute inset-[22%] rounded-full blur-2xl"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in srgb, var(--accent-purple) 38%, transparent), transparent 70%)",
+          animation: "adv-pulse-soft 6s ease-in-out infinite",
+          animationDelay: "0.8s",
+        }}
+      />
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad3" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="50%" stopColor="var(--accent-purple)" />
+            <stop offset="100%" stopColor="var(--accent-teal)" />
+          </linearGradient>
+          <radialGradient id="advCore3" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="var(--accent-purple)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Constellation lines (slowly drifting in opacity) */}
+        <g
+          opacity="0.6"
+          style={{
+            transformOrigin: "center",
+            animation: "adv-spin-slow 60s linear infinite",
+          }}
+        >
+          <line x1="50" y1="60" x2="100" y2="100" stroke="url(#advGrad3)" strokeWidth="0.9" />
+          <line x1="100" y1="100" x2="150" y2="60" stroke="url(#advGrad3)" strokeWidth="0.9" />
+          <line x1="100" y1="100" x2="155" y2="140" stroke="url(#advGrad3)" strokeWidth="0.9" />
+          <line x1="100" y1="100" x2="60" y2="155" stroke="url(#advGrad3)" strokeWidth="0.9" />
+          <line x1="50" y1="60" x2="60" y2="155" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
+          <line x1="150" y1="60" x2="155" y2="140" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
+
+          {/* Star nodes — twinkling */}
+          <circle cx="50" cy="60" r="3" fill="var(--primary)" style={{ animation: "adv-twinkle 2.6s ease-in-out infinite" }} />
+          <circle cx="150" cy="60" r="2.5" fill="var(--accent-teal)" style={{ animation: "adv-twinkle 3s ease-in-out infinite", animationDelay: "0.5s" }} />
+          <circle cx="155" cy="140" r="2.5" fill="var(--accent-purple)" style={{ animation: "adv-twinkle 2.8s ease-in-out infinite", animationDelay: "1s" }} />
+          <circle cx="60" cy="155" r="2.8" fill="var(--primary)" style={{ animation: "adv-twinkle 2.4s ease-in-out infinite", animationDelay: "1.4s" }} />
+        </g>
+
+        {/* Hexagonal frame — slowly rotating reverse */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-rev 50s linear infinite" }}>
+          <polygon
+            points="100,30 160,65 160,135 100,170 40,135 40,65"
+            fill="none"
+            stroke="url(#advGrad3)"
+            strokeWidth="0.8"
+            strokeDasharray="1 4"
+            opacity="0.45"
+          />
+        </g>
+
+        {/* Central star */}
+        <g style={{ transformOrigin: "center", animation: "adv-drift 4s ease-in-out infinite" }}>
+          <path
+            d="M100 80 L104 96 L120 100 L104 104 L100 120 L96 104 L80 100 L96 96 Z"
+            fill="url(#advGrad3)"
+          />
+          <circle cx="100" cy="100" r="5" fill="url(#advCore3)" />
+        </g>
+
+        {/* Outer scattered sparkles */}
+        <circle cx="30" cy="100" r="1.2" fill="white" style={{ animation: "adv-twinkle 2s ease-in-out infinite" }} />
+        <circle cx="170" cy="100" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.4s ease-in-out infinite", animationDelay: "0.8s" }} />
+        <circle cx="100" cy="30" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.2s ease-in-out infinite", animationDelay: "1.2s" }} />
+        <circle cx="100" cy="170" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.6s ease-in-out infinite", animationDelay: "1.6s" }} />
+      </svg>
+    </div>
+  );
+}
+
 /* ---------- Use case card (unified theme) ---------- */
 
 function ProductCard({ title, desc }: { title: string; desc: string }) {
@@ -536,7 +926,7 @@ function ProductCard({ title, desc }: { title: string; desc: string }) {
   );
 }
 
-/* ---------- Related product card (same theme, with image) ---------- */
+/* ---------- Related product card — mirrors blog-card structure ---------- */
 
 function RelatedCard({
   href,
@@ -545,6 +935,7 @@ function RelatedCard({
   title,
   tagline,
   cta,
+  accentColor,
 }: {
   href: string;
   image: string;
@@ -552,56 +943,145 @@ function RelatedCard({
   title: string;
   tagline: string;
   cta: string;
+  accentColor: string;
 }) {
-  return (
-    <Link
-      href={href}
-      className="pd-case-card group relative flex flex-col overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1"
-      style={{
-        background: "rgba(255,255,255,0.04)",
-        border: "1px solid rgba(255,255,255,0.08)",
-      }}
-    >
-      <div className="relative aspect-[16/9] overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-          sizes="(max-width: 640px) 100vw, 500px"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-        <div
-          className="absolute left-4 top-4 rounded-full border border-white/12 bg-black/40 px-3 py-1 text-[11px] font-semibold tracking-wide text-white backdrop-blur-sm"
-          style={{ fontFamily: "var(--font-jetbrains), monospace" }}
-        >
-          {brand}
-        </div>
-      </div>
+  const cardRef = useRef<HTMLDivElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
 
-      <div className="flex flex-1 flex-col p-6">
-        <h4
-          className="mb-2 text-lg font-bold leading-tight text-white group-hover:text-primary"
-          style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+
+    gsap.to(cardRef.current, {
+      rotateX: ((y - cy) / cy) * -8,
+      rotateY: ((x - cx) / cx) * 8,
+      transformPerspective: 800,
+      scale: 1.02,
+      duration: 0.3,
+      ease: "power2.out",
+      overwrite: "auto",
+    });
+    if (glowRef.current) {
+      gsap.to(glowRef.current, {
+        x: x - 100,
+        y: y - 100,
+        opacity: 0.7,
+        duration: 0.3,
+        overwrite: "auto",
+      });
+    }
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    if (cardRef.current) {
+      gsap.to(cardRef.current, {
+        rotateX: 0,
+        rotateY: 0,
+        scale: 1,
+        duration: 0.6,
+        ease: "elastic.out(1, 0.5)",
+      });
+    }
+    if (glowRef.current) {
+      gsap.to(glowRef.current, { opacity: 0, duration: 0.4 });
+    }
+  }, []);
+
+  return (
+    <div
+      className="pd-case-card"
+      style={{ perspective: "800px" }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Link href={href} className="block h-full">
+        <div
+          ref={cardRef}
+          className="group relative flex h-full flex-col overflow-hidden rounded-2xl p-7 shadow-xl transition-shadow duration-500 will-change-transform hover:shadow-2xl"
+          style={{
+            transformStyle: "preserve-3d",
+            background: `linear-gradient(135deg, var(--card-bg), ${accentColor}10, var(--card-bg))`,
+            backdropFilter: "blur(12px)",
+            border: "1px solid var(--card-border)",
+            boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
+          }}
         >
-          {title}
-        </h4>
-        <p
-          className="line-clamp-2 text-sm leading-relaxed text-white/55"
-          style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
-        >
-          {tagline}
-        </p>
-        <div className="mt-auto pt-4">
-          <span
-            className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.2em] text-primary"
-            style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+          {/* Corner glow */}
+          <div
+            className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full blur-3xl"
+            style={{ background: `linear-gradient(135deg, ${accentColor}15, transparent)` }}
+          />
+
+          {/* Mouse-follow glow */}
+          <div
+            ref={glowRef}
+            className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0 blur-3xl"
+            style={{ background: `${accentColor}20` }}
+          />
+
+          {/* Hover shimmer */}
+          <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
+          <div
+            className="relative z-10 flex flex-1 flex-col"
+            style={{ transform: "translateZ(15px)" }}
           >
-            {cta}
-            <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
-          </span>
+            {/* Cover image — square aspect to fit 1:1 source images */}
+            <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-xl">
+              <Image
+                src={image}
+                alt={title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            </div>
+
+            {/* Brand pill */}
+            <span
+              className="mb-4 inline-block self-start rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider backdrop-blur-sm"
+              style={{
+                color: accentColor,
+                background: `${accentColor}20`,
+                border: `1px solid ${accentColor}30`,
+                fontFamily: "var(--font-jetbrains), monospace",
+              }}
+            >
+              {brand}
+            </span>
+
+            <h3
+              className="mb-3 line-clamp-2 text-lg font-bold leading-snug text-foreground"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+            >
+              {title}
+            </h3>
+
+            <p
+              className="mb-5 line-clamp-3 flex-1 text-sm leading-relaxed text-muted"
+              style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
+            >
+              {tagline}
+            </p>
+
+            <span
+              className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-300 group-hover:gap-3"
+              style={{
+                color: accentColor,
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
+              }}
+            >
+              {cta}
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
+          </div>
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 }

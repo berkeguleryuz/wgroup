@@ -1,5 +1,6 @@
-import ProductDetailLayout from "@/components/layout/ProductDetailLayout";
+import { redirect } from "next/navigation";
 
+// Legacy slug — merged into Operational Excellence.
 export default function Page() {
-  return <ProductDetailLayout productKey="systemArchitectureCompliance" />;
+  redirect("/products/operational-excellence");
 }

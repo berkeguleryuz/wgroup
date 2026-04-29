@@ -18,16 +18,24 @@ function BrainVisual() {
         alt=""
         fill
         priority
-        className="brain-img object-cover opacity-40"
-        style={{ filter: "brightness(0.7)" }}
+        className="brain-img object-cover opacity-80"
+        style={{ filter: "brightness(1.05)" }}
         sizes="100vw"
       />
-      {/* Dark overlay to keep text legible */}
+      {/* Soft overlay — keeps text legible without crushing the image */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(6,11,24,0.5) 0%, rgba(6,11,24,0.7) 100%)",
+            "linear-gradient(to bottom, rgba(6,11,24,0.18) 0%, rgba(6,11,24,0.42) 60%, rgba(6,11,24,0.55) 100%)",
+        }}
+      />
+      {/* Subtle radial vignette to anchor the centered text */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(6,11,24,0) 0%, rgba(6,11,24,0) 35%, rgba(6,11,24,0.35) 100%)",
         }}
       />
     </div>

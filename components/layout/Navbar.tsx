@@ -31,67 +31,59 @@ function isGroup(item: NavItem): item is NavGroup {
 /* ---------- Image map ---------- */
 
 const navImages: Record<string, string> = {
-  aboutWgroup: "/w-new/w1.webp",
-  whatWeDo: "/w-new/w2.webp",
-  ourDivisions: "/w-new/w3.webp",
-  ourStory: "/w-new/wn10.webp",
-  ourVision: "/w-new/wn11.webp",
+  aboutWgroup: "/w-new/a1.webp",
+  whatWeDo: "/w-new/a2.webp",
+  ourDivisions: "/w-new/a3.webp",
+  ourStory: "/w-new/a4.webp",
+  ourVision: "/w-new/a5.webp",
   wquality: "/w-new/W-Quality.webp",
   wdigilab: "/w-new/W-Digilab.webp",
   wstudio: "/w-new/W-Studio.webp",
-  // W-DigiLab products
-  smartOperationalPlatform: "/w-new/wn1.webp",
-  intelligencePerformancePlatform: "/w-new/wn2.webp",
-  blockchainProducts: "/w-new/wn3.webp",
-  // W-Quality products
-  systemArchitectureCompliance: "/w-new/wn4.webp",
-  strategicSupplierDevelopment: "/w-new/wn5.webp",
-  strategicPerformanceManagement: "/w-new/wn6.webp",
-  // W-Studio products
-  aiContentProduction: "/w-new/wn7.webp",
-  businessflix: "/w-new/wn8.webp",
-  corporateKnowledgeChannels: "/w-new/wn9.webp",
+  // W-Quality solutions
+  operationalExcellence: "/w-new/n0.webp",
+  wQualityAiAdvisor: "/w-new/n1.webp",
+  // W-DigiLab solutions
+  smartOperationalPlatform: "/w-new/n2.webp",
+  blockchainProducts: "/w-new/n3.webp",
+  // W-Studio solutions
+  aiContentProduction: "/w-new/n4.webp",
+  businessflix: "/w-new/n5.webp",
+  talentManagement: "/w-new/n6.webp",
 };
 
 /* ---------- Product definitions ---------- */
 
 type ProductKey =
+  | "operationalExcellence"
+  | "wQualityAiAdvisor"
   | "smartOperationalPlatform"
-  | "intelligencePerformancePlatform"
   | "blockchainProducts"
-  | "systemArchitectureCompliance"
-  | "strategicSupplierDevelopment"
-  | "strategicPerformanceManagement"
   | "aiContentProduction"
   | "businessflix"
-  | "corporateKnowledgeChannels";
+  | "talentManagement";
 
 const productSlugs: Record<ProductKey, string> = {
+  operationalExcellence: "operational-excellence",
+  wQualityAiAdvisor: "w-quality-ai-advisor",
   smartOperationalPlatform: "smart-operational-platform",
-  intelligencePerformancePlatform: "intelligence-performance-platform",
   blockchainProducts: "blockchain-products",
-  systemArchitectureCompliance: "system-architecture-compliance",
-  strategicSupplierDevelopment: "supplier-development",
-  strategicPerformanceManagement: "strategic-performance-management",
   aiContentProduction: "ai-content-production",
   businessflix: "businessflix",
-  corporateKnowledgeChannels: "corporate-knowledge-channels",
+  talentManagement: "talent-management",
 };
 
+const qualityProducts: ProductKey[] = [
+  "operationalExcellence",
+  "wQualityAiAdvisor",
+];
 const digilabProducts: ProductKey[] = [
   "smartOperationalPlatform",
-  "intelligencePerformancePlatform",
   "blockchainProducts",
-];
-const qualityProducts: ProductKey[] = [
-  "systemArchitectureCompliance",
-  "strategicSupplierDevelopment",
-  "strategicPerformanceManagement",
 ];
 const studioProducts: ProductKey[] = [
   "aiContentProduction",
   "businessflix",
-  "corporateKnowledgeChannels",
+  "talentManagement",
 ];
 
 const buildProductLink = (k: ProductKey): NavLink => ({
@@ -128,7 +120,6 @@ const navItems: NavItem[] = [
       { label: "W-Studio", items: studioProducts.map(buildProductLink) },
     ],
   },
-  { key: "blog", href: "/blog" },
   { key: "faq", href: "/faq" },
 ];
 
@@ -244,7 +235,7 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
           ))}
         </div>
 
-        <div className="col-span-2 relative min-h-70 overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
+        <div className="col-span-2 relative aspect-square overflow-hidden rounded-2xl bg-white/3 ring-1 ring-white/6">
           {group.items.map((item) => (
             <div
               key={item.key}
@@ -440,7 +431,7 @@ function ProductsPanel({
         </div>
 
         <div className="col-span-4">
-          <div className="relative h-full min-h-65 overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
+          <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-white/6 bg-white/3 shadow-2xl shadow-black/40">
             {activeImage ? (
               <>
                 <Image
