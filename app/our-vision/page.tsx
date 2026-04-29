@@ -78,7 +78,6 @@ export default function OurVisionPage() {
     <PageLayout
       title={t("title")}
       subtitle={t("subtitle")}
-      eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
       heroImage="/w-new/wn11.webp"
     >

@@ -141,7 +141,6 @@ export default function OurDivisionsPage() {
     <PageLayout
       title={t("title")}
       subtitle={t("subtitle")}
-      eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
       heroImage="/w-new/w3.webp"
     >

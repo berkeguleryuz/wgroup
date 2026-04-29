@@ -216,7 +216,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <PageLayout title={t("title")} subtitle={t("p1")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")} heroImage="/w-new/w1.webp">
+    <PageLayout title={t("title")} subtitle={t("p1")} titleHighlight={t("titleHighlight")} heroImage="/w-new/w1.webp">
       <div ref={sectionRef}>
         {/* Stats grid */}
         <div className="page-content-block mb-16 grid grid-cols-3 gap-6">

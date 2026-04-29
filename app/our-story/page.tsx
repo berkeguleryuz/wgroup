@@ -365,7 +365,6 @@ export default function OurStoryPage() {
     <PageLayout
       title={t("title")}
       subtitle={t("subtitle")}
-      eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
       heroImage="/w-new/wn10.webp"
     >
