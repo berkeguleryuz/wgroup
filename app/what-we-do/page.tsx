@@ -266,12 +266,14 @@ export default function WhatWeDoPage() {
           </div>
         </section>
 
-        {/* ─────────── Block C: Closing — wide cinematic banner with text below ─────────── */}
-        <section className="wwd-block relative">
+        {/* ─────────── Block C: Closing — square image paired with editorial text ─────────── */}
+        <section className="wwd-block relative grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
+          {/* Square image — full content visible at native 1:1 */}
           <div className="wwd-reveal relative">
             <div
-              className="relative h-[260px] overflow-hidden rounded-[28px] sm:h-[320px] lg:h-[380px]"
+              className="relative aspect-square overflow-hidden rounded-[32px]"
               style={{
+                background: "#0a0f1e",
                 boxShadow:
                   "0 40px 80px -30px rgba(15, 23, 42, 0.3), 0 16px 32px -16px rgba(15, 23, 42, 0.12)",
               }}
@@ -280,37 +282,66 @@ export default function WhatWeDoPage() {
                 src="/w-new/wn5.webp"
                 alt=""
                 fill
-                sizes="100vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
               />
               <div
                 className="pointer-events-none absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(180deg, rgba(10,15,30,0.05) 0%, rgba(10,15,30,0.55) 100%)",
+                    "linear-gradient(140deg, rgba(30,109,181,0.18) 0%, transparent 45%, transparent 55%, rgba(10,15,30,0.35) 100%)",
                 }}
               />
             </div>
+
+            {/* Floating accent dot */}
+            <span
+              aria-hidden
+              className="absolute -bottom-3 -left-3 h-7 w-7 rounded-full sm:-bottom-4 sm:-left-4 sm:h-9 sm:w-9"
+              style={{
+                background: "var(--accent-teal)",
+                boxShadow: "0 8px 20px -6px rgba(8,145,178,0.55)",
+              }}
+            />
           </div>
 
-          <div className="wwd-reveal mx-auto mt-12 max-w-3xl text-center sm:mt-14">
-            <p
-              className="text-lg leading-[1.85] sm:text-[20px] sm:leading-[1.8]"
-              style={{
-                fontFamily: "var(--font-barlow), system-ui, sans-serif",
-                color: "#2a3444",
-                fontWeight: 400,
-              }}
-            >
-              {t("p3")}
-            </p>
-            <div
-              className="mx-auto mt-8 h-[2px] w-20 rounded-full"
+          {/* Closing editorial column */}
+          <div className="wwd-reveal relative">
+            <span
+              aria-hidden
+              className="mb-7 block h-[3px] w-16 rounded-full"
               style={{
                 background:
                   "linear-gradient(90deg, var(--primary), var(--accent-teal), var(--accent-purple))",
               }}
             />
+
+            <p
+              className="text-lg leading-[1.85] sm:text-[22px] sm:leading-[1.7]"
+              style={{
+                fontFamily: "var(--font-barlow), system-ui, sans-serif",
+                color: "#1a2535",
+                fontWeight: 500,
+              }}
+            >
+              {t("p3")}
+            </p>
+
+            <div className="mt-10 flex items-center gap-3">
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: "var(--primary)" }}
+              />
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: "var(--accent-teal)" }}
+              />
+              <span
+                className="h-1.5 w-1.5 rounded-full"
+                style={{ background: "var(--accent-purple)" }}
+              />
+              <span className="ml-1 h-px flex-1 bg-border" />
+            </div>
           </div>
         </section>
       </div>
