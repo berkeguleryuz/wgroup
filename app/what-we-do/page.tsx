@@ -58,7 +58,6 @@ export default function WhatWeDoPage() {
   return (
     <PageLayout
       title={t("title")}
-      eyebrow={t("eyebrow")}
       titleHighlight={t("titleHighlight")}
       heroImage="/w-new/w2.webp"
     >

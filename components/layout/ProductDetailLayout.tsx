@@ -14,7 +14,6 @@ import {
   productSlugs,
   productDivision,
   divisionHref,
-  divisionAccent,
   relatedProducts,
 } from "@/lib/products";
 
@@ -154,14 +153,15 @@ export default function ProductDetailLayout({ productKey }: Props) {
   return (
     <div ref={pageRef} style={{ background: "var(--background)" }}>
       {/* ================== HERO ================== */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-        {/* Hero background image (soft) */}
+      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+        {/* Hero background image (soft, centered) */}
         <div className="absolute inset-0">
           <Image
             src={heroImage}
             alt=""
             fill
-            className="object-cover opacity-[0.12]"
+            className="object-contain opacity-[0.18]"
+            style={{ objectPosition: "center" }}
             sizes="100vw"
             priority
           />
@@ -188,6 +188,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
         </div>
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
+
           <div className="pd-hero-eyebrow mb-6 flex items-center justify-center">
             <Link
               href={brandUrl}
@@ -461,7 +462,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
                   title={t(`items.${rk}.title`)}
                   tagline={t(`items.${rk}.tagline`)}
                   cta={t("eyebrow")}
-                  accentColor={divisionAccent[productDivision[rk]].solid}
+                  accentColor="#1E6DB5"
                 />
               ))}
             </div>
