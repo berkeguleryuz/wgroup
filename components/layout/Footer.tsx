@@ -15,7 +15,7 @@ const divisionLinks = [
 ] as const;
 
 const productLinks: { key: ProductKey; href: string }[] = productOrder.map(
-  (k) => ({ key: k, href: `/products/${productSlugs[k]}` })
+  (k) => ({ key: k, href: `/solutions/${productSlugs[k]}` })
 );
 
 const companyLinks = [

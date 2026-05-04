@@ -32,14 +32,6 @@ export default function NotFound() {
             backgroundSize: "80px 80px",
           }}
         />
-        <div
-          className="absolute -left-32 top-1/4 h-[420px] w-[420px] rounded-full blur-[130px]"
-          style={{ background: "rgba(30,109,181,0.10)" }}
-        />
-        <div
-          className="absolute -right-32 bottom-1/4 h-[400px] w-[400px] rounded-full blur-[130px]"
-          style={{ background: "rgba(8,145,178,0.08)" }}
-        />
       </div>
 
       {/* Decorative corner brackets */}
@@ -380,44 +372,6 @@ function LostSignalSVG() {
           opacity="0.35"
         />
 
-        {/* Stray drifting particles (lost in space) */}
-        <circle
-          cx="50"
-          cy="280"
-          r="1.4"
-          fill="white"
-          style={{ animation: "adv-twinkle 2.6s ease-in-out infinite" }}
-        />
-        <circle
-          cx="80"
-          cy="60"
-          r="1.1"
-          fill="white"
-          style={{
-            animation: "adv-twinkle 3s ease-in-out infinite",
-            animationDelay: "0.6s",
-          }}
-        />
-        <circle
-          cx="320"
-          cy="220"
-          r="1.5"
-          fill="white"
-          style={{
-            animation: "adv-twinkle 2.4s ease-in-out infinite",
-            animationDelay: "1.2s",
-          }}
-        />
-        <circle
-          cx="260"
-          cy="320"
-          r="1.2"
-          fill="white"
-          style={{
-            animation: "adv-twinkle 2.8s ease-in-out infinite",
-            animationDelay: "1.8s",
-          }}
-        />
       </svg>
     </div>
   );

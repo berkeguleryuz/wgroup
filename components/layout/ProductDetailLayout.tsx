@@ -11,6 +11,7 @@ import FeatureDefinition from "@/components/layout/FeatureDefinition";
 import {
   type ProductKey,
   productImages,
+  productHeroImages,
   productSlugs,
   productDivision,
   divisionHref,
@@ -38,7 +39,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
   const definition = t(`${item}.definition`);
   const strategic = t(`${item}.strategicAdvantage`);
   const useCases = t.raw(`${item}.useCases`) as UseCase[];
-  const heroImage = productImages[productKey];
+  const heroImage = productHeroImages[productKey];
   const division = productDivision[productKey];
   const brandUrl = divisionHref[division];
   const related = relatedProducts(productKey);
@@ -154,29 +155,21 @@ export default function ProductDetailLayout({ productKey }: Props) {
     <div ref={pageRef} style={{ background: "var(--background)" }}>
       {/* ================== HERO ================== */}
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
-        {/* Hero background image (soft, centered) */}
+        {/* Hero background banner (icon centered, edges feathered into site bg) */}
         <div className="absolute inset-0">
           <Image
             src={heroImage}
             alt=""
             fill
-            className="object-contain opacity-[0.18]"
+            className="object-cover"
             style={{ objectPosition: "center" }}
             sizes="100vw"
             priority
           />
         </div>
-        {/* Gradient vignette overlays */}
-        <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background/70 to-background" />
+        {/* Subtle vignette for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80" />
         <div className="pointer-events-none absolute inset-0">
-          <div
-            className="absolute -left-24 top-20 h-[380px] w-[380px] rounded-full blur-[110px]"
-            style={{ background: "rgba(30,109,181,0.10)" }}
-          />
-          <div
-            className="absolute right-0 top-1/3 h-[440px] w-[440px] rounded-full blur-[120px]"
-            style={{ background: "rgba(8,145,178,0.10)" }}
-          />
           <div
             className="absolute inset-0 opacity-[0.025]"
             style={{
@@ -296,26 +289,15 @@ export default function ProductDetailLayout({ productKey }: Props) {
         className="relative py-28 sm:py-36"
         style={{ background: "var(--background)" }}
       >
-        {/* Atmospheric backdrop */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          <div
-            className="absolute -left-40 top-16 h-[440px] w-[440px] rounded-full blur-[130px]"
-            style={{ background: "rgba(30,109,181,0.07)" }}
-          />
-          <div
-            className="absolute -right-40 bottom-16 h-[400px] w-[400px] rounded-full blur-[130px]"
-            style={{ background: "rgba(8,145,178,0.06)" }}
-          />
-          {/* Drafting grid */}
-          <div
-            className="absolute inset-0 opacity-[0.025]"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
-              backgroundSize: "80px 80px",
-            }}
-          />
-        </div>
+        {/* Drafting grid */}
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.025]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.4) 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+          }}
+        />
 
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           {/* Eyebrow */}
@@ -456,7 +438,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
               {related.map((rk) => (
                 <RelatedCard
                   key={rk}
-                  href={`/products/${productSlugs[rk]}`}
+                  href={`/solutions/${productSlugs[rk]}`}
                   image={productImages[rk]}
                   brand={t(`items.${rk}.brand`)}
                   title={t(`items.${rk}.title`)}
@@ -675,15 +657,6 @@ function StarBurstDecoration() {
       className="relative"
       style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
     >
-      {/* Soft glow halo */}
-      <div
-        className="absolute inset-[18%] rounded-full blur-2xl"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in srgb, var(--primary) 38%, transparent), transparent 70%)",
-          animation: "adv-pulse-soft 4.5s ease-in-out infinite",
-        }}
-      />
       <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
         <defs>
           <linearGradient id="advGrad1" x1="0" y1="0" x2="1" y2="1">
@@ -730,11 +703,6 @@ function StarBurstDecoration() {
           <animate attributeName="r" values="12;16;12" dur="3.2s" repeatCount="indefinite" />
         </circle>
 
-        {/* Twinkling sparkles */}
-        <circle cx="40" cy="60" r="1.8" fill="white" style={{ animation: "adv-twinkle 2.4s ease-in-out infinite" }} />
-        <circle cx="160" cy="55" r="1.5" fill="white" style={{ animation: "adv-twinkle 3s ease-in-out infinite", animationDelay: "0.6s" }} />
-        <circle cx="50" cy="160" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.8s ease-in-out infinite", animationDelay: "1.2s" }} />
-        <circle cx="155" cy="150" r="1.6" fill="white" style={{ animation: "adv-twinkle 2.2s ease-in-out infinite", animationDelay: "0.3s" }} />
       </svg>
     </div>
   );
@@ -747,15 +715,6 @@ function OrbitalDecoration() {
       className="relative"
       style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
     >
-      <div
-        className="absolute inset-[20%] rounded-full blur-2xl"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in srgb, var(--accent-teal) 42%, transparent), transparent 70%)",
-          animation: "adv-pulse-soft 5s ease-in-out infinite",
-          animationDelay: "0.4s",
-        }}
-      />
       <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
         <defs>
           <linearGradient id="advGrad2" x1="0" y1="0" x2="1" y2="1">
@@ -808,15 +767,6 @@ function ConstellationDecoration() {
       className="relative"
       style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
     >
-      <div
-        className="absolute inset-[22%] rounded-full blur-2xl"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in srgb, var(--accent-purple) 38%, transparent), transparent 70%)",
-          animation: "adv-pulse-soft 6s ease-in-out infinite",
-          animationDelay: "0.8s",
-        }}
-      />
       <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
         <defs>
           <linearGradient id="advGrad3" x1="0" y1="0" x2="1" y2="1">
@@ -846,10 +796,10 @@ function ConstellationDecoration() {
           <line x1="150" y1="60" x2="155" y2="140" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
 
           {/* Star nodes — twinkling */}
-          <circle cx="50" cy="60" r="3" fill="var(--primary)" style={{ animation: "adv-twinkle 2.6s ease-in-out infinite" }} />
-          <circle cx="150" cy="60" r="2.5" fill="var(--accent-teal)" style={{ animation: "adv-twinkle 3s ease-in-out infinite", animationDelay: "0.5s" }} />
-          <circle cx="155" cy="140" r="2.5" fill="var(--accent-purple)" style={{ animation: "adv-twinkle 2.8s ease-in-out infinite", animationDelay: "1s" }} />
-          <circle cx="60" cy="155" r="2.8" fill="var(--primary)" style={{ animation: "adv-twinkle 2.4s ease-in-out infinite", animationDelay: "1.4s" }} />
+          <circle cx="50" cy="60" r="3" fill="var(--primary)" />
+          <circle cx="150" cy="60" r="2.5" fill="var(--accent-teal)" />
+          <circle cx="155" cy="140" r="2.5" fill="var(--accent-purple)" />
+          <circle cx="60" cy="155" r="2.8" fill="var(--primary)" />
         </g>
 
         {/* Hexagonal frame — slowly rotating reverse */}
@@ -873,11 +823,6 @@ function ConstellationDecoration() {
           <circle cx="100" cy="100" r="5" fill="url(#advCore3)" />
         </g>
 
-        {/* Outer scattered sparkles */}
-        <circle cx="30" cy="100" r="1.2" fill="white" style={{ animation: "adv-twinkle 2s ease-in-out infinite" }} />
-        <circle cx="170" cy="100" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.4s ease-in-out infinite", animationDelay: "0.8s" }} />
-        <circle cx="100" cy="30" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.2s ease-in-out infinite", animationDelay: "1.2s" }} />
-        <circle cx="100" cy="170" r="1.2" fill="white" style={{ animation: "adv-twinkle 2.6s ease-in-out infinite", animationDelay: "1.6s" }} />
       </svg>
     </div>
   );
