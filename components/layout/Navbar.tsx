@@ -48,6 +48,7 @@ const navImages: Record<string, string> = {
   // W-Studio solutions
   aiContentProduction: "/w-new/n4.webp",
   businessflix: "/w-new/n5.webp",
+  aiSkillPlatform: "/w-new/n7.webp",
   talentManagement: "/w-new/n6.webp",
 };
 
@@ -60,15 +61,17 @@ type ProductKey =
   | "blockchainProducts"
   | "aiContentProduction"
   | "businessflix"
+  | "aiSkillPlatform"
   | "talentManagement";
 
 const productSlugs: Record<ProductKey, string> = {
-  operationalExcellence: "operational-excellence",
-  wQualityAiAdvisor: "w-quality-ai-advisor",
-  smartOperationalPlatform: "smart-operational-platform",
+  operationalExcellence: "integrated-operating-system",
+  wQualityAiAdvisor: "ai-quality-process-optimization",
+  smartOperationalPlatform: "operational-intelligence-platform",
   blockchainProducts: "blockchain-products",
-  aiContentProduction: "ai-content-production",
-  businessflix: "businessflix",
+  aiContentProduction: "corporate-media-engine",
+  businessflix: "busyflix",
+  aiSkillPlatform: "ai-skill-platform",
   talentManagement: "talent-management",
 };
 
@@ -83,12 +86,13 @@ const digilabProducts: ProductKey[] = [
 const studioProducts: ProductKey[] = [
   "aiContentProduction",
   "businessflix",
+  "aiSkillPlatform",
   "talentManagement",
 ];
 
 const buildProductLink = (k: ProductKey): NavLink => ({
   key: k,
-  href: `/products/${productSlugs[k]}`,
+  href: `/solutions/${productSlugs[k]}`,
 });
 
 /* ---------- Navigation structure ---------- */

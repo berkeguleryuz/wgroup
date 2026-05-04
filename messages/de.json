@@ -255,7 +255,7 @@
     "p1": "WGroup wurde auf der Überzeugung gegründet, dass die Zukunft der Industrie nicht allein durch Technologie gestaltet wird.",
     "p2": "Während künstliche Intelligenz und digitale Systeme die Art und Weise verändern, wie Organisationen arbeiten, besteht die eigentliche Herausforderung nicht nur darin, neue Werkzeuge einzusetzen, sondern daraus einen nachhaltigen und sinnvollen Mehrwert zu schaffen.",
     "p3": "WGroup wurde gegründet, um zu erforschen, wie industrielle Expertise, digitale Intelligenz und eine künstlerische Perspektive zusammenwirken können, um die Entwicklung von Industriewissen neu zu gestalten.",
-    "p4": "Die Gründer vereinten zwei unterschiedliche Welten — industrielle Ingenieurwissenschaft und die Künste — um eine neue Art von Industrieplattform aufzubauen, auf der sich Technologie, Prozesse und Ideen gemeinsam weiterentwickeln.",
+    "p4": "Die Gründer vereinten zwei unterschiedliche Welten — Ingenieurwesen und die Künste — um eine neue Art von Industrieplattform aufzubauen, auf der sich Technologie, Prozesse und Ideen gemeinsam weiterentwickeln.",
     "p5": "Diese Kombination ermöglicht es WGroup, industrielle Herausforderungen nicht nur mit technischer Präzision anzugehen, sondern auch mit kreativem Denken, das neue Perspektiven für Innovation eröffnet.",
     "p6": "Heute konzentriert sich WGroup darauf, Organisationen dabei zu unterstützen, Prozesse zu digitalisieren, intelligente Systeme zu integrieren und neue Wissensplattformen für das Zeitalter der künstlichen Intelligenz zu entwickeln.",
     "p7": "Bei WGroup trifft Industrie auf Intelligenz — und Kreativität treibt Innovation voran.",
@@ -1045,155 +1045,139 @@
     "jumpToUseCases": "Zu den Anwendungsbereichen",
     "items": {
       "operationalExcellence": {
-        "slug": "operational-excellence",
+        "slug": "integrated-operating-system",
         "brand": "W-Quality",
         "brandHref": "/w-quality",
-        "title": "Operational Excellence",
-        "tagline": "Ein integriertes Transformationsprogramm, das QMS, Lieferantenökosystem und strategisches Performancemanagement vereint",
-        "definition": "Operational Excellence ist ein integriertes Transformationsprogramm, das das Qualitätsmanagementsystem, die Lieferkette und die strategischen Entscheidungsmechanismen einer Organisation unter einer einzigen Disziplin zusammenführt. Systemarchitektur (QMS), Lieferantenökosystem und strategisches Performancemanagement werden nicht als drei separate Projekte, sondern als drei koordinierte Muskeln desselben operativen Atems behandelt. Prozesse, Verantwortlichkeiten, Messpunkte und Genehmigungsabläufe werden an Standards wie ISO 9001 und IATF 16949, an kundenspezifische Anforderungen (CSR) sowie an Prozessaudit-Anforderungen wie VDA 6.3 ausgerichtet und zugleich für die tatsächliche Geschäftslogik des Unternehmens entwickelt. Lieferanten werden von überwachten Kostenpositionen zu Partnern transformiert, die die technische Sprache des OEMs sprechen. Strategische Führungsziele werden mit der operativen Realität verbunden; durch Policy Deployment, OKR- / BSC-Rahmenwerke und visuelles Management wird die Strategie auf allen Ebenen in eine gemeinsame Sprache übersetzt.",
-        "strategicAdvantage": "Zielt direkt auf die Qualitätskosten (COQ: Ausschuss, Nacharbeit, Garantie, Reklamationen), nimmt 3rd-Party-Audits den Charakter eines «Stressereignisses» und schützt Zertifikatsgültigkeit sowie Marktzugang durch das Ziel «Null kritische Befunde». Löst lieferantenbezogene Probleme an der Quelle, erkennt Kapazitäts- und Qualitätsrisiken in kritischen Teilen oder Prozessen frühzeitig und verhindert Krisen, bevor sie entstehen. Schließt die Lücke zwischen strategischem Plan und operativer Umsetzung; konzentriert die Dynamik der Organisation auf 3-5 Kernziele. Überführt Prozesse aus dem Gedächtnis der Gründermannschaft in dokumentierte, messbare und übertragbare Form und macht operative Bereitschaft an Wachstumspunkten wie neuen Werkseröffnungen, M&A-Integrationen oder OEM-Kundenakquise nachweisbar.",
+        "title": "Integrated Operating System",
+        "tagline": "Ein System für Qualität, Lieferanten und strategische Umsetzung.",
+        "definition": "Integrated Operating System ist eine Transformations-Beratungslösung für Unternehmen, die Qualität, Lieferantenmanagement und strategische Umsetzung als ein zusammenhängendes System zum Funktionieren bringen müssen. Statt QMS, Lieferantenentwicklung und Performance-Management als separate Projekte zu behandeln, integriert die Lösung sie in ein operatives Modell. Prozesse, Verantwortlichkeiten, Genehmigungsabläufe, KPIs, Auditanforderungen und Lieferantenroutinen werden an ISO 9001, IATF 16949, VDA 6.3 und kundenspezifischen Anforderungen ausgerichtet und an die tatsächliche Geschäftslogik des Unternehmens angepasst. Das Ergebnis ist ein dokumentiertes, messbares und übertragbares Betriebssystem, in dem Qualitätsrisiken sichtbar sind, Lieferantenleistung gesteuert wird, Audits sicher gemanagt werden und Strategie in tägliche Umsetzung übersetzt wird.",
+        "strategicAdvantage": "Integrated Operating System hilft Unternehmen, Ausschuss, Nacharbeit, Schrott, Reklamationen, Garantieprobleme und wiederkehrende Prozessfehler zu reduzieren. Durch die Ausrichtung des Managementsystems an ISO 9001, IATF 16949, VDA 6.3 und CSR-Erwartungen werden Audits zu einem kontrollierten Readiness-Prozess statt zu einem stressigen Einmal-Ereignis. Ziel ist es, Zertifizierung, Kundenvertrauen und Marktzugang über ein für Zero Critical Finding-Performance konzipiertes System zu schützen. Viele operative Probleme beginnen im Lieferanten-Ökosystem. Integrated Operating System hilft Unternehmen, lieferantenbezogene Qualitäts-, Liefer-, Kapazitäts- und Prozessrisiken zu erkennen, bevor sie zu Wareneingangs-Ausschuss, Linienstillständen, Eskalationen oder Kundenrückrufen führen. Lieferantenmanagement entwickelt sich von reaktiver Nachverfolgung zu einer strukturierten Performance-Disziplin auf Basis klarer Erwartungen, technischer Kommunikation, risikobasierter Überwachung und messbarer Verbesserungsmaßnahmen. Viele Unternehmen haben strategische Ziele, aber das Tagesgeschäft bewegt sich oft in andere Richtungen. Integrated Operating System schließt diese Lücke, indem Führungsziele in fokussierte Prioritäten, KPIs, Routinen und visuelle Managementpraktiken übersetzt werden. Über Policy Deployment, OKR/BSC-Strukturen und Performance-Routinen konzentriert sich die Organisation auf 3-5 Kernziele und schafft eine gemeinsame Umsetzungssprache vom Management bis zur Werkstatt.",
         "useCases": [
           {
-            "title": "QMS-Implementierung & Zertifizierung",
-            "desc": "QMS-Implementierung, Optimierung und Vorbereitung auf ISO- / IATF-Zertifizierung."
+            "title": "QMS-Architektur und Prozessdesign",
+            "desc": "Erstellung oder Verbesserung von Prozesskarten, Verantwortlichkeiten, Genehmigungsabläufen, Dokumentationsstrukturen, KPI-Punkten und Management-Routinen."
           },
           {
-            "title": "IATF 16949-Konformität",
-            "desc": "Konformitäts- und Transition-Programm für die Automobilindustrie (Gap-Analyse, Aktionsplan, Audit-Coaching)."
+            "title": "ISO 9001- und IATF 16949-Ausrichtung",
+            "desc": "Vorbereitung oder Stärkung von Qualitätsmanagementsystemen gemäß internationalen Standards, Automotive-Anforderungen und Zertifizierungserwartungen."
           },
           {
-            "title": "Prozesskartierung & KPI",
-            "desc": "Prozesskartierung (SIPOC, Turtle Charts), Engpassanalyse und KPI-Design."
+            "title": "VDA 6.3 Prozessaudit-Readiness",
+            "desc": "Verbesserung der Prozessaudit-Fähigkeit, Schließen von Lücken, Vorbereitung von Nachweisen und Reduzierung des Risikos kritischer Befunde."
           },
           {
-            "title": "Standortübergreifende Standardisierung",
-            "desc": "Globaler Standard-Roll-out (HQ zu lokalen Werken) und standortübergreifende Standardisierung."
+            "title": "Management kundenspezifischer Anforderungen",
+            "desc": "Strukturierung von CSR-Interpretation, -Umsetzung, -Überwachung und Nachweismanagement über alle relevanten Prozesse hinweg."
           },
           {
-            "title": "Gap-Analyse & Mock-Audits",
-            "desc": "Gap-Analyse und Mock-Audits für System-, Prozess- und Produktaudits."
+            "title": "Lieferantenentwicklung und Performance-Management",
+            "desc": "Verbesserung der Lieferantenqualität, Lieferleistung, Eskalationsmanagement, Korrekturmaßnahmen-Nachverfolgung und risikobasierter Lieferantenkontrolle."
           },
           {
-            "title": "VDA 6.3 & CSR",
-            "desc": "Vorbereitung auf VDA 6.3-Prozessaudits und Integration kundenspezifischer Anforderungen (CSR)."
+            "title": "Reduzierung der Qualitätskosten",
+            "desc": "Reduzierung von Ausschuss, Nacharbeit, Schrott, Garantiekosten, Reklamationen und versteckten Qualitätsverlusten durch strukturierte Verbesserungsmaßnahmen."
           },
           {
-            "title": "Regulatorische Compliance",
-            "desc": "Beratung zur Einhaltung gesetzlicher und technischer Vorschriften (UNECE, REACH, ESG)."
+            "title": "Strategisches Performance-Management",
+            "desc": "Umsetzung der Strategie über Policy Deployment, OKR, BSC, KPI-Systeme, visuelles Management und Führungsroutinen."
           },
           {
-            "title": "Interne Auditoren-Entwicklung",
-            "desc": "Entwicklung und Qualifizierung interner Auditoren."
+            "title": "Wachstum und organisatorische Bereitschaft",
+            "desc": "Übertragung von Prozesswissen aus dem Gedächtnis der Gründer und informellen Routinen in dokumentierte, messbare und skalierbare Systeme für neue Werkseröffnungen, M&A-Integrationen, OEM-Onboarding oder schnelle Wachstumsphasen."
           },
           {
-            "title": "Lieferantenleistung",
-            "desc": "Projekte zur Lieferantenleistungssteigerung (PPM, OTD, Logistik)."
-          },
-          {
-            "title": "Neuer Lieferanten-Onboarding",
-            "desc": "Sourcing, PPAP-Vorbereitung und APQP-gestütztes Onboarding neuer Lieferanten."
-          },
-          {
-            "title": "Technische Entwicklung vor Ort",
-            "desc": "Technische Entwicklung vor Ort und Kapazitätsaufbau für kritische Teile oder Prozesse."
-          },
-          {
-            "title": "Strategisches Performancemanagement",
-            "desc": "Command-Center-Design, OKR- / BSC-Deployment und Entscheidungshygiene; verbindet Strategie mit der operativen Realität."
+            "title": "Operatives Risiko und Krisenprävention",
+            "desc": "Frühzeitige Erkennung von Lieferanten-, Prozess-, Kapazitäts-, Audit- und Qualitätsrisiken, bevor sie zu Linienstillständen, Kundeneskalationen, Zertifikatsrisiken oder Marktzugangsproblemen werden."
           }
         ]
       },
       "wQualityAiAdvisor": {
-        "slug": "w-quality-ai-advisor",
+        "slug": "ai-quality-process-optimization",
         "brand": "W-Quality",
         "brandHref": "/w-quality",
-        "title": "AI Advisor",
-        "tagline": "Ein intelligenter Qualitäts- und Compliance-Assistent, der das Feld-Know-how von W-Quality in KI skaliert",
-        "definition": "W-Quality AI Advisor ist ein intelligenter Qualitäts- und Compliance-Assistent, der das Beratungs-Know-how von W-Quality in eine skalierbare KI-Lösung überführt. Eine Wissensbasis, die ISO 9001, IATF 16949, VDA 6.3, CSR sowie UNECE- / REACH- / ESG-Anforderungen interpretiert, wird mit den QMS-Dokumenten, Auditberichten, Lieferanten-Scorecards und KPI-Daten des Unternehmens kombiniert und liefert der Führung einen Echtzeit-«Quality Co-Pilot». Das System läuft auf vier Kernmodulen — Document Intelligence, Audit-Readiness-Scoring, Lieferantenrisiko-Modell und Regulierungsmonitoring — und versieht jede Antwort mit Quellenangabe (Absatz, Klausel, Auditbefund).",
-        "strategicAdvantage": "Verwandelt eine in Beraterstunden gemessene Reaktion in eine kontinuierliche, in Minuten gemessene Kontrollebene. Ersetzt die Unsicherheit «Wie viele Tage bis zum Audit?» durch einen Live-Readiness-Score und eine priorisierte Liste zu schließender Befunde. Erschließt das Qualitätswissen, das im Gedächtnis der Gründer und in Expertensilos liegt, und macht es als Asset auf jeder Schicht zugänglich, abfragbar und übertragbar. Verfolgt regulatorische Änderungen und kundenspezifische Anforderungen ohne menschliches Nachfassen und schließt Compliance-Lücken, bevor sie entstehen. Erzeugt Frühwarnsignale für Lieferantenleistung und Prozessabweichung und senkt damit Linienstillstands- und Rückrufkosten direkt. Indem die ganzheitliche Methodik von W-Quality in ein SaaS-ähnliches Produkt überführt wird, entsteht aus der Beratungsbeziehung eine kontinuierliche Wertschöpfung unabhängig vom Engagement-Zeitraum.",
+        "title": "AI Quality & Process Optimization Advisory",
+        "tagline": "Praxiserfahrung in KI-gesteuerte Prozessintelligenz verwandeln.",
+        "definition": "AI Quality & Process Optimization Advisory ist ein Beratungsservice, der Unternehmen dabei unterstützt zu verstehen, wie und wo KI-gestützte Prozessoptimierung in ihrem bestehenden Geschäftsbetrieb angewendet werden kann. Statt eine fertige Plattform anzubieten, beginnen wir mit einer strukturierten Analyse Ihrer Prozesse, Dokumente, Workflows, Schwachstellen, Audithistorie, Lieferantenrisiken, KPI-Strukturen und operativen Engpässe. Auf Basis der Praxiskompetenz von W-Quality definieren wir realistische KI-Möglichkeiten wie Document Intelligence, Audit-Readiness-Unterstützung, Lieferanten-Risikoanalyse, KPI-basierte Frühwarnsignale, regulatorische Verfolgung und Prozessabweichungs-Erkennung. Das Ergebnis ist eine klare und praktische KI-Optimierungs-Roadmap: wo KI helfen kann, welche Daten benötigt werden, welche Workflows verbessert werden können und welche Anwendungsfälle zuerst priorisiert werden sollten.",
+        "strategicAdvantage": "Viele Unternehmen wollen KI nutzen, wissen aber nicht, wo sie anfangen sollen. Wir beginnen mit echtem Prozessverständnis. Qualitäts-, Produktions-, Audit-, Lieferanten- und Compliance-Workflows werden durch automotive und Fertigungs-Praxiserfahrung analysiert, nicht durch Technologie-Hype. Dies hilft Unternehmen, KI-Anwendungsfälle zu identifizieren, die operativ relevant, technisch realistisch und mit messbarer Geschäftswirkung verbunden sind. In vielen Organisationen lebt kritisches Know-how im Expertengedächtnis, in Abteilungssilos, in Auditerfahrung, in undokumentierten Routinen und in verstreuten Dokumenten. Wir helfen Unternehmen, dieses Wissen in strukturierte, KI-fähige Prozessintelligenz zu verwandeln. Standards, QMS-Dokumente, Auditbefunde, Lieferanten-Scorecards, KPI-Daten, kundenspezifische Anforderungen und interne Verfahren können in eine nutzbare Wissensstruktur übersetzt werden, die schnellere Entscheidungen und besseren Wissenstransfer unterstützt. KI-gestützte Prozessoptimierung kann Unternehmen helfen, von reaktiver Problemlösung zu Frühwarnung und präventiver Kontrolle überzugehen. Wir identifizieren, wo KI Audit-Readiness, Lieferanten-Risikosignale, Prozessabweichungs-Erkennung, regulatorische Verfolgung, Überwachung kundenspezifischer Anforderungen und KPI-Anomalie-Analyse unterstützen kann. Dies schafft die Grundlage für schnellere Reaktion, reduzierte Audit-Unsicherheit, frühere Risikoerkennung und geringere Exposition gegenüber Qualitätsfehlern, Compliance-Lücken, Linienstillständen und Rückrufkosten.",
         "useCases": [
           {
-            "title": "Document Intelligence",
-            "desc": "Natürlichsprachliche Abfragen, Widerspruchserkennung und Vorschläge für fehlende Klauseln über QMS-Verfahren, Arbeitsanweisungen, Kontrollpläne und Auditberichte."
+            "title": "Qualitätsmanagementsysteme",
+            "desc": "Analyse, wie KI QMS-Dokumentensuche, Verfahrens-Interpretation, Klausel-Mapping und Querverweise zwischen ISO 9001, IATF 16949, VDA 6.3, CSR-Anforderungen und unternehmensspezifischer Dokumentation unterstützen kann."
           },
           {
-            "title": "Audit-Readiness-Score",
-            "desc": "Kontinuierliche Reifegradmessung gegen ISO 9001 / IATF 16949 / VDA 6.3 und CSR, Frühwarnung für kritische Befunde und Aktionspriorisierung."
+            "title": "Audit-Readiness und Compliance",
+            "desc": "Identifizierung, wie KI bei der Bewertung der Audit-Readiness, der Erkennung fehlender Nachweise, der Verknüpfung von Befunden mit relevanten Klauseln, der Priorisierung offener Maßnahmen und der Reduzierung von Unsicherheit vor Kunden-, Zertifizierungs- oder internen Audits helfen kann."
           },
           {
-            "title": "Mock-Audit-Co-Pilot",
-            "desc": "Simuliert Auditor-Fragen, listet erwartete Nachweise, bewertet die Antworten des Teams und überführt Lücken in Aktionen."
+            "title": "Lieferantenentwicklung und Lieferantenrisiko",
+            "desc": "Bewertung, wie Lieferanten-Scorecards, Auditergebnisse, Lieferleistung, Qualitätsvorfälle, Eskalationshistorie und KPI-Trends genutzt werden können, um KI-gestützte Lieferanten-Risikomodelle und Frühwarnmechanismen zu erstellen."
           },
           {
-            "title": "Lieferantenrisiko-Engine",
-            "desc": "Erzeugt aus PPAP-, APQP-, PPM-, OTD- und Reklamationsdaten einen Risikoscore und empfiehlt eine Lieferantenentwicklungs-Roadmap."
+            "title": "Produktions- und Prozessoptimierung",
+            "desc": "Analyse wiederkehrender Abweichungen, Schrott- und Nacharbeitsmuster, Prozessengpässe, Produktions-KPIs und Workflow-Ineffizienzen, um zu definieren, wo KI schnellere Ursachenanalyse und Prozessverbesserung unterstützen kann."
           },
           {
-            "title": "Regulierungs- & CSR-Monitor",
-            "desc": "Änderungsbenachrichtigungen für UNECE, REACH, ESG und kundenspezifische Anforderungen mit Auswirkungsanalyse."
+            "title": "Kundenspezifische Anforderungen und regulatorische Verfolgung",
+            "desc": "Bewertung, wie KI kundenspezifische Anforderungen, regulatorische Updates und interne Compliance-Pflichten überwachen, strukturieren und interpretieren kann, um manuelle Nachverfolgung zu reduzieren und Lücken zu schließen, bevor sie zu Auditbefunden werden."
           },
           {
-            "title": "KPI- & Entscheidungs-Assistent",
-            "desc": "Entscheidungsunterstützungsebene, die das Führungs-Dashboard in natürlicher Sprache erklärt und Varianzursachen sowie empfohlene Aktionen erzeugt."
+            "title": "KPI- und Management-Reporting",
+            "desc": "Identifizierung von Möglichkeiten, fragmentierte KPI-Berichte, Auditdaten, Lieferantendaten und Qualitätsleistungsindikatoren in KI-gestützte Management-Zusammenfassungen, Dashboards und priorisierte Aktionslisten zu verwandeln."
           },
           {
-            "title": "Coaching für interne Auditoren",
-            "desc": "Szenariobasiertes Üben, Rollenspiel und Feedback zur Entwicklung interner Auditkompetenzen."
-          },
-          {
-            "title": "Systemintegration",
-            "desc": "API-Anbindung an ERP-, MES-, QMS- und Dokumentenmanagementsysteme mit rollenbasiertem Zugriff und Audit-Trail."
+            "title": "Expertenwissens-Transfer",
+            "desc": "Erfassung des Wissens erfahrener Manager, Auditoren, Qualitätsführer und Prozessexperten und Umwandlung in strukturierte Wissensressourcen, die Onboarding, Schulung und tägliche Entscheidungsfindung unterstützen."
           }
         ]
       },
       "smartOperationalPlatform": {
-        "slug": "smart-operational-platform",
+        "slug": "operational-intelligence-platform",
         "brand": "W-DigiLab",
         "brandHref": "/w-digilab",
-        "title": "Intelligente Betriebs- und Performance-Plattform",
-        "tagline": "Eine modulare Betriebs- und Intelligence-Plattform unter einem digitalen Dach",
-        "definition": "Eine modulare Betriebs- und Intelligence-Plattform, die alle operativen Prozesse des Unternehmens (Workflows, Audits, Lieferantenmanagement, Produktionsplanung) und die Entscheidungsunterstützungsschicht (Unternehmenswissensbasis, prädiktives Performance-Dashboard) unter einem einzigen digitalen Dach zusammenführt. Die operative Seite überführt papier-, Excel- und E-Mail-basierte Prozesse in digitale Module mit rollenbasierten Genehmigungsworkflows und KI-gestützter Validierung. Die Intelligence-Seite verarbeitet Daten aus diesen Modulen, Produktionssensoren und Unternehmensdokumentation mittels KI und liefert sowohl eine in natürlicher Sprache durchsuchbare Wissensbasis als auch ein prädiktives Performance-Dashboard, das drei Entscheidungsebenen gleichzeitig bedient: Schichtleitung, Abteilungsleitung und Geschäftsführung.",
-        "strategicAdvantage": "Jeder Prozessschritt wird mit Zeitstempel, Benutzer-ID und Genehmigungskette protokolliert; diese Protokolle dienen sowohl als durchgängige Rückverfolgbarkeit als auch als Datentreibstoff für die Intelligence-Schicht. Ein Auditbefund löst automatisch den CAPA-Workflow aus, eine CAPA-Maßnahme fließt in den zugehörigen Prozess zurück, ein lieferantenbezogener Befund wirkt sich auf den Lieferanten-Risiko-Score aus, und dasselbe Ereignis aktualisiert gleichzeitig den Compliance-Score und die Warnliste im Führungs-Dashboard. Da die Module zusammenarbeiten, werden dieselben Daten nie zweimal erfasst. Operative Signale aktualisieren automatisch die Kompetenzmatrix. Die in IATF-, VDA- und CSR-Audits geforderten Nachweisdokumente werden in 1-2 Klicks erzeugt, während die Geschäftsführung KPI-Trends, ROI-Tracking und Maschinenausfall-Warnungen im selben Panel verfolgt.",
+        "title": "Operational Intelligence Platform",
+        "tagline": "Ein digitales Dach für Operationen, Rückverfolgbarkeit und Entscheidungsintelligenz.",
+        "definition": "Operational Intelligence Platform ist eine modulare Betriebs- und Intelligence-Plattform, die die operativen Prozesse des Unternehmens und die Entscheidungsunterstützungsschicht unter einem digitalen Dach vereint. Die operative Schicht überführt papier-, Excel- und E-Mail-basierte Prozesse in digitale Module mit rollenbasierten Genehmigungsabläufen, Rückverfolgbarkeit, KI-gestützter Validierung und automatisierter Nachweiserstellung. Die Intelligence-Schicht verarbeitet Daten aus Workflows, Audits, Lieferanten, Produktionsaktivitäten, Shop-Floor-Signalen und Unternehmensdokumentation, um zwei kritische Fähigkeiten zu schaffen: eine in natürlicher Sprache durchsuchbare Unternehmenswissensbasis und ein prädiktives Performance-Dashboard für Schichtleiter, Manager und Geschäftsführung. Da beide Schichten dieselbe Datenquelle nutzen, gibt es keine Lücke zwischen Ausführung und dem Verständnis der dahinter liegenden Entscheidung. Jeder Prozessschritt wird mit Zeitstempel, Benutzer-ID, Genehmigungskette und zugehörigem Nachweis protokolliert. Diese Protokolle schaffen End-to-End-Rückverfolgbarkeit und speisen gleichzeitig die Intelligence-Schicht für Risikoerkennung, Compliance-Überwachung und Performance-Prognose.",
+        "strategicAdvantage": "Operational Intelligence Platform verwandelt operative Ausführung in automatisch rückverfolgbare Nachweise. Jeder Workflow, jede Genehmigung, jede CAPA-Maßnahme, jeder Auditbefund, jedes Lieferantenproblem und jedes Prozess-Update wird mit Zeitstempel, Benutzeridentität, Genehmigungskette und unterstützenden Dokumenten erfasst. Nachweisdokumente, die für IATF-, VDA- und CSR-Audits benötigt werden, können in wenigen Klicks erzeugt werden, was den manuellen Vorbereitungsaufwand reduziert und Audit-Readiness zum Teil des Tagesgeschäfts macht statt zu einer Last-Minute-Aktivität. In vielen Unternehmen werden dieselben Informationen separat in Excel-Dateien, E-Mails, Formulare, Auditberichte, Lieferanten-Tracker und Management-Dashboards eingegeben. Operational Intelligence Platform verbindet Module, sodass ein Ereignis automatisch alle zugehörigen Bereiche aktualisiert. Ein Auditbefund kann einen CAPA-Workflow auslösen. Eine CAPA-Maßnahme kann den zugehörigen Workflow aktualisieren. Ein lieferantenbezogenes Problem kann den Lieferanten-Risiko-Score beeinflussen. Dasselbe Ereignis kann den Compliance-Score und die Führungs-Warnliste aktualisieren. Das beseitigt isolierte Prozessinseln und reduziert wiederholende manuelle Arbeit. Operational Intelligence Platform verwandelt operative Daten in Entscheidungsintelligenz. Die Plattform nutzt KI, um Workflow-Daten, Shop-Floor-Signale, KPI-Trends, Lieferantendaten und Unternehmensdokumentation zu verarbeiten. Sie unterstützt drei Entscheidungsebenen gleichzeitig: Schichtleiter sehen operative Warnungen, unvollständige Aufgaben, Stillstandssignale und unmittelbare Handlungsbedarfe; Abteilungsleiter verfolgen Performance, Risiken, CAPA-Fortschritt, Lieferantenprobleme und Team-Bereitschaft; die Geschäftsführung überwacht KPI-Trends, Compliance-Scores, ROI-Tracking, Risikoexposition und strategische Performance-Indikatoren. Dies schafft eine einzige Wahrheitsquelle, in der Unternehmenswissen personenunabhängig wird und Entscheidungsfindung schneller, sichtbarer und datengetriebener wird.",
         "useCases": [
           {
-            "title": "Digitale Workflows",
-            "desc": "8D- und Ishikawa-basiertes Reklamationsmanagement, CAPA, MOC-Genehmigungsketten, Layered Process Audit (LPA) und Meldesysteme für Nichtkonformitäten vor Ort."
+            "title": "Workflow-Digitalisierung",
+            "desc": "Digitalisierung papier-, Excel- und E-Mail-basierter Workflows mit rollenbasierten Genehmigungen, Aufgaben-Ownership, Zeitstempeln, Eskalationsregeln und KI-gestützter Validierung."
           },
           {
-            "title": "Internal Audit & Governance",
-            "desc": "Management des jährlichen Auditprogramms; System-, Prozess- und Produktaudits; CSR- und 2nd-Party-Lieferantenaudits; dynamische VDA 6.3- und IATF 16949-Checklisten."
+            "title": "Audit- und Compliance-Management",
+            "desc": "Verwaltung von Auditbefunden, Nachweisdateien, Korrekturmaßnahmen, Compliance-Scores und Readiness-Indikatoren für IATF-, VDA-, CSR- und interne Auditanforderungen."
           },
           {
-            "title": "Lieferantenrisiko & Performance",
-            "desc": "Live-Risiko-Score (PPM, OTD, finanziell, logistisch, geografisch), Scorecard-Management, automatisierte Entwicklungspläne und Auslösung von 2nd-Party-Audits."
+            "title": "CAPA- und Korrekturmaßnahmen-Management",
+            "desc": "Verbindung von Auditbefunden, Lieferantenproblemen, Prozessabweichungen und Reklamationen mit strukturierten CAPA-Workflows mit Ownership, Fristen und Nachverfolgungs-Sichtbarkeit."
           },
           {
-            "title": "Intelligente Produktionsplanung",
-            "desc": "Dynamische Terminierung, die Maschinenkapazität, Rohstoffe, Schichten und Lieferfristen gemeinsam optimiert; \"What-If\"-Szenarien und MES / SCADA-Integration."
+            "title": "Lieferantenmanagement und Risiko-Scoring",
+            "desc": "Verfolgung von Lieferantenperformance, lieferantenbezogenen Befunden, Qualitätsproblemen, Lieferrisiken, Eskalationshistorie und Lieferanten-Risiko-Scores in einem vernetzten Modul."
           },
           {
-            "title": "Kompetenz & Vertretung",
-            "desc": "Objektive ILU-Matrix, gespeist aus digitalen Workflow-Daten; Verfolgung der Zertifikatsgültigkeit; automatische Backup-Alarme für kritische Positionen."
+            "title": "Produktionsplanung und Shop-Floor-Signale",
+            "desc": "Verbindung von Produktionsplanungsdaten, Maschinenausfall-Warnungen, Bearbeitungszeiten, Prozessverzögerungen und operativen Signalen mit Performance-Dashboards."
           },
           {
-            "title": "KI-Wissensabfrage (RAG)",
-            "desc": "Abfrage technischer Standards, Verfahren, 8D-Protokolle und Lösungsarchive in natürlicher Sprache; Antworten mit Quellenangaben."
+            "title": "Unternehmenswissensbasis",
+            "desc": "Erstellung einer in natürlicher Sprache durchsuchbaren Wissensbasis aus Verfahren, Standards, Auditberichten, Prozessdokumenten, Lessons Learned und internem Know-how."
           },
           {
             "title": "Prädiktives Performance-Dashboard",
-            "desc": "IATF / QMS-Compliance-Score, OEE, Energieverbrauch, Maschinenausfall-Warnungen; abteilungs- und werksbezogene KPI-Dashboards."
+            "desc": "Überwachung von KPI-Trends, ROI-Tracking, Stillstandsrisiken, Compliance-Scores, Lieferantenrisiken und operativen Warnungen über Schichtleiter-, Manager- und Führungsebene."
           },
           {
-            "title": "Strategische Governance",
-            "desc": "OKR / BSC-basierte Zielkaskadierung, 3-6-12-Monats-Trendanalysen, ROI- und Fortschritts-Tracking strategischer Investitionen."
+            "title": "Kompetenzmatrix und Belegschafts-Bereitschaft",
+            "desc": "Nutzung operativer Signale wie Aufgabenqualität, Formularabschluss, Genehmigungsverzögerungen und Prozessfehler zur Aktualisierung der Kompetenzsichtbarkeit und Identifikation von Schulungsbedarf."
           },
           {
-            "title": "Integrierte Schulung",
-            "desc": "Interaktives Onboarding verbunden mit WStudio-Videoinhalten; Digitalisierung von Engineering-Know-how durch strukturierte Q&A-Sätze."
+            "title": "Nachweis- und Dokumentenerstellung",
+            "desc": "Erstellung von Auditnachweisen, Prozessaufzeichnungen, Genehmigungshistorien, CAPA-Dokumentation und Compliance-Dateien in 1-2 Klicks."
           },
           {
-            "title": "Automatisierte Warnung und Eskalation",
-            "desc": "Sofortbenachrichtigungen bei Schwellenwertüberschreitungen; automatisches CAPA-Triggern bei Erkennung von Nichtkonformitäten."
+            "title": "Unternehmensgedächtnis und Wissenstransfer",
+            "desc": "Reduzierung der Abhängigkeit von individueller Erfahrung durch Umwandlung von Prozesshistorie, Entscheidungen, Genehmigungen, Dokumenten und Lessons Learned in ein strukturiertes digitales Gedächtnis."
           }
         ]
       },
@@ -1233,92 +1217,84 @@
         ]
       },
       "aiContentProduction": {
-        "slug": "ai-content-production",
+        "slug": "corporate-media-engine",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "KI-gestützte Content Production, Business Storytelling und Knowledge Channels",
-        "tagline": "KI, filmisches Storytelling und markierte Broadcast-Kanäle in einem Service",
-        "definition": "Ein End-to-End-Medienservice, der eine KI-gestützte Videoproduktionsinfrastruktur, die Disziplin des filmischen Storytellings und markierte Corporate-Broadcast-Kanäle verbindet und Unternehmen dabei hilft, Wissen, Erfahrungen und Erfolgsgeschichten in moderne Videoformate zu übersetzen. Wir verwandeln komplexe Geschäftsprozesse, technisches Know-how und Führungserkenntnisse in Inhalte, die angeschaut, geteilt und erinnert werden, und veröffentlichen sie anschließend über nachhaltige, abonnierbare Kanäle für Mitarbeiter, Lieferanten und externe Stakeholder. KI-Tools liefern Geschwindigkeit und Skalierung; Storytelling sorgt für Wiedererkennungswert und emotionale Wirkung; die Kanalstruktur sorgt dafür, dass das produzierte Wissen zu einer im Laufe der Zeit wachsenden Corporate-Media-Bibliothek in Markenqualität wird.",
-        "strategicAdvantage": "Durchbricht den Zeit- und Budget-Engpass klassischer Unternehmensvideoproduktion: KI-Avatar-Präsentatoren und automatisierte Vertonung erzeugen mehrsprachige Inhalte aus einem einzigen Dreh, während das Storytelling-Framework Inhalte von trockener Informationsvermittlung zu Geschichten macht, die angeschaut, geteilt und erinnert werden. Die Kanalstruktur löst den einmaligen Charakter der Produktion auf; eine funktionierende Corporate-Media-Operation wird mit einem regelmäßigen Publikationskalender, redaktioneller Kuratierung und Abonnement-Erlebnis aufgebaut. Mitarbeiter greifen auf Inhalte mit der Leichtigkeit von Netflix oder Spotify zu; Lieferanten verfolgen ihre Entwicklungsinhalte von einem einzigen Ort aus; neue Mitarbeiter lernen das Unternehmen über einen strukturierten Feed kennen.",
+        "title": "Corporate Media Engine",
+        "tagline": "Bauen Sie eine Corporate-Media-Engine auf, keine Einzelvideos.",
+        "definition": "Corporate Media Engine ist eine End-to-End-Medienlösung, die komplexe Geschäftsprozesse, Führungserkenntnisse, technische Expertise und Erfolgsgeschichten in moderne Videoformate übersetzt. Sie nutzt KI-Tools zur schnelleren und skalierbaren Produktion, Storytelling-Frameworks für emotionale Wirkung und Wiedererkennung sowie markierte Kanalstrukturen zur Veröffentlichung über abonnierbare Corporate-Media-Bibliotheken. Das Ergebnis ist kein einmaliges Unternehmensvideo. Es ist ein wachsendes, markenkonformes Medien-Ökosystem für Mitarbeiter, Lieferanten, Kunden und externe Stakeholder.",
+        "strategicAdvantage": "Corporate Media Engine durchbricht den Zeit- und Budget-Engpass klassischer Unternehmensvideoproduktion. KI-Avatar-Präsentatoren, automatisierte Vertonung und mehrsprachige Inhalts-Workflows ermöglichen es, mehr Inhalte aus weniger Produktionseinsatz zu erzeugen, bei gleichbleibender Konsistenz über Märkte, Sprachen und Stakeholder-Gruppen hinweg. KI schafft Produktionseffizienz, aber Storytelling schafft Wirkung. Corporate Media Engine verwandelt trockene Informationsvermittlung in geschichtengetriebene Inhalte mit Struktur, Kontext, Spannung, Charakteren und Konsequenzen. Komplexes Geschäftswissen wird so leichter verständlich, erinnerbar und besprechbar. Corporate Media Engine löst die Einmal-Natur klassischer Unternehmensvideoproduktion auf. Statt isolierter Videos entstehen markierte Broadcast-Kanäle mit regelmäßigem Publikationskalender, redaktioneller Kuratierung und abonnementbasiertem Zugang. Produziertes Wissen wird zu einer wachsenden Corporate-Media-Bibliothek, die Kommunikation, Schulung, Kultur, Employer Branding und Stakeholder-Engagement über die Zeit hinweg trägt.",
         "useCases": [
           {
-            "title": "AI Video Production",
-            "desc": "KI-gestützte Produktionspipeline vom Drehbuch bis zur Postproduktion; minimaler Dreh, maximaler Output."
+            "title": "Interne Wissenskommunikation",
+            "desc": "Umwandlung von Unternehmens-Know-how, Prozesswissen und operativer Erfahrung in strukturierte Videoinhalte für Mitarbeiter."
           },
           {
-            "title": "AI Avatar Presenters",
-            "desc": "Mehrsprachige digitale Präsentatoren in der Rolle von Unternehmenssprechern oder Trainern, ohne menschliche On-Camera-Talente zu benötigen."
+            "title": "Technisches Know-how und Prozessdarstellung",
+            "desc": "Erklärung komplexer Produktionsprozesse, Qualitätsmethoden, Auditsysteme, Lieferantenanforderungen und digitaler Workflows in modernen Videoformaten."
           },
           {
-            "title": "Multilingual Content Creation",
-            "desc": "Automatisierte Lokalisierung aus einer einzigen Master-Quelle in Englisch, Deutsch, Türkisch und jede weitere benötigte Sprache."
+            "title": "Führungs- und Geschäftsleitungs-Kommunikation",
+            "desc": "Transformation von Führungserkenntnissen, strategischen Botschaften und Management-Perspektiven in sehenswerte Corporate-Broadcasts."
           },
           {
-            "title": "Automated Storytelling Videos",
-            "desc": "KI-gesteuerte Erzählformate, die Rohdaten oder Dokumente in strukturierte Story-Bögen verwandeln."
+            "title": "Lieferanten- und Partnerkommunikation",
+            "desc": "Erstellung markierter Content-Kanäle für Lieferanten-Onboarding, Entwicklung, Standards, Erwartungen und Verbesserungsprogramme."
           },
           {
-            "title": "Company Stories",
-            "desc": "Filmisches Storytelling zur Gründung, Transformation oder Kulturgeschichte des Unternehmens."
+            "title": "Mitarbeiterschulung und kulturelle Ausrichtung",
+            "desc": "Unterstützung von Lernen, Kultur, Compliance, Qualitätsmindset und interner Transformation mit Inhalten, die sich weniger wie Pflichtschulungen und mehr wie ein Medienerlebnis anfühlen."
           },
           {
-            "title": "Innovation Stories",
-            "desc": "Dokumentarische Darstellung von F&E-Projekten, Patentwegen und technologischen Durchbrüchen."
+            "title": "Employer Branding und Talentkommunikation",
+            "desc": "Präsentation von Unternehmenskultur, Menschen-Geschichten, Karrierewegen und Erfolgsgeschichten in Premium-Markenmedienformaten."
           },
           {
-            "title": "Leadership Insights",
-            "desc": "Vermittlung von Führungsvision, strategischen Entscheidungen und Branchenperspektiven aus erster Hand."
+            "title": "Kunden- und externe Stakeholder-Kommunikation",
+            "desc": "Veröffentlichung ausgewählter Corporate Stories, Innovationsfälle, Erfolgsgeschichten und Thought-Leadership-Inhalte für Kunden, Investoren, Partner und den breiteren Markt."
           },
           {
-            "title": "Industry Documentaries",
-            "desc": "Unternehmensdokumentationen zu Branchentransformationen, Lieferketten-Narrativen oder Wettbewerbsdynamiken."
-          },
-          {
-            "title": "Internal Learning Channels",
-            "desc": "Interne Schulungs- und Microlearning-Kanäle mit regelmäßigem Publikationskalender und rollenbasierten Inhaltsströmen."
-          },
-          {
-            "title": "Supplier Development Channels",
-            "desc": "Kanäle in Markenqualität für Lieferanten, mit Entwicklungsinhalten, Standard-Updates und technischer Anleitung."
-          },
-          {
-            "title": "Onboarding Channels",
-            "desc": "Strukturierte Video-Streams für die ersten 30, 60 und 90 Tage sowie rollenbasierte Orientierungsserien für neue Mitarbeiter."
-          },
-          {
-            "title": "Corporate Storytelling Channels",
-            "desc": "Ein regelmäßig veröffentlichter Corporate-Story-Kanal für externe Stakeholder (Kunden, Investoren, Bewerber)."
+            "title": "Mehrsprachige Corporate-Media-Bibliotheken",
+            "desc": "Nutzung KI-gestützter Vertonung, Avatar-Präsentatoren und Lokalisierungs-Workflows, um eine Kernbotschaft über verschiedene Sprachen, Märkte und Zielgruppen zu skalieren."
           }
         ]
       },
       "businessflix": {
-        "slug": "businessflix",
+        "slug": "busyflix",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "BusinessFlix",
-        "tagline": "Kein Schulungsvideo, sondern eine Broadcast-Erfahrung, die produziert wurde, um angeschaut zu werden",
-        "definition": "Ein Premium-Content-Produktionsservice, der Wissen und Erfahrung aus klassischen Schulungs- oder Promotionsformaten herauslöst und in eine echte Show- oder Miniserien-Erfahrung verwandelt. Unternehmensthemen (Qualität, Audit, Lieferantenentwicklung, Talentmanagement) werden in Staffeln mit Charakteren, Spannung und dramatischen Bögen strukturiert. Der Inhalt ist kein Schulungsvideo, sondern eine Broadcast-Erfahrung, die produziert wurde, um angeschaut zu werden.",
-        "strategicAdvantage": "Löst das größte Problem unternehmensinterner Schulungen und kultureller Inhalte: niedrige Abschlussquoten und keine nachhaltige Wirkung. Da das Publikum das Gefühl hat, eine Show oder Serie zu sehen, wird der Inhalt freiwillig konsumiert, sozial diskutiert und erneut angesehen. Themen wie Auditdruck in der Automobilindustrie, Lieferantenkrisen oder Qualitätsführung erzeugen, wenn sie durch Charaktere und Geschichten erzählt werden, ein unvergessliches Markenerlebnis für Mitarbeiter und externe Stakeholder.",
+        "title": "BusyFlix",
+        "tagline": "Unternehmenswissen, produziert wie eine Show.",
+        "definition": "BusyFlix ist ein Premium-Content-Produktionsservice für Unternehmen, der Geschäftsthemen in geschichtengetriebene Shows und Miniserien verwandelt. Statt Standard-Schulungsvideos oder Unternehmenspräsentationen werden Themen wie Qualität, Auditdruck, Lieferantenentwicklung, Führung und Talentmanagement in Staffeln, Episoden, Charakteren, Spannung und dramatischen Bögen strukturiert. Das Ergebnis ist kein Schulungsvideo. Es ist eine Broadcast-Erfahrung, die produziert wurde, um gesehen zu werden.",
+        "strategicAdvantage": "BusyFlix löst eines der größten Probleme unternehmensinterner Schulung und kultureller Kommunikation: niedrige Aufmerksamkeits- und Abschlussraten. Wenn sich Geschäftsinhalte wie eine Show statt wie ein Pflicht-Schulungsvideo anfühlen, werden Menschen sie eher freiwillig anschauen und bis zum Ende verfolgen. Geschichtengetriebene Inhalte schaffen stärkere Erinnerung als klassische Informationsvermittlung. Indem BusyFlix Geschäftsthemen in Charaktere, Konflikte, Entscheidungen und Konsequenzen verwandelt, hilft es Mitarbeitern, Kernbotschaften länger zu erinnern und mit echten Arbeitsplatzsituationen zu verbinden. Da sich der Inhalt wie eine Serie anfühlt, wird er leichter besprochen, geteilt und erneut angesehen. Themen wie Auditdruck, Lieferantenkrisen oder Qualitätsführung werden mehr als interne Kommunikation. Sie erzeugen ein unvergessliches Markenerlebnis für Mitarbeiter, Lieferanten, Kunden und externe Stakeholder.",
         "useCases": [
           {
-            "title": "Audit Drama",
-            "desc": "Eine Schulungsserie, die Auditprozesse durch Szenen rekonstruiert, in einem sehenswerten spannungsgetriebenen Format."
+            "title": "Qualitätskultur und Qualitätsführung",
+            "desc": "Verwandlung von Qualitätsprinzipien, Fehlern, Kundenerwartungen und Null-Fehler-Mindset in einprägsame Geschäftsgeschichten."
           },
           {
-            "title": "Supplier Development Stories",
-            "desc": "Charaktergetriebenes dokumentarisches Storytelling von Lieferantenentwicklungswegen aus der Praxis."
+            "title": "Auditvorbereitung und Auditdruck",
+            "desc": "Darstellung realer Auditszenarien, interner Druck, Entscheidungsmomente und Konsequenzen durch geschichtengetriebene Episoden."
           },
           {
-            "title": "Quality Queen Show",
-            "desc": "Eine Serie, die Qualitätsführer in den Mittelpunkt stellt und Mentoring sowie Fallbesprechungen im Show-Format präsentiert."
+            "title": "Lieferantenentwicklung und Lieferantenkrisen",
+            "desc": "Umwandlung von Lieferantenleistungs-Problemen, Eskalationsprozessen und Entwicklungswegen in kurze Serien."
           },
           {
-            "title": "Industry Mini Series",
-            "desc": "Ein mehrteiliges Miniserienformat, das Branchenthemen sehenswert statt lehrbuchartig macht."
+            "title": "Talentmanagement und Führungskräfteentwicklung",
+            "desc": "Erstellung von Inhalten rund um Führungsverhalten, Teamdynamik, Entscheidungsfindung, Feedbackkultur und Mitarbeiterwachstum."
           },
           {
-            "title": "Talent Development Series",
-            "desc": "Kompetenzentwicklung, Karrierewege und interne Mentoring-Geschichten im Serienformat."
+            "title": "Digitale Transformation und Prozessverbesserung",
+            "desc": "Erklärung von Transformation, Automatisierung, Daten, Lean-Prozessen und Operational Excellence durch praktische Geschäftsnarrative."
+          },
+          {
+            "title": "Employer Branding und kulturelle Kommunikation",
+            "desc": "Präsentation von Unternehmenskultur, Werten und internen Erfolgsgeschichten in einem Format, das Menschen tatsächlich sehen wollen."
+          },
+          {
+            "title": "Kunden- und Stakeholder-Kommunikation",
+            "desc": "Umwandlung komplexer Unternehmensbotschaften in sehenswerte Premium-Inhalte für Kunden, Partner, Lieferanten und externe Zielgruppen."
           }
         ]
       },
@@ -1326,38 +1302,89 @@
         "slug": "talent-management",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "Talent Management Plattform",
-        "tagline": "AI-Mentor, Fähigkeitsmessung und Kompetenzkarte auf einer Plattform",
-        "definition": "Ein KI-gestützter Talent-Management-Service, der Kompetenzentwicklung, Fähigkeitsmessung und Mentoring-Erfahrung der Mitarbeiter auf einer einzigen digitalen Plattform vereint. Wenn ein Mitarbeiter sich in einem Thema weiterentwickeln möchte, gestaltet er über Text-, Sprach- oder Video-Konversationen mit einem AI-Mentor seinen persönlichen Lernpfad; Trainer und interne Experten bereichern die Plattform bei Bedarf durch hochgeladene Mikro-Videoinhalte; das System misst das tatsächliche Fähigkeitsniveau des Mitarbeiters sowohl durch KI-geführte Interviews als auch durch praktische Aufgaben und macht die Entwicklungskurve sichtbar.",
-        "strategicAdvantage": "Beseitigt die zwei zentralen Schwächen klassischer Lernplattformen: nicht messbares Lernen und nicht personalisierte Inhalte. Jeder Mitarbeiter erhält eine Entwicklungsreise, die auf seinem eigenen Niveau beginnt und durch Gespräche mit dem AI-Mentor vorangetrieben wird; Trainer skalieren, indem sie Inhalte nur in kritischen Wissensbereichen hochladen, anstatt Hunderten Menschen 1-zu-1-Zeit zu widmen. Auf der Managementseite ist die Kompetenzlandkarte in Echtzeit verfügbar: wer in welchem Thema bereit ist, wo Lücken bestehen, welche Positionen über Backups verfügen, alles in einem einzigen Dashboard sichtbar. Dadurch basieren Beförderungs-, Rotations-, Backup- und Schulungsinvestitionsentscheidungen auf gemessenen Daten statt auf Intuition.",
+        "title": "Talent Management",
+        "tagline": "Eine kreative Plattform, auf der Schauspieler und Performer wachsen, sich vernetzen und ihr Handwerk präsentieren.",
+        "definition": "Talent Management ist eine kreativ-first Plattform für Schauspieler, Performer und andere On-Screen- oder Bühnen-Talente. Jeder Nutzer erstellt ein professionelles Profil mit persönlicher Vorstellung, Headshots, Showreel, vergangenen Projekten, Ausbildungshistorie und kreativer Bandbreite. Talente können KI-Tools nutzen, um Drehbücher zu lesen, an Szenen zu arbeiten, sich auf Castings vorzubereiten, Dialogproben durchzuführen und Charakterinterpretationen durch geführte KI-Gespräche zu erkunden. Eine integrierte Social-Schicht ermöglicht Talenten, Inhalte zu veröffentlichen, einander zu folgen, Work-in-Progress zu teilen, ein Publikum aufzubauen und sich mit Regisseuren, Casting-Profis und kreativen Mitwirkenden zu vernetzen. Das Ergebnis ist eine Plattform, auf der kreative Identität, kreative Praxis und kreatives Netzwerk zusammen leben, statt sich auf separate Tools, Agenturen und Social-Media-Accounts zu verteilen.",
+        "strategicAdvantage": "Talent Management bietet Performern einen privaten kreativen Raum, um Drehbücher zu lesen, Szenen zu studieren, Dialoge zu proben, Charaktermotivation zu erkunden und sich mit KI-Unterstützung auf Castings vorzubereiten. Die KI agiert als kreativer Lese-Partner, der bei der Analyse von Ton, Absicht, Subtext und emotionaler Dynamik hilft, ohne die künstlerische Entscheidung des Performers zu ersetzen. Statt einer fragmentierten Mischung aus CV-Dokumenten, Headshot-Ordnern, Agenturprofilen und Social-Media-Accounts bauen Talente ein einziges strukturiertes professionelles Profil auf, das Vorstellungsvideo, Showreel, vergangene Projekte, Ausbildung, Sprachen, Skills und kreative Bandbreite umfasst. Daraus entsteht eine einzige kreative Identität, die leicht zu teilen, leicht zu aktualisieren und in der Branche wiedererkennbar ist. Talent Management ist nicht nur eine Portfolio-Plattform. Es ist auch ein kreatives soziales Netzwerk, in dem Talente Behind-the-Scenes-Inhalte veröffentlichen, Monologe teilen, Audition-Aufnahmen posten, anderen Performern folgen, ein Publikum aufbauen und in der Branche sichtbar bleiben können. Diese Kombination aus Profil, Portfolio und sozialer Präsenz hilft kreativen Talenten, sich beruflich weiterzuentwickeln, ohne nur von traditionellen Gatekeepern abhängig zu sein.",
         "useCases": [
           {
-            "title": "AI-Mentor",
-            "desc": "Mitarbeiter führen Text-, Sprach- oder Video-1-1-Sitzungen mit dem AI-Mentor, um Themen zu lernen, Fragen zu stellen und Feedback zu erhalten."
+            "title": "Schauspieler- und Performer-Profile",
+            "desc": "Aufbau strukturierter kreativer Profile mit Vorstellungsvideo, Headshots, Showreel, vergangenen Projekten, Ausbildung und Skills."
           },
           {
-            "title": "Fähigkeitsmessung & Zertifizierung",
-            "desc": "Strukturierte KI-geführte Bewertungen, Fallstudien und praktische Aufgaben zur Messung des tatsächlichen Fähigkeitsniveaus."
+            "title": "KI-gestützte Drehbuchlesung und Szenenarbeit",
+            "desc": "Drehbücher lesen, Charaktere analysieren, Szenenabsicht erkunden und Dialoge in KI-geführten kreativen Sitzungen proben."
           },
           {
-            "title": "Trainer-Video & Mikro-Content",
-            "desc": "Content-Infrastruktur, auf der interne Experten und externe Trainer kurze, themenspezifische Videoinhalte hochladen; der AI-Mentor verknüpft diese mit relevanten Fragen."
+            "title": "Casting-Vorbereitung und Self-Tape-Unterstützung",
+            "desc": "Vorbereitung auf Castings, Aufnahme von Self-Tapes, Performance-Review und Verfeinerung der Darstellung vor der Einreichung."
           },
           {
-            "title": "Personalisierter Entwicklungspfad",
-            "desc": "Ein kontinuierlich aktualisierter Lernpfad, der dynamisch von der KI auf Basis von Rolle, aktuellem Fähigkeitsniveau und Karriereziel generiert wird."
+            "title": "Showreel- und Portfolio-Management",
+            "desc": "Hochladen, Organisieren und Präsentieren vergangener Film-, Theater-, Werbe- und Digital-Projekte in einer professionellen Bibliothek."
           },
           {
-            "title": "Kompetenzkarte & Backup",
-            "desc": "Visuelle Verfolgung der Kompetenzverteilung, Backups kritischer Positionen und Entwicklungskurven über Abteilungen und das gesamte Unternehmen."
+            "title": "Kreatives Social Networking",
+            "desc": "Anderen Talenten folgen, Arbeit teilen, Behind-the-Scenes-Inhalte posten und ein organisches kreatives Publikum aufbauen."
           },
           {
-            "title": "Interview-Simulation",
-            "desc": "Mitarbeiter können vor wichtigen Meetings, Präsentationen oder Rolleninterviews Übungsinterviews mit der KI durchführen und Feedback zu Ton, Sprachfluss und Inhalt erhalten."
+            "title": "Casting und kreative Collaboration-Entdeckung",
+            "desc": "Sichtbar werden für Casting-Direktoren, Produzenten, Agenten und kreative Mitwirkende, die spezifische Talentprofile suchen."
           },
           {
-            "title": "Mentoring- & Coaching-Übergabe",
-            "desc": "Automatisches Matching mit einem internen Mentor oder externen Coach, wenn der AI-Mentor ein Thema nicht lösen kann oder menschliche Note erforderlich ist."
+            "title": "Karriereentwicklung für kreative Talente",
+            "desc": "Verfolgung von Ausbildung, Kursen, Workshops, Sprachen und kreativer Bandbreite als Teil einer langfristigen Karrieregeschichte."
+          },
+          {
+            "title": "Personal Branding für Performer",
+            "desc": "Talente dabei unterstützen, der Branche und ihrem Publikum eine konsistente, professionelle und authentische kreative Identität zu präsentieren."
+          }
+        ]
+      },
+      "aiSkillPlatform": {
+        "slug": "ai-skill-platform",
+        "brand": "W-Studio",
+        "brandHref": "/w-studio",
+        "title": "AI Skill Platform",
+        "tagline": "KI-Mentor, Fähigkeitsmessung und Kompetenzsichtbarkeit auf einer Plattform.",
+        "definition": "AI Skill Platform ist eine KI-gestützte Talent-Management-Plattform, die Kompetenzentwicklung, Fähigkeitsmessung und Mentoring-Erfahrung der Mitarbeiter in einem einzigen System vereint. Wenn ein Mitarbeiter sich in einem bestimmten Thema weiterentwickeln möchte, interagiert er über Text-, Sprach- oder Video-Konversationen mit einem KI-Mentor. Der KI-Mentor hilft, das aktuelle Niveau, den Lernbedarf und den persönlichen Entwicklungspfad zu definieren. Interne Trainer und Fachexperten können die Plattform bereichern, indem sie bei Bedarf Mikro-Videoinhalte, praktische Beispiele, Dokumente oder aufgabenbasierte Lernmaterialien hochladen. Die Plattform misst echte Kompetenz durch KI-geführte Interviews, szenariobasierte Fragen und praktische Aufgaben. Im Verlauf wird die Entwicklungskurve sowohl für Mitarbeiter als auch für Manager sichtbar. Das Ergebnis ist ein Talent-Entwicklungssystem, in dem Lernen personalisiert, Fortschritt messbar und Kompetenzdaten für die Personalplanung nutzbar werden.",
+        "strategicAdvantage": "Klassische Lernplattformen liefern oft denselben Inhalt an alle, unabhängig von Erfahrungsstufe, Rolle oder tatsächlicher Lücke. AI Skill Platform startet beim realen Niveau des Mitarbeiters. Durch KI-Mentor-Gespräche, Interviews und praktische Aufgaben erhält jeder Mitarbeiter eine auf seinen Bedarf zugeschnittene Entwicklungsreise. Dies erzeugt ein relevanteres, ansprechenderes und effizienteres Entwicklungserlebnis als Standard-Content-Bibliotheken oder generische Schulungspfade. Viele Organisationen wissen, wer eine Schulung abgeschlossen hat, aber nicht, wer die geforderte Fähigkeit tatsächlich erworben hat. AI Skill Platform misst Kompetenz durch KI-geführte Interviews, szenariobasierte Bewertungen und praktische Aufgaben. Dadurch wird die Entwicklungskurve im Zeitverlauf sichtbar und der Unterschied zwischen Inhaltsabschluss und tatsächlicher Fähigkeit erkennbar. Manager sehen, wer in welchem Thema bereit ist, wo Lücken bestehen, welche Rollen abgedeckt sind und wo zusätzliche Entwicklung nötig ist. Eins-zu-eins-Mentoring ist wertvoll, aber in großen Teams schwer skalierbar. AI Skill Platform ermöglicht Trainern und internen Experten, ihr Wissen durch gezielte Mikro-Inhalte genau dort einzubringen, wo es am meisten gebraucht wird, während der KI-Mentor Mitarbeiter kontinuierlich durch Gespräch und Anleitung unterstützt. Auf der Managementseite stützen Echtzeit-Kompetenzkarten Beförderungs-, Rotations-, Backup- und Schulungsinvestitionsentscheidungen auf gemessene Daten statt auf Intuition.",
+        "useCases": [
+          {
+            "title": "Mitarbeiter-Kompetenzentwicklung",
+            "desc": "Erstellung personalisierter Entwicklungsreisen basierend auf dem aktuellen Niveau, den Rollenanforderungen und den Wachstumszielen jedes Mitarbeiters."
+          },
+          {
+            "title": "KI-Mentoring und geführtes Lernen",
+            "desc": "Unterstützung der Mitarbeiter durch KI-Mentor-Gespräche per Text, Sprache oder Video, um Lernen zu lenken, Themen zu klären und nächste Schritte zu empfehlen."
+          },
+          {
+            "title": "Fähigkeitsbewertung und praktische Evaluation",
+            "desc": "Messung des realen Fähigkeitsniveaus durch KI-geführte Interviews, szenariobasierte Fragen, praktische Aufgaben und rollenbezogene Bewertungen."
+          },
+          {
+            "title": "Kompetenzkartierung",
+            "desc": "Visualisierung, wer in welchem Thema bereit ist, wer Lücken hat, welche Teams gefährdet sind und wo Entwicklung erforderlich ist."
+          },
+          {
+            "title": "Wissenstransfer interner Experten",
+            "desc": "Trainer und interne Experten laden Mikro-Videos, Beispiele, Dokumente und praktische Inhalte für kritische Wissensbereiche hoch."
+          },
+          {
+            "title": "Beförderungs- und Rotationsentscheidungen",
+            "desc": "Unterstützung von Beförderungs-, Rollenwechsel- und Rotationsentscheidungen mit gemessenen Kompetenzdaten statt allein mit Manager-Intuition."
+          },
+          {
+            "title": "Backup- und Nachfolgeplanung",
+            "desc": "Erkennung, welche Positionen abgesichert sind, wo Fähigkeitsrisiken bestehen und welche Mitarbeiter für kritische Rollen vorbereitet werden können."
+          },
+          {
+            "title": "Optimierung von Schulungsinvestitionen",
+            "desc": "Priorisierung von Schulungsinvestitionen basierend auf tatsächlichen Lücken, Team-Bereitschaft und Kompetenzdaten."
+          },
+          {
+            "title": "Onboarding und Rollenbereitschaft",
+            "desc": "Neue Mitarbeiter erreichen Rollenbereitschaft schneller durch geführtes KI-Mentoring, gezielte Inhalte und messbares Fortschrittstracking."
           }
         ]
       }

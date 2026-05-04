@@ -147,15 +147,14 @@ export default function FeatureDefinition({
             >
               <span
                 aria-hidden
-                className="pointer-events-none absolute -left-2 -top-8 select-none leading-none sm:-left-4 sm:-top-14"
+                className="pointer-events-none absolute -left-2 -top-16 select-none leading-none sm:-left-4 sm:-top-24"
                 style={{
-                  fontFamily: "var(--font-fraunces), Georgia, serif",
-                  fontStyle: "italic",
-                  fontWeight: 400,
+                  fontFamily: "Georgia, 'Times New Roman', serif",
+                  fontStyle: "normal",
+                  fontWeight: 700,
                   fontSize: "clamp(9rem, 18vw, 14rem)",
-                  fontVariationSettings: "'SOFT' 100, 'opsz' 144, 'WONK' 1",
                   background:
-                    "linear-gradient(135deg, rgba(30,109,181,0.28), rgba(8,145,178,0.18) 70%, transparent)",
+                    "linear-gradient(135deg, rgba(30,109,181,0.32), rgba(8,145,178,0.24))",
                   WebkitBackgroundClip: "text",
                   backgroundClip: "text",
                   color: "transparent",

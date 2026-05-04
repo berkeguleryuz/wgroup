@@ -5,15 +5,17 @@ export type ProductKey =
   | "blockchainProducts"
   | "aiContentProduction"
   | "businessflix"
+  | "aiSkillPlatform"
   | "talentManagement";
 
 export const productSlugs: Record<ProductKey, string> = {
-  operationalExcellence: "operational-excellence",
-  wQualityAiAdvisor: "w-quality-ai-advisor",
-  smartOperationalPlatform: "smart-operational-platform",
+  operationalExcellence: "integrated-operating-system",
+  wQualityAiAdvisor: "ai-quality-process-optimization",
+  smartOperationalPlatform: "operational-intelligence-platform",
   blockchainProducts: "blockchain-products",
-  aiContentProduction: "ai-content-production",
-  businessflix: "businessflix",
+  aiContentProduction: "corporate-media-engine",
+  businessflix: "busyflix",
+  aiSkillPlatform: "ai-skill-platform",
   talentManagement: "talent-management",
 };
 
@@ -24,7 +26,19 @@ export const productImages: Record<ProductKey, string> = {
   blockchainProducts: "/w-new/n3.webp",
   aiContentProduction: "/w-new/n4.webp",
   businessflix: "/w-new/n5.webp",
+  aiSkillPlatform: "/w-new/n7.webp",
   talentManagement: "/w-new/n6.webp",
+};
+
+export const productHeroImages: Record<ProductKey, string> = {
+  operationalExcellence: "/w-new/hero-integrated-operating-system.webp",
+  wQualityAiAdvisor: "/w-new/hero-ai-quality-process-optimization.webp",
+  smartOperationalPlatform: "/w-new/hero-operational-intelligence-platform.webp",
+  blockchainProducts: "/w-new/hero-blockchain-products.webp",
+  aiContentProduction: "/w-new/hero-corporate-media-engine.webp",
+  businessflix: "/w-new/hero-busyflix.webp",
+  aiSkillPlatform: "/w-new/hero-ai-skill-platform.webp",
+  talentManagement: "/w-new/hero-talent-management.webp",
 };
 
 export type Division = "W-DigiLab" | "W-Quality" | "W-Studio";
@@ -36,6 +50,7 @@ export const productDivision: Record<ProductKey, Division> = {
   blockchainProducts: "W-DigiLab",
   aiContentProduction: "W-Studio",
   businessflix: "W-Studio",
+  aiSkillPlatform: "W-Studio",
   talentManagement: "W-Studio",
 };
 
@@ -52,6 +67,7 @@ export const productOrder: ProductKey[] = [
   "blockchainProducts",
   "aiContentProduction",
   "businessflix",
+  "aiSkillPlatform",
   "talentManagement",
 ];
 
