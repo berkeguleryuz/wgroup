@@ -26,8 +26,8 @@ export const productImages: Record<ProductKey, string> = {
   blockchainProducts: "/w-new/n3.webp",
   aiContentProduction: "/w-new/n4.webp",
   businessflix: "/w-new/n5.webp",
-  aiSkillPlatform: "/w-new/n7.webp",
-  talentManagement: "/w-new/n6.webp",
+  aiSkillPlatform: "/w-new/n6.webp",
+  talentManagement: "/w-new/n8.webp",
 };
 
 export const productHeroImages: Record<ProductKey, string> = {
