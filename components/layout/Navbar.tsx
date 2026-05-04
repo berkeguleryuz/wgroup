@@ -48,8 +48,8 @@ const navImages: Record<string, string> = {
   // W-Studio solutions
   aiContentProduction: "/w-new/n4.webp",
   businessflix: "/w-new/n5.webp",
-  aiSkillPlatform: "/w-new/n7.webp",
-  talentManagement: "/w-new/n6.webp",
+  aiSkillPlatform: "/w-new/n6.webp",
+  talentManagement: "/w-new/n8.webp",
 };
 
 /* ---------- Product definitions ---------- */
