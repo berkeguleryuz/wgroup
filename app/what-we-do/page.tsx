@@ -62,10 +62,8 @@ export default function WhatWeDoPage() {
       heroImage="/w-new/w2.webp"
     >
       <div ref={sectionRef} className="space-y-28 sm:space-y-36">
-        {/* ─────────── Block A: Editorial lead — large statement + paired image ─────────── */}
         <section className="wwd-block relative grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div className="wwd-reveal relative">
-            {/* Decorative quote glyph */}
             <span
               aria-hidden
               className="pointer-events-none absolute -left-2 -top-10 select-none text-[120px] leading-none sm:-top-14 sm:text-[160px]"
@@ -125,7 +123,6 @@ export default function WhatWeDoPage() {
               />
             </div>
 
-            {/* Floating accent dot */}
             <span
               aria-hidden
               className="absolute -bottom-3 -right-3 h-7 w-7 rounded-full sm:-bottom-4 sm:-right-4 sm:h-9 sm:w-9"
@@ -137,7 +134,6 @@ export default function WhatWeDoPage() {
           </div>
         </section>
 
-        {/* ─────────── Flow connector ─────────── */}
         <div className="wwd-block flex items-center justify-center">
           <div className="wwd-reveal flex items-center gap-3">
             <span className="h-px w-16 bg-border" />
@@ -157,11 +153,8 @@ export default function WhatWeDoPage() {
           </div>
         </div>
 
-        {/* ─────────── Block B: Image collage + body ─────────── */}
         <section className="wwd-block relative grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
-          {/* Collage of three brand images */}
           <div className="relative h-[420px] sm:h-[500px] lg:h-[540px]">
-            {/* Quality — top left */}
             <div
               className="collage-tile absolute left-0 top-0 h-[48%] w-[48%] overflow-hidden rounded-2xl"
               style={{
@@ -184,7 +177,6 @@ export default function WhatWeDoPage() {
               />
             </div>
 
-            {/* Digilab — top right */}
             <div
               className="collage-tile absolute right-0 top-[10%] h-[48%] w-[48%] overflow-hidden rounded-2xl"
               style={{
@@ -207,7 +199,6 @@ export default function WhatWeDoPage() {
               />
             </div>
 
-            {/* Studio — bottom center, largest */}
             <div
               className="collage-tile absolute bottom-0 left-[26%] h-[48%] w-[48%] overflow-hidden rounded-2xl"
               style={{
@@ -230,7 +221,6 @@ export default function WhatWeDoPage() {
               />
             </div>
 
-            {/* Background accent blob */}
             <div
               aria-hidden
               className="pointer-events-none absolute -inset-6 -z-10 rounded-[60px] blur-3xl"
@@ -241,7 +231,6 @@ export default function WhatWeDoPage() {
             />
           </div>
 
-          {/* Body text */}
           <div className="wwd-reveal flex items-center">
             <div className="relative">
               <span
@@ -266,9 +255,7 @@ export default function WhatWeDoPage() {
           </div>
         </section>
 
-        {/* ─────────── Block C: Closing — square image paired with editorial text ─────────── */}
         <section className="wwd-block relative grid items-center gap-12 lg:grid-cols-[1fr_1.05fr] lg:gap-20">
-          {/* Square image — full content visible at native 1:1 */}
           <div className="wwd-reveal relative">
             <div
               className="relative aspect-square overflow-hidden rounded-[32px]"
@@ -294,7 +281,6 @@ export default function WhatWeDoPage() {
               />
             </div>
 
-            {/* Floating accent dot */}
             <span
               aria-hidden
               className="absolute -bottom-3 -left-3 h-7 w-7 rounded-full sm:-bottom-4 sm:-left-4 sm:h-9 sm:w-9"
@@ -305,7 +291,6 @@ export default function WhatWeDoPage() {
             />
           </div>
 
-          {/* Closing editorial column */}
           <div className="wwd-reveal relative">
             <span
               aria-hidden

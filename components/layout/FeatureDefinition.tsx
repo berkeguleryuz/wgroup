@@ -10,18 +10,12 @@ export interface MetaEntry {
 }
 
 interface Props {
-  /** vertical meta rows in the left rail */
   meta?: MetaEntry[];
-  /** top-right chip shown on the right column, above the pull quote */
   eyebrow?: string;
   rightChip?: string;
-  /** large italic pull-quote text */
   lead: string;
-  /** cite under the pull-quote (optional) */
   leadCite?: string;
-  /** body paragraph under the pull-quote (optional) */
   body?: string;
-  /** vertical padding */
   spacing?: "default" | "tight";
 }
 
@@ -63,7 +57,6 @@ export default function FeatureDefinition({
       }`}
       style={{ background: "#f7f9fc" }}
     >
-      {/* Background pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
@@ -72,7 +65,6 @@ export default function FeatureDefinition({
           backgroundSize: "40px 40px",
         }}
       />
-      {/* Soft primary glow at top */}
       <div
         className="pointer-events-none absolute inset-x-0 top-0 h-64"
         style={{
@@ -80,7 +72,6 @@ export default function FeatureDefinition({
             "radial-gradient(ellipse at 50% 0%, rgba(30,109,181,0.12), transparent 70%)",
         }}
       />
-      {/* Soft teal glow at bottom-right */}
       <div
         className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full blur-[120px]"
         style={{ background: "rgba(8,145,178,0.08)" }}
@@ -88,10 +79,8 @@ export default function FeatureDefinition({
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-          {/* Left rail */}
           <aside className="lg:col-span-4">
             <div className="fd-fade lg:sticky lg:top-32">
-              {/* Vertical meta list */}
               {meta.length > 0 && (
                 <div className="space-y-5 border-l border-[#1E6DB5]/15 pl-5">
                   {meta.map((m, i) => (
@@ -105,7 +94,6 @@ export default function FeatureDefinition({
                 </div>
               )}
 
-              {/* Decorative divider */}
               <div
                 className="mt-10 h-px w-24"
                 style={{
@@ -116,7 +104,6 @@ export default function FeatureDefinition({
             </div>
           </aside>
 
-          {/* Right content */}
           <div className="lg:col-span-8">
             {(eyebrow || rightChip) && (
               <div
@@ -140,7 +127,6 @@ export default function FeatureDefinition({
               </div>
             )}
 
-            {/* Lead pull-quote */}
             <blockquote
               className="fd-fade relative mb-12 block"
               style={{ quotes: "none" }}
@@ -196,7 +182,6 @@ export default function FeatureDefinition({
               )}
             </blockquote>
 
-            {/* Body paragraph */}
             {body && (
               <div className="fd-fade relative">
                 <p

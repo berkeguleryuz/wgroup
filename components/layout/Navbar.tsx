@@ -9,8 +9,6 @@ import { useGSAP } from "@gsap/react";
 import { ChevronDown, Menu, X, ArrowRight } from "@/components/icons";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-/* ---------- Types ---------- */
-
 interface NavLink {
   key: string;
   href: string;
@@ -28,8 +26,6 @@ function isGroup(item: NavItem): item is NavGroup {
   return "items" in item;
 }
 
-/* ---------- Image map ---------- */
-
 const navImages: Record<string, string> = {
   aboutWgroup: "/w-new/a1.webp",
   whatWeDo: "/w-new/a2.webp",
@@ -39,20 +35,15 @@ const navImages: Record<string, string> = {
   wquality: "/w-new/W-Quality.webp",
   wdigilab: "/w-new/W-Digilab.webp",
   wstudio: "/w-new/W-Studio.webp",
-  // W-Quality solutions
   operationalExcellence: "/w-new/n0.webp",
   wQualityAiAdvisor: "/w-new/n1.webp",
-  // W-DigiLab solutions
   smartOperationalPlatform: "/w-new/n2.webp",
   blockchainProducts: "/w-new/n3.webp",
-  // W-Studio solutions
   aiContentProduction: "/w-new/n4.webp",
   businessflix: "/w-new/n5.webp",
   aiSkillPlatform: "/w-new/n6.webp",
   talentManagement: "/w-new/n8.webp",
 };
-
-/* ---------- Product definitions ---------- */
 
 type ProductKey =
   | "operationalExcellence"
@@ -95,8 +86,6 @@ const buildProductLink = (k: ProductKey): NavLink => ({
   href: `/solutions/${productSlugs[k]}`,
 });
 
-/* ---------- Navigation structure ---------- */
-
 const navItems: NavItem[] = [
   {
     key: "company",
@@ -133,8 +122,6 @@ function getGroup(key: string): NavGroup | undefined {
     | undefined;
 }
 
-/* ---------- Shared panel props ---------- */
-
 interface PanelProps {
   t: ReturnType<typeof useTranslations>;
   tProducts: ReturnType<typeof useTranslations>;
@@ -143,7 +130,6 @@ interface PanelProps {
   closeDropdown: () => void;
 }
 
-/* Helper: resolve label/description from product or navbar key */
 function resolveLabel(key: string, t: PanelProps["t"], tProducts: PanelProps["tProducts"]) {
   if (key in productSlugs) {
     return {
@@ -153,8 +139,6 @@ function resolveLabel(key: string, t: PanelProps["t"], tProducts: PanelProps["tP
   }
   return { name: t(key), desc: t(`desc.${key}`) };
 }
-
-/* ---------- Product link item ---------- */
 
 function ProductLink({
   item,
@@ -192,8 +176,6 @@ function ProductLink({
     </Link>
   );
 }
-
-/* ==================== COMPANY PANEL ==================== */
 
 function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelProps) {
   const group = getGroup("company");
@@ -292,8 +274,6 @@ function CompanyPanel({ t, hoveredItem, setHoveredItem, closeDropdown }: PanelPr
   );
 }
 
-/* ==================== DIVISIONS PANEL ==================== */
-
 function DivisionsPanel({ t, closeDropdown }: PanelProps) {
   const group = getGroup("divisions");
   if (!group) return null;
@@ -338,8 +318,6 @@ function DivisionsPanel({ t, closeDropdown }: PanelProps) {
   );
 }
 
-/* ==================== PRODUCTS PANEL ==================== */
-
 function ProductsPanel({
   t,
   tProducts,
@@ -357,7 +335,6 @@ function ProductsPanel({
     <div className="mx-auto max-w-6xl px-8 py-8">
       <div className="grid grid-cols-12 gap-8">
         <div className="col-span-8 grid grid-cols-3 gap-6">
-          {/* W-Quality */}
           <div>
             <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
               <span className="h-px flex-1 bg-white/8" />
@@ -381,7 +358,6 @@ function ProductsPanel({
             </div>
           </div>
 
-          {/* W-DigiLab */}
           {group.sections?.[0] && (
             <div>
               <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
@@ -407,7 +383,6 @@ function ProductsPanel({
             </div>
           )}
 
-          {/* W-Studio */}
           {group.sections?.[1] && (
             <div>
               <h4 className="mb-3 flex items-center justify-center gap-2 text-[11px] font-bold tracking-widest">
@@ -470,8 +445,6 @@ function ProductsPanel({
     </div>
   );
 }
-
-/* ---------- Mobile Accordion ---------- */
 
 function MobileAccordion({
   group,
@@ -580,8 +553,6 @@ function MobileAccordion({
     </div>
   );
 }
-
-/* ========== Navbar ========== */
 
 export default function Navbar() {
   const t = useTranslations("navbar");

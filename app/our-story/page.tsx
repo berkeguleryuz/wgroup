@@ -8,22 +8,10 @@ import { ArrowRight } from "@/components/icons";
 import PageLayout from "@/components/layout/PageLayout";
 import MorphButton from "@/components/ui/MorphButton";
 
-/* ============================================================
-   Concept — "Print Atelier"
-   Refined editorial spread inspired by fine art catalogs.
-   Signatures: hairline rules · diamond ornaments · drop caps ·
-   asymmetric margins · generous whitespace · no chapter numbers.
-
-   Type system
-   - Body / mono labels   → Barlow / JetBrains Mono
-   - Display / drop caps  → Fraunces (no italic; refined serif)
-   ============================================================ */
-
 const FONT_BODY = "var(--font-barlow), system-ui, sans-serif";
 const FONT_EDITORIAL = "var(--font-fraunces), Georgia, serif";
 const FONT_MONO = "var(--font-jetbrains), ui-monospace, monospace";
 
-/* Diamond ornament — recurring motif */
 function Diamond({
   size = 6,
   color = "currentColor",
@@ -43,7 +31,6 @@ function Diamond({
   );
 }
 
-/* Standfirst — small editorial header used across blocks */
 function Standfirst({
   label,
   align = "center",
@@ -87,7 +74,6 @@ function Standfirst({
   );
 }
 
-/* Hero statement — opening manifesto */
 function HeroStatement({ text, label }: { text: string; label: string }) {
   return (
     <section className="story-chapter relative py-14 sm:py-20">
@@ -114,7 +100,6 @@ function HeroStatement({ text, label }: { text: string; label: string }) {
   );
 }
 
-/* Editorial fragment — asymmetric drop-cap paragraph with side label */
 function Fragment({
   text,
   label,
@@ -171,7 +156,6 @@ function Fragment({
 
   const content = (
     <div className="relative">
-      {/* mobile-only standfirst */}
       <div className="mb-5 sm:hidden">
         <Standfirst label={label} align={side} />
       </div>
@@ -225,7 +209,6 @@ function Fragment({
   );
 }
 
-/* Cinematic break — soft-tinted highlight statement */
 function CinematicBreak({ text, label }: { text: string; label: string }) {
   return (
     <section
@@ -272,7 +255,6 @@ function CinematicBreak({ text, label }: { text: string; label: string }) {
   );
 }
 
-/* Cinematic close — gradient finale */
 function Closing({ text, label }: { text: string; label: string }) {
   return (
     <section
@@ -377,7 +359,6 @@ export default function OurStoryPage() {
         <Fragment text={t("p6")} label={t("labelToday")} side="right" />
         <Closing text={t("p7")} label={t("labelCoda")} />
 
-        {/* Global CTA */}
         <div
           className="story-cta relative mt-4 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24"
           style={{ background: "#0a0f1e" }}

@@ -16,14 +16,12 @@ export default function WQualityPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Hero text entrance */
       const heroTl = gsap.timeline({ delay: 0.3 });
       heroTl.from(".dv-hero-title", { y: 60, opacity: 0, duration: 0.9, ease: "power3.out" });
       heroTl.from(".dv-hero-sub", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
       heroTl.from(".dv-hero-line", { scaleX: 0, duration: 0.8, ease: "power3.inOut" }, "-=0.3");
       heroTl.from(".dv-hero-intro", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.3");
 
-      /* Scroll sections */
       gsap.utils.toArray<HTMLElement>(".dv-fade").forEach((el) => {
         gsap.from(el, {
           y: 60, opacity: 0, duration: 1, ease: "power2.out",
@@ -53,7 +51,6 @@ export default function WQualityPage() {
 
   return (
     <div ref={pageRef} style={{ background: "var(--background)" }}>
-      {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -84,7 +81,6 @@ export default function WQualityPage() {
             {t("intro")}
           </p>
         </div>
-        {/* Curved transition */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg className="block w-full h-[80px]" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
             <path d="M0 0 Q720 80 1440 0 V80 H0 Z" fill="#f7f9fc" />
@@ -92,7 +88,6 @@ export default function WQualityPage() {
         </div>
       </section>
 
-      {/* ===== WHAT WE DO ===== */}
       <FeatureDefinition
         meta={[
           { label: tCommon("focusLabel"), value: t("subtitle"), italic: true },
@@ -104,7 +99,6 @@ export default function WQualityPage() {
         body={[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).join(" ")}
       />
 
-      {/* ===== CORE CAPABILITIES ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="dv-fade mb-16 flex items-center gap-4">
@@ -149,7 +143,6 @@ export default function WQualityPage() {
         </div>
       </section>
 
-      {/* ===== APPROACH ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "#f7f9fc" }}>
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <div className="dv-fade mb-14 flex items-center gap-4">
@@ -195,7 +188,6 @@ export default function WQualityPage() {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
       <section className="relative pb-28 sm:pb-36" style={{ background: "#f7f9fc" }}>
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",

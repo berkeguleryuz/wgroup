@@ -15,7 +15,6 @@ const Sparkles = dynamic(
 const pillarLotties = ["/lottie/target.json", "/lottie/lightbulb.json", "/lottie/trending-up.json"] as const;
 const pillarColors = ["var(--primary)", "var(--accent-purple)", "var(--accent-teal)"] as const;
 
-/* ---------- Corner Bracket ---------- */
 const bracketSize = 24;
 const bracketWidth = 2;
 
@@ -39,7 +38,6 @@ function CornerBracket({ position, color }: { position: "tl" | "tr" | "bl" | "br
   );
 }
 
-/* ---------- Pillar Card with 3D tilt + Corner Brackets ---------- */
 function PillarCard({
   lottie,
   title,
@@ -123,13 +121,11 @@ function PillarCard({
         className="relative h-full p-8 will-change-transform"
         style={{ transformStyle: "preserve-3d" }}
       >
-        {/* Corner brackets — unified color */}
         <CornerBracket position="tl" color="var(--primary)" />
         <CornerBracket position="tr" color="var(--primary)" />
         <CornerBracket position="bl" color="var(--primary)" />
         <CornerBracket position="br" color="var(--primary)" />
 
-        {/* Content */}
         <div
           className="relative z-10 flex flex-col items-center text-center"
           style={{ transform: "translateZ(20px)" }}
@@ -161,9 +157,6 @@ function PillarCard({
   );
 }
 
-/* ============================================================
-   About Section
-   ============================================================ */
 export default function About() {
   const t = useTranslations("whatWeDo");
   const sectionRef = useRef<HTMLElement>(null);
@@ -171,7 +164,6 @@ export default function About() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* heading entrance */
       gsap.from(".about-heading", {
         y: 50,
         opacity: 0,
@@ -196,7 +188,6 @@ export default function About() {
         },
       });
 
-      /* expanding clip-path image */
       if (imageRef.current) {
         gsap.set(imageRef.current, {
           clipPath: "polygon(38% 30%, 62% 30%, 62% 70%, 38% 70%)",
@@ -213,7 +204,6 @@ export default function About() {
         });
       }
 
-      /* pillar cards – 3D entrance */
       const pillarCards = gsap.utils.toArray<HTMLElement>(".pillar-card");
       if (pillarCards.length) {
         gsap.set(pillarCards, { opacity: 0, y: 60 });
@@ -233,7 +223,6 @@ export default function About() {
         });
       }
 
-      /* floating icon animation */
       gsap.utils.toArray<HTMLElement>(".pillar-icon").forEach((icon) => {
         gsap.to(icon, {
           y: -5,
@@ -250,7 +239,6 @@ export default function About() {
 
   return (
     <>
-      {/* ---- Curved top edge: sits OUTSIDE section to avoid overflow-hidden clip ---- */}
       <div className="relative z-20 -mt-50 overflow-visible">
         <svg
           className="block w-full h-50"
@@ -260,11 +248,9 @@ export default function About() {
         >
           <path d="M0 80 Q720 0 1440 80 V84 H0 Z" fill="#0a0f1e" />
         </svg>
-        {/* Glow */}
         <div
           className="pointer-events-none absolute left-1/2 bottom-0 h-25 w-175 -translate-x-1/2 rounded-full blur-[80px]"
         />
-        {/* Sparkles covering the curve area */}
         <div className="pointer-events-none absolute inset-0">
           <Sparkles
             className="h-full w-full"
@@ -283,9 +269,7 @@ export default function About() {
         className="relative overflow-hidden bg-secondary py-28"
       >
 
-      {/* ---- Horizon arc + glow + sparkles ---- */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-105">
-        {/* Purple / blue glow behind the arc */}
         <div
           className="absolute bottom-0 left-1/2 h-65 w-225 -translate-x-1/2 rounded-full blur-[100px]"
           style={{
@@ -294,7 +278,6 @@ export default function About() {
           }}
         />
 
-        {/* Curved horizon line */}
         <svg
           className="absolute bottom-0 left-1/2 w-[120%] max-w-350 -translate-x-1/2"
           viewBox="0 0 1400 120"
@@ -309,7 +292,6 @@ export default function About() {
           />
         </svg>
 
-        {/* Sparkles above the arc */}
         <Sparkles
           className="absolute inset-0"
           density={100}
@@ -321,14 +303,12 @@ export default function About() {
         />
       </div>
 
-      {/* Background grid */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.02]"
 
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12">
-        {/* Header */}
         <div className="mx-auto max-w-3xl text-center">
           <p
             className="about-heading mb-3 text-sm font-semibold tracking-[0.2em] text-primary"
@@ -359,7 +339,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Expanding image */}
         <div className="mt-16">
           <div
             ref={imageRef}
@@ -386,13 +365,10 @@ export default function About() {
           </div>
         </div>
 
-        {/* Body block — animated convergence + editorial typography */}
         <div className="relative mx-auto mt-24 max-w-5xl">
           <div className="relative z-10 flex flex-col items-center">
-            {/* Animated convergence network SVG */}
             <ConvergenceNetwork />
 
-            {/* Decorative trio dots */}
             <div className="about-text mt-2 flex items-center gap-2">
               <span
                 className="block h-1 w-1 rounded-full"
@@ -408,7 +384,6 @@ export default function About() {
               />
             </div>
 
-            {/* Editorial lead pull-quote */}
             <p
               className="about-text mt-10 max-w-3xl text-center text-2xl leading-[1.4] text-white/85 sm:text-[28px] sm:leading-[1.32] lg:text-[32px] lg:leading-[1.28]"
               style={{
@@ -421,7 +396,6 @@ export default function About() {
               {t("body1")}
             </p>
 
-            {/* Hairline divider with diamond ornament */}
             <div className="about-text mt-12 flex w-full max-w-2xl items-center gap-4">
               <span className="block h-px flex-1 bg-gradient-to-r from-transparent via-white/15 to-white/15" />
               <span
@@ -435,7 +409,6 @@ export default function About() {
               <span className="block h-px flex-1 bg-gradient-to-r from-white/15 via-white/15 to-transparent" />
             </div>
 
-            {/* Three division blurbs */}
             <div className="mt-12 grid w-full grid-cols-1 gap-8 text-center sm:grid-cols-3 sm:gap-10 sm:text-left">
               <DivisionBlurb
                 label="W-Quality"
@@ -454,7 +427,6 @@ export default function About() {
               />
             </div>
 
-            {/* Closing tagline */}
             <p
               className="about-text mt-14 max-w-2xl text-center text-base text-white/55 sm:text-lg"
               style={{
@@ -469,7 +441,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Pillar cards */}
         <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {[1, 2, 3].map((n, i) => (
             <PillarCard
@@ -487,7 +458,6 @@ export default function About() {
   );
 }
 
-/* ---------- Division blurb ---------- */
 function DivisionBlurb({
   label,
   color,
@@ -533,17 +503,10 @@ function DivisionBlurb({
   );
 }
 
-/* ---------- Animated Convergence Network ----------
-   Visualizes the WGroup ↔ three-division ecosystem:
-   one luminous central hub with three orbital satellites
-   connected by flowing dashed lines and traveling particles.
-   Pure SVG + CSS keyframes, no JS animations.
-*/
 function ConvergenceNetwork() {
   const cx = 160;
   const cy = 160;
   const r = 110;
-  // Three points equally spaced (120° apart): top, lower-left, lower-right
   const sin60 = Math.sin(Math.PI / 3);
   const cos60 = Math.cos(Math.PI / 3);
   const nodes: { x: number; y: number; color: string; coreId: string; label: string; pathId: string; delay: string }[] = [
@@ -612,7 +575,6 @@ function ConvergenceNetwork() {
             <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0.4" />
           </linearGradient>
 
-          {/* Hidden paths for animateMotion to follow */}
           {nodes.map((n) => (
             <path
               key={n.pathId}
@@ -623,7 +585,6 @@ function ConvergenceNetwork() {
           ))}
         </defs>
 
-        {/* Outer dotted ring — slow rotation */}
         <g
           style={{
             transformOrigin: "center",
@@ -642,7 +603,6 @@ function ConvergenceNetwork() {
           />
         </g>
 
-        {/* Mid orbital ring — counter rotation */}
         <g
           style={{
             transformOrigin: "center",
@@ -661,7 +621,6 @@ function ConvergenceNetwork() {
           />
         </g>
 
-        {/* Connection lines from center to each node */}
         {nodes.map((n, i) => (
           <g key={`line-${i}`}>
             <line
@@ -688,10 +647,8 @@ function ConvergenceNetwork() {
           </g>
         ))}
 
-        {/* Traveling particles along each line — bidirectional */}
         {nodes.map((n, i) => (
           <g key={`particle-${i}`}>
-            {/* Outward particle (center → node) */}
             <circle r="2.4" fill={n.color}>
               <animateMotion
                 dur="3.2s"
@@ -708,7 +665,6 @@ function ConvergenceNetwork() {
                 begin={n.delay}
               />
             </circle>
-            {/* Inward particle (node → center) */}
             <circle r="1.8" fill="white" opacity="0.85">
               <animateMotion
                 dur="3.2s"
@@ -730,17 +686,14 @@ function ConvergenceNetwork() {
           </g>
         ))}
 
-        {/* Satellite nodes — pulsing core + halo */}
         {nodes.map((n, i) => (
           <g key={`node-${i}`}>
-            {/* Halo */}
             <circle
               cx={n.x}
               cy={n.y}
               r="14"
               fill={`url(#${n.coreId})`}
             />
-            {/* Solid core */}
             <circle cx={n.x} cy={n.y} r="5" fill={n.color}>
               <animate
                 attributeName="r"
@@ -750,12 +703,10 @@ function ConvergenceNetwork() {
                 begin={`${i * 0.5}s`}
               />
             </circle>
-            {/* Bright pip */}
             <circle cx={n.x} cy={n.y} r="1.6" fill="white" opacity="0.95" />
           </g>
         ))}
 
-        {/* Center hub — luminous WGroup core */}
         <circle cx={cx} cy={cy} r="26" fill="url(#convCoreHub)">
           <animate
             attributeName="r"
@@ -767,7 +718,6 @@ function ConvergenceNetwork() {
         <circle cx={cx} cy={cy} r="9" fill="white" opacity="0.92" />
         <circle cx={cx} cy={cy} r="3" fill="var(--primary)" />
 
-        {/* Scattered ambient sparkles */}
         <circle
           cx="40"
           cy="70"

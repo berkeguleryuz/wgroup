@@ -45,11 +45,8 @@ export default function ContactPage() {
   return (
     <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")}>
       <div ref={sectionRef} className="grid grid-cols-1 gap-12 lg:grid-cols-5">
-        {/* Left: Form (3 cols) — card with gradient top accent */}
         <div className="contact-reveal lg:col-span-3">
-          {/* Animated rotating border card */}
           <div className="relative rounded-2xl p-[1.5px]" style={{ overflow: "hidden" }}>
-            {/* Spinning conic gradient behind the card */}
             <div
               className="pointer-events-none absolute inset-[-50%] animate-[borderSpin_4s_linear_infinite]"
               style={{
@@ -57,7 +54,6 @@ export default function ContactPage() {
               }}
             />
 
-            {/* Inner card content */}
             <div
               className="relative rounded-2xl"
               style={{ background: "var(--background)" }}
@@ -129,7 +125,6 @@ export default function ContactPage() {
           </div>
           </div>
 
-          {/* Keyframes for border spin */}
           <style jsx global>{`
             @keyframes borderSpin {
               from { transform: rotate(0deg); }
@@ -138,9 +133,7 @@ export default function ContactPage() {
           `}</style>
         </div>
 
-        {/* Right: Info (2 cols) — no card, clean direct content */}
         <div className="lg:col-span-2 space-y-10">
-          {/* Office info — clean list with left accent */}
           <div className="contact-reveal">
             <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("officeTitle")}</h3>
             <div className="space-y-1">
@@ -175,10 +168,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Divider */}
           <div className="contact-reveal h-px w-full bg-gradient-to-r from-border via-border to-transparent" />
 
-          {/* Social — standalone pill buttons */}
           <div className="contact-reveal">
             <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">{t("followUs")}</h3>
             <div className="flex flex-col gap-3">

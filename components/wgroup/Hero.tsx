@@ -3,13 +3,12 @@
 import { useRef, useEffect } from "react";
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 import Image from "next/image";
-import { ArrowRight } from "@/components/icons";
+import { ArrowRight, ArrowUpRight } from "@/components/icons";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import MorphButton from "@/components/ui/MorphButton";
 
-/* ---- Hero Brain Image — full-bleed background cover ---- */
 function BrainVisual() {
   return (
     <div className="brain-visual pointer-events-none absolute inset-0">
@@ -22,7 +21,6 @@ function BrainVisual() {
         style={{ filter: "brightness(1.05)" }}
         sizes="100vw"
       />
-      {/* Soft overlay — keeps text legible without crushing the image */}
       <div
         className="absolute inset-0"
         style={{
@@ -30,7 +28,6 @@ function BrainVisual() {
             "linear-gradient(to bottom, rgba(6,11,24,0.18) 0%, rgba(6,11,24,0.42) 60%, rgba(6,11,24,0.55) 100%)",
         }}
       />
-      {/* Subtle radial vignette to anchor the centered text */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -204,7 +201,7 @@ export default function Hero() {
               }}
             >
               {t("contactUs")}
-              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </div>
         </div>
