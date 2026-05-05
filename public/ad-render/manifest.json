@@ -29,8 +29,8 @@
     "s2": { "start": "public/w-new/W-Quality.webp", "end": "public/ad-render/scene-02-knowledge/end-frame_v1.png", "clip": null },
     "s3": { "start": "public/w-new/W-Digilab.webp", "end": "public/ad-render/scene-03-transform/end-frame_v1.png", "clip": null },
     "s4": { "start": "public/w-new/W-Studio.webp", "end": "public/ad-render/scene-04-excellence/end-frame_v2.png", "clip": null },
-    "s5": { "start": null, "end": null, "clip": null },
-    "s6": { "start": null, "end": null, "clip": null }
+    "s5": { "start": "public/ad-render/scene-05-converge/start-frame_v1.png", "end": "public/ad-render/scene-05-converge/end-frame_v2.png", "clip": null },
+    "s6": { "start": "public/ad-render/scene-06-logo/start-frame_v1.png", "end": "public/ad-render/scene-06-logo/end-frame_v2.png", "clip": null }
   },
   "audio": { "voiceover_full": null, "voiceover_per_line": {}, "bgm": null },
   "final": null
