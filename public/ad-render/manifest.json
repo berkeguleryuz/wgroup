@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "spec": "docs/superpowers/specs/2026-05-05-wgroup-youtube-ad-design.md",
+  "scenes": {
+    "s1": { "start": null, "end": null, "clip": null },
+    "s2": { "start": "public/w-new/W-Quality.webp", "end": null, "clip": null },
+    "s3": { "start": "public/w-new/W-Digilab.webp", "end": null, "clip": null },
+    "s4": { "start": "public/w-new/W-Studio.webp", "end": null, "clip": null },
+    "s5": { "start": null, "end": null, "clip": null },
+    "s6": { "start": null, "end": null, "clip": null }
+  },
+  "audio": { "voiceover_full": null, "voiceover_per_line": {}, "bgm": null },
+  "final": null
+}
