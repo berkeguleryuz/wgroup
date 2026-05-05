@@ -4,16 +4,6 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "@/components/icons";
 
-/* ============================================================
-   404 — "Off the Grid"
-   Industrial editorial 404 page with an animated "lost signal"
-   SVG. Single luminous beacon, expanding search rings with broken
-   segments, a far-drifting satellite, and a faint dashed line
-   reaching out for it. Aligned with the project's brand palette
-   (primary blue + accent teal + accent purple) and motif language
-   used across product detail pages.
-   ============================================================ */
-
 export default function NotFound() {
   const t = useTranslations("notFoundPage");
 
@@ -22,7 +12,6 @@ export default function NotFound() {
       className="relative flex min-h-dvh w-full items-center justify-center overflow-hidden px-6 py-24"
       style={{ background: "var(--background)" }}
     >
-      {/* Atmospheric backdrop: drafting grid + ambient blobs */}
       <div className="pointer-events-none absolute inset-0">
         <div
           className="absolute inset-0 opacity-[0.04]"
@@ -34,17 +23,14 @@ export default function NotFound() {
         />
       </div>
 
-      {/* Decorative corner brackets */}
       <CornerBracket position="tl" />
       <CornerBracket position="tr" />
       <CornerBracket position="bl" />
       <CornerBracket position="br" />
 
       <div className="relative z-10 mx-auto flex max-w-2xl flex-col items-center text-center">
-        {/* Animated SVG */}
         <LostSignalSVG />
 
-        {/* 404 hero glyph */}
         <h1
           className="relative mt-8 leading-[0.92]"
           style={{
@@ -64,7 +50,6 @@ export default function NotFound() {
           404
         </h1>
 
-        {/* Title */}
         <h2
           className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-[28px]"
           style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
@@ -72,7 +57,6 @@ export default function NotFound() {
           {t("title")}
         </h2>
 
-        {/* Description */}
         <p
           className="mt-6 max-w-xl text-base leading-[1.75] text-white/55 sm:text-[17px]"
           style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
@@ -80,7 +64,6 @@ export default function NotFound() {
           {t("description")}
         </p>
 
-        {/* CTAs */}
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row">
           <Link
             href="/"
@@ -106,7 +89,6 @@ export default function NotFound() {
           </Link>
         </div>
 
-        {/* Trio dots footer */}
         <div className="mt-14 flex items-center gap-2">
           <span
             className="block h-1 w-1 rounded-full"
@@ -126,7 +108,6 @@ export default function NotFound() {
   );
 }
 
-/* ---------- Corner brackets (drafting frame) ---------- */
 function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
   const color = "rgba(30,109,181,0.32)";
   const size = 28;
@@ -165,12 +146,6 @@ function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
   );
 }
 
-/* ---------- Animated "Lost Signal" SVG ----------
-   Central beacon with concentric search waves (one segment broken
-   per ring), a small drifting satellite far from center, and a
-   faint dashed reach-out line that fades in and out trying to
-   establish connection. Pure SVG + globals.css keyframes + SMIL.
-*/
 function LostSignalSVG() {
   return (
     <div
@@ -198,11 +173,9 @@ function LostSignalSVG() {
             <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0.3" />
           </linearGradient>
 
-          {/* Reach path: from beacon (180,180) toward satellite (305, 80) */}
           <path id="nfReachPath" d="M180 180 L305 80" fill="none" />
         </defs>
 
-        {/* Outer dotted ring — slow rotate */}
         <g
           style={{
             transformOrigin: "center",
@@ -221,8 +194,6 @@ function LostSignalSVG() {
           />
         </g>
 
-        {/* Three concentric search waves with broken segments */}
-        {/* Wave A — broken on right side */}
         <g
           style={{
             transformOrigin: "center",
@@ -241,7 +212,6 @@ function LostSignalSVG() {
             opacity="0.55"
           />
         </g>
-        {/* Wave B — broken on lower-left */}
         <g
           style={{
             transformOrigin: "center",
@@ -261,7 +231,6 @@ function LostSignalSVG() {
             opacity="0.45"
           />
         </g>
-        {/* Wave C — broken on top */}
         <g
           style={{
             transformOrigin: "center",
@@ -282,7 +251,6 @@ function LostSignalSVG() {
           />
         </g>
 
-        {/* Reach-out line (dashed, flickering opacity to suggest weak signal) */}
         <line
           x1="180"
           y1="180"
@@ -308,7 +276,6 @@ function LostSignalSVG() {
           />
         </line>
 
-        {/* Faint particle traveling along the reach line */}
         <circle r="1.6" fill="white" opacity="0.85">
           <animateMotion dur="3.2s" repeatCount="indefinite">
             <mpath href="#nfReachPath" />
@@ -321,7 +288,6 @@ function LostSignalSVG() {
           />
         </circle>
 
-        {/* Drifting satellite (the lost node) */}
         <g
           style={{
             transformOrigin: "305px 80px",
@@ -340,7 +306,6 @@ function LostSignalSVG() {
           <circle cx="305" cy="80" r="1.6" fill="white" opacity="0.95" />
         </g>
 
-        {/* Central beacon — slow steady pulse (calm, persistent) */}
         <circle cx="180" cy="180" r="32" fill="url(#nfBeacon)">
           <animate
             attributeName="r"
@@ -352,7 +317,6 @@ function LostSignalSVG() {
         <circle cx="180" cy="180" r="10" fill="white" opacity="0.94" />
         <circle cx="180" cy="180" r="3.5" fill="var(--primary)" />
 
-        {/* Crosshair at center (drafting cue) */}
         <line
           x1="180"
           y1="160"

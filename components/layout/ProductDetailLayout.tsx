@@ -53,7 +53,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Hero entrance */
       const heroTl = gsap.timeline({ delay: 0.25 });
       heroTl.from(".pd-hero-eyebrow", {
         y: 20,
@@ -84,7 +83,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         "-=0.3"
       );
 
-      /* Scroll fade sections */
       gsap.utils.toArray<HTMLElement>(".pd-fade").forEach((el) => {
         gsap.from(el, {
           y: 50,
@@ -99,7 +97,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         });
       });
 
-      /* Use case card stagger */
       gsap.utils.toArray<HTMLElement>(".pd-case-card").forEach((el, i) => {
         gsap.from(el, {
           y: 40,
@@ -115,7 +112,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         });
       });
 
-      /* Approach blocks (strategic advantage) */
       gsap.utils.toArray<HTMLElement>(".pd-approach-block").forEach((el, i) => {
         gsap.from(el, {
           y: 40,
@@ -135,13 +131,10 @@ export default function ProductDetailLayout({ productKey }: Props) {
     return () => ctx.revert();
   }, [productKey]);
 
-  /* Split definition + strategic into paragraphs for layered typography */
   const definitionParts = definition.split(/(?<=[.!?])\s+/);
   const definitionLead = definitionParts.slice(0, 1).join(" ");
   const definitionRest = definitionParts.slice(1).join(" ");
 
-  /* Strategic-advantage blocks: prefer the new {title, body}[] schema,
-     fall back to legacy string by chunking sentences into ~3 groups. */
   const strategicChunks: StrategicBlock[] = (() => {
     if (Array.isArray(strategicRaw)) {
       return (strategicRaw as StrategicBlock[]).filter(
@@ -166,9 +159,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
 
   return (
     <div ref={pageRef} style={{ background: "var(--background)" }}>
-      {/* ================== HERO ================== */}
       <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
-        {/* Hero background banner (icon centered, edges feathered into site bg) */}
         <div className="absolute inset-0">
           <Image
             src={heroImage}
@@ -180,7 +171,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
             priority
           />
         </div>
-        {/* Subtle vignette for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/80" />
         <div className="pointer-events-none absolute inset-0">
           <div
@@ -229,7 +219,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
                     >
                       {tail}
                     </span>
-                    {/* underline sweep */}
                     <span
                       aria-hidden
                       className="pointer-events-none absolute -bottom-1.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full opacity-0 transition-all duration-500 group-hover:scale-x-100 group-hover:opacity-100"
@@ -272,7 +261,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
           <div className="pd-hero-line mx-auto mt-10 h-[2px] w-20 origin-center bg-primary/60" />
         </div>
 
-        {/* Curved transition */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg
             className="block w-full h-[80px]"
@@ -285,7 +273,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         </div>
       </section>
 
-      {/* ================== DEFINITION ================== */}
       <FeatureDefinition
         meta={[
           { label: tCommon("focusLabel"), value: tagline, italic: true },
@@ -297,12 +284,10 @@ export default function ProductDetailLayout({ productKey }: Props) {
         body={definitionRest || undefined}
       />
 
-      {/* ================== STRATEGIC ADVANTAGE ================== */}
       <section
         className="relative py-28 sm:py-36"
         style={{ background: "var(--background)" }}
       >
-        {/* Drafting grid */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.025]"
           style={{
@@ -313,7 +298,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         />
 
         <div className="relative z-10 mx-auto max-w-6xl px-6">
-          {/* Eyebrow */}
           <div className="pd-fade mb-16 flex items-center gap-4">
             <div
               className="h-[3px] w-12 rounded-full"
@@ -348,9 +332,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
             </span>
           </div>
 
-          {/* Editorial strata composition */}
           <div className="relative">
-            {/* Vertical thread on the left edge - runs through all strata */}
             <div
               className="pointer-events-none absolute bottom-0 left-0 top-0 hidden w-px sm:block"
               style={{
@@ -371,7 +353,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         </div>
       </section>
 
-      {/* ================== USE CASES ================== */}
       <section
         className="light-content relative py-28 sm:py-36"
         style={{ background: "#f7f9fc" }}
@@ -413,7 +394,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         </div>
       </section>
 
-      {/* ================== RELATED PRODUCTS ================== */}
       {related.length > 0 && (
         <section
           className="relative py-28 sm:py-36"
@@ -466,7 +446,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
         </section>
       )}
 
-      {/* ================== CTA ================== */}
       <section
         className="relative pb-28 sm:pb-36"
         style={{ background: "#f7f9fc" }}
@@ -538,13 +517,6 @@ export default function ProductDetailLayout({ productKey }: Props) {
   );
 }
 
-/* ---------- Strategic-advantage editorial strata ----------
-   No cards. A magazine-spread typographic composition where each
-   chunk becomes its own asymmetric "strata": animated SVG decoration
-   on the outer side (alternating left/right), and Barlow body text.
-   Hairline rule dividers + a vertical thread create editorial cadence.
-*/
-
 const ADV_DECORATIONS = [
   StarBurstDecoration,
   OrbitalDecoration,
@@ -582,7 +554,6 @@ function AdvantageStrata({
 
   const bodyEl = (
     <div className={`pd-approach-block relative max-w-2xl ${flipped ? "sm:ml-auto" : ""}`}>
-      {/* Subtle leading rule + index badge */}
       <div
         className={`mb-5 flex items-center gap-3 ${
           flipped ? "sm:justify-end" : ""
@@ -614,7 +585,6 @@ function AdvantageStrata({
         />
       </div>
 
-      {/* Title */}
       {title ? (
         <h3
           className={`mb-4 text-2xl font-bold leading-[1.18] tracking-tight text-white sm:text-[28px] ${
@@ -629,7 +599,6 @@ function AdvantageStrata({
         </h3>
       ) : null}
 
-      {/* Body */}
       <p
         className={`text-[17px] leading-[1.78] text-white/80 sm:text-[18px] sm:leading-[1.72] ${
           flipped ? "sm:text-right" : ""
@@ -642,7 +611,6 @@ function AdvantageStrata({
         {body}
       </p>
 
-      {/* Trailing accent dot row */}
       <div
         className={`mt-7 flex items-center gap-1.5 ${
           flipped ? "sm:justify-end" : ""
@@ -693,8 +661,6 @@ function AdvantageStrata({
   );
 }
 
-/* ---------- Animated SVG decorations (replace numerals) ---------- */
-
 function StarBurstDecoration() {
   return (
     <div
@@ -715,7 +681,6 @@ function StarBurstDecoration() {
           </radialGradient>
         </defs>
 
-        {/* Slow-rotating outer ring */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-slow 40s linear infinite" }}>
           <circle
             cx="100"
@@ -729,7 +694,6 @@ function StarBurstDecoration() {
           />
         </g>
 
-        {/* Counter-rotating star burst */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-rev 28s linear infinite" }}>
           <path
             d="M100 28 L106 92 L168 100 L106 108 L100 172 L94 108 L32 100 L94 92 Z"
@@ -743,7 +707,6 @@ function StarBurstDecoration() {
           />
         </g>
 
-        {/* Glowing core */}
         <circle cx="100" cy="100" r="14" fill="url(#advCore1)">
           <animate attributeName="r" values="12;16;12" dur="3.2s" repeatCount="indefinite" />
         </circle>
@@ -772,7 +735,6 @@ function OrbitalDecoration() {
           </radialGradient>
         </defs>
 
-        {/* Three concentric pulse rings */}
         <circle cx="100" cy="100" r="40" fill="none" stroke="url(#advGrad2)" strokeWidth="1.2" opacity="0.7"
                 style={{ transformOrigin: "100px 100px", animation: "adv-pulse-ring 3.4s ease-out infinite" }} />
         <circle cx="100" cy="100" r="40" fill="none" stroke="url(#advGrad2)" strokeWidth="1.2" opacity="0.7"
@@ -780,23 +742,19 @@ function OrbitalDecoration() {
         <circle cx="100" cy="100" r="40" fill="none" stroke="url(#advGrad2)" strokeWidth="1.2" opacity="0.7"
                 style={{ transformOrigin: "100px 100px", animation: "adv-pulse-ring 3.4s ease-out infinite", animationDelay: "2.2s" }} />
 
-        {/* Counter-rotating orbital ring with two satellite dots */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-slow 18s linear infinite" }}>
           <circle cx="100" cy="100" r="62" fill="none" stroke="url(#advGrad2)" strokeWidth="1" opacity="0.4" />
           <circle cx="100" cy="38" r="3.5" fill="var(--primary)" />
           <circle cx="100" cy="162" r="2.5" fill="var(--accent-teal)" opacity="0.85" />
         </g>
 
-        {/* Outer dotted ring */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-rev 32s linear infinite" }}>
           <circle cx="100" cy="100" r="86" fill="none" stroke="url(#advGrad2)" strokeWidth="1" strokeDasharray="1 5" opacity="0.5" />
         </g>
 
-        {/* Center crosshair */}
         <line x1="100" y1="86" x2="100" y2="114" stroke="white" strokeWidth="1" opacity="0.55" />
         <line x1="86" y1="100" x2="114" y2="100" stroke="white" strokeWidth="1" opacity="0.55" />
 
-        {/* Glowing core */}
         <circle cx="100" cy="100" r="9" fill="url(#advCore2)">
           <animate attributeName="r" values="7;11;7" dur="2.8s" repeatCount="indefinite" />
         </circle>
@@ -825,7 +783,6 @@ function ConstellationDecoration() {
           </radialGradient>
         </defs>
 
-        {/* Constellation lines (slowly drifting in opacity) */}
         <g
           opacity="0.6"
           style={{
@@ -840,14 +797,12 @@ function ConstellationDecoration() {
           <line x1="50" y1="60" x2="60" y2="155" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
           <line x1="150" y1="60" x2="155" y2="140" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
 
-          {/* Star nodes - twinkling */}
           <circle cx="50" cy="60" r="3" fill="var(--primary)" />
           <circle cx="150" cy="60" r="2.5" fill="var(--accent-teal)" />
           <circle cx="155" cy="140" r="2.5" fill="var(--accent-purple)" />
           <circle cx="60" cy="155" r="2.8" fill="var(--primary)" />
         </g>
 
-        {/* Hexagonal frame - slowly rotating reverse */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-rev 50s linear infinite" }}>
           <polygon
             points="100,30 160,65 160,135 100,170 40,135 40,65"
@@ -859,7 +814,6 @@ function ConstellationDecoration() {
           />
         </g>
 
-        {/* Central star */}
         <g style={{ transformOrigin: "center", animation: "adv-drift 4s ease-in-out infinite" }}>
           <path
             d="M100 80 L104 96 L120 100 L104 104 L100 120 L96 104 L80 100 L96 96 Z"
@@ -892,7 +846,6 @@ function HexLatticeDecoration() {
           </radialGradient>
         </defs>
 
-        {/* Outer hex frame - slow rotate */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-slow 70s linear infinite" }}>
           <polygon
             points="100,18 168,58 168,142 100,182 32,142 32,58"
@@ -903,7 +856,6 @@ function HexLatticeDecoration() {
           />
         </g>
 
-        {/* Lattice cluster - six small hexagons around center */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-rev 36s linear infinite" }}>
           {[0, 60, 120, 180, 240, 300].map((deg, i) => {
             const r = 56;
@@ -923,7 +875,6 @@ function HexLatticeDecoration() {
           })}
         </g>
 
-        {/* Central hex with pulse */}
         <polygon
           points="100,82 116,91 116,109 100,118 84,109 84,91"
           fill="url(#advGrad4)"
@@ -932,7 +883,6 @@ function HexLatticeDecoration() {
           <animate attributeName="opacity" values="0.55;0.95;0.55" dur="3.4s" repeatCount="indefinite" />
         </polygon>
 
-        {/* Glowing core */}
         <circle cx="100" cy="100" r="6" fill="url(#advCore4)">
           <animate attributeName="r" values="5;9;5" dur="2.6s" repeatCount="indefinite" />
         </circle>
@@ -960,7 +910,6 @@ function FlowFieldDecoration() {
           </radialGradient>
         </defs>
 
-        {/* Flowing curves */}
         <g opacity="0.7">
           <path
             d="M20 70 Q60 40 100 70 T180 70"
@@ -989,7 +938,6 @@ function FlowFieldDecoration() {
           </path>
         </g>
 
-        {/* Floating particles along curves */}
         <circle cx="60" cy="86" r="2.6" fill="var(--primary)">
           <animate attributeName="cx" values="20;180;20" dur="9s" repeatCount="indefinite" />
           <animate attributeName="cy" values="70;70;70" dur="9s" repeatCount="indefinite" />
@@ -1001,11 +949,9 @@ function FlowFieldDecoration() {
           <animate attributeName="cx" values="20;180;20" dur="11s" repeatCount="indefinite" />
         </circle>
 
-        {/* Vertical accent lines */}
         <line x1="40" y1="40" x2="40" y2="160" stroke="url(#advGrad5)" strokeWidth="0.6" opacity="0.35" />
         <line x1="160" y1="40" x2="160" y2="160" stroke="url(#advGrad5)" strokeWidth="0.6" opacity="0.35" />
 
-        {/* Centroid */}
         <circle cx="100" cy="100" r="7" fill="url(#advCore5)">
           <animate attributeName="r" values="5;9;5" dur="3s" repeatCount="indefinite" />
         </circle>
@@ -1037,16 +983,13 @@ function RadarSweepDecoration() {
           </linearGradient>
         </defs>
 
-        {/* Concentric range rings */}
         <circle cx="100" cy="100" r="30" fill="none" stroke="url(#advGrad6)" strokeWidth="0.8" opacity="0.45" />
         <circle cx="100" cy="100" r="55" fill="none" stroke="url(#advGrad6)" strokeWidth="0.8" opacity="0.4" />
         <circle cx="100" cy="100" r="80" fill="none" stroke="url(#advGrad6)" strokeWidth="0.8" opacity="0.35" />
 
-        {/* Crosshair */}
         <line x1="100" y1="14" x2="100" y2="186" stroke="white" strokeWidth="0.4" opacity="0.3" />
         <line x1="14" y1="100" x2="186" y2="100" stroke="white" strokeWidth="0.4" opacity="0.3" />
 
-        {/* Sweeping radial wedge */}
         <g style={{ transformOrigin: "100px 100px", animation: "adv-spin-slow 6s linear infinite" }}>
           <path
             d="M100 100 L100 16 A84 84 0 0 1 184 100 Z"
@@ -1055,7 +998,6 @@ function RadarSweepDecoration() {
           />
         </g>
 
-        {/* Detected blips */}
         <circle cx="68" cy="74" r="2.4" fill="var(--accent-teal)">
           <animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite" />
         </circle>
@@ -1066,7 +1008,6 @@ function RadarSweepDecoration() {
           <animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="1.2s" repeatCount="indefinite" />
         </circle>
 
-        {/* Glowing core */}
         <circle cx="100" cy="100" r="6" fill="url(#advCore6)">
           <animate attributeName="r" values="5;9;5" dur="2.4s" repeatCount="indefinite" />
         </circle>
@@ -1094,7 +1035,6 @@ function NodeNetworkDecoration() {
           </radialGradient>
         </defs>
 
-        {/* Edge lines with pulse */}
         <g opacity="0.6">
           <line x1="40" y1="50" x2="100" y2="100" stroke="url(#advGrad7)" strokeWidth="0.9">
             <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
@@ -1114,13 +1054,11 @@ function NodeNetworkDecoration() {
           <line x1="160" y1="60" x2="160" y2="150" stroke="url(#advGrad7)" strokeWidth="0.5" opacity="0.4" />
         </g>
 
-        {/* Outer nodes */}
         <circle cx="40" cy="50" r="4" fill="var(--primary)" />
         <circle cx="160" cy="60" r="3.5" fill="var(--accent-teal)" />
         <circle cx="40" cy="150" r="3.5" fill="var(--accent-purple)" />
         <circle cx="160" cy="150" r="4" fill="var(--primary)" />
 
-        {/* Floating data packet along an edge */}
         <circle r="2" fill="white" opacity="0.95">
           <animateMotion dur="4.6s" repeatCount="indefinite" path="M40,50 L100,100 L160,150" />
         </circle>
@@ -1128,7 +1066,6 @@ function NodeNetworkDecoration() {
           <animateMotion dur="5.2s" begin="1s" repeatCount="indefinite" path="M160,60 L100,100 L40,150" />
         </circle>
 
-        {/* Center hub */}
         <circle cx="100" cy="100" r="8" fill="url(#advCore7)">
           <animate attributeName="r" values="6;11;6" dur="2.4s" repeatCount="indefinite" />
         </circle>
@@ -1137,8 +1074,6 @@ function NodeNetworkDecoration() {
     </div>
   );
 }
-
-/* ---------- Use case card (unified theme) ---------- */
 
 function ProductCard({ title, desc }: { title: string; desc: string }) {
   return (
@@ -1181,8 +1116,6 @@ function ProductCard({ title, desc }: { title: string; desc: string }) {
     </article>
   );
 }
-
-/* ---------- Related product card - mirrors blog-card structure ---------- */
 
 function RelatedCard({
   href,
@@ -1266,27 +1199,23 @@ function RelatedCard({
             boxShadow: "0 10px 40px -10px rgba(0,0,0,0.3)",
           }}
         >
-          {/* Corner glow */}
           <div
             className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full blur-3xl"
             style={{ background: `linear-gradient(135deg, ${accentColor}15, transparent)` }}
           />
 
-          {/* Mouse-follow glow */}
           <div
             ref={glowRef}
             className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0 blur-3xl"
             style={{ background: `${accentColor}20` }}
           />
 
-          {/* Hover shimmer */}
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
           <div
             className="relative z-10 flex flex-1 flex-col"
             style={{ transform: "translateZ(15px)" }}
           >
-            {/* Cover image - square aspect to fit 1:1 source images */}
             <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-xl">
               <Image
                 src={image}
@@ -1298,7 +1227,6 @@ function RelatedCard({
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
 
-            {/* Brand pill */}
             <span
               className="mb-4 inline-block self-start rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-wider backdrop-blur-sm"
               style={{

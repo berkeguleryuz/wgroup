@@ -82,7 +82,6 @@ export default function OurVisionPage() {
       heroImage="/w-new/wn11.webp"
     >
       <div ref={sectionRef}>
-        {/* Opening — full width large text */}
         <div className="vision-intro mb-20 text-center">
           <p
             className="text-2xl leading-[1.45] tracking-[-0.01em] sm:text-[34px] sm:leading-[1.35] lg:text-[40px]"
@@ -96,14 +95,12 @@ export default function OurVisionPage() {
           </p>
         </div>
 
-        {/* Content cards — alternating layout */}
         <div className="space-y-8">
           {[t("p2"), t("p3"), t("p4")].map((text, i) => (
             <div
               key={i}
               className={`vision-card flex flex-col gap-6 sm:flex-row sm:gap-10 ${i % 2 === 1 ? "sm:flex-row-reverse" : ""}`}
             >
-              {/* Number side */}
               <div className="flex shrink-0 items-start justify-center sm:w-28">
                 <span
                   className="text-[72px] font-black leading-none sm:text-[96px]"
@@ -122,7 +119,6 @@ export default function OurVisionPage() {
                 </span>
               </div>
 
-              {/* Text side */}
               <div
                 className="flex-1 rounded-2xl p-8 sm:p-10"
                 style={{
@@ -153,7 +149,6 @@ export default function OurVisionPage() {
           ))}
         </div>
 
-        {/* Three pillars */}
         <div className="vision-pillars mt-20 mb-6">
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
             {pillars.filter(Boolean).map((word, i) => (
@@ -184,7 +179,6 @@ export default function OurVisionPage() {
           </div>
         </div>
 
-        {/* Global CTA */}
         <div className="relative mt-16 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />

@@ -7,7 +7,6 @@ import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { useTranslations } from "next-intl";
 import { ArrowRight } from "@/components/icons";
 
-/* ---- Inline brand icons ---- */
 function GradCapIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
@@ -85,7 +84,6 @@ const brands = [
   },
 ];
 
-/* ---- SVG Tree Connector ---- */
 function TreeConnector({
   direction,
 }: {
@@ -161,14 +159,12 @@ function TreeConnector({
   );
 }
 
-/* ========== Brands Section ========== */
 export default function Brands() {
   const t = useTranslations("brands");
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Icon circles pop-in */
       gsap.from(".brand-icon-circle", {
         scale: 0,
         opacity: 0,
@@ -182,7 +178,6 @@ export default function Brands() {
         },
       });
 
-      /* Tree connector lines fade in */
       gsap.from(".tree-line", {
         opacity: 0,
         duration: 1,
@@ -195,7 +190,6 @@ export default function Brands() {
         },
       });
 
-      /* Heading entrance */
       gsap.from(".brands-heading > *", {
         y: 25,
         opacity: 0,
@@ -209,7 +203,6 @@ export default function Brands() {
         },
       });
 
-      /* Card entrance */
       const cards = gsap.utils.toArray<HTMLElement>(".brand-card");
       if (cards.length) {
         gsap.set(cards, { opacity: 0, y: 40 });
@@ -238,7 +231,6 @@ export default function Brands() {
       ref={sectionRef}
       className="relative overflow-hidden bg-[#f8f9fb] py-24 sm:py-32"
     >
-      {/* Subtle grid overlay */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{
@@ -249,7 +241,6 @@ export default function Brands() {
       />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
-        {/* ---- Brand Icon Circles ---- */}
         <div className="mx-auto grid max-w-4xl grid-cols-3 gap-6">
           {brands.map((brand) => (
             <div key={brand.key} className="flex flex-col items-center">
@@ -264,13 +255,10 @@ export default function Brands() {
           ))}
         </div>
 
-        {/* ---- Top Connector (converge to center) ---- */}
         <TreeConnector direction="converge" />
 
-        {/* Mobile: simple vertical line */}
         <div className="mx-auto my-4 h-10 w-px border-l border-dashed border-primary/30 lg:hidden" />
 
-        {/* ---- Center Heading ---- */}
         <div className="brands-heading mx-auto max-w-2xl py-6 text-center lg:py-3">
           <p
             className="mb-3 text-sm font-semibold tracking-[0.2em] text-primary"
@@ -298,13 +286,10 @@ export default function Brands() {
           </p>
         </div>
 
-        {/* Mobile: simple vertical line */}
         <div className="mx-auto my-4 h-10 w-px border-l border-dashed border-primary/30 lg:hidden" />
 
-        {/* ---- Bottom Connector (diverge to cards) ---- */}
         <TreeConnector direction="diverge" />
 
-        {/* ---- Brand Cards ---- */}
         <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {brands.map((brand) => (
             <Link
@@ -313,7 +298,6 @@ export default function Brands() {
               className="brand-card group block"
             >
               <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200/60 bg-white p-5 transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-gray-900/6">
-                {/* Image */}
                 <div className="relative mb-5 aspect-16/10 overflow-hidden rounded-xl">
                   <Image
                     src={brand.image}
@@ -324,7 +308,6 @@ export default function Brands() {
                   />
                 </div>
 
-                {/* Icon + Name */}
                 <div className="mb-2.5 flex items-center gap-2.5">
                   <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/8">
                     <brand.Icon className="h-4 w-4 text-primary" />
@@ -339,12 +322,10 @@ export default function Brands() {
                   </h3>
                 </div>
 
-                {/* Description */}
                 <p className="mb-5 flex-1 text-sm leading-relaxed text-gray-500">
                   {t(`${brand.key}Desc`)}
                 </p>
 
-                {/* CTA - always at bottom */}
                 <div
                   className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary transition-all duration-300 group-hover:gap-3"
                   style={{

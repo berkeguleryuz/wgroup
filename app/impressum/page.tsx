@@ -30,7 +30,6 @@ export default function ImpressumPage() {
   return (
     <PageLayout title={t("title")} subtitle={t("subtitle")} eyebrow={t("eyebrow")}>
       <div ref={sectionRef} className="space-y-10">
-        {/* Company Info */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("companyTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("companyName")}</p>
@@ -38,41 +37,35 @@ export default function ImpressumPage() {
           <p className="text-lg leading-relaxed text-muted">{t("companyCountry")}</p>
         </div>
 
-        {/* Representative */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("representativeTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("representativeName")}</p>
         </div>
 
-        {/* Contact */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("contactTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("contactPhone")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("contactEmail")}</p>
         </div>
 
-        {/* Register */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("registerTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("registerCourt")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("registerNumber")}</p>
         </div>
 
-        {/* VAT */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("vatTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("vatDescription")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("vatNumber")}</p>
         </div>
 
-        {/* Responsible for content */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("responsibleTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("responsibleName")}</p>
           <p className="text-lg leading-relaxed text-muted">{t("responsibleAddress")}</p>
         </div>
 
-        {/* Disclaimer */}
         <div className="legal-section page-content-block space-y-6 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("disclaimerTitle")}</h2>
           <div className="space-y-2">
@@ -85,7 +78,6 @@ export default function ImpressumPage() {
           </div>
         </div>
 
-        {/* Copyright */}
         <div className="legal-section page-content-block space-y-2 rounded-2xl p-6" style={{ background: "var(--card-bg)", border: "1px solid var(--card-border)" }}>
           <h2 className="text-xl font-bold text-foreground">{t("copyrightTitle")}</h2>
           <p className="text-lg leading-relaxed text-muted">{t("copyrightText")}</p>

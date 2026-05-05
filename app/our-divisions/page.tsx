@@ -34,7 +34,6 @@ function DivisionCard({
         href={href}
         className="division-card group relative grid gap-6 rounded-2xl py-12 px-2 transition-all duration-300 hover:bg-primary/[0.03] first:pt-0 lg:grid-cols-[260px_1fr] lg:gap-14 lg:px-6"
       >
-        {/* Left: identity */}
         <div>
           <span
             className="text-5xl font-bold tracking-tight sm:text-6xl"
@@ -57,7 +56,6 @@ function DivisionCard({
           />
         </div>
 
-        {/* Right: description + arrow */}
         <div className="flex items-start">
           <div
             className="mr-5 mt-1 hidden w-[2px] self-stretch rounded-full lg:block"
@@ -145,10 +143,8 @@ export default function OurDivisionsPage() {
       heroImage="/w-new/w3.webp"
     >
       <div ref={sectionRef}>
-        {/* Intro — editorial spread */}
         <div className="page-content-block relative mb-20 sm:mb-24">
           <div className="relative grid grid-cols-1 gap-x-10 gap-y-12 lg:grid-cols-12 lg:gap-y-16">
-            {/* Marker column — three-color rhythm */}
             <div className="intro-block lg:col-span-3">
               <div className="flex flex-row items-center gap-3 lg:flex-col lg:items-start lg:gap-4">
                 <span className="flex items-center gap-1.5">
@@ -160,7 +156,6 @@ export default function OurDivisionsPage() {
               </div>
             </div>
 
-            {/* Lead statement — large display */}
             <div className="intro-block lg:col-span-9">
               <p
                 className="text-2xl leading-[1.4] tracking-[-0.01em] text-foreground sm:text-[30px] sm:leading-[1.35] lg:text-[34px]"
@@ -173,7 +168,6 @@ export default function OurDivisionsPage() {
               </p>
             </div>
 
-            {/* p2 — indented right block, with leading horizontal accent */}
             <div className="intro-block lg:col-span-7 lg:col-start-3">
               <div className="flex items-start gap-5 sm:gap-6">
                 <span
@@ -190,7 +184,6 @@ export default function OurDivisionsPage() {
               </div>
             </div>
 
-            {/* p3 — further indented, purple accent */}
             <div className="intro-block lg:col-span-7 lg:col-start-5">
               <div className="flex items-start gap-5 sm:gap-6">
                 <span

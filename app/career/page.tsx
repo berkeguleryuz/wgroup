@@ -84,7 +84,6 @@ export default function CareerPage() {
       heroImage="/w/company/career.webp"
     >
       <div ref={sectionRef}>
-        {/* Intro */}
         <div className="career-intro mb-16 text-center">
           <p
             className="text-xl leading-[1.7] sm:text-2xl"
@@ -98,7 +97,6 @@ export default function CareerPage() {
           </p>
         </div>
 
-        {/* Why WGroup — 3 pillars */}
         <div className="mb-16">
           <h2
             className="mb-10 text-center text-2xl font-bold tracking-tight sm:text-3xl"
@@ -120,7 +118,6 @@ export default function CareerPage() {
                   border: "1px solid rgba(30, 109, 181, 0.08)",
                 }}
               >
-                {/* Background number */}
                 <span
                   className="pointer-events-none absolute -right-2 -top-4 text-[100px] font-black leading-none"
                   style={{
@@ -164,7 +161,6 @@ export default function CareerPage() {
           </div>
         </div>
 
-        {/* Who We Are Looking For */}
         <div className="career-who mb-16">
           <div className="relative overflow-hidden rounded-2xl p-8 sm:p-12">
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
@@ -190,7 +186,6 @@ export default function CareerPage() {
           </div>
         </div>
 
-        {/* Open Positions */}
         <div className="career-open mb-6">
           <div
             className="overflow-hidden rounded-2xl p-8 sm:p-12"
@@ -221,7 +216,6 @@ export default function CareerPage() {
           </div>
         </div>
 
-        {/* Three pillars */}
         <div className="mt-16 mb-6">
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8">
             {[t("pillar1Title"), t("pillar2Title"), t("pillar3Title")].map((word, i) => (
@@ -249,7 +243,6 @@ export default function CareerPage() {
           </div>
         </div>
 
-        {/* Global CTA */}
         <div className="relative mt-14 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />

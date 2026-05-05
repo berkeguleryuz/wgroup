@@ -38,7 +38,6 @@ export default function FrameAnimation() {
           }
         );
 
-        // Slight parallax float while visible
         gsap.to(card, {
           y: -40,
           ease: "none",
@@ -57,7 +56,6 @@ export default function FrameAnimation() {
 
   return (
     <section ref={sectionRef} className="relative" style={{ background: "#0a0f1e" }}>
-      {/* Sticky video background */}
       <div className="sticky top-0 z-0 h-screen w-full overflow-hidden">
         <video
           src="/w/worldmap.mp4"
@@ -72,9 +70,7 @@ export default function FrameAnimation() {
         />
       </div>
 
-      {/* Cards scroll over video */}
       <div className="relative z-10" style={{ marginTop: "-100vh" }}>
-        {/* Top spacer */}
         <div className="h-[60vh]" />
 
         {cardKeys.map((key, i) => {
@@ -103,7 +99,6 @@ export default function FrameAnimation() {
                     borderTop: "1px solid rgba(255,255,255,0.05)",
                   }}
                 >
-                  {/* Card number accent */}
                   <span
                     className="mb-4 inline-block text-[64px] font-black leading-none"
                     style={{
@@ -145,7 +140,6 @@ export default function FrameAnimation() {
           );
         })}
 
-        {/* Bottom spacer */}
         <div className="h-[30vh]" />
       </div>
     </section>

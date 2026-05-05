@@ -6,8 +6,6 @@ import { useTranslations } from "next-intl";
 import { LinkedInIcon, InstagramIcon } from "@/components/icons";
 import { productOrder, productSlugs, type ProductKey } from "@/lib/products";
 
-/* ---------- Link data ---------- */
-
 const divisionLinks = [
   { key: "wquality", href: "/w-quality" },
   { key: "wdigilab", href: "/w-digilab" },
@@ -36,17 +34,13 @@ const legalLinks = [
   { key: "cookiePolicy", href: "/cookie-policy" },
 ] as const;
 
-/* ========== Footer ========== */
-
 export default function Footer() {
   const t = useTranslations("footer");
   const tProducts = useTranslations("wproducts");
 
   return (
     <footer className="bg-secondary">
-      {/* ---------- Main columns ---------- */}
       <div className="mx-auto max-w-7xl px-6 py-16">
-        {/* Logo */}
         <div className="mb-12">
           <Image
             src="/wgroup/logo.png"
@@ -58,7 +52,6 @@ export default function Footer() {
         </div>
 
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          {/* Company */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
               {t("company")}
@@ -77,7 +70,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Divisions */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
               {t("divisions")}
@@ -96,7 +88,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Products */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
               {t("products")}
@@ -115,7 +106,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
               {t("legal")}
@@ -134,7 +124,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Follow Us */}
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white">
               {t("followUs")}
@@ -163,7 +152,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ---------- Bottom bar ---------- */}
       <div className="border-t border-white/6">
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-4 px-6 py-6 text-center text-xs text-white/40 sm:flex-row sm:justify-between sm:text-left">
           <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">

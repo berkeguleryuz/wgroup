@@ -44,13 +44,11 @@ export default function CTA() {
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="relative overflow-hidden rounded-3xl bg-background px-8 py-20 sm:px-16 sm:py-24">
-          {/* Background blobs */}
           <div className="pointer-events-none absolute inset-0">
             <div className="cta-blob absolute -left-20 top-0 h-75 w-75 rounded-full bg-primary/15 blur-[100px]" />
             <div className="cta-blob absolute bottom-0 right-0 h-100 w-100 rounded-full bg-accent-purple/10 blur-[120px]" />
           </div>
 
-          {/* Mesh */}
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.02]"
             style={{
@@ -60,7 +58,6 @@ export default function CTA() {
             }}
           />
 
-          {/* Content */}
           <div className="cta-content relative z-10 mx-auto max-w-2xl text-center">
             <p
               className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary"

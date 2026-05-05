@@ -9,7 +9,6 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import MorphButton from "@/components/ui/MorphButton";
 
-/* ---- Hero Brain Image — full-bleed background cover ---- */
 function BrainVisual() {
   return (
     <div className="brain-visual pointer-events-none absolute inset-0">
@@ -22,7 +21,6 @@ function BrainVisual() {
         style={{ filter: "brightness(1.05)" }}
         sizes="100vw"
       />
-      {/* Soft overlay — keeps text legible without crushing the image */}
       <div
         className="absolute inset-0"
         style={{
@@ -30,7 +28,6 @@ function BrainVisual() {
             "linear-gradient(to bottom, rgba(6,11,24,0.18) 0%, rgba(6,11,24,0.42) 60%, rgba(6,11,24,0.55) 100%)",
         }}
       />
-      {/* Subtle radial vignette to anchor the centered text */}
       <div
         className="pointer-events-none absolute inset-0"
         style={{

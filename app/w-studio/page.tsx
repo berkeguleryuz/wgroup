@@ -51,7 +51,6 @@ export default function WStudioPage() {
 
   return (
     <div ref={pageRef} style={{ background: "var(--background)" }}>
-      {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -90,7 +89,6 @@ export default function WStudioPage() {
         </div>
       </section>
 
-      {/* ===== WHAT WE DO ===== */}
       <FeatureDefinition
         meta={[
           { label: tCommon("focusLabel"), value: t("subtitle"), italic: true },
@@ -102,7 +100,6 @@ export default function WStudioPage() {
         body={[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).join(" ")}
       />
 
-      {/* ===== CORE CAPABILITIES ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="dv-fade mb-16 flex items-center gap-4">
@@ -147,7 +144,6 @@ export default function WStudioPage() {
         </div>
       </section>
 
-      {/* ===== APPROACH ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "#f7f9fc" }}>
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <div className="dv-fade mb-14 flex items-center gap-4">
@@ -193,7 +189,6 @@ export default function WStudioPage() {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
       <section className="relative pb-28 sm:pb-36" style={{ background: "#f7f9fc" }}>
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",

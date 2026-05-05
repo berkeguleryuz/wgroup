@@ -28,7 +28,6 @@ export default function PageLayout({
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* --- floating blobs --- */
       gsap.utils.toArray<HTMLElement>(".page-blob").forEach((blob, i) => {
         gsap.to(blob, {
           y: `random(-20, 20)`,
@@ -41,7 +40,6 @@ export default function PageLayout({
         });
       });
 
-      /* --- word-by-word 3D title reveal --- */
       const tl = gsap.timeline({ delay: 0.2 });
 
       tl.from(".page-title-word", {
@@ -62,14 +60,12 @@ export default function PageLayout({
         );
       }
 
-      /* --- decorative line expand --- */
       tl.from(
         ".page-hero-line",
         { scaleX: 0, duration: 0.8, ease: "power3.inOut" },
         "-=0.4"
       );
 
-      /* --- sparkle twinkle --- */
       gsap.utils.toArray<HTMLElement>(".page-sparkle").forEach((dot, i) => {
         gsap.to(dot, {
           opacity: gsap.utils.random(0.2, 1),
@@ -82,7 +78,6 @@ export default function PageLayout({
         });
       });
 
-      /* --- content stagger reveal on scroll --- */
       gsap.utils
         .toArray<HTMLElement>(".page-content-block")
         .forEach((block) => {
@@ -106,12 +101,10 @@ export default function PageLayout({
 
   return (
     <>
-      {/* Hero + Curve wrapper — image spans both */}
       <section
         ref={heroRef}
         className="relative overflow-hidden bg-secondary"
       >
-        {/* Hero background image — covers hero + curve */}
         {heroImage && (
           <div className="absolute inset-0 z-0">
             <Image
@@ -125,14 +118,12 @@ export default function PageLayout({
           </div>
         )}
 
-        {/* animated blobs — covers entire section */}
         <div className="pointer-events-none absolute inset-0">
           <div className="page-blob absolute -left-20 -top-20 h-[400px] w-[400px] rounded-full bg-accent-purple/8 blur-[120px]" />
           <div
             className="page-blob absolute right-0 top-1/4 h-[500px] w-[500px] rounded-full bg-primary/8 blur-[100px]"
           />
           <div className="page-blob absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-accent-teal/8 blur-[80px]" />
-          {/* mesh grid */}
           <div
             className="absolute inset-0 opacity-[0.02]"
             style={{
@@ -143,13 +134,10 @@ export default function PageLayout({
           />
         </div>
 
-        {/* gradient overlay — covers entire section */}
         <div className="absolute inset-0 bg-gradient-to-t from-secondary/60 via-secondary/20 to-transparent" />
 
-        {/* Hero content */}
         <div className="relative py-24 px-6 sm:py-32">
 
-          {/* content */}
           <div className="relative z-10 mx-auto max-w-4xl text-center">
             {eyebrow && (
               <p
@@ -203,14 +191,11 @@ export default function PageLayout({
                 {subtitle}
               </p>
             )}
-            {/* decorative line */}
             <div className="page-hero-line mx-auto mt-8 h-[2px] w-24 origin-center bg-primary" />
           </div>
         </div>
 
-        {/* Curved transition with sparkles */}
         <div className="relative">
-          {/* Sparkle dots in dark zone */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             {[...Array(18)].map((_, i) => (
               <div
@@ -237,9 +222,7 @@ export default function PageLayout({
         </div>
       </section>
 
-      {/* Content — light theme */}
       <section ref={contentRef} className="light-content relative py-20 px-6" style={{ background: "#f7f9fc" }}>
-        {/* subtle dot pattern */}
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.03]"
           style={{
@@ -248,7 +231,6 @@ export default function PageLayout({
             backgroundSize: "40px 40px",
           }}
         />
-        {/* top glow */}
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-[200px]"
           style={{

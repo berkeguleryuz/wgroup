@@ -30,7 +30,6 @@ const categoryColors: Record<string, string> = {
   news: "#f59e0b",
 };
 
-/* ---------- Premium blog card with gradient, glow, 3D tilt ---------- */
 function BlogCard({
   href,
   category,
@@ -118,20 +117,17 @@ function BlogCard({
             boxShadow: `0 10px 40px -10px rgba(0,0,0,0.3)`,
           }}
         >
-          {/* Corner glow */}
           <div
             className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full blur-3xl"
             style={{ background: `linear-gradient(135deg, ${color}15, transparent)` }}
           />
 
-          {/* Mouse-follow glow */}
           <div
             ref={glowRef}
             className="pointer-events-none absolute h-[200px] w-[200px] rounded-full opacity-0 blur-3xl"
             style={{ background: `${color}20` }}
           />
 
-          {/* Hover shimmer */}
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/0 via-primary/5 to-primary/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
           <div className="relative z-10 flex flex-1 flex-col" style={{ transform: "translateZ(15px)" }}>
@@ -207,7 +203,6 @@ export default function BlogPage() {
   return (
     <PageLayout title={t("title")} eyebrow={t("eyebrow")} titleHighlight={t("titleHighlight")}>
       <div ref={sectionRef}>
-        {/* Category Filter */}
         <div className="page-content-block mb-10 flex flex-wrap gap-3">
           {categories.map((cat) => {
             const isActive = activeCategory === cat.key;
@@ -239,7 +234,6 @@ export default function BlogPage() {
           })}
         </div>
 
-        {/* Blog Grid */}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredArticles.map((article) => (
             <BlogCard

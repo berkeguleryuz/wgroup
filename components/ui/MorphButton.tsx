@@ -9,11 +9,8 @@ gsap.registerPlugin(MorphSVGPlugin);
 
 interface MorphButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children?: React.ReactNode;
-  /** Fill color for the morph wave (default: current text color mapped) */
   fillColor?: string;
-  /** Text color before hover */
   textColor?: string;
-  /** Text color after hover */
   textColorHover?: string;
 }
 

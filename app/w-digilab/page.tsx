@@ -16,14 +16,12 @@ export default function WDigiLabPage() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      /* Hero text entrance */
       const heroTl = gsap.timeline({ delay: 0.3 });
       heroTl.from(".dv-hero-title", { y: 60, opacity: 0, duration: 0.9, ease: "power3.out" });
       heroTl.from(".dv-hero-sub", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.4");
       heroTl.from(".dv-hero-line", { scaleX: 0, duration: 0.8, ease: "power3.inOut" }, "-=0.3");
       heroTl.from(".dv-hero-intro", { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" }, "-=0.3");
 
-      /* Scroll sections */
       gsap.utils.toArray<HTMLElement>(".dv-fade").forEach((el) => {
         gsap.from(el, {
           y: 60, opacity: 0, duration: 1, ease: "power2.out",
@@ -53,7 +51,6 @@ export default function WDigiLabPage() {
 
   return (
     <div ref={pageRef} style={{ background: "var(--background)" }}>
-      {/* ===== HERO ===== */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
@@ -85,7 +82,6 @@ export default function WDigiLabPage() {
           </p>
         </div>
 
-        {/* Curved transition */}
         <div className="absolute bottom-0 left-0 right-0">
           <svg className="block w-full h-[80px]" viewBox="0 0 1440 80" fill="none" preserveAspectRatio="none">
             <path d="M0 0 Q720 80 1440 0 V80 H0 Z" fill="#f7f9fc" />
@@ -93,7 +89,6 @@ export default function WDigiLabPage() {
         </div>
       </section>
 
-      {/* ===== WHAT WE DO ===== */}
       <FeatureDefinition
         meta={[
           { label: tCommon("focusLabel"), value: t("subtitle"), italic: true },
@@ -105,7 +100,6 @@ export default function WDigiLabPage() {
         body={[t("whatWeDo2"), t("whatWeDo3")].filter(Boolean).join(" ")}
       />
 
-      {/* ===== CORE CAPABILITIES ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "var(--background)" }}>
         <div className="relative z-10 mx-auto max-w-6xl px-6">
           <div className="dv-fade mb-16 flex items-center gap-4">
@@ -116,35 +110,29 @@ export default function WDigiLabPage() {
             </h2>
           </div>
 
-          {/* Vertical list cards with corner brackets */}
           <div className="mx-auto max-w-3xl space-y-6">
             {capabilities.map((cap, i) => (
               <div
                 key={i}
                 className="dv-cap-card group relative flex items-center gap-8 px-10 py-8 transition-all duration-400 hover:bg-white/[0.02]"
               >
-                {/* Corner brackets */}
                 <span className="pointer-events-none absolute left-0 top-0 h-5 w-5 border-l-2 border-t-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
                 <span className="pointer-events-none absolute right-0 top-0 h-5 w-5 border-r-2 border-t-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
                 <span className="pointer-events-none absolute bottom-0 left-0 h-5 w-5 border-b-2 border-l-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
                 <span className="pointer-events-none absolute bottom-0 right-0 h-5 w-5 border-b-2 border-r-2 border-primary/30 transition-colors duration-300 group-hover:border-primary" />
 
-                {/* Number */}
                 <span className="shrink-0 text-3xl font-black text-primary/20 transition-colors duration-300 group-hover:text-primary/40"
                   style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
-                {/* Divider */}
                 <div className="h-10 w-px shrink-0 bg-white/8 transition-colors duration-300 group-hover:bg-primary/30" />
 
-                {/* Text */}
                 <h3 className="flex-1 text-lg font-semibold leading-snug text-white/80 transition-colors duration-300 group-hover:text-white sm:text-xl"
                   style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}>
                   {cap}
                 </h3>
 
-                {/* Logo on hover */}
                 <img
                   src="/wgroup/logo.png"
                   alt=""
@@ -156,7 +144,6 @@ export default function WDigiLabPage() {
         </div>
       </section>
 
-      {/* ===== APPROACH ===== */}
       <section className="relative py-28 sm:py-36" style={{ background: "#f7f9fc" }}>
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <div className="dv-fade mb-14 flex items-center gap-4">
@@ -202,7 +189,6 @@ export default function WDigiLabPage() {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
       <section className="relative pb-28 sm:pb-36" style={{ background: "#f7f9fc" }}>
         <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
           backgroundImage: "radial-gradient(circle at 1px 1px, var(--primary) 0.5px, transparent 0)",

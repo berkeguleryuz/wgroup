@@ -22,7 +22,6 @@ const BRAND_PILLS: { name: string; color: string; tint: string }[] = [
   { name: "WStudio", color: "var(--accent-purple)", tint: "rgba(99, 102, 241, 0.1)" },
 ];
 
-/* ---------- Render p3 paragraph with brand-name highlight pills ---------- */
 function renderWithBrandPills(text: string) {
   const pattern = new RegExp(
     `(${BRAND_PILLS.map((b) => b.name).join("|")})`,
@@ -49,7 +48,6 @@ function renderWithBrandPills(text: string) {
   });
 }
 
-/* ---------- Corner bracket ---------- */
 function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
   const color = "rgba(30,109,181,0.4)";
   const styles: Record<string, React.CSSProperties> = {
@@ -61,7 +59,6 @@ function CornerBracket({ position }: { position: "tl" | "tr" | "bl" | "br" }) {
   return <span className="pointer-events-none absolute h-6 w-6" style={styles[position]} />;
 }
 
-/* ---------- 3D tilt stat card with Lottie + corner brackets ---------- */
 function StatItem({
   lottie,
   value,
@@ -218,7 +215,6 @@ export default function AboutPage() {
   return (
     <PageLayout title={t("title")} subtitle={t("p1")} titleHighlight={t("titleHighlight")} heroImage="/w-new/w1.webp">
       <div ref={sectionRef}>
-        {/* Stats grid */}
         <div className="page-content-block mb-16 grid grid-cols-3 gap-6">
           {[
             { value: "40+", label: t("statCountries") },
@@ -234,9 +230,7 @@ export default function AboutPage() {
           ))}
         </div>
 
-        {/* Content — editorial spread: large lead statement + structured body with brand pills */}
         <div className="page-content-block">
-          {/* p2 — display lead, restrained typography */}
           <div className="about-paragraph relative mx-auto max-w-[58ch]">
             <span
               aria-hidden
@@ -262,7 +256,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* divider — generous space, single hairline */}
           <div className="about-paragraph mx-auto my-16 flex max-w-[58ch] items-center gap-4 sm:my-20">
             <span className="h-px flex-1 bg-[rgba(15,23,42,0.08)]" />
             <span className="flex items-center gap-1.5" aria-hidden>
@@ -282,7 +275,6 @@ export default function AboutPage() {
             <span className="h-px flex-1 bg-[rgba(15,23,42,0.08)]" />
           </div>
 
-          {/* p3 — body with inline brand pills */}
           <div className="about-paragraph relative mx-auto max-w-[58ch]">
             <p
               className="text-base leading-[1.95] sm:text-[18px] sm:leading-[1.85]"
@@ -296,7 +288,6 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Global CTA */}
         <div className="about-cta relative mt-16 overflow-hidden rounded-3xl px-8 py-20 sm:px-16 sm:py-24" style={{ background: "#0a0f1e" }}>
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -left-20 top-0 h-[300px] w-[300px] rounded-full bg-primary/15 blur-[100px]" />

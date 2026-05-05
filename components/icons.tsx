@@ -3,11 +3,6 @@ interface IconProps {
   style?: React.CSSProperties;
 }
 
-/* ============================================================
-   Shared SVG wrapper
-   ============================================================ */
-
-/** Stroke-based icon wrapper (lucide-style) */
 function S({ className, style, children }: IconProps & { children: React.ReactNode }) {
   return (
     <svg
@@ -26,7 +21,6 @@ function S({ className, style, children }: IconProps & { children: React.ReactNo
   );
 }
 
-/** Fill-based icon wrapper (brand logos) */
 function F({ className, style, children }: IconProps & { children: React.ReactNode }) {
   return (
     <svg
@@ -40,10 +34,6 @@ function F({ className, style, children }: IconProps & { children: React.ReactNo
     </svg>
   );
 }
-
-/* ============================================================
-   UI / Navigation Icons
-   ============================================================ */
 
 export function ArrowRight({ className, style }: IconProps) {
   return (
@@ -108,10 +98,6 @@ export function Send({ className, style }: IconProps) {
   );
 }
 
-/* ============================================================
-   Contact / Social Icons
-   ============================================================ */
-
 export function Mail({ className, style }: IconProps) {
   return (
     <S className={className} style={style}>
@@ -165,10 +151,6 @@ export function Globe({ className, style }: IconProps) {
     </S>
   );
 }
-
-/* ============================================================
-   Decorative / Section Icons
-   ============================================================ */
 
 export function Target({ className, style }: IconProps) {
   return (
