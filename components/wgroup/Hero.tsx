@@ -17,7 +17,7 @@ function BrainVisual() {
         alt=""
         fill
         priority
-        className="brain-img object-cover opacity-80"
+        className="brain-img object-cover opacity-0"
         style={{ filter: "brightness(1.05)" }}
         sizes="100vw"
       />
@@ -62,44 +62,45 @@ export default function Hero() {
         },
       });
 
-      gsap.from(".brain-img", {
-        scale: 1.1,
-        opacity: 0,
-        duration: 2.5,
-        ease: "power2.out",
-        delay: 0.3,
-      });
+      gsap.fromTo(
+        ".brain-img",
+        { scale: 1.1, opacity: 0 },
+        { scale: 1, opacity: 0.8, duration: 2.5, ease: "power2.out", delay: 0.3 }
+      );
 
       const tl = gsap.timeline({ delay: 0.6 });
 
-      tl.from(".hero-line-1", {
-        y: 60,
-        opacity: 0,
-        duration: 0.9,
-        ease: "power3.out",
-      });
+      tl.fromTo(
+        ".hero-line-1",
+        { y: 60, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, ease: "power3.out" }
+      );
 
-      tl.from(
+      tl.fromTo(
         ".hero-line-2",
-        { y: 50, opacity: 0, duration: 0.9, ease: "power3.out" },
+        { y: 50, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, ease: "power3.out" },
         "-=0.6"
       );
 
-      tl.from(
+      tl.fromTo(
         ".hero-sub",
-        { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" },
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" },
         "-=0.4"
       );
 
-      tl.from(
+      tl.fromTo(
         ".hero-cta-group",
-        { y: 20, opacity: 0, scale: 0.95, duration: 0.6, ease: "back.out(1.7)" },
+        { y: 20, opacity: 0, scale: 0.95 },
+        { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.7)" },
         "-=0.3"
       );
 
-      tl.from(
+      tl.fromTo(
         ".hero-scroll-hint",
-        { opacity: 0, duration: 0.5 },
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5 },
         "-=0.2"
       );
 
@@ -146,14 +147,14 @@ export default function Hero() {
 
         <div className="hero-content-wrapper absolute inset-0 z-20 flex flex-col items-center justify-center px-6">
           <h1
-            className="hero-line-1 text-center text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.04em] text-white"
+            className="hero-line-1 text-center text-[clamp(2.5rem,7vw,5.5rem)] font-bold leading-[0.95] tracking-[-0.04em] text-white opacity-0"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             {t("titleLine1")}
           </h1>
 
           <h1
-            className="hero-line-2 mt-2 text-center text-[clamp(2.5rem,7vw,5.5rem)] leading-none text-white"
+            className="hero-line-2 mt-2 text-center text-[clamp(2.5rem,7vw,5.5rem)] leading-none text-white opacity-0"
             style={{
               fontFamily: "var(--font-instrument), Georgia, serif",
               fontStyle: "italic",
@@ -164,7 +165,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className="hero-sub mt-8 max-w-lg text-center text-base text-white/60 sm:text-lg"
+            className="hero-sub mt-8 max-w-lg text-center text-base text-white/60 sm:text-lg opacity-0"
             style={{
               fontFamily: "var(--font-barlow), system-ui, sans-serif",
               fontWeight: 500,
@@ -173,7 +174,7 @@ export default function Hero() {
             {t("subtitle")}
           </p>
 
-          <div className="hero-cta-group mt-10 flex flex-col items-center gap-4 sm:flex-row">
+          <div className="hero-cta-group mt-10 flex flex-col items-center gap-4 sm:flex-row opacity-0">
             <Link href="/about" className="group">
               <MorphButton
                 className="inline-flex h-14 items-center gap-2 rounded-full bg-white px-8 text-sm font-semibold text-background shadow-lg shadow-white/10 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-xl group-hover:shadow-white/20 sm:text-base"

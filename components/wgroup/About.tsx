@@ -164,29 +164,37 @@ export default function About() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(".about-heading", {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".about-heading",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
+      gsap.fromTo(
+        ".about-heading",
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".about-heading",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
 
-      gsap.from(".about-text", {
-        y: 40,
-        opacity: 0,
-        duration: 0.7,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: ".about-text",
-          start: "top 85%",
-          toggleActions: "play none none reverse",
-        },
-      });
+      gsap.fromTo(
+        ".about-text",
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".about-text",
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
 
       if (imageRef.current) {
         gsap.set(imageRef.current, {
