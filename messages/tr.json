@@ -1048,7 +1048,7 @@
         "slug": "integrated-operating-system",
         "brand": "W-Quality",
         "brandHref": "/w-quality",
-        "title": "Integrated Operating System",
+        "title": "Bütünleşik Operasyon Sistemi",
         "tagline": "Kalite, tedarikçi ve stratejik uygulama için tek bir sistem.",
         "definition": "Integrated Operating System; kalite, tedarikçi yönetimi ve stratejik uygulamayı tek bir bağlı sistem olarak çalıştırması gereken şirketler için bir dönüşüm danışmanlığı çözümüdür. QMS, tedarikçi gelişimi ve performans yönetimini ayrı projeler olarak ele almak yerine, çözüm bunları tek bir operasyonel modelde birleştirir. Süreçler, sorumluluklar, onay akışları, KPI'lar, denetim gereksinimleri ve tedarikçi rutinleri; ISO 9001, IATF 16949, VDA 6.3 ve müşteri özel gereksinimleriyle hizalanır ve şirketin gerçek iş mantığına uyarlanır. Sonuç; kalite risklerinin görünür, tedarikçi performansının kontrollü, denetimlerin güvenle yönetildiği ve stratejinin günlük uygulamaya dönüştürüldüğü dokümante, ölçülebilir ve devredilebilir bir operasyon sistemidir.",
         "strategicAdvantage": [
@@ -1112,8 +1112,8 @@
         "slug": "ai-quality-process-optimization",
         "brand": "W-Quality",
         "brandHref": "/w-quality",
-        "title": "AI Quality & Process Optimization Advisory",
-        "tagline": "Saha deneyimini yapay zeka destekli süreç zekasına dönüştürmek.",
+        "title": "Yapay Zekâ Kalite ve Süreç Optimizasyonu Danışmanlığı",
+        "tagline": "Saha deneyimini yapay zekâ destekli süreç zekâsına dönüştürmek.",
         "definition": "AI Quality & Process Optimization Advisory; şirketlerin AI destekli süreç optimizasyonunun mevcut iş operasyonlarında nerede ve nasıl uygulanabileceğini anlamasına yardımcı olmak için tasarlanmış bir danışmanlık hizmetidir. Hazır bir platform sunmak yerine; süreçlerinizin, dokümanlarınızın, iş akışlarınızın, problem noktalarınızın, denetim geçmişinizin, tedarikçi risklerinizin, KPI yapılarınızın ve operasyonel darboğazlarınızın yapılandırılmış bir analizi ile başlıyoruz. W-Quality'nin saha uzmanlığına dayanarak; doküman zekası, denetim hazırlık desteği, tedarikçi risk analizi, KPI tabanlı erken uyarı sinyalleri, regülasyon takibi ve süreç sapması tespiti gibi gerçekçi AI fırsatlarını tanımlıyoruz. Çıktı; AI'nın nerede yardımcı olabileceğini, hangi verilerin gerektiğini, hangi iş akışlarının iyileştirilebileceğini ve hangi kullanım senaryolarının önce önceliklendirilmesi gerektiğini gösteren net ve pratik bir AI optimizasyon yol haritasıdır.",
         "strategicAdvantage": [
           {
@@ -1168,8 +1168,8 @@
         "slug": "operational-intelligence-platform",
         "brand": "W-DigiLab",
         "brandHref": "/w-digilab",
-        "title": "Operational Intelligence Platform",
-        "tagline": "Operasyon, izlenebilirlik ve karar zekası için tek bir dijital çatı.",
+        "title": "Operasyonel Zekâ Platformu",
+        "tagline": "Operasyon, izlenebilirlik ve karar zekâsı için tek bir dijital çatı.",
         "definition": "Operational Intelligence Platform; şirketin operasyonel süreçlerini ve karar destek katmanını tek bir dijital çatı altında birleştiren modüler bir operasyon ve zekâ platformudur. Operasyonel katman; kağıt, Excel ve e-posta tabanlı süreçleri rol bazlı onay akışları, izlenebilirlik, AI destekli doğrulama ve otomatik kanıt üretimi olan dijital modüllere taşır. Zekâ katmanı; iş akışlarından, denetimlerden, tedarikçilerden, üretim aktivitelerinden, saha sinyallerinden ve kurumsal dokümantasyondan gelen veriyi işleyerek iki kritik yetenek üretir: doğal dilde sorgulanabilir bir kurumsal bilgi bankası ve vardiya amirleri, müdürler ve üst yönetim için öngörücü bir performans dashboard'u. İki katman da aynı veri kaynağını kullandığı için, iş yapma ile o işin arkasındaki kararı anlama arasında boşluk kalmaz. Her süreç adımı zaman damgası, kullanıcı kimliği, onay zinciri ve ilgili kanıt ile kayıt altına alınır. Bu kayıtlar; uçtan uca izlenebilirlik oluştururken aynı zamanda risk tespiti, uyum izleme ve performans tahmini için zekâ katmanını besler.",
         "strategicAdvantage": [
           {
@@ -1284,7 +1284,7 @@
         "slug": "corporate-media-engine",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "Corporate Media Engine",
+        "title": "Kurumsal Medya Motoru",
         "tagline": "Tek seferlik videolar değil, kurumsal bir medya motoru kurun.",
         "definition": "Corporate Media Engine; karmaşık iş süreçlerini, liderlik içgörülerini, teknik uzmanlığı ve kurumsal başarı hikayelerini modern video formatlarına dönüştüren uçtan uca bir medya çözümüdür. AI araçlarıyla üretimi hızlandırıp ölçekler, storytelling çerçeveleriyle duygusal etki ve akılda kalıcılık üretir, markalı kanal yapılarıyla içeriği abone olunabilir kurumsal medya kütüphaneleri üzerinden yayınlar. Sonuç tek seferlik bir kurumsal video değildir. Çalışanlar, tedarikçiler, müşteriler ve dış paydaşlar için zaman içinde büyüyen, marka standardında bir medya ekosistemidir.",
         "strategicAdvantage": [
@@ -1396,7 +1396,7 @@
         "slug": "talent-management",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "Talent Management",
+        "title": "Yetenek Yönetimi",
         "tagline": "Oyuncuların ve sanatçıların geliştiği, bağlandığı ve sanatlarını sergilediği yaratıcı bir platform.",
         "definition": "Talent Management; oyuncular, performansçılar ve diğer kamera/sahne yetenekleri için yaratıcı odaklı bir platformdur. Her kullanıcı; kişisel tanıtım, profesyonel fotoğraflar (headshots), showreel, geçmiş projeler, eğitim geçmişi ve yaratıcı menzilini içeren profesyonel bir profil oluşturur. Yetenekler AI araçlarını; senaryo okumak, sahne çalışmak, oyunculuk seçmelerine (audition) hazırlanmak, replik provası yapmak ve karakter yorumlarını yönlendirilmiş AI sohbetleriyle keşfetmek için kullanabilir. Gömülü sosyal katman, yeteneklerin içerik yayımlamasına, birbirlerini takip etmesine, devam eden çalışmalarını paylaşmasına, kitle oluşturmasına ve yönetmenler, casting profesyonelleri ve yaratıcı işbirlikçilerle bağlantı kurmasına olanak tanır. Sonuç; yaratıcı kimliğin, yaratıcı pratiğin ve yaratıcı ağın ayrı araçlar, ajanslar ve sosyal medya hesaplarına dağılmak yerine bir arada yaşadığı tek bir platformdur.",
         "strategicAdvantage": [
@@ -1456,7 +1456,7 @@
         "slug": "ai-skill-platform",
         "brand": "W-Studio",
         "brandHref": "/w-studio",
-        "title": "AI Skill Platform",
+        "title": "Yapay Zekâ Yetkinlik Platformu",
         "tagline": "Tek bir platformda AI mentor, beceri ölçümü ve yetkinlik görünürlüğü.",
         "definition": "AI Skill Platform; çalışan yetkinlik gelişimini, beceri ölçümünü ve mentorluk deneyimini tek bir sistemde birleştiren AI destekli bir yetenek yönetimi platformudur. Bir çalışan belirli bir konuda gelişmek istediğinde, AI mentor ile metin, sesli veya video tabanlı görüşmelerle etkileşime girer. AI mentor; çalışanın mevcut seviyesini, öğrenme ihtiyaçlarını ve kişisel gelişim yolunu belirlemeye yardımcı olur. İç eğitmenler ve konu uzmanları; gerektiğinde mikro video içerikler, pratik örnekler, dokümanlar veya görev tabanlı öğrenme materyalleri yükleyerek platformu zenginleştirebilir. Platform; AI yürütmeli mülakatlar, senaryo tabanlı sorular ve pratik görevlerle gerçek yetkinliği ölçer. Çalışan ilerledikçe gelişim eğrisi hem çalışan hem yönetici için görünür hale gelir. Sonuç; öğrenmenin kişiselleştirildiği, ilerlemenin ölçülebildiği ve yetkinlik verisinin iş gücü planlamasında kullanılabilir hale geldiği bir yetenek geliştirme sistemidir.",
         "strategicAdvantage": [
