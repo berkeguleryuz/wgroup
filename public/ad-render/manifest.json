@@ -42,7 +42,8 @@
       "s5": "public/ad-render/audio/voiceover_per_line/s5_v1.mp3",
       "s6": "public/ad-render/audio/voiceover_per_line/s6_v1.mp3"
     },
-    "bgm": null
+    "bgm": "public/ad-render/audio/bgm_v1.mp3",
+    "bgm_source": "Turn In The Sun — Simon Herody (YouTube Audio Library)"
   },
-  "final": "public/ad-render/final/master_v2_no_bgm.mp4"
+  "final": "public/ad-render/final/master_v3.mp4"
 }
