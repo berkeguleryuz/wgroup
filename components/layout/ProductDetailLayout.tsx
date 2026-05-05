@@ -23,6 +23,11 @@ interface UseCase {
   desc: string;
 }
 
+interface StrategicBlock {
+  title: string;
+  body: string;
+}
+
 interface Props {
   productKey: ProductKey;
 }
@@ -37,7 +42,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
   const tagline = t(`${item}.tagline`);
   const brand = t(`${item}.brand`);
   const definition = t(`${item}.definition`);
-  const strategic = t(`${item}.strategicAdvantage`);
+  const strategicRaw = t.raw(`${item}.strategicAdvantage`);
   const useCases = t.raw(`${item}.useCases`) as UseCase[];
   const heroImage = productHeroImages[productKey];
   const division = productDivision[productKey];
@@ -135,18 +140,26 @@ export default function ProductDetailLayout({ productKey }: Props) {
   const definitionLead = definitionParts.slice(0, 1).join(" ");
   const definitionRest = definitionParts.slice(1).join(" ");
 
-  /* Group strategic-advantage sentences into ~3 readable chunks */
-  const strategicSentences = strategic
-    .split(/(?<=[.!?])\s+/)
-    .map((s) => s.trim())
-    .filter(Boolean);
-  const strategicChunks: string[] = (() => {
-    if (strategicSentences.length <= 3) return strategicSentences;
-    const target = 3;
-    const perGroup = Math.ceil(strategicSentences.length / target);
-    const out: string[] = [];
-    for (let i = 0; i < strategicSentences.length; i += perGroup) {
-      out.push(strategicSentences.slice(i, i + perGroup).join(" "));
+  /* Strategic-advantage blocks: prefer the new {title, body}[] schema,
+     fall back to legacy string by chunking sentences into ~3 groups. */
+  const strategicChunks: StrategicBlock[] = (() => {
+    if (Array.isArray(strategicRaw)) {
+      return (strategicRaw as StrategicBlock[]).filter(
+        (b) => b && typeof b.body === "string" && b.body.length > 0
+      );
+    }
+    const text = typeof strategicRaw === "string" ? strategicRaw : "";
+    const sentences = text
+      .split(/(?<=[.!?])\s+/)
+      .map((s) => s.trim())
+      .filter(Boolean);
+    if (sentences.length <= 3) {
+      return sentences.map((s) => ({ title: "", body: s }));
+    }
+    const perGroup = Math.ceil(sentences.length / 3);
+    const out: StrategicBlock[] = [];
+    for (let i = 0; i < sentences.length; i += perGroup) {
+      out.push({ title: "", body: sentences.slice(i, i + perGroup).join(" ") });
     }
     return out;
   })();
@@ -337,7 +350,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
 
           {/* Editorial strata composition */}
           <div className="relative">
-            {/* Vertical thread on the left edge — runs through all strata */}
+            {/* Vertical thread on the left edge - runs through all strata */}
             <div
               className="pointer-events-none absolute bottom-0 left-0 top-0 hidden w-px sm:block"
               style={{
@@ -349,7 +362,8 @@ export default function ProductDetailLayout({ productKey }: Props) {
               <AdvantageStrata
                 key={i}
                 index={i}
-                text={chunk}
+                title={chunk.title}
+                body={chunk.body}
                 total={strategicChunks.length}
               />
             ))}
@@ -531,15 +545,25 @@ export default function ProductDetailLayout({ productKey }: Props) {
    Hairline rule dividers + a vertical thread create editorial cadence.
 */
 
-const ADV_DECORATIONS = [StarBurstDecoration, OrbitalDecoration, ConstellationDecoration];
+const ADV_DECORATIONS = [
+  StarBurstDecoration,
+  OrbitalDecoration,
+  ConstellationDecoration,
+  HexLatticeDecoration,
+  FlowFieldDecoration,
+  RadarSweepDecoration,
+  NodeNetworkDecoration,
+];
 
 function AdvantageStrata({
   index,
-  text,
+  title,
+  body,
   total,
 }: {
   index: number;
-  text: string;
+  title: string;
+  body: string;
   total: number;
 }) {
   const isLast = index === total - 1;
@@ -556,11 +580,11 @@ function AdvantageStrata({
     </div>
   );
 
-  const body = (
-    <div className="pd-approach-block relative max-w-2xl">
-      {/* Subtle leading rule */}
+  const bodyEl = (
+    <div className={`pd-approach-block relative max-w-2xl ${flipped ? "sm:ml-auto" : ""}`}>
+      {/* Subtle leading rule + index badge */}
       <div
-        className={`mb-6 flex items-center gap-3 ${
+        className={`mb-5 flex items-center gap-3 ${
           flipped ? "sm:justify-end" : ""
         }`}
       >
@@ -575,6 +599,12 @@ function AdvantageStrata({
           }}
         />
         <span
+          className="font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-primary/80"
+          style={{ fontFamily: "var(--font-jetbrains), monospace" }}
+        >
+          {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+        </span>
+        <span
           aria-hidden
           className="block h-1.5 w-1.5 rotate-45"
           style={{
@@ -584,9 +614,24 @@ function AdvantageStrata({
         />
       </div>
 
+      {/* Title */}
+      {title ? (
+        <h3
+          className={`mb-4 text-2xl font-bold leading-[1.18] tracking-tight text-white sm:text-[28px] ${
+            flipped ? "sm:text-right" : ""
+          }`}
+          style={{
+            fontFamily: "var(--font-barlow), system-ui, sans-serif",
+            letterSpacing: "-0.012em",
+          }}
+        >
+          {title}
+        </h3>
+      ) : null}
+
       {/* Body */}
       <p
-        className={`text-[17px] leading-[1.78] text-white/85 sm:text-[19px] sm:leading-[1.72] ${
+        className={`text-[17px] leading-[1.78] text-white/80 sm:text-[18px] sm:leading-[1.72] ${
           flipped ? "sm:text-right" : ""
         }`}
         style={{
@@ -594,7 +639,7 @@ function AdvantageStrata({
           letterSpacing: "-0.003em",
         }}
       >
-        {text}
+        {body}
       </p>
 
       {/* Trailing accent dot row */}
@@ -621,12 +666,12 @@ function AdvantageStrata({
 
   return (
     <div
-      className={`relative py-12 sm:py-20 ${
+      className={`relative py-20 sm:py-32 ${
         isLast ? "" : "border-b border-white/[0.06]"
       }`}
     >
       <div
-        className={`grid items-center gap-8 sm:gap-14 ${
+        className={`grid items-center gap-10 sm:gap-20 ${
           flipped
             ? "sm:grid-cols-[minmax(0,1fr)_clamp(160px,18vw,240px)]"
             : "sm:grid-cols-[clamp(160px,18vw,240px)_minmax(0,1fr)]"
@@ -634,13 +679,13 @@ function AdvantageStrata({
       >
         {flipped ? (
           <>
-            {body}
+            {bodyEl}
             {decoration}
           </>
         ) : (
           <>
             {decoration}
-            {body}
+            {bodyEl}
           </>
         )}
       </div>
@@ -795,14 +840,14 @@ function ConstellationDecoration() {
           <line x1="50" y1="60" x2="60" y2="155" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
           <line x1="150" y1="60" x2="155" y2="140" stroke="url(#advGrad3)" strokeWidth="0.5" opacity="0.6" />
 
-          {/* Star nodes — twinkling */}
+          {/* Star nodes - twinkling */}
           <circle cx="50" cy="60" r="3" fill="var(--primary)" />
           <circle cx="150" cy="60" r="2.5" fill="var(--accent-teal)" />
           <circle cx="155" cy="140" r="2.5" fill="var(--accent-purple)" />
           <circle cx="60" cy="155" r="2.8" fill="var(--primary)" />
         </g>
 
-        {/* Hexagonal frame — slowly rotating reverse */}
+        {/* Hexagonal frame - slowly rotating reverse */}
         <g style={{ transformOrigin: "center", animation: "adv-spin-rev 50s linear infinite" }}>
           <polygon
             points="100,30 160,65 160,135 100,170 40,135 40,65"
@@ -823,6 +868,271 @@ function ConstellationDecoration() {
           <circle cx="100" cy="100" r="5" fill="url(#advCore3)" />
         </g>
 
+      </svg>
+    </div>
+  );
+}
+
+function HexLatticeDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad4" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--accent-teal)" />
+            <stop offset="100%" stopColor="var(--accent-purple)" />
+          </linearGradient>
+          <radialGradient id="advCore4" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Outer hex frame - slow rotate */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-slow 70s linear infinite" }}>
+          <polygon
+            points="100,18 168,58 168,142 100,182 32,142 32,58"
+            fill="none"
+            stroke="url(#advGrad4)"
+            strokeWidth="1"
+            opacity="0.55"
+          />
+        </g>
+
+        {/* Lattice cluster - six small hexagons around center */}
+        <g style={{ transformOrigin: "center", animation: "adv-spin-rev 36s linear infinite" }}>
+          {[0, 60, 120, 180, 240, 300].map((deg, i) => {
+            const r = 56;
+            const cx = 100 + r * Math.cos((deg * Math.PI) / 180);
+            const cy = 100 + r * Math.sin((deg * Math.PI) / 180);
+            return (
+              <g key={i} transform={`translate(${cx} ${cy})`}>
+                <polygon
+                  points="0,-14 12,-7 12,7 0,14 -12,7 -12,-7"
+                  fill="none"
+                  stroke="url(#advGrad4)"
+                  strokeWidth="0.9"
+                  opacity={0.45 + (i % 2) * 0.2}
+                />
+              </g>
+            );
+          })}
+        </g>
+
+        {/* Central hex with pulse */}
+        <polygon
+          points="100,82 116,91 116,109 100,118 84,109 84,91"
+          fill="url(#advGrad4)"
+          opacity="0.85"
+        >
+          <animate attributeName="opacity" values="0.55;0.95;0.55" dur="3.4s" repeatCount="indefinite" />
+        </polygon>
+
+        {/* Glowing core */}
+        <circle cx="100" cy="100" r="6" fill="url(#advCore4)">
+          <animate attributeName="r" values="5;9;5" dur="2.6s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    </div>
+  );
+}
+
+function FlowFieldDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad5" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--accent-teal)" />
+          </linearGradient>
+          <radialGradient id="advCore5" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Flowing curves */}
+        <g opacity="0.7">
+          <path
+            d="M20 70 Q60 40 100 70 T180 70"
+            fill="none"
+            stroke="url(#advGrad5)"
+            strokeWidth="1.2"
+            strokeDasharray="4 6"
+          >
+            <animate attributeName="stroke-dashoffset" values="0;-40" dur="6s" repeatCount="indefinite" />
+          </path>
+          <path
+            d="M20 100 Q60 70 100 100 T180 100"
+            fill="none"
+            stroke="url(#advGrad5)"
+            strokeWidth="1.2"
+            opacity="0.7"
+          />
+          <path
+            d="M20 130 Q60 160 100 130 T180 130"
+            fill="none"
+            stroke="url(#advGrad5)"
+            strokeWidth="1.2"
+            strokeDasharray="4 6"
+          >
+            <animate attributeName="stroke-dashoffset" values="0;40" dur="7s" repeatCount="indefinite" />
+          </path>
+        </g>
+
+        {/* Floating particles along curves */}
+        <circle cx="60" cy="86" r="2.6" fill="var(--primary)">
+          <animate attributeName="cx" values="20;180;20" dur="9s" repeatCount="indefinite" />
+          <animate attributeName="cy" values="70;70;70" dur="9s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="120" cy="100" r="2.2" fill="var(--accent-teal)">
+          <animate attributeName="cx" values="180;20;180" dur="10s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="80" cy="130" r="2.4" fill="var(--accent-purple)" opacity="0.85">
+          <animate attributeName="cx" values="20;180;20" dur="11s" repeatCount="indefinite" />
+        </circle>
+
+        {/* Vertical accent lines */}
+        <line x1="40" y1="40" x2="40" y2="160" stroke="url(#advGrad5)" strokeWidth="0.6" opacity="0.35" />
+        <line x1="160" y1="40" x2="160" y2="160" stroke="url(#advGrad5)" strokeWidth="0.6" opacity="0.35" />
+
+        {/* Centroid */}
+        <circle cx="100" cy="100" r="7" fill="url(#advCore5)">
+          <animate attributeName="r" values="5;9;5" dur="3s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    </div>
+  );
+}
+
+function RadarSweepDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad6" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--accent-purple)" />
+          </linearGradient>
+          <radialGradient id="advCore6" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+          </radialGradient>
+          <linearGradient id="advSweep6" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="var(--primary)" stopOpacity="0" />
+            <stop offset="100%" stopColor="var(--primary)" stopOpacity="0.55" />
+          </linearGradient>
+        </defs>
+
+        {/* Concentric range rings */}
+        <circle cx="100" cy="100" r="30" fill="none" stroke="url(#advGrad6)" strokeWidth="0.8" opacity="0.45" />
+        <circle cx="100" cy="100" r="55" fill="none" stroke="url(#advGrad6)" strokeWidth="0.8" opacity="0.4" />
+        <circle cx="100" cy="100" r="80" fill="none" stroke="url(#advGrad6)" strokeWidth="0.8" opacity="0.35" />
+
+        {/* Crosshair */}
+        <line x1="100" y1="14" x2="100" y2="186" stroke="white" strokeWidth="0.4" opacity="0.3" />
+        <line x1="14" y1="100" x2="186" y2="100" stroke="white" strokeWidth="0.4" opacity="0.3" />
+
+        {/* Sweeping radial wedge */}
+        <g style={{ transformOrigin: "100px 100px", animation: "adv-spin-slow 6s linear infinite" }}>
+          <path
+            d="M100 100 L100 16 A84 84 0 0 1 184 100 Z"
+            fill="url(#advSweep6)"
+            opacity="0.5"
+          />
+        </g>
+
+        {/* Detected blips */}
+        <circle cx="68" cy="74" r="2.4" fill="var(--accent-teal)">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="138" cy="118" r="2.2" fill="var(--accent-purple)">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="3.1s" begin="0.6s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="118" cy="58" r="2" fill="var(--primary)">
+          <animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" begin="1.2s" repeatCount="indefinite" />
+        </circle>
+
+        {/* Glowing core */}
+        <circle cx="100" cy="100" r="6" fill="url(#advCore6)">
+          <animate attributeName="r" values="5;9;5" dur="2.4s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    </div>
+  );
+}
+
+function NodeNetworkDecoration() {
+  return (
+    <div
+      aria-hidden
+      className="relative"
+      style={{ width: "clamp(140px, 16vw, 200px)", height: "clamp(140px, 16vw, 200px)" }}
+    >
+      <svg viewBox="0 0 200 200" className="absolute inset-0 h-full w-full">
+        <defs>
+          <linearGradient id="advGrad7" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--accent-teal)" />
+          </linearGradient>
+          <radialGradient id="advCore7" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="white" stopOpacity="0.95" />
+            <stop offset="100%" stopColor="var(--accent-teal)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Edge lines with pulse */}
+        <g opacity="0.6">
+          <line x1="40" y1="50" x2="100" y2="100" stroke="url(#advGrad7)" strokeWidth="0.9">
+            <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite" />
+          </line>
+          <line x1="160" y1="60" x2="100" y2="100" stroke="url(#advGrad7)" strokeWidth="0.9">
+            <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.6s" begin="0.4s" repeatCount="indefinite" />
+          </line>
+          <line x1="40" y1="150" x2="100" y2="100" stroke="url(#advGrad7)" strokeWidth="0.9">
+            <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.4s" begin="0.8s" repeatCount="indefinite" />
+          </line>
+          <line x1="160" y1="150" x2="100" y2="100" stroke="url(#advGrad7)" strokeWidth="0.9">
+            <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.8s" begin="1.2s" repeatCount="indefinite" />
+          </line>
+          <line x1="40" y1="50" x2="160" y2="60" stroke="url(#advGrad7)" strokeWidth="0.5" opacity="0.5" />
+          <line x1="40" y1="150" x2="160" y2="150" stroke="url(#advGrad7)" strokeWidth="0.5" opacity="0.5" />
+          <line x1="40" y1="50" x2="40" y2="150" stroke="url(#advGrad7)" strokeWidth="0.5" opacity="0.4" />
+          <line x1="160" y1="60" x2="160" y2="150" stroke="url(#advGrad7)" strokeWidth="0.5" opacity="0.4" />
+        </g>
+
+        {/* Outer nodes */}
+        <circle cx="40" cy="50" r="4" fill="var(--primary)" />
+        <circle cx="160" cy="60" r="3.5" fill="var(--accent-teal)" />
+        <circle cx="40" cy="150" r="3.5" fill="var(--accent-purple)" />
+        <circle cx="160" cy="150" r="4" fill="var(--primary)" />
+
+        {/* Floating data packet along an edge */}
+        <circle r="2" fill="white" opacity="0.95">
+          <animateMotion dur="4.6s" repeatCount="indefinite" path="M40,50 L100,100 L160,150" />
+        </circle>
+        <circle r="1.6" fill="white" opacity="0.7">
+          <animateMotion dur="5.2s" begin="1s" repeatCount="indefinite" path="M160,60 L100,100 L40,150" />
+        </circle>
+
+        {/* Center hub */}
+        <circle cx="100" cy="100" r="8" fill="url(#advCore7)">
+          <animate attributeName="r" values="6;11;6" dur="2.4s" repeatCount="indefinite" />
+        </circle>
+        <circle cx="100" cy="100" r="3" fill="white" opacity="0.95" />
       </svg>
     </div>
   );
@@ -872,7 +1182,7 @@ function ProductCard({ title, desc }: { title: string; desc: string }) {
   );
 }
 
-/* ---------- Related product card — mirrors blog-card structure ---------- */
+/* ---------- Related product card - mirrors blog-card structure ---------- */
 
 function RelatedCard({
   href,
@@ -976,7 +1286,7 @@ function RelatedCard({
             className="relative z-10 flex flex-1 flex-col"
             style={{ transform: "translateZ(15px)" }}
           >
-            {/* Cover image — square aspect to fit 1:1 source images */}
+            {/* Cover image - square aspect to fit 1:1 source images */}
             <div className="relative mb-4 aspect-square w-full overflow-hidden rounded-xl">
               <Image
                 src={image}

@@ -366,11 +366,11 @@
     "titleHighlight": "Sorular",
     "q1": {
       "question": "WGroup nedir, hangi alanda çalışıyorsunuz?",
-      "answer": "Biz, endüstriyel danışmanlık, dijital sistemler ve yaratıcı medya alanlarını birleştiren Berlin merkezli bir ekibiz. Mühendislik bilgisini yaratıcı düşünceyle birleştiriyor; endüstri bilgisinin nasıl üretildiğini, dijitalleştirildiğini ve paylaşıldığını yeniden tasarlıyoruz. Bugün 40'tan fazla ülkede iş ortaklarımızla birlikte projeler yürütüyoruz."
+      "answer": "Biz, endüstriyel danışmanlık, dijital sistemler ve yaratıcı medya alanlarını birleştiren Berlin merkezli bir ekibiz. Mühendislik bilgisini yaratıcı düşünceyle birleştiriyor, endüstri bilgisinin nasıl üretildiğini, dijitalleştirildiğini ve paylaşıldığını yeniden tasarlıyoruz. Bugün 40'tan fazla ülkede iş ortaklarımızla birlikte projeler yürütüyoruz."
     },
     "q2": {
       "question": "Üç biriminiz birbirinden nasıl ayrılır?",
-      "answer": "Her birimin kendi uzmanlık alanı var. WQuality, kalite yönetimi ve süreç mükemmeliyetinde danışmanlık veriyor. WDigiLab, akıllı sistemler, dijital platformlar ve yapay zeka çözümleri geliştiriyor. WStudio ise kurumsal hikayeleri film, dizi ve interaktif içerik formatlarına taşıyor. Üçü ayrı görünse de aslında aynı bütünün parçaları; birlikte tek bir değer zinciri oluşturuyorlar."
+      "answer": "Her birimin kendi uzmanlık alanı var. WQuality, kalite yönetimi, tedarikçi gelişimi ve operasyonel mükemmeliyette danışmanlık veriyor. WDigiLab, akıllı operasyonel platformlar, blokzincir ürünleri ve yapay zeka destekli karar sistemleri geliştiriyor. WStudio ise grubun yaratıcı ve yayın katmanını yürütüyor. Corporate Media Engine, BusyFlix yayın platformu, Talent Management ve AI Skill Platform bu çatı altında yer alıyor. Üçü ayrı görünse de aslında aynı bütünün parçaları, birlikte tek bir değer zinciri oluşturuyorlar."
     },
     "q3": {
       "question": "WQuality hangi hizmetleri sunuyor?",
@@ -382,15 +382,15 @@
     },
     "q5": {
       "question": "WStudio ne üretiyor?",
-      "answer": "AI destekli içerik üretimi, kurumsal hikaye anlatımı, BusinessFlix tarzı dizi formatlı içerikler ve kurumsal bilgi kanalları. Karmaşık endüstri bilgisini izlenebilir, paylaşılabilir ve akılda kalan medya formatlarına dönüştürüyoruz. İç iletişimden müşteri deneyimine kadar her noktada işe yarayan bir kurumsal medya kütüphanesi yaratıyoruz."
+      "answer": "WStudio, WGroup'un yaratıcı ve yayın katmanını yönetiyor ve birbirine bağlı dört ürünü kapsıyor. AI destekli medya üretimi için Corporate Media Engine. Kurumsal öğrenmenin, hikaye temelli serilerin ve yetenek yönetimi yayınlarının yayımlandığı ve izlendiği eğitim odaklı kurumsal yayın platformu BusyFlix. Performansçılar için yaratıcı bir profil ve sosyal ağ olan Talent Management. AI mentor temelli beceri gelişimi için AI Skill Platform. Ortak nokta, kurumsal bilgiyi ve yaratıcı yeteneği izlenen, paylaşılan ve akılda kalan deneyimlere dönüştürmek."
     },
     "q6": {
       "question": "Hangi sektörlere hizmet veriyorsunuz?",
-      "answer": "Otomotiv, üretim ve mühendislik bizim köklerimiz. Bunların yanında enerji, lojistik, savunma ve teknoloji alanlarındaki kuruluşlarla da çalışıyoruz. Ortak nokta şu: standartların kritik, bilginin değerli ve sürekli iyileşmenin zorunlu olduğu sektörler."
+      "answer": "Otomotiv, üretim ve mühendislik bizim köklerimiz. Bunların yanında enerji, lojistik, savunma ve teknoloji alanlarındaki kuruluşlarla da çalışıyoruz. WStudio tarafıyla birlikte film, dizi ve oyunculuk merkezli yaratıcı endüstrilere ve hizmet sektörlerine de hizmet veriyoruz. Ortak nokta şu: standartların kritik, bilginin değerli, yaratıcı kimliğin görünür ve sürekli iyileşmenin zorunlu olduğu sektörler."
     },
     "q7": {
       "question": "Bir proje nasıl başlıyor?",
-      "answer": "Her şey kısa bir tanışma görüşmesiyle başlıyor. Önce sizi ve hedeflerinizi dinliyoruz, sonra ihtiyacınıza uygun birim sürece dahil oluyor. Ardından kısa bir hazırlık aşaması: kapsamı tanımlıyor, mevcut durumu analiz ediyor, yol haritası ve öncelikleri çıkarıyoruz. Her proje kendine özgü tasarlanıyor; tek tip paket sunmuyoruz."
+      "answer": "Her şey kısa bir tanışma görüşmesiyle başlıyor. Önce sizi ve hedeflerinizi dinliyoruz, sonra ihtiyacınıza uygun birim sürece dahil oluyor. Ardından kısa bir hazırlık aşaması geliyor. Kapsamı tanımlıyor, mevcut durumu analiz ediyor, yol haritası ve öncelikleri çıkarıyoruz. Her proje kendine özgü tasarlanıyor, tek tip paket sunmuyoruz."
     },
     "q8": {
       "question": "Yapay zeka ve dijital dönüşümde nasıl bir rol üstleniyorsunuz?",
@@ -398,11 +398,11 @@
     },
     "q9": {
       "question": "Hangi coğrafyalarda çalışıyorsunuz?",
-      "answer": "Merkezimiz Berlin'de. Avrupa odaklı çalışıyoruz; ama 40'tan fazla ülkede iş ortaklarımız ve müşterilerimizle aktif projelerimiz var. Uzaktan, yerinde ya da hibrit, hangi model size uygunsa onu birlikte seçiyoruz."
+      "answer": "Merkezimiz Berlin'de. Avrupa odaklı çalışıyoruz, ama 40'tan fazla ülkede iş ortaklarımız ve müşterilerimizle aktif projelerimiz var. Uzaktan, yerinde ya da hibrit, hangi model size uygunsa onu birlikte seçiyoruz."
     },
     "q10": {
       "question": "Sizinle nasıl iletişime geçilir?",
-      "answer": "Sitedeki İletişim sayfasından doğrudan ulaşabilirsiniz. info@wgroupgmbh.eu adresine yazabilir veya +49 174 177 78 79 numarasından bize ulaşabilirsiniz. İlk görüşmemiz baskısız bir tanışma sohbeti; hedefleriniz birbiriyle örtüşüyorsa birlikte yola devam ederiz, örtüşmüyorsa hiç sorun değil."
+      "answer": "Sitedeki İletişim sayfasından doğrudan ulaşabilirsiniz. info@wgroupgmbh.eu adresine yazabilir veya +49 174 177 78 79 numarasından bize ulaşabilirsiniz. İlk görüşmemiz baskısız bir tanışma sohbeti. Hedefleriniz birbiriyle örtüşüyorsa birlikte yola devam ederiz, örtüşmüyorsa hiç sorun değil."
     }
   },
   "weduFactory": {
@@ -1051,7 +1051,24 @@
         "title": "Integrated Operating System",
         "tagline": "Kalite, tedarikçi ve stratejik uygulama için tek bir sistem.",
         "definition": "Integrated Operating System; kalite, tedarikçi yönetimi ve stratejik uygulamayı tek bir bağlı sistem olarak çalıştırması gereken şirketler için bir dönüşüm danışmanlığı çözümüdür. QMS, tedarikçi gelişimi ve performans yönetimini ayrı projeler olarak ele almak yerine, çözüm bunları tek bir operasyonel modelde birleştirir. Süreçler, sorumluluklar, onay akışları, KPI'lar, denetim gereksinimleri ve tedarikçi rutinleri; ISO 9001, IATF 16949, VDA 6.3 ve müşteri özel gereksinimleriyle hizalanır ve şirketin gerçek iş mantığına uyarlanır. Sonuç; kalite risklerinin görünür, tedarikçi performansının kontrollü, denetimlerin güvenle yönetildiği ve stratejinin günlük uygulamaya dönüştürüldüğü dokümante, ölçülebilir ve devredilebilir bir operasyon sistemidir.",
-        "strategicAdvantage": "Integrated Operating System; şirketlerin retleri, yeniden işlemeyi, hurdayı, şikayetleri, garanti sorunlarını ve tekrarlayan süreç hatalarını azaltmasına yardımcı olur. Yönetim sistemini ISO 9001, IATF 16949, VDA 6.3 ve CSR beklentileriyle hizalayarak; denetimler stresli bir tek seferlik olay yerine kontrollü bir hazırlık süreci haline gelir. Amaç; sertifikasyonu, müşteri güvenini ve pazar erişimini Zero Critical Finding performansı için tasarlanmış bir sistem üzerinden korumaktır. Pek çok operasyonel sorun tedarikçi ekosisteminde başlar. Integrated Operating System; şirketlerin tedarikçi kaynaklı kalite, teslimat, kapasite ve süreç risklerini; giriş retleri, hat duruşları, eskalasyonlar veya müşteri geri çağırmaları yaratmadan önce tespit etmesine yardımcı olur. Tedarikçi yönetimi; reaktif takipten, açık beklentiler, teknik iletişim, risk tabanlı izleme ve ölçülebilir iyileştirme aksiyonlarına dayanan yapılandırılmış bir performans disiplinine taşınır. Birçok şirketin stratejik hedefleri vardır, ama günlük operasyonlar çoğu zaman farklı yönlere ilerler. Integrated Operating System; liderlik hedeflerini odaklı önceliklere, KPI'lara, rutinlere ve görsel yönetim pratiklerine çevirerek bu boşluğu kapatır. Politika yayılımı, OKR/BSC yapıları ve performans rutinleri sayesinde organizasyon 3-5 temel hedefe odaklanır ve yönetimden sahaya kadar paylaşılan bir uygulama dili oluşturur.",
+        "strategicAdvantage": [
+          {
+            "title": "Kalite kayıplarını kaynağında azaltmak",
+            "body": "Integrated Operating System, şirketlerin retleri, yeniden işlemeyi, hurdayı, şikayetleri, garanti sorunlarını ve tekrarlayan süreç hatalarını azaltmasına yardımcı olur. Reaktif yangın söndürmeden bağlı bir operasyonel disipline geçilmesiyle gizli kalite maliyetleri görünür, kontrol edilebilir ve zaman içinde yapısal olarak daha düşük hale gelir."
+          },
+          {
+            "title": "Denetime hazır bir yönetim sistemi",
+            "body": "Yönetim sistemini ISO 9001, IATF 16949, VDA 6.3 ve CSR beklentileriyle hizalayarak, denetimler stresli bir tek seferlik olay yerine kontrollü bir hazırlık sürecine dönüşür. Amaç, sertifikasyonu, müşteri güvenini ve pazar erişimini Zero Critical Finding performansı için tasarlanmış bir sistem üzerinden korumaktır."
+          },
+          {
+            "title": "Tedarikçi riskini yapılandırılmış performansa çevirmek",
+            "body": "Pek çok operasyonel sorun tedarikçi ekosisteminde başlar. Integrated Operating System, şirketlerin tedarikçi kaynaklı kalite, teslimat, kapasite ve süreç risklerini, giriş retleri, hat duruşları, eskalasyonlar veya müşteri geri çağırmaları yaratmadan önce tespit etmesine yardımcı olur. Tedarikçi yönetimi, reaktif takipten çıkıp açık beklentiler, teknik iletişim, risk tabanlı izleme ve ölçülebilir iyileştirme aksiyonlarına dayanan yapılandırılmış bir performans disiplinine taşınır."
+          },
+          {
+            "title": "Stratejiyi günlük uygulamaya çevirmek",
+            "body": "Birçok şirketin stratejik hedefleri vardır, ama günlük operasyonlar çoğu zaman farklı yönlere ilerler. Integrated Operating System, liderlik hedeflerini odaklı önceliklere, KPI'lara, rutinlere ve görsel yönetim pratiklerine çevirerek bu boşluğu kapatır. Politika yayılımı, OKR ve BSC yapıları ile performans rutinleri sayesinde organizasyon 3-5 temel hedefe odaklanır ve yönetimden sahaya kadar paylaşılan bir uygulama dili oluşur."
+          }
+        ],
         "useCases": [
           {
             "title": "QMS Mimarisi ve Süreç Tasarımı",
@@ -1098,7 +1115,24 @@
         "title": "AI Quality & Process Optimization Advisory",
         "tagline": "Saha deneyimini yapay zeka destekli süreç zekasına dönüştürmek.",
         "definition": "AI Quality & Process Optimization Advisory; şirketlerin AI destekli süreç optimizasyonunun mevcut iş operasyonlarında nerede ve nasıl uygulanabileceğini anlamasına yardımcı olmak için tasarlanmış bir danışmanlık hizmetidir. Hazır bir platform sunmak yerine; süreçlerinizin, dokümanlarınızın, iş akışlarınızın, problem noktalarınızın, denetim geçmişinizin, tedarikçi risklerinizin, KPI yapılarınızın ve operasyonel darboğazlarınızın yapılandırılmış bir analizi ile başlıyoruz. W-Quality'nin saha uzmanlığına dayanarak; doküman zekası, denetim hazırlık desteği, tedarikçi risk analizi, KPI tabanlı erken uyarı sinyalleri, regülasyon takibi ve süreç sapması tespiti gibi gerçekçi AI fırsatlarını tanımlıyoruz. Çıktı; AI'nın nerede yardımcı olabileceğini, hangi verilerin gerektiğini, hangi iş akışlarının iyileştirilebileceğini ve hangi kullanım senaryolarının önce önceliklendirilmesi gerektiğini gösteren net ve pratik bir AI optimizasyon yol haritasıdır.",
-        "strategicAdvantage": "Birçok şirket AI kullanmak ister ama nereden başlayacağını bilmez. Biz gerçek süreç anlayışıyla başlarız. Kalite, üretim, denetim, tedarikçi ve uyum iş akışları; teknoloji hype'ı üzerinden değil, otomotiv ve imalat saha deneyimi üzerinden analiz edilir. Bu şirketlerin operasyonel olarak alakalı, teknik olarak gerçekçi ve ölçülebilir iş etkisine bağlı AI kullanım senaryolarını belirlemesine yardımcı olur. Birçok organizasyonda kritik know-how; uzman hafızasında, departman silolarında, denetim deneyiminde, dokümante edilmemiş rutinlerde ve dağınık dokümanlarda yaşar. Şirketlerin bu bilgiyi yapılandırılmış, AI'ya hazır süreç zekasına dönüştürmesine yardımcı oluyoruz. Standartlar, QMS dokümanları, denetim bulguları, tedarikçi scorecard'ları, KPI verisi, müşteri özel gereksinimleri ve iç prosedürler; daha hızlı kararları ve daha iyi bilgi transferini destekleyen kullanılabilir bir bilgi yapısına haritalandırılabilir. AI destekli süreç optimizasyonu; şirketlerin reaktif problem çözmeden erken uyarı ve önleyici kontrole geçmesine yardımcı olabilir. AI'nın denetim hazırlığını, tedarikçi risk sinyallerini, süreç sapması tespitini, regülasyon takibini, müşteri özel gereksinim izlemesini ve KPI anomali analizini nerede destekleyebileceğini belirleriz. Bu daha hızlı yanıt, azaltılmış denetim belirsizliği, daha erken risk tespiti ve kalite hatalarına, uyum açıklarına, hat duruşlarına ve geri çağırma maliyetlerine daha düşük maruziyet için zemin oluşturur.",
+        "strategicAdvantage": [
+          {
+            "title": "Hype'a değil, saha gerçeğine dayanan AI senaryoları",
+            "body": "Birçok şirket AI kullanmak ister ama nereden başlayacağını bilmez. Biz gerçek süreç anlayışıyla başlarız. Kalite, üretim, denetim, tedarikçi ve uyum iş akışları, teknoloji hype'ı üzerinden değil, otomotiv ve imalat saha deneyimi üzerinden analiz edilir. Bu yaklaşım, şirketlerin operasyonel olarak anlamlı, teknik olarak gerçekçi ve ölçülebilir iş etkisine bağlı AI kullanım senaryolarını belirlemesine yardımcı olur."
+          },
+          {
+            "title": "Dağınık know-how'ı yapılandırılmış süreç zekasına dönüştürmek",
+            "body": "Birçok organizasyonda kritik know-how, uzman hafızasında, departman silolarında, denetim deneyiminde, dokümante edilmemiş rutinlerde ve dağınık dokümanlarda yaşar. Şirketlerin bu bilgiyi yapılandırılmış ve AI'ya hazır bir süreç zekasına dönüştürmesine yardımcı oluyoruz. Standartlar, QMS dokümanları, denetim bulguları, tedarikçi scorecard'ları, KPI verisi, müşteri özel gereksinimleri ve iç prosedürler, daha hızlı kararları ve daha iyi bilgi transferini destekleyen kullanılabilir bir bilgi yapısına haritalanabilir."
+          },
+          {
+            "title": "Reaktif problem çözmeden erken uyarıya geçiş",
+            "body": "AI destekli süreç optimizasyonu, şirketlerin reaktif problem çözmeden erken uyarı ve önleyici kontrole geçmesine yardımcı olabilir. AI'nın denetim hazırlığını, tedarikçi risk sinyallerini, süreç sapması tespitini, regülasyon takibini, müşteri özel gereksinim izlemesini ve KPI anomali analizini nerede destekleyebileceğini birlikte belirleriz."
+          },
+          {
+            "title": "Hatalara, denetimlere ve geri çağırma maliyetlerine daha düşük maruziyet",
+            "body": "Bu yapı, daha hızlı yanıt, daha az denetim belirsizliği ve daha erken risk tespiti için zemin oluşturur. Aşağı yöndeki etki, kalite hatalarına, uyum açıklarına, hat duruşlarına ve geri çağırma maliyetlerine daha düşük maruziyettir. Operasyonel güvenilirlik ve toplam kalite maliyeti üzerinde ölçülebilir bir iyileşme sağlar."
+          }
+        ],
         "useCases": [
           {
             "title": "Kalite Yönetim Sistemleri",
@@ -1137,7 +1171,24 @@
         "title": "Operational Intelligence Platform",
         "tagline": "Operasyon, izlenebilirlik ve karar zekası için tek bir dijital çatı.",
         "definition": "Operational Intelligence Platform; şirketin operasyonel süreçlerini ve karar destek katmanını tek bir dijital çatı altında birleştiren modüler bir operasyon ve zekâ platformudur. Operasyonel katman; kağıt, Excel ve e-posta tabanlı süreçleri rol bazlı onay akışları, izlenebilirlik, AI destekli doğrulama ve otomatik kanıt üretimi olan dijital modüllere taşır. Zekâ katmanı; iş akışlarından, denetimlerden, tedarikçilerden, üretim aktivitelerinden, saha sinyallerinden ve kurumsal dokümantasyondan gelen veriyi işleyerek iki kritik yetenek üretir: doğal dilde sorgulanabilir bir kurumsal bilgi bankası ve vardiya amirleri, müdürler ve üst yönetim için öngörücü bir performans dashboard'u. İki katman da aynı veri kaynağını kullandığı için, iş yapma ile o işin arkasındaki kararı anlama arasında boşluk kalmaz. Her süreç adımı zaman damgası, kullanıcı kimliği, onay zinciri ve ilgili kanıt ile kayıt altına alınır. Bu kayıtlar; uçtan uca izlenebilirlik oluştururken aynı zamanda risk tespiti, uyum izleme ve performans tahmini için zekâ katmanını besler.",
-        "strategicAdvantage": "Operational Intelligence Platform; operasyonel uygulamayı otomatik olarak izlenebilir kanıta dönüştürür. Her iş akışı, onay, CAPA aksiyonu, denetim bulgusu, tedarikçi sorunu ve süreç güncellemesi; zaman damgası, kullanıcı kimliği, onay zinciri ve destekleyici dokümanlarla kayıt altına alınır. IATF, VDA ve CSR denetimleri için gereken kanıt dosyaları birkaç tıkla üretilebilir; manuel hazırlık eforu azalır ve denetime hazırlık son dakika faaliyeti olmaktan çıkıp günlük operasyonun parçası haline gelir. Birçok şirkette aynı bilgi; Excel dosyalarına, e-postalara, formlara, denetim raporlarına, tedarikçi takip listelerine ve yönetim dashboard'larına ayrı ayrı girilir. Operational Intelligence Platform; modülleri öyle bağlar ki bir olay tüm ilgili alanları otomatik günceller. Bir denetim bulgusu CAPA akışını tetikleyebilir. Bir CAPA aksiyonu ilgili iş akışını güncelleyebilir. Tedarikçi kaynaklı bir sorun tedarikçi risk skorunu etkileyebilir. Aynı olay uyum skorunu ve üst yönetim uyarı listesini güncelleyebilir. Bu bağlantısız süreç adalarını ortadan kaldırır ve tekrarlayan manuel işi azaltır. Operational Intelligence Platform; operasyonel veriyi karar zekasına dönüştürür. Platform; iş akışı verisini, saha sinyallerini, KPI trendlerini, tedarikçi verisini ve kurumsal dokümantasyonu işlemek için AI kullanır. Aynı anda üç karar katmanını destekler: vardiya amirleri operasyonel uyarıları, tamamlanmamış görevleri, duruş sinyallerini ve acil aksiyon ihtiyaçlarını görür; departman müdürleri performansı, riskleri, CAPA ilerlemesini, tedarikçi sorunlarını ve ekip hazırlığını takip eder; üst yönetim KPI trendlerini, uyum skorlarını, ROI takibini, risk maruziyetini ve stratejik performans göstergelerini izler. Bu kurumsal hafızanın kişilerden bağımsız hale geldiği ve karar almanın daha hızlı, daha görünür ve daha veri tabanlı olduğu tek bir gerçeklik kaynağı yaratır.",
+        "strategicAdvantage": [
+          {
+            "title": "İzlenebilir kanıt, operasyonun bir yan ürünü olarak",
+            "body": "Operational Intelligence Platform, operasyonel uygulamayı otomatik olarak izlenebilir kanıta dönüştürür. Her iş akışı, onay, CAPA aksiyonu, denetim bulgusu, tedarikçi sorunu ve süreç güncellemesi, zaman damgası, kullanıcı kimliği, onay zinciri ve destekleyici dokümanlarla kayıt altına alınır. IATF, VDA ve CSR denetimleri için gereken kanıt dosyaları birkaç tıkla üretilebilir. Bu sayede manuel hazırlık eforu azalır, denetime hazırlık son dakika faaliyeti olmaktan çıkar ve günlük operasyonun parçası haline gelir."
+          },
+          {
+            "title": "Tek bir olay, tüm ilgili modülleri günceller",
+            "body": "Birçok şirkette aynı bilgi, Excel dosyalarına, e-postalara, formlara, denetim raporlarına, tedarikçi takip listelerine ve yönetim dashboard'larına ayrı ayrı girilir. Operational Intelligence Platform, modülleri öyle bağlar ki tek bir olay tüm ilgili alanları otomatik günceller. Bir denetim bulgusu CAPA akışını tetikleyebilir. Bir CAPA aksiyonu ilgili iş akışını güncelleyebilir. Tedarikçi kaynaklı bir sorun, tedarikçi risk skorunu etkileyebilir. Aynı olay uyum skorunu ve üst yönetim uyarı listesini de günceller. Böylece bağlantısız süreç adaları ortadan kalkar ve tekrarlayan manuel iş azalır."
+          },
+          {
+            "title": "Üç karar katmanında karar zekası",
+            "body": "Operational Intelligence Platform, operasyonel veriyi karar zekasına dönüştürür. Platform, iş akışı verisini, saha sinyallerini, KPI trendlerini, tedarikçi verisini ve kurumsal dokümantasyonu işlemek için AI kullanır ve aynı anda üç karar katmanını destekler. Vardiya amirleri operasyonel uyarıları, tamamlanmamış görevleri, duruş sinyallerini ve acil aksiyon ihtiyaçlarını görür. Departman müdürleri performansı, riskleri, CAPA ilerlemesini, tedarikçi sorunlarını ve ekip hazırlığını takip eder. Üst yönetim KPI trendlerini, uyum skorlarını, ROI takibini, risk maruziyetini ve stratejik performans göstergelerini izler."
+          },
+          {
+            "title": "Kişiye değil, sisteme bağlı tek gerçeklik kaynağı",
+            "body": "Bu yapı, kurumsal hafızanın kişilerden bağımsız hale geldiği ve karar almanın daha hızlı, daha görünür ve daha veri tabanlı olduğu tek bir gerçeklik kaynağı yaratır. Çalışanlar, roller ve vardiyalar değişse bile aynı dashboardlar, kanıtlar, geçmiş ve KPI mantığı yerinde kalır. Operasyonun sürekliliği, o anda kimin masada olduğuna bağlı kalmaz."
+          }
+        ],
         "useCases": [
           {
             "title": "İş Akışı Dijitalleştirme",
@@ -1188,7 +1239,20 @@
         "title": "Blokzincir Ürünleri",
         "tagline": "Tokenizasyon, DAO yönetişimi ve akıllı sözleşmeler tek üründe",
         "definition": "Blockchain teknolojisinin kurumsal dünyada en doğrudan değer ürettiği üç alanı tek bir ürün ailesinde toplar: varlık ve değer tokenizasyonu, merkeziyetsiz yönetişim (DAO) sistemleri ve akıllı sözleşmelerle otomatik çalışan iş kuralları. Şirketlerin bu araçları kendi yapılarına kontrollü biçimde entegre etmesini sağlayan modüler bir çözüm paketidir. Operasyonel ve Performans Platformundan bağımsız çalışır; kendi iş mantığı ve ekonomik modeli vardır.",
-        "strategicAdvantage": "Merkezi otoriteye veya tek bir sisteme güvenmenin yeterli olmadığı senaryolarda devreye girer. Bir yatırım kararı tokenize edilmiş oyla alınabilir, bir teşvik programı token olarak dağıtılabilir, bir işbirliği sözleşmesi kendi kendine çalışan smart contract olarak kodlanabilir. Karar ve işlem geçmişi değiştirilemez şekilde on-chain kaydedildiği için, özellikle çok taraflı yapılarda (ortak girişim, konsorsiyum, tedarikçi ağı) güven ihtiyacını ortadan kaldırır; manuel onay döngülerini ve ara güven katmanlarını kısaltır.",
+        "strategicAdvantage": [
+          {
+            "title": "Tek bir merkezi otoriteye bağlı kalmadan güven",
+            "body": "Merkezi otoriteye veya tek bir sisteme güvenmenin yeterli olmadığı senaryolarda devreye girer. Bir yatırım kararı tokenize edilmiş oyla alınabilir, bir teşvik programı token olarak dağıtılabilir, bir işbirliği sözleşmesi de kendi kendine çalışan bir akıllı sözleşme olarak kodlanabilir."
+          },
+          {
+            "title": "Güven boşluğunu kapatan değiştirilemez kayıt",
+            "body": "Karar ve işlem geçmişi değiştirilemez şekilde on-chain kaydedildiği için, özellikle ortak girişim, konsorsiyum ve tedarikçi ağı gibi çok taraflı yapılarda güven boşluğunu ortadan kaldırır. Her aksiyon, herhangi bir tarafın iyi niyetine veya kayıt disiplinine bağlı kalmadan sonradan doğrulanabilir hale gelir."
+          },
+          {
+            "title": "Manuel onay döngülerinden programlanabilir iş akışlarına",
+            "body": "Koşullu iş kuralları akıllı sözleşmelere taşındığında, geleneksel olarak manuel inceleme, imza ve ara onay gerektiren çok taraflı süreçler, koşulları sağlandığı anda otomatik olarak yürütülür. Bu yaklaşım karar döngülerini kısaltır, operasyonel sürtünmeyi azaltır ve denetlenebilirlikten ödün vermeden ara güven katmanlarını ortadan kaldırır."
+          }
+        ],
         "useCases": [
           {
             "title": "Varlık ve Değer Tokenizasyonu",
@@ -1223,7 +1287,20 @@
         "title": "Corporate Media Engine",
         "tagline": "Tek seferlik videolar değil, kurumsal bir medya motoru kurun.",
         "definition": "Corporate Media Engine; karmaşık iş süreçlerini, liderlik içgörülerini, teknik uzmanlığı ve kurumsal başarı hikayelerini modern video formatlarına dönüştüren uçtan uca bir medya çözümüdür. AI araçlarıyla üretimi hızlandırıp ölçekler, storytelling çerçeveleriyle duygusal etki ve akılda kalıcılık üretir, markalı kanal yapılarıyla içeriği abone olunabilir kurumsal medya kütüphaneleri üzerinden yayınlar. Sonuç tek seferlik bir kurumsal video değildir. Çalışanlar, tedarikçiler, müşteriler ve dış paydaşlar için zaman içinde büyüyen, marka standardında bir medya ekosistemidir.",
-        "strategicAdvantage": "Corporate Media Engine, klasik kurumsal video yapımının zaman ve bütçe darboğazını ortadan kaldırır. AI avatar sunucular, otomatik seslendirme ve çok dilli içerik akışları sayesinde daha az üretim girdisinden daha çok içerik üretmek mümkün olur; aynı zamanda farklı pazar, dil ve paydaş gruplarında çıktının tutarlılığı korunur. AI üretim verimliliği sağlar, ama etkiyi storytelling yaratır. Corporate Media Engine; kuru bilgi aktarımını yapı, bağlam, gerilim, karakter ve sonuçlardan oluşan hikaye temelli içeriğe çevirir. Karmaşık iş bilgisi böylece daha kolay anlaşılır, hatırlanır ve konuşulur. Corporate Media Engine kurumsal video üretimini tek seferlik bir olay olmaktan çıkarır. İzole videolar yerine; düzenli yayın takvimi, editöryel kurgu ve abonelik tabanlı erişimle çalışan markalı yayın kanalları kurulur. Üretilen bilgi; iletişimi, eğitimi, kültürü, işveren markasını ve paydaş bağlılığını zaman içinde besleyen bir kurumsal medya kütüphanesine dönüşür.",
+        "strategicAdvantage": [
+          {
+            "title": "Üretim maliyeti ve zaman darboğazını kırmak",
+            "body": "Corporate Media Engine, klasik kurumsal video yapımının zaman ve bütçe darboğazını ortadan kaldırır. AI avatar sunucular, otomatik seslendirme ve çok dilli içerik akışları sayesinde daha az üretim girdisinden daha çok içerik üretmek mümkün olur. Aynı zamanda farklı pazar, dil ve paydaş gruplarında çıktının tutarlılığı korunur."
+          },
+          {
+            "title": "Sadece bilgi aktarımı değil, hikaye anlatımı",
+            "body": "AI üretim verimliliği sağlar, ama etkiyi storytelling yaratır. Corporate Media Engine, kuru bilgi aktarımını yapı, bağlam, gerilim, karakter ve sonuçlardan oluşan hikaye temelli içeriğe çevirir. Karmaşık iş bilgisi böylece daha kolay anlaşılır, hatırlanır ve konuşulur."
+          },
+          {
+            "title": "Tek seferlik videolar değil, markalı yayın kanalları",
+            "body": "Corporate Media Engine, kurumsal video üretimini tek seferlik bir olay olmaktan çıkarır. İzole videolar yerine, düzenli yayın takvimi, editöryel kurgu ve abonelik tabanlı erişimle çalışan markalı yayın kanalları kurulur. Üretilen bilgi, iletişimi, eğitimi, kültürü, işveren markasını ve paydaş bağlılığını zaman içinde besleyen bir kurumsal medya kütüphanesine dönüşür."
+          }
+        ],
         "useCases": [
           {
             "title": "Kurum içi bilgi iletişimi",
@@ -1264,9 +1341,26 @@
         "brand": "W-Studio",
         "brandHref": "/w-studio",
         "title": "BusyFlix",
-        "tagline": "Bir show gibi üretilen kurumsal bilgi.",
-        "definition": "BusyFlix; kurumsal konuları hikaye temelli show ve mini dizilere dönüştüren premium bir iş dünyası içerik üretim servisidir. Standart eğitim videoları veya kurumsal sunumlar yerine; kalite, denetim baskısı, tedarikçi gelişimi, liderlik ve yetenek yönetimi gibi konular sezonlar, bölümler, karakterler, gerilim ve dramatik yapıyla kurgulanır. Sonuç bir eğitim videosu değildir. İzlenmek için üretilmiş bir yayın deneyimidir.",
-        "strategicAdvantage": "BusyFlix; kurumsal eğitim ve kültürel iletişim alanındaki en büyük sorunlardan birini çözer: düşük dikkat ve düşük tamamlanma oranı. İş içeriği zorunlu bir eğitim videosu gibi değil bir show gibi hissettirdiğinde, insanlar onu gönüllü olarak izlemeye ve sonuna kadar takipte kalmaya daha yatkın olur. Hikaye temelli içerik, klasik bilgi aktarımına kıyasla daha güçlü hafıza oluşturur. BusyFlix iş konularını karakterler, çatışma, kararlar ve sonuçlara çevirerek çalışanların kilit mesajları daha uzun süre hatırlamasına ve bunları gerçek iş yeri durumlarıyla ilişkilendirmesine yardımcı olur. İçerik bir dizi gibi hissettirdiği için tartışılması, paylaşılması ve tekrar izlenmesi kolaylaşır. Denetim baskısı, tedarikçi krizleri veya kalite liderliği gibi konular iç iletişimden daha fazlası haline gelir; çalışanlar, tedarikçiler, müşteriler ve dış paydaşlar için unutulmaz bir marka deneyimi yaratır.",
+        "tagline": "Bilgiyi doğru aktarmaya yönelik bir yayın platformu.",
+        "definition": "BusyFlix; kurumsal öğrenmenin, hikaye temelli serilerin, liderlik gelişimi içeriklerinin ve yapay zeka destekli formatların tek bir markalı yayın deneyimi altında bir araya geldiği eğitim odaklı bir kurumsal streaming ve paylaşım platformudur. Klasik eğitim videolarına veya statik öğrenme kütüphanelerine sıkışmak yerine BusyFlix; eğitim mini dizilerinden belgesellere, liderlik konuşmalarından yetenek yönetimi yayınlarına, tedarikçi ve kültür temelli bölümlerden kısa formatlı içeriklere kadar farklı içerik türlerini barındırır ve dağıtır. Platformdaki her yapım; kurumsal öğrenmeye daha yaratıcı, özgün ve sinematik bir yaklaşım kazandıran çeşitli AI destekli yöntemlerin bir araya gelmesiyle hazırlanır. Sonuç statik bir eğitim kütüphanesi ya da bir içerik üretim çıktısı değildir; kurumsal bilginin, öğrenme yolculuklarının, yetenek yönetimi çıktılarının ve marka hikayelerinin yayımlandığı, izlendiği ve paylaşıldığı bağımsız bir yayın platformudur.",
+        "strategicAdvantage": [
+          {
+            "title": "Eğitim odaklı bir yayın deneyimi",
+            "body": "BusyFlix, kurumsal öğrenmeyi bir yayın deneyimine dönüştürür. Eğitim, liderlik gelişimi, denetim hazırlığı, tedarikçi know-how'ı ve kültür odaklı konular, modern bir eğlence platformu titizliğiyle sezonlar, bölümler, kanallar ve özenle hazırlanmış oynatma listeleri olarak yayımlanır. Eğitim odağı, izleyiciyi 'zorunlu izleme' algısından çıkarıp çalışanların kendi zamanında, kendi temposunda gönüllü olarak takip ettiği bir öğrenme deneyimine yönlendirir."
+          },
+          {
+            "title": "Tek çatı altında farklı içerik türleri",
+            "body": "BusyFlix içerik formatından bağımsız çalıştığı için aynı platformda çok farklı türler yan yana yer alabilir. Kalite, denetim baskısı veya tedarikçi gelişimi üzerine hikaye temelli diziler, belgesel formatında açıklayıcı içerikler, yönetici konuşmaları, liderlik gelişimi bölümleri, oryantasyon yolculukları, yedekleme planlama hikayeleri ve şirket içi insan portreleri gibi yetenek yönetimi yayınları ile kısa formatlı kültür içerikleri tek çatı altında bir araya gelir."
+          },
+          {
+            "title": "Bant üretimi değil, AI destekli yaratıcı yapım",
+            "body": "Seriler ve bölümler, üretken hikaye taslakları, AI avatar ve sentetik ses, otomatik çok dilli dağıtım ve AI destekli editöryel akışlar gibi farklı yapay zeka yöntemlerinin birleşimiyle hazırlanır. Bu yaklaşım, her yapımı geleneksel kurumsal videoya kıyasla daha yaratıcı, daha hızlı yayımlanabilir ve daha özgün hale getirir."
+          },
+          {
+            "title": "Sadece arşivlenen değil, izlenen ve paylaşılan içerik",
+            "body": "Her şey istenildiği anda izlenip paylaşılabildiği için denetim baskısı hikayeleri, tedarikçi krizleri, kalite liderliği örnekleri ve yetenek yolculukları iç iletişimin ötesine geçer. Çalışanların, tedarikçilerin, müşterilerin ve dış izleyicilerin diledikleri zaman izleyebildiği ve paylaşabildiği unutulmaz bir marka deneyimine dönüşür."
+          }
+        ],
         "useCases": [
           {
             "title": "Kalite kültürü ve kalite liderliği",
@@ -1305,7 +1399,24 @@
         "title": "Talent Management",
         "tagline": "Oyuncuların ve sanatçıların geliştiği, bağlandığı ve sanatlarını sergilediği yaratıcı bir platform.",
         "definition": "Talent Management; oyuncular, performansçılar ve diğer kamera/sahne yetenekleri için yaratıcı odaklı bir platformdur. Her kullanıcı; kişisel tanıtım, profesyonel fotoğraflar (headshots), showreel, geçmiş projeler, eğitim geçmişi ve yaratıcı menzilini içeren profesyonel bir profil oluşturur. Yetenekler AI araçlarını; senaryo okumak, sahne çalışmak, oyunculuk seçmelerine (audition) hazırlanmak, replik provası yapmak ve karakter yorumlarını yönlendirilmiş AI sohbetleriyle keşfetmek için kullanabilir. Gömülü sosyal katman, yeteneklerin içerik yayımlamasına, birbirlerini takip etmesine, devam eden çalışmalarını paylaşmasına, kitle oluşturmasına ve yönetmenler, casting profesyonelleri ve yaratıcı işbirlikçilerle bağlantı kurmasına olanak tanır. Sonuç; yaratıcı kimliğin, yaratıcı pratiğin ve yaratıcı ağın ayrı araçlar, ajanslar ve sosyal medya hesaplarına dağılmak yerine bir arada yaşadığı tek bir platformdur.",
-        "strategicAdvantage": "Talent Management; performansçılara senaryo okumak, sahneleri çalışmak, replikleri provalamak, karakter motivasyonunu keşfetmek ve seçmelere AI desteğiyle hazırlanmak için özel bir yaratıcı alan sunar. AI; ton, niyet, alt metin ve duygusal dinamikleri analiz etmede yaratıcı bir okuma partneri gibi davranır, ancak performansçının sanatsal kararını asla devralmaz. Yetenekler; CV dokümanları, headshot klasörleri, ajans profilleri ve sosyal medya hesaplarından oluşan parçalı bir karışım yerine; tanıtım videosu, showreel, geçmiş projeler, eğitim, diller, beceriler ve yaratıcı menzili içeren tek bir yapılandırılmış profesyonel profil kurar. Bu paylaşması kolay, güncellenmesi kolay ve sektörde tanınan tek bir yaratıcı kimlik yaratır. Talent Management yalnızca bir portföy platformu değildir. Aynı zamanda yeteneklerin kamera arkası içerik yayımlayabildiği, monologlar paylaşabildiği, seçme çekimlerini paylaşabildiği, başka performansçıları takip edebildiği, kitle oluşturabildiği ve sektörde görünür kalabildiği yaratıcı bir sosyal ağdır. Profil, portföy ve sosyal varlığın bu birleşimi; yaratıcı yeteneğin yalnızca geleneksel kapı bekçilerine bağlı kalmadan profesyonel olarak büyümesine yardımcı olur.",
+        "strategicAdvantage": [
+          {
+            "title": "Yönetmen değil, yaratıcı bir okuma partneri olarak AI",
+            "body": "Talent Management, performansçılara senaryo okumak, sahneleri çalışmak, replikleri provalamak, karakter motivasyonunu keşfetmek ve seçmelere AI desteğiyle hazırlanmak için özel bir yaratıcı alan sunar. AI, ton, niyet, alt metin ve duygusal dinamikleri analiz etmede yaratıcı bir okuma partneri gibi davranır. Ancak performansçının sanatsal kararını asla devralmaz, yalnızca o kararın daha bilinçli alınmasına yardımcı olur."
+          },
+          {
+            "title": "Dağınık portföy değil, tek bir yaratıcı kimlik",
+            "body": "Yetenekler, CV dokümanları, headshot klasörleri, ajans profilleri ve sosyal medya hesaplarından oluşan parçalı bir karışım yerine, tanıtım videosu, showreel, geçmiş projeler, eğitim, diller, beceriler ve yaratıcı menzili içeren tek bir yapılandırılmış profesyonel profil kurar. Böylece paylaşması kolay, güncellenmesi kolay ve sektörde tanınan tek bir yaratıcı kimlik ortaya çıkar."
+          },
+          {
+            "title": "Görünürlük için yaratıcı bir sosyal ağ",
+            "body": "Talent Management yalnızca bir portföy platformu değildir. Aynı zamanda yeteneklerin kamera arkası içerik yayımlayabildiği, monologlar paylaşabildiği, seçme çekimlerini paylaşabildiği, başka performansçıları takip edebildiği, kitle oluşturabildiği ve sektörde görünür kalabildiği yaratıcı bir sosyal ağdır. Görünürlük, yalnızca bir casting çağrısında var olan bir şey olmaktan çıkar ve sürekli devam eden bir pratik haline gelir."
+          },
+          {
+            "title": "Geleneksel kapı bekçilerinin ötesinde kariyer gelişimi",
+            "body": "Profil, portföy ve sosyal varlığın bu birleşimi, yaratıcı yeteneğin yalnızca geleneksel kapı bekçilerine bağlı kalmadan profesyonel olarak büyümesine yardımcı olur. Casting yönetmenleri, yapımcılar ve yaratıcı işbirlikçiler, yeteneği ajans listeleri veya kulaktan kulağa duyumlardan değil, doğrudan işin kendisinden keşfeder. Bu, başka türlü kapalı kalacak olan fırsatların önünü açar."
+          }
+        ],
         "useCases": [
           {
             "title": "Oyuncu ve performansçı profilleri",
@@ -1348,7 +1459,24 @@
         "title": "AI Skill Platform",
         "tagline": "Tek bir platformda AI mentor, beceri ölçümü ve yetkinlik görünürlüğü.",
         "definition": "AI Skill Platform; çalışan yetkinlik gelişimini, beceri ölçümünü ve mentorluk deneyimini tek bir sistemde birleştiren AI destekli bir yetenek yönetimi platformudur. Bir çalışan belirli bir konuda gelişmek istediğinde, AI mentor ile metin, sesli veya video tabanlı görüşmelerle etkileşime girer. AI mentor; çalışanın mevcut seviyesini, öğrenme ihtiyaçlarını ve kişisel gelişim yolunu belirlemeye yardımcı olur. İç eğitmenler ve konu uzmanları; gerektiğinde mikro video içerikler, pratik örnekler, dokümanlar veya görev tabanlı öğrenme materyalleri yükleyerek platformu zenginleştirebilir. Platform; AI yürütmeli mülakatlar, senaryo tabanlı sorular ve pratik görevlerle gerçek yetkinliği ölçer. Çalışan ilerledikçe gelişim eğrisi hem çalışan hem yönetici için görünür hale gelir. Sonuç; öğrenmenin kişiselleştirildiği, ilerlemenin ölçülebildiği ve yetkinlik verisinin iş gücü planlamasında kullanılabilir hale geldiği bir yetenek geliştirme sistemidir.",
-        "strategicAdvantage": "Klasik eğitim platformları çoğu zaman deneyim seviyesi, rol veya gerçek beceri açığından bağımsız olarak herkese aynı içeriği sunar. AI Skill Platform çalışanın gerçek seviyesinden başlar. AI mentor sohbetleri, mülakatlar ve pratik görevler sayesinde her çalışan kendi ihtiyaçlarına göre şekillenen bir gelişim yolculuğuna sahip olur. Bu standart içerik kütüphaneleri veya jenerik eğitim yollarına kıyasla daha alakalı, bağlayıcı ve verimli bir gelişim deneyimi yaratır. Birçok organizasyon kimin eğitimi tamamladığını bilir, ama kimin gerekli beceriyi gerçekten kazandığını bilmez. AI Skill Platform yetkinliği AI yürütmeli mülakatlar, senaryo tabanlı değerlendirmeler ve pratik görevlerle ölçer. Bu gelişim eğrisini zaman içinde görünür kılar ve içerik tamamlama ile gerçek yetkinlik arasındaki farkı ayırt etmeye yardımcı olur. Yöneticiler kimin hangi konuda hazır olduğunu, kimin açıklarının olduğunu, hangi rollerin yedeklendiğini ve nerede ek gelişim gerektiğini görebilir. Birebir mentorluk değerlidir ama büyük ekiplerde ölçeklenmesi zordur. AI Skill Platform; eğitmenlerin ve iç uzmanların bilgilerini sadece en çok ihtiyaç duyulan yerlere hedefli mikro içerik katarak ölçeklemesine olanak tanırken, AI mentor çalışanları sohbet ve yönlendirmeyle sürekli destekler. Yönetim tarafında ise gerçek zamanlı yetkinlik haritaları; terfi, rotasyon, yedekleme planlaması ve eğitim yatırım kararlarını sezgi yerine ölçülmüş veriye dayandırır.",
+        "strategicAdvantage": [
+          {
+            "title": "Çalışanın gerçek seviyesinden başlayan kişisel gelişim",
+            "body": "Klasik eğitim platformları çoğu zaman deneyim seviyesi, rol veya gerçek beceri açığından bağımsız olarak herkese aynı içeriği sunar. AI Skill Platform ise çalışanın gerçek seviyesinden başlar. AI mentor sohbetleri, mülakatlar ve pratik görevler sayesinde her çalışan, kendi ihtiyaçlarına göre şekillenen bir gelişim yolculuğuna sahip olur. Bu yaklaşım, standart içerik kütüphaneleri veya jenerik eğitim yollarına kıyasla daha alakalı, daha bağlayıcı ve daha verimli bir gelişim deneyimi yaratır."
+          },
+          {
+            "title": "Tamamlanma değil, ölçülmüş yetkinlik",
+            "body": "Birçok organizasyon kimin eğitimi tamamladığını bilir, ama kimin gerekli beceriyi gerçekten kazandığını bilmez. AI Skill Platform, yetkinliği AI yürütmeli mülakatlar, senaryo tabanlı değerlendirmeler ve pratik görevlerle ölçer. Bu sayede gelişim eğrisi zaman içinde görünür hale gelir ve içerik tamamlama ile gerçek yetkinlik arasındaki fark net biçimde ayırt edilir. Yöneticiler kimin hangi konuda hazır olduğunu, kimin açıklarının olduğunu, hangi rollerin yedeklendiğini ve nerede ek gelişim gerektiğini görebilir."
+          },
+          {
+            "title": "Büyük ekipler için ölçeklenebilir mentorluk",
+            "body": "Birebir mentorluk değerlidir ama büyük ekiplerde ölçeklenmesi zordur. AI Skill Platform, eğitmenlerin ve iç uzmanların bilgilerini sadece en çok ihtiyaç duyulan yerlere hedefli mikro içerik katarak ölçeklemesine olanak tanır. AI mentor ise çalışanları sohbet ve yönlendirmeyle sürekli destekler. Böylece uzman zamanı, gerçekten en büyük farkı yarattığı anlara ayrılır."
+          },
+          {
+            "title": "Veriye dayanan iş gücü kararları",
+            "body": "Yönetim tarafında gerçek zamanlı yetkinlik haritaları, terfi, rotasyon, yedekleme planlaması ve eğitim yatırımı kararlarını sezgi yerine ölçülmüş veriye dayandırır. İş gücü görünürlüğü, anekdotsal geri bildirimden, kimin hazır olduğuna, kimin geliştiğine ve bir sonraki açıkların nerede oluşacağına dair sürekli güncellenen bir tabloya dönüşür."
+          }
+        ],
         "useCases": [
           {
             "title": "Çalışan Yetkinlik Gelişimi",

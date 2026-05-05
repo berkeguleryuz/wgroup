@@ -207,7 +207,7 @@
     "subtitle": "WGroup",
     "p1": "WGroup is an innovation-driven company operating at the intersection of industrial consulting, digital systems and creative media.",
     "p2": "By combining engineering expertise with creative thinking, WGroup develops next-generation solutions that transform how industry knowledge is created, digitized and shared.",
-    "p3": "Through its three divisions — WQuality, WDigiLab and WStudio — WGroup delivers consulting expertise, digital innovation and media-driven platforms designed for the evolving industrial landscape.",
+    "p3": "Through its three divisions, WQuality, WDigiLab and WStudio, WGroup delivers consulting expertise, digital innovation and media-driven platforms designed for the evolving industrial landscape.",
     "statCountries": "Countries",
     "statFounded": "Founded",
     "statClients": "Clients",
@@ -255,7 +255,7 @@
     "p1": "WGroup was founded on the belief that the future of industry will not be shaped by technology alone.",
     "p2": "As artificial intelligence and digital systems transform how organizations operate, the real challenge is not simply adopting new tools, but turning them into meaningful and sustainable value.",
     "p3": "WGroup was created to explore how industrial expertise, digital intelligence and artistic perspective can work together to reshape how industry knowledge evolves.",
-    "p4": "The founders brought together two different worlds — engineering and the arts — to build a new kind of industry platform where technology, processes and ideas evolve together.",
+    "p4": "The founders brought together two different worlds, engineering and the arts, to build a new kind of industry platform where technology, processes and ideas evolve together.",
     "p5": "This combination allows WGroup to approach industry challenges not only with technical precision, but also with creative thinking that opens new perspectives for innovation.",
     "p6": "Today, WGroup focuses on helping organizations digitize processes, integrate intelligent systems and develop new knowledge platforms for the AI era.",
     "p7": "At WGroup, industry meets intelligence and creativity drives innovation.",
@@ -370,7 +370,7 @@
     },
     "q2": {
       "question": "How do your three divisions differ from each other?",
-      "answer": "Each one has its own focus. WQuality leads on quality management and operational excellence. WDigiLab builds intelligent systems, digital platforms and AI driven solutions. WStudio turns corporate stories into films, series and interactive content. They look separate but they are really three parts of one connected value chain."
+      "answer": "Each one has its own focus. WQuality leads on quality management, supplier development and operational excellence. WDigiLab builds intelligent operational platforms, blockchain products and AI driven decision systems. WStudio runs the creative and streaming layer of the group: Corporate Media Engine, the BusyFlix platform, Talent Management and AI Skill Platform sit under this roof. They look separate but they are really three parts of one connected value chain."
     },
     "q3": {
       "question": "What does WQuality offer?",
@@ -382,11 +382,11 @@
     },
     "q5": {
       "question": "What does WStudio produce?",
-      "answer": "AI assisted content production, corporate storytelling, BusinessFlix style series and corporate knowledge channels. We turn complex industry knowledge into watchable, shareable and memorable media. It works for both internal communications and the customer facing experience."
+      "answer": "WStudio runs the creative and streaming layer of WGroup. It covers four connected products: Corporate Media Engine for AI assisted media production, BusyFlix as a training focused corporate streaming platform where corporate learning, story driven series and talent management releases are published and watched, Talent Management as a creative platform for performers, and AI Skill Platform for AI mentor based skill development. The common thread is turning corporate knowledge and creative talent into experiences that are watched, shared and remembered."
     },
     "q6": {
       "question": "Which industries do you serve?",
-      "answer": "Automotive, manufacturing and engineering are our roots. We also work with clients in energy, logistics, defense and technology. The common thread is sectors where standards matter, knowledge is valuable, and continuous improvement is not optional."
+      "answer": "Automotive, manufacturing and engineering are our roots. We also work with clients in energy, logistics, defense and technology. Through WStudio we extend into film, television and performance-driven creative industries as well as service sectors. The common thread is environments where standards matter, knowledge is valuable, creative identity needs to be visible and continuous improvement is not optional."
     },
     "q7": {
       "question": "How does a project begin?",
@@ -1051,7 +1051,24 @@
         "title": "Integrated Operating System",
         "tagline": "One system for quality, suppliers and strategic execution.",
         "definition": "Integrated Operating System is a transformation consulting solution for companies that need to make quality, supplier management and strategic execution work as one connected system. Instead of treating QMS, supplier development and performance management as separate projects, the solution integrates them into one operational model. Processes, responsibilities, approval flows, KPIs, audit requirements and supplier routines are aligned with ISO 9001, IATF 16949, VDA 6.3 and customer-specific requirements, while being adapted to the company's real business logic. The result is a documented, measurable and transferable operating system where quality risks are visible, supplier performance is controlled, audits are managed with confidence and strategy is translated into daily execution.",
-        "strategicAdvantage": "Integrated Operating System helps companies reduce rejects, rework, scrap, complaints, warranty issues and recurring process failures. By aligning the management system with ISO 9001, IATF 16949, VDA 6.3 and CSR expectations, audits become a controlled readiness process instead of a stressful one-time event. The objective is to protect certification, customer trust and market access through a system designed for Zero Critical Finding performance. Many operational problems start in the supplier ecosystem. Integrated Operating System helps companies identify supplier-related quality, delivery, capacity and process risks before they create incoming rejects, line stoppages, escalations or customer recalls. Supplier management moves from reactive follow-up to a structured performance discipline based on clear expectations, technical communication, risk-based monitoring and measurable improvement actions. Many companies have strategic goals, but daily operations often move in different directions. Integrated Operating System closes this gap by translating leadership objectives into focused priorities, KPIs, routines and visual management practices. Through policy deployment, OKR / BSC structures and performance routines, the organization concentrates on 3-5 key objectives and creates a shared execution language from management to shop floor.",
+        "strategicAdvantage": [
+          {
+            "title": "Quality losses cut at the source",
+            "body": "Integrated Operating System helps companies reduce rejects, rework, scrap, complaints, warranty issues and recurring process failures. By moving from reactive firefighting to a connected operational discipline, hidden quality costs become visible, controllable and structurally lower over time."
+          },
+          {
+            "title": "An audit-ready management system",
+            "body": "By aligning the management system with ISO 9001, IATF 16949, VDA 6.3 and CSR expectations, audits become a controlled readiness process instead of a stressful one-time event. The objective is to protect certification, customer trust and market access through a system designed for Zero Critical Finding performance."
+          },
+          {
+            "title": "Supplier risk turned into structured performance",
+            "body": "Many operational problems start in the supplier ecosystem. Integrated Operating System helps companies identify supplier-related quality, delivery, capacity and process risks before they create incoming rejects, line stoppages, escalations or customer recalls. Supplier management moves from reactive follow-up to a structured performance discipline based on clear expectations, technical communication, risk-based monitoring and measurable improvement actions."
+          },
+          {
+            "title": "Strategy translated into daily execution",
+            "body": "Many companies have strategic goals, but daily operations often move in different directions. Integrated Operating System closes this gap by translating leadership objectives into focused priorities, KPIs, routines and visual management practices. Through policy deployment, OKR / BSC structures and performance routines, the organization concentrates on 3-5 key objectives and creates a shared execution language from management to shop floor."
+          }
+        ],
         "useCases": [
           {
             "title": "QMS Architecture and Process Design",
@@ -1098,7 +1115,24 @@
         "title": "AI Quality & Process Optimization Advisory",
         "tagline": "Turning field experience into AI-driven process intelligence.",
         "definition": "AI Quality & Process Optimization Advisory is a consulting service designed to help companies understand how and where AI-supported process optimization can be applied within their existing business operations. Instead of offering a ready-made platform, we start with a structured analysis of your processes, documents, workflows, pain points, audit history, supplier risks, KPI structures and operational bottlenecks. Based on W-Quality's field expertise, we define realistic AI opportunities such as document intelligence, audit-readiness support, supplier risk analysis, KPI-based early-warning signals, regulatory tracking and process deviation detection. The outcome is a clear and practical AI optimization roadmap: where AI can help, what data is needed, which workflows can be improved and which use cases should be prioritized first.",
-        "strategicAdvantage": "Many companies want to use AI but do not know where to start. We begin with real process understanding. Quality, production, audit, supplier and compliance workflows are analyzed through automotive and manufacturing field experience, not technology hype. This helps companies identify AI use cases that are operationally relevant, technically realistic and connected to measurable business impact. In many organizations, critical know-how lives in expert memory, department silos, audit experience, undocumented routines and scattered documents. We help companies turn this knowledge into structured, AI-ready process intelligence. Standards, QMS documents, audit findings, supplier scorecards, KPI data, customer-specific requirements and internal procedures can be mapped into a usable knowledge structure that supports faster decisions and better knowledge transfer. AI-supported process optimization can help companies move from reactive problem-solving to early-warning and preventive control. We identify where AI can support audit readiness, supplier risk signals, process deviation detection, regulatory tracking, customer-specific requirement monitoring and KPI anomaly analysis. This creates the foundation for faster response, reduced audit uncertainty, earlier risk detection and lower exposure to quality failures, compliance gaps, line stoppages and recall costs.",
+        "strategicAdvantage": [
+          {
+            "title": "AI use cases grounded in field reality",
+            "body": "Many companies want to use AI but do not know where to start. We begin with real process understanding. Quality, production, audit, supplier and compliance workflows are analyzed through automotive and manufacturing field experience, not technology hype. This helps companies identify AI use cases that are operationally relevant, technically realistic and connected to measurable business impact."
+          },
+          {
+            "title": "Tribal knowledge turned into structured intelligence",
+            "body": "In many organizations, critical know-how lives in expert memory, department silos, audit experience, undocumented routines and scattered documents. We help companies turn this knowledge into structured, AI-ready process intelligence. Standards, QMS documents, audit findings, supplier scorecards, KPI data, customer-specific requirements and internal procedures can be mapped into a usable knowledge structure that supports faster decisions and better knowledge transfer."
+          },
+          {
+            "title": "From reactive problem-solving to early-warning control",
+            "body": "AI-supported process optimization can help companies move from reactive problem-solving to early-warning and preventive control. We identify where AI can support audit readiness, supplier risk signals, process deviation detection, regulatory tracking, customer-specific requirement monitoring and KPI anomaly analysis."
+          },
+          {
+            "title": "Lower exposure to failures, audits and recall costs",
+            "body": "This creates the foundation for faster response, reduced audit uncertainty and earlier risk detection. The downstream effect is lower exposure to quality failures, compliance gaps, line stoppages and recall costs, with measurable impact on operational reliability and the total cost of quality."
+          }
+        ],
         "useCases": [
           {
             "title": "Quality Management Systems",
@@ -1137,7 +1171,24 @@
         "title": "Operational Intelligence Platform",
         "tagline": "One digital roof for operations, traceability and decision intelligence.",
         "definition": "Operational Intelligence Platform is a modular operating and intelligence platform that combines the company's operational processes and decision-support layer under one digital roof. The operational layer transfers paper, Excel and email-based processes into digital modules with role-based approval flows, traceability, AI-supported validation and automated evidence generation. The intelligence layer processes data from workflows, audits, suppliers, production activities, shop-floor signals and corporate documentation to create two critical capabilities: a corporate knowledge base searchable in natural language, and a predictive performance dashboard for supervisors, managers and executives. Because both layers use the same data source, there is no gap between executing work and understanding the decision behind it. Every process step is logged with timestamp, user ID, approval chain and related evidence. These logs create end-to-end traceability while also feeding the intelligence layer for risk detection, compliance monitoring and performance forecasting.",
-        "strategicAdvantage": "Operational Intelligence Platform turns operational execution into automatically traceable evidence. Every workflow, approval, CAPA action, audit finding, supplier issue and process update is recorded with timestamp, user identity, approval chain and supporting documents. Evidence files required for IATF, VDA and CSR audits can be generated in a few clicks, reducing manual preparation effort and making audit readiness part of daily operations instead of a last-minute activity. In many companies, the same information is entered separately into Excel files, emails, forms, audit reports, supplier trackers and management dashboards. Operational Intelligence Platform connects modules so that one event updates all related areas automatically. An audit finding can trigger a CAPA flow. A CAPA action can update the related workflow. A supplier-originated issue can affect the supplier risk score. The same event can update the compliance score and executive alert list. This eliminates disconnected process islands and reduces repetitive manual work. Operational Intelligence Platform transforms operational data into decision intelligence. The platform uses AI to process workflow data, shop-floor signals, KPI trends, supplier data and corporate documentation. It supports three decision layers at the same time: shift supervisors see operational alerts, incomplete tasks, downtime signals and immediate action needs; department managers track performance, risks, CAPA progress, supplier issues and team readiness; executive leadership monitors KPI trends, compliance scores, ROI tracking, risk exposure and strategic performance indicators. This creates a single source of truth where corporate memory becomes independent of individuals and decision-making becomes faster, more visible and more data-driven.",
+        "strategicAdvantage": [
+          {
+            "title": "Traceable evidence as a byproduct of execution",
+            "body": "Operational Intelligence Platform turns operational execution into automatically traceable evidence. Every workflow, approval, CAPA action, audit finding, supplier issue and process update is recorded with timestamp, user identity, approval chain and supporting documents. Evidence files required for IATF, VDA and CSR audits can be generated in a few clicks, reducing manual preparation effort and making audit readiness part of daily operations instead of a last-minute activity."
+          },
+          {
+            "title": "One event, every related module updates",
+            "body": "In many companies, the same information is entered separately into Excel files, emails, forms, audit reports, supplier trackers and management dashboards. Operational Intelligence Platform connects modules so that one event updates all related areas automatically. An audit finding can trigger a CAPA flow. A CAPA action can update the related workflow. A supplier-originated issue can affect the supplier risk score. The same event can update the compliance score and executive alert list. This eliminates disconnected process islands and reduces repetitive manual work."
+          },
+          {
+            "title": "Decision intelligence across three layers",
+            "body": "Operational Intelligence Platform transforms operational data into decision intelligence. The platform uses AI to process workflow data, shop-floor signals, KPI trends, supplier data and corporate documentation, and supports three decision layers at the same time. Shift supervisors see operational alerts, incomplete tasks, downtime signals and immediate action needs. Department managers track performance, risks, CAPA progress, supplier issues and team readiness. Executive leadership monitors KPI trends, compliance scores, ROI tracking, risk exposure and strategic performance indicators."
+          },
+          {
+            "title": "A single source of truth, not personal expertise",
+            "body": "This creates a single source of truth where corporate memory becomes independent of individuals and decision-making becomes faster, more visible and more data-driven. The same dashboards, evidence, history and KPI logic stay in place even as people, roles and shifts rotate, so operational continuity does not depend on who happens to be in the room."
+          }
+        ],
         "useCases": [
           {
             "title": "Workflow Digitalization",
@@ -1188,7 +1239,20 @@
         "title": "Blockchain Products",
         "tagline": "Tokenization, DAO governance and smart contracts in one product family",
         "definition": "Consolidates the three areas where blockchain technology generates the most direct value in the corporate world into a single product family: tokenization of assets and value, decentralized governance (DAO) systems, and business rules executed automatically via smart contracts. A modular solution suite that enables companies to integrate these tools into their own structures in a controlled way. Operates independently of the Operational and Performance Platform; has its own business logic and economic model.",
-        "strategicAdvantage": "Activates in scenarios where trusting a central authority or a single system is not sufficient. An investment decision can be made through tokenized voting; an incentive program can be distributed as tokens; a collaboration agreement can be encoded as a self-executing smart contract. Because decision and transaction history is recorded on-chain immutably, it eliminates the trust gap, particularly in multi-party structures (joint ventures, consortia, supplier networks), and shortens manual approval loops and intermediate trust layers.",
+        "strategicAdvantage": [
+          {
+            "title": "Trust without a single central authority",
+            "body": "Activates in scenarios where trusting a central authority or a single system is not sufficient. An investment decision can be made through tokenized voting, an incentive program can be distributed as tokens, and a collaboration agreement can be encoded as a self-executing smart contract."
+          },
+          {
+            "title": "Immutable history that closes the trust gap",
+            "body": "Because decision and transaction history is recorded on-chain immutably, it eliminates the trust gap, particularly in multi-party structures such as joint ventures, consortia and supplier networks. Every action becomes verifiable after the fact without depending on the goodwill or recordkeeping of any single participant."
+          },
+          {
+            "title": "From manual approval loops to programmable workflows",
+            "body": "By moving conditional business rules into smart contracts, multi-party processes that traditionally required manual reviews, signatures and intermediate approvals execute automatically once their conditions are met. This shortens decision cycles, reduces operational friction and removes layers of intermediate trust without giving up auditability."
+          }
+        ],
         "useCases": [
           {
             "title": "Asset & Value Tokenization",
@@ -1223,7 +1287,20 @@
         "title": "Corporate Media Engine",
         "tagline": "Build a corporate media engine, not one-off videos.",
         "definition": "Corporate Media Engine is an end-to-end media solution that turns complex business processes, leadership insights, technical expertise and corporate success stories into modern video formats. It uses AI tools to produce content faster and at scale, storytelling frameworks to create emotional impact and recall, and branded channel structures to publish content through subscribable corporate media libraries. The result is not a one-time corporate video. It is a growing, brand-standard media ecosystem for employees, suppliers, customers and external stakeholders.",
-        "strategicAdvantage": "Corporate Media Engine breaks the time and budget bottleneck of traditional corporate video production. AI avatar presenters, automated voice-over and multilingual content workflows make it possible to create more content from fewer production inputs, while keeping output consistent across markets, languages and stakeholder groups. AI creates production efficiency, but storytelling creates impact. Corporate Media Engine turns dry information transfer into story-driven content with structure, context, tension, characters and outcomes. This makes complex business knowledge easier to understand, remember and discuss. Corporate Media Engine removes the one-off nature of corporate video production. Instead of isolated videos, companies build branded broadcast channels with regular publishing calendars, editorial curation and subscription-based access. Produced knowledge becomes a growing corporate media library that supports communication, training, culture, employer branding and stakeholder engagement over time.",
+        "strategicAdvantage": [
+          {
+            "title": "Break the production cost and time bottleneck",
+            "body": "Corporate Media Engine breaks the time and budget bottleneck of traditional corporate video production. AI avatar presenters, automated voice-over and multilingual content workflows make it possible to create more content from fewer production inputs, while keeping output consistent across markets, languages and stakeholder groups."
+          },
+          {
+            "title": "Storytelling, not just information transfer",
+            "body": "AI creates production efficiency, but storytelling creates impact. Corporate Media Engine turns dry information transfer into story-driven content with structure, context, tension, characters and outcomes. This makes complex business knowledge easier to understand, remember and discuss."
+          },
+          {
+            "title": "Branded broadcast channels, not one-off videos",
+            "body": "Corporate Media Engine removes the one-off nature of corporate video production. Instead of isolated videos, companies build branded broadcast channels with regular publishing calendars, editorial curation and subscription-based access. Produced knowledge becomes a growing corporate media library that supports communication, training, culture, employer branding and stakeholder engagement over time."
+          }
+        ],
         "useCases": [
           {
             "title": "Internal knowledge communication",
@@ -1264,9 +1341,26 @@
         "brand": "W-Studio",
         "brandHref": "/w-studio",
         "title": "BusyFlix",
-        "tagline": "Corporate knowledge, produced like a show.",
-        "definition": "BusyFlix is a premium business content production service that turns corporate topics into story-driven shows and mini-series. Instead of standard training videos or corporate presentations, subjects such as quality, audit pressure, supplier development, leadership and talent management are structured into seasons, episodes, characters, tension and dramatic arcs. The result is not a training video. It is a broadcast experience produced to be watched.",
-        "strategicAdvantage": "BusyFlix solves one of the biggest problems in corporate training and cultural communication: low attention and low completion rates. When business content feels like a show instead of a mandatory training video, people are more likely to watch it voluntarily and stay engaged until the end. Story-driven content creates stronger memory than classic information transfer. By turning business topics into characters, conflict, decisions and consequences, BusyFlix helps employees remember key messages longer and connect them with real workplace situations. Because the content feels like a series, it becomes easier to discuss, share and rewatch. Topics such as audit pressure, supplier crises or quality leadership become more than internal communication. They create an unforgettable brand experience for employees, suppliers, customers and external stakeholders.",
+        "tagline": "A streaming platform built to transfer knowledge accurately.",
+        "definition": "BusyFlix is a training-focused corporate streaming and sharing platform where corporate learning, story-driven series, leadership development and AI-generated formats come together inside a single branded broadcast experience. Rather than relying on classic training videos or static learning libraries, BusyFlix hosts and distributes a wide range of content types: training mini-series, documentary-style explainers, leadership talks, talent management releases, supplier and culture episodes, short-form features and more. Every title is created through a mix of AI-assisted production methods that bring a more creative, original and cinematic approach to corporate learning. The result is not a static training library or a content production output. It is a dedicated streaming environment where corporate knowledge, learning journeys, talent management outcomes and brand stories are published, watched and shared.",
+        "strategicAdvantage": [
+          {
+            "title": "A training-led streaming experience",
+            "body": "BusyFlix turns corporate learning into a streaming experience. Training, leadership development, audit readiness, supplier know-how and culture-driven topics are published as seasons, episodes, channels and curated playlists with the same craft as a modern entertainment platform. The training focus shifts the relationship from mandatory viewing toward voluntary, self-paced learning that employees actually want to follow on their own time."
+          },
+          {
+            "title": "Many content types under one roof",
+            "body": "Because BusyFlix is format-agnostic, the same platform can host story-driven series on quality, audit pressure or supplier development; documentary-style explainers; executive talks; talent management releases such as leadership development episodes, onboarding journeys, succession stories and people-of-the-company features; as well as short-form cultural content."
+          },
+          {
+            "title": "Crafted with AI, not produced like a factory line",
+            "body": "Series and episodes are crafted through a combination of AI-assisted production methods such as generative storyboarding, AI avatars and synthetic voice, automated multilingual delivery and AI-supported editorial workflows, making each release more creative, faster to publish and more original than traditional corporate video."
+          },
+          {
+            "title": "Watched and shared on demand, not just stored",
+            "body": "Because everything is streamed and shareable on demand, stories about audit pressure, supplier crises, quality leadership and talent journeys move beyond internal communication and become an unforgettable brand experience that employees, suppliers, customers and external audiences can watch and share whenever they want."
+          }
+        ],
         "useCases": [
           {
             "title": "Quality culture and quality leadership",
@@ -1305,7 +1399,24 @@
         "title": "Talent Management",
         "tagline": "A creative platform where actors and performers grow, connect and showcase their craft.",
         "definition": "Talent Management is a creative-first platform for actors, performers and other on-screen or on-stage talent. Each user creates a professional profile with personal introduction, headshots, showreel, past projects, training history and creative range. Talents can use AI tools to read scripts, work on scenes, prepare for auditions, run dialogue rehearsals and explore character interpretations through guided AI conversations. A built-in social layer allows talents to publish content, follow each other, share work in progress, build an audience and connect with directors, casting professionals and creative collaborators. The result is one platform where creative identity, creative practice and creative network live together, instead of being scattered across separate tools, agents and social media accounts.",
-        "strategicAdvantage": "Talent Management gives performers a private creative space to read scripts, study scenes, rehearse dialogues, explore character motivation and prepare for auditions with AI support. The AI acts as a creative reading partner, helping the talent analyze tone, intention, subtext and emotional dynamics, without replacing the artistic decision of the performer. Instead of using a fragmented mix of CV documents, headshot folders, agency profiles and social media accounts, talents build one structured professional profile that includes introduction video, showreel, past projects, training, languages, skills and creative range. This creates a single creative identity that is easy to share, easy to update and recognizable across the industry. Talent Management is not only a portfolio platform. It is also a creative social network where talents can publish behind-the-scenes content, share monologues, post audition takes, follow other performers, build an audience and stay visible in the industry. This combination of profile, portfolio and social presence helps creative talent grow professionally without depending only on traditional gatekeepers.",
+        "strategicAdvantage": [
+          {
+            "title": "AI as a creative reading partner, not a director",
+            "body": "Talent Management gives performers a private creative space to read scripts, study scenes, rehearse dialogues, explore character motivation and prepare for auditions with AI support. The AI acts as a creative reading partner, helping the talent analyze tone, intention, subtext and emotional dynamics, without replacing the artistic decision of the performer."
+          },
+          {
+            "title": "One creative identity, not a scattered portfolio",
+            "body": "Instead of using a fragmented mix of CV documents, headshot folders, agency profiles and social media accounts, talents build one structured professional profile that includes introduction video, showreel, past projects, training, languages, skills and creative range. This creates a single creative identity that is easy to share, easy to update and recognizable across the industry."
+          },
+          {
+            "title": "A creative social network for visibility",
+            "body": "Talent Management is not only a portfolio platform. It is also a creative social network where talents can publish behind-the-scenes content, share monologues, post audition takes, follow other performers, build an audience and stay visible in the industry. Visibility becomes a continuous practice rather than something that only exists during a casting call."
+          },
+          {
+            "title": "Career growth beyond traditional gatekeepers",
+            "body": "This combination of profile, portfolio and social presence helps creative talent grow professionally without depending only on traditional gatekeepers. Casting directors, producers and creative collaborators discover talent based on the work itself, not just on agency rosters or word of mouth, which opens opportunities that would otherwise stay closed."
+          }
+        ],
         "useCases": [
           {
             "title": "Actor and performer profiles",
@@ -1348,7 +1459,24 @@
         "title": "AI Skill Platform",
         "tagline": "AI mentor, skill measurement and competency visibility on one platform.",
         "definition": "AI Skill Platform is an AI-driven talent management platform that combines employee competency development, skill assessment and mentorship experience in one system. When an employee wants to develop in a specific topic, they interact with an AI mentor through text, voice or video conversations. The AI mentor helps define the employee's current level, learning needs and personal development path. Internal trainers and subject-matter experts can enrich the platform by uploading micro video content, practical examples, documents or task-based learning materials where needed. The platform measures real competency through AI-led interviews, scenario-based questions and practical tasks. As the employee progresses, the development curve becomes visible for both the employee and the manager. The result is a talent development system where learning is personalized, progress is measurable and competency data becomes usable for workforce planning.",
-        "strategicAdvantage": "Classic training platforms often deliver the same content to everyone, regardless of experience level, role or actual skill gap. AI Skill Platform starts from the employee's real level. Through AI mentor conversations, interviews and practical tasks, each employee receives a development journey shaped around their own needs. This creates a more relevant, engaging and efficient development experience than standard content libraries or generic training paths. Many organizations know who completed a training, but not who actually gained the required skill. AI Skill Platform measures competency through AI-led interviews, scenario-based evaluations and practical tasks. This makes the development curve visible over time and helps distinguish between content completion and real capability. Managers can see who is ready in which topic, who has gaps, which roles are covered and where additional development is needed. One-on-one mentoring is valuable but difficult to scale across large teams. AI Skill Platform allows trainers and internal experts to scale their knowledge by contributing targeted micro content only where it is needed most, while the AI mentor supports employees continuously through conversation and guidance. On the management side, real-time competency maps support promotion, rotation, backup planning and training investment decisions based on measured data instead of intuition.",
+        "strategicAdvantage": [
+          {
+            "title": "Personalized development from each employee's real level",
+            "body": "Classic training platforms often deliver the same content to everyone, regardless of experience level, role or actual skill gap. AI Skill Platform starts from the employee's real level. Through AI mentor conversations, interviews and practical tasks, each employee receives a development journey shaped around their own needs. This creates a more relevant, engaging and efficient development experience than standard content libraries or generic training paths."
+          },
+          {
+            "title": "Measured competency, not just course completion",
+            "body": "Many organizations know who completed a training, but not who actually gained the required skill. AI Skill Platform measures competency through AI-led interviews, scenario-based evaluations and practical tasks. This makes the development curve visible over time and helps distinguish between content completion and real capability. Managers can see who is ready in which topic, who has gaps, which roles are covered and where additional development is needed."
+          },
+          {
+            "title": "Scalable mentorship for large teams",
+            "body": "One-on-one mentoring is valuable but difficult to scale across large teams. AI Skill Platform allows trainers and internal experts to scale their knowledge by contributing targeted micro content only where it is needed most, while the AI mentor supports employees continuously through conversation and guidance. Expert time is reserved for the moments where it actually creates the biggest difference."
+          },
+          {
+            "title": "Data-driven workforce decisions",
+            "body": "On the management side, real-time competency maps support promotion, rotation, backup planning and training investment decisions based on measured data instead of intuition. Workforce visibility moves from anecdotal feedback to a continuously updated picture of who is ready, who is developing and where the next gaps will appear."
+          }
+        ],
         "useCases": [
           {
             "title": "Employee Competency Development",

@@ -54,6 +54,15 @@ export function ArrowRight({ className, style }: IconProps) {
   );
 }
 
+export function ArrowUpRight({ className, style }: IconProps) {
+  return (
+    <S className={className} style={style}>
+      <path d="M7 17 17 7" />
+      <path d="M7 7h10v10" />
+    </S>
+  );
+}
+
 export function ArrowLeft({ className, style }: IconProps) {
   return (
     <S className={className} style={style}>
