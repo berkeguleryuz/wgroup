@@ -26,9 +26,9 @@
   },
   "scenes": {
     "s1": { "start": "public/ad-render/scene-01-opening/start-frame_v2.png", "end": "public/ad-render/scene-01-opening/end-frame_v2.png", "clip": null },
-    "s2": { "start": "public/w-new/W-Quality.webp", "end": null, "clip": null },
-    "s3": { "start": "public/w-new/W-Digilab.webp", "end": null, "clip": null },
-    "s4": { "start": "public/w-new/W-Studio.webp", "end": null, "clip": null },
+    "s2": { "start": "public/w-new/W-Quality.webp", "end": "public/ad-render/scene-02-knowledge/end-frame_v1.png", "clip": null },
+    "s3": { "start": "public/w-new/W-Digilab.webp", "end": "public/ad-render/scene-03-transform/end-frame_v1.png", "clip": null },
+    "s4": { "start": "public/w-new/W-Studio.webp", "end": "public/ad-render/scene-04-excellence/end-frame_v2.png", "clip": null },
     "s5": { "start": null, "end": null, "clip": null },
     "s6": { "start": null, "end": null, "clip": null }
   },
