@@ -1,6 +1,29 @@
 {
   "version": 1,
   "spec": "docs/superpowers/specs/2026-05-05-wgroup-youtube-ad-design.md",
+  "higgsfield": {
+    "workspace_id": "ae40a751-b572-4c20-b39b-d18c5b77b94e",
+    "image_model": "gpt_image_2",
+    "video_model": "seedance_2_0"
+  },
+  "references": {
+    "wquality": {
+      "image_path": "public/w-new/W-Quality.webp",
+      "higgsfield_id": "ddbb5b88-59ff-4f73-952d-772e05b01da3"
+    },
+    "wdigilab": {
+      "image_path": "public/w-new/W-Digilab.webp",
+      "higgsfield_id": "08f83617-72c5-4a94-8f2d-287dc2ff727f"
+    },
+    "wstudio": {
+      "image_path": "public/w-new/W-Studio.webp",
+      "higgsfield_id": "ee0693cb-5091-4b2d-a6f9-eebd30e9aa1a"
+    },
+    "logo": {
+      "image_path": "public/wgroup/logo.png",
+      "higgsfield_id": "b73a5d79-e0e5-4997-a5e8-291de3ddf702"
+    }
+  },
   "scenes": {
     "s1": { "start": null, "end": null, "clip": null },
     "s2": { "start": "public/w-new/W-Quality.webp", "end": null, "clip": null },
