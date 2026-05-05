@@ -25,7 +25,7 @@
     }
   },
   "scenes": {
-    "s1": { "start": "public/ad-render/scene-01-opening/start-frame_v2.png", "end": null, "clip": null },
+    "s1": { "start": "public/ad-render/scene-01-opening/start-frame_v2.png", "end": "public/ad-render/scene-01-opening/end-frame_v2.png", "clip": null },
     "s2": { "start": "public/w-new/W-Quality.webp", "end": null, "clip": null },
     "s3": { "start": "public/w-new/W-Digilab.webp", "end": null, "clip": null },
     "s4": { "start": "public/w-new/W-Studio.webp", "end": null, "clip": null },
