@@ -33,17 +33,17 @@
     "s6": { "start": "public/ad-render/scene-06-logo/start-frame_v1.png", "end": "public/ad-render/scene-06-logo/end-frame_v2.png", "clip": "public/ad-render/scene-06-logo/clip_v1.mp4" }
   },
   "audio": {
-    "voiceover_full": "public/ad-render/audio/voiceover_full_v1.mp3",
+    "voiceover_full": "public/ad-render/audio/voiceover_full_v3.mp3",
     "voiceover_per_line": {
-      "s1": "public/ad-render/audio/voiceover_per_line/s1_v1.mp3",
-      "s2": "public/ad-render/audio/voiceover_per_line/s2_v1.mp3",
-      "s3": "public/ad-render/audio/voiceover_per_line/s3_v1.mp3",
-      "s4": "public/ad-render/audio/voiceover_per_line/s4_v1.mp3",
-      "s5": "public/ad-render/audio/voiceover_per_line/s5_v1.mp3",
-      "s6": "public/ad-render/audio/voiceover_per_line/s6_v1.mp3"
+      "s1": "public/ad-render/audio/voiceover_per_line/s1_v3.mp3",
+      "s2": "public/ad-render/audio/voiceover_per_line/s2_v3.mp3",
+      "s3": "public/ad-render/audio/voiceover_per_line/s3_v3.mp3",
+      "s4": "public/ad-render/audio/voiceover_per_line/s4_v3.mp3",
+      "s5": "public/ad-render/audio/voiceover_per_line/s5_v3.mp3",
+      "s6": "public/ad-render/audio/voiceover_per_line/s6_v3.mp3"
     },
     "bgm": "public/ad-render/audio/bgm_v1.mp3",
     "bgm_source": "Turn In The Sun — Simon Herody (YouTube Audio Library)"
   },
-  "final": "public/ad-render/final/master_v3.mp4"
+  "final": "public/ad-render/final/master_v4.mp4"
 }

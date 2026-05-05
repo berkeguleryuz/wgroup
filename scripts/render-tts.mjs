@@ -6,13 +6,15 @@ const apiKey = process.env.OPENAI_API_KEY;
 if (!apiKey) throw new Error('OPENAI_API_KEY not set in .env');
 
 const lines = [
-  ['s1', 'In a world rebuilt by transformation,'],
-  ['s2', 'excellence begins with knowledge — measured, proven, certified.'],
-  ['s3', 'It evolves through transformation — where data becomes decision.'],
-  ['s4', 'And it speaks through stories that move industries forward.'],
+  ['s1', 'In a world rebuilt by transformation — this is WGroup.'],
+  ['s2', 'W-Quality. Where knowledge becomes precision.'],
+  ['s3', 'W-DigiLab. Where data becomes decision.'],
+  ['s4', 'W-Studio. Where stories move industries forward.'],
   ['s5', 'Three divisions. One vision. One signature of excellence.'],
   ['s6', 'WGroup — the art of transforming knowledge into excellence.'],
 ];
+
+const VERSION = 'v3';
 
 const fullText = lines.map(([, t]) => t).join(' ');
 const outDir = 'public/ad-render/audio';
@@ -39,7 +41,7 @@ async function tts(text, outFile) {
   console.log(`wrote ${outFile} (${buf.length} bytes)`);
 }
 
-await tts(fullText, path.join(outDir, 'voiceover_full_v1.mp3'));
+await tts(fullText, path.join(outDir, `voiceover_full_${VERSION}.mp3`));
 for (const [id, text] of lines) {
-  await tts(text, path.join(perLineDir, `${id}_v1.mp3`));
+  await tts(text, path.join(perLineDir, `${id}_${VERSION}.mp3`));
 }
