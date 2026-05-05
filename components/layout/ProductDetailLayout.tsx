@@ -54,32 +54,34 @@ export default function ProductDetailLayout({ productKey }: Props) {
   useEffect(() => {
     const ctx = gsap.context(() => {
       const heroTl = gsap.timeline({ delay: 0.25 });
-      heroTl.from(".pd-hero-eyebrow", {
-        y: 20,
-        opacity: 0,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-      heroTl.from(
+      heroTl.fromTo(
+        ".pd-hero-eyebrow",
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }
+      );
+      heroTl.fromTo(
         ".pd-hero-word",
+        { y: 60, opacity: 0, rotationX: -45 },
         {
-          y: 60,
-          opacity: 0,
-          rotationX: -45,
+          y: 0,
+          opacity: 1,
+          rotationX: 0,
           stagger: 0.06,
           duration: 0.8,
           ease: "back.out(1.5)",
         },
         "-=0.25"
       );
-      heroTl.from(
+      heroTl.fromTo(
         ".pd-hero-sub",
-        { y: 30, opacity: 0, duration: 0.7, ease: "power2.out" },
+        { y: 30, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" },
         "-=0.4"
       );
-      heroTl.from(
+      heroTl.fromTo(
         ".pd-hero-line",
-        { scaleX: 0, duration: 0.8, ease: "power3.inOut" },
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.8, ease: "power3.inOut" },
         "-=0.3"
       );
 
@@ -185,7 +187,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
 
         <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
 
-          <div className="pd-hero-eyebrow mb-6 flex items-center justify-center">
+          <div className="pd-hero-eyebrow mb-6 flex items-center justify-center opacity-0">
             <Link
               href={brandUrl}
               className="group relative inline-flex items-baseline leading-none transition-transform duration-300 hover:-translate-y-px"
@@ -243,7 +245,7 @@ export default function ProductDetailLayout({ productKey }: Props) {
             {titleWords.map((word, i) => (
               <span
                 key={i}
-                className="pd-hero-word mr-[0.22em] inline-block will-change-transform"
+                className="pd-hero-word mr-[0.22em] inline-block will-change-transform opacity-0"
                 style={{ transformStyle: "preserve-3d" }}
               >
                 {word}
@@ -252,13 +254,13 @@ export default function ProductDetailLayout({ productKey }: Props) {
           </h1>
 
           <p
-            className="pd-hero-sub mx-auto max-w-2xl text-lg text-white/55 sm:text-xl"
+            className="pd-hero-sub mx-auto max-w-2xl text-lg text-white/55 sm:text-xl opacity-0"
             style={{ fontFamily: "var(--font-barlow), system-ui, sans-serif" }}
           >
             {tagline}
           </p>
 
-          <div className="pd-hero-line mx-auto mt-10 h-[2px] w-20 origin-center bg-primary/60" />
+          <div className="pd-hero-line mx-auto mt-10 h-[2px] w-20 origin-center scale-x-0 bg-primary/60" />
         </div>
 
         <div className="absolute bottom-0 left-0 right-0">
