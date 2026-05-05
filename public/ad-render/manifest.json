@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "spec": "docs/superpowers/specs/2026-05-05-wgroup-youtube-ad-design.md",
+  "higgsfield": {
+    "workspace_id": "ae40a751-b572-4c20-b39b-d18c5b77b94e",
+    "image_model": "gpt_image_2",
+    "video_model": "seedance_2_0"
+  },
+  "references": {
+    "wquality": {
+      "image_path": "public/w-new/W-Quality.webp",
+      "higgsfield_id": "ddbb5b88-59ff-4f73-952d-772e05b01da3"
+    },
+    "wdigilab": {
+      "image_path": "public/w-new/W-Digilab.webp",
+      "higgsfield_id": "08f83617-72c5-4a94-8f2d-287dc2ff727f"
+    },
+    "wstudio": {
+      "image_path": "public/w-new/W-Studio.webp",
+      "higgsfield_id": "ee0693cb-5091-4b2d-a6f9-eebd30e9aa1a"
+    },
+    "logo": {
+      "image_path": "public/wgroup/logo.png",
+      "higgsfield_id": "b73a5d79-e0e5-4997-a5e8-291de3ddf702"
+    }
+  },
+  "scenes": {
+    "s1": { "start": "public/ad-render/scene-01-opening/start-frame_v2.png", "end": "public/ad-render/scene-01-opening/end-frame_v2.png", "clip": "public/ad-render/scene-01-opening/clip_v1.mp4" },
+    "s2": { "start": "public/w-new/W-Quality.webp", "end": "public/ad-render/scene-02-knowledge/end-frame_v1.png", "clip": "public/ad-render/scene-02-knowledge/clip_v1.mp4" },
+    "s3": { "start": "public/w-new/W-Digilab.webp", "end": "public/ad-render/scene-03-transform/end-frame_v1.png", "clip": "public/ad-render/scene-03-transform/clip_v1.mp4" },
+    "s4": { "start": "public/w-new/W-Studio.webp", "end": "public/ad-render/scene-04-excellence/end-frame_v2.png", "clip": "public/ad-render/scene-04-excellence/clip_v1.mp4" },
+    "s5": { "start": "public/ad-render/scene-05-converge/start-frame_v1.png", "end": "public/ad-render/scene-05-converge/end-frame_v2.png", "clip": "public/ad-render/scene-05-converge/clip_v1.mp4" },
+    "s6": { "start": "public/ad-render/scene-06-logo/start-frame_v1.png", "end": "public/ad-render/scene-06-logo/end-frame_v2.png", "clip": "public/ad-render/scene-06-logo/clip_v1.mp4" }
+  },
+  "audio": {
+    "voiceover_full": "public/ad-render/audio/voiceover_full_v3.mp3",
+    "voiceover_per_line": {
+      "s1": "public/ad-render/audio/voiceover_per_line/s1_v3.mp3",
+      "s2": "public/ad-render/audio/voiceover_per_line/s2_v3.mp3",
+      "s3": "public/ad-render/audio/voiceover_per_line/s3_v3.mp3",
+      "s4": "public/ad-render/audio/voiceover_per_line/s4_v3.mp3",
+      "s5": "public/ad-render/audio/voiceover_per_line/s5_v3.mp3",
+      "s6": "public/ad-render/audio/voiceover_per_line/s6_v3.mp3"
+    },
+    "bgm": "public/ad-render/audio/bgm_v1.mp3",
+    "bgm_source": "Turn In The Sun — Simon Herody (YouTube Audio Library)"
+  },
+  "final": "public/ad-render/final/master_v4.mp4"
+}

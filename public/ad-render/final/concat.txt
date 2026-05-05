@@ -1,0 +1,6 @@
+file '../scene-01-opening/clip_v1.mp4'
+file '../scene-02-knowledge/clip_v1.mp4'
+file '../scene-03-transform/clip_v1.mp4'
+file '../scene-04-excellence/clip_v1.mp4'
+file '../scene-05-converge/clip_v1.mp4'
+file '../scene-06-logo/clip_v1.mp4'
