@@ -382,7 +382,7 @@
     },
     "q5": {
       "question": "WStudio ne üretiyor?",
-      "answer": "WStudio, WGroup'un yaratıcı ve yayın katmanını yönetiyor ve birbirine bağlı dört ürünü kapsıyor. AI destekli medya üretimi için Corporate Media Engine. Kurumsal öğrenmenin, hikaye temelli serilerin ve yetenek yönetimi yayınlarının yayımlandığı ve izlendiği eğitim odaklı kurumsal yayın platformu BusyFlix. Performansçılar için yaratıcı bir profil ve sosyal ağ olan Talent Management. AI mentor temelli beceri gelişimi için AI Skill Platform. Ortak nokta, kurumsal bilgiyi ve yaratıcı yeteneği izlenen, paylaşılan ve akılda kalan deneyimlere dönüştürmek."
+      "answer": "WStudio, WGroup'un yaratıcı ve yayın katmanını yönetiyor ve birbirine bağlı dört ürünü kapsıyor. AI destekli medya üretimi için Corporate Media Engine. Eğlenceli içeriklerin ve hikaye temelli serilerin başrolde olduğu, kurumsal öğrenme ve yetenek yönetimi yayınlarının da aynı akışta doğal biçimde yer bulduğu yayın platformu BusyFlix. Performansçılar için yaratıcı bir profil ve sosyal ağ olan Talent Management. AI mentor temelli beceri gelişimi için AI Skill Platform. Ortak nokta, kurumsal bilgiyi ve yaratıcı yeteneği izlenen, paylaşılan ve akılda kalan deneyimlere dönüştürmek."
     },
     "q6": {
       "question": "Hangi sektörlere hizmet veriyorsunuz?",
@@ -1341,12 +1341,12 @@
         "brand": "W-Studio",
         "brandHref": "/w-studio",
         "title": "BusyFlix",
-        "tagline": "Bilgiyi doğru aktarmaya yönelik bir yayın platformu.",
-        "definition": "BusyFlix; kurumsal öğrenmenin, hikaye temelli serilerin, liderlik gelişimi içeriklerinin ve yapay zeka destekli formatların tek bir markalı yayın deneyimi altında bir araya geldiği eğitim odaklı bir kurumsal streaming ve paylaşım platformudur. Klasik eğitim videolarına veya statik öğrenme kütüphanelerine sıkışmak yerine BusyFlix; eğitim mini dizilerinden belgesellere, liderlik konuşmalarından yetenek yönetimi yayınlarına, tedarikçi ve kültür temelli bölümlerden kısa formatlı içeriklere kadar farklı içerik türlerini barındırır ve dağıtır. Platformdaki her yapım; kurumsal öğrenmeye daha yaratıcı, özgün ve sinematik bir yaklaşım kazandıran çeşitli AI destekli yöntemlerin bir araya gelmesiyle hazırlanır. Sonuç statik bir eğitim kütüphanesi ya da bir içerik üretim çıktısı değildir; kurumsal bilginin, öğrenme yolculuklarının, yetenek yönetimi çıktılarının ve marka hikayelerinin yayımlandığı, izlendiği ve paylaşıldığı bağımsız bir yayın platformudur.",
+        "tagline": "Eğlencenin başrolde olduğu, gelişimin de doğal akışında yer aldığı bir yayın platformu.",
+        "definition": "BusyFlix; eğlenceli içeriklerin ve hikaye temelli serilerin merkezde olduğu, kurumsal öğrenme, liderlik gelişimi içerikleri ve yapay zeka destekli formatların da aynı yayın deneyiminde doğal biçimde yer bulduğu bağımsız bir streaming ve paylaşım platformudur. Klasik eğitim videolarına veya statik öğrenme kütüphanelerine sıkışmak yerine BusyFlix; mini dizilerden belgesellere, liderlik konuşmalarından yetenek yönetimi yayınlarına, kültür temelli bölümlerden kısa formatlı içeriklere kadar farklı içerik türlerini barındırır ve dağıtır. Platformdaki her yapım; izleyiciyi içine çeken, yaratıcı, özgün ve sinematik bir yaklaşım kazandıran çeşitli AI destekli yöntemlerin bir araya gelmesiyle hazırlanır. Sonuç ne sıradan bir kurumsal içerik çıktısı ne de statik bir eğitim kütüphanesidir; eğlenceli yapımların, hikayelerin, öğrenme yolculuklarının, yetenek yönetimi çıktılarının ve marka anlatılarının yayımlandığı, izlendiği ve paylaşıldığı bağımsız bir yayın platformudur.",
         "strategicAdvantage": [
           {
-            "title": "Eğitim odaklı bir yayın deneyimi",
-            "body": "BusyFlix, kurumsal öğrenmeyi bir yayın deneyimine dönüştürür. Eğitim, liderlik gelişimi, denetim hazırlığı, tedarikçi know-how'ı ve kültür odaklı konular, modern bir eğlence platformu titizliğiyle sezonlar, bölümler, kanallar ve özenle hazırlanmış oynatma listeleri olarak yayımlanır. Eğitim odağı, izleyiciyi 'zorunlu izleme' algısından çıkarıp çalışanların kendi zamanında, kendi temposunda gönüllü olarak takip ettiği bir öğrenme deneyimine yönlendirir."
+            "title": "Önce eğlence, doğal akışında gelişim",
+            "body": "BusyFlix, izlenmek için açılan, akışında gelişimi de barındıran modern bir yayın deneyimi sunar. Hikayeler, liderlik konuşmaları, kültür içerikleri ve gelişim odaklı yapımlar, modern bir eğlence platformunun titizliğiyle sezonlar, bölümler, kanallar ve özenle hazırlanmış oynatma listeleri olarak yayımlanır. Bu yaklaşım, izleyiciyi 'zorunlu izleme' algısından tamamen çıkarır; eğlenceyi merkeze alıp gelişimi de bu akışın doğal bir parçası haline getirerek çalışanların kendi zamanında, kendi temposunda keyifle takip ettiği gönüllü bir izleme deneyimine dönüştürür."
           },
           {
             "title": "Tek çatı altında farklı içerik türleri",
