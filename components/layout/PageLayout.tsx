@@ -11,6 +11,7 @@ interface PageLayoutProps {
   titleHighlight?: string;
   heroImage?: string;
   children: React.ReactNode;
+  
 }
 
 export default function PageLayout({
