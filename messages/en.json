@@ -382,7 +382,7 @@
     },
     "q5": {
       "question": "What does WStudio produce?",
-      "answer": "WStudio runs the creative and streaming layer of WGroup. It covers four connected products: Corporate Media Engine for AI assisted media production, BusyFlix as a training focused corporate streaming platform where corporate learning, story driven series and talent management releases are published and watched, Talent Management as a creative platform for performers, and AI Skill Platform for AI mentor based skill development. The common thread is turning corporate knowledge and creative talent into experiences that are watched, shared and remembered."
+      "answer": "WStudio runs the creative and streaming layer of WGroup. It covers four connected products: Corporate Media Engine for AI assisted media production, BusyFlix as a streaming platform built around entertaining content and story driven series, where corporate learning and talent management releases also find a natural place in the same flow, Talent Management as a creative platform for performers, and AI Skill Platform for AI mentor based skill development. The common thread is turning corporate knowledge and creative talent into experiences that are watched, shared and remembered."
     },
     "q6": {
       "question": "Which industries do you serve?",
@@ -1341,12 +1341,12 @@
         "brand": "W-Studio",
         "brandHref": "/w-studio",
         "title": "BusyFlix",
-        "tagline": "A streaming platform built to transfer knowledge accurately.",
-        "definition": "BusyFlix is a training-focused corporate streaming and sharing platform where corporate learning, story-driven series, leadership development and AI-generated formats come together inside a single branded broadcast experience. Rather than relying on classic training videos or static learning libraries, BusyFlix hosts and distributes a wide range of content types: training mini-series, documentary-style explainers, leadership talks, talent management releases, supplier and culture episodes, short-form features and more. Every title is created through a mix of AI-assisted production methods that bring a more creative, original and cinematic approach to corporate learning. The result is not a static training library or a content production output. It is a dedicated streaming environment where corporate knowledge, learning journeys, talent management outcomes and brand stories are published, watched and shared.",
+        "tagline": "A streaming platform built around entertaining content, with development woven naturally into the flow.",
+        "definition": "BusyFlix is a streaming and sharing platform built around entertaining content and story-driven series, where corporate learning, leadership development and AI-generated formats also find a natural place inside a single branded broadcast experience. Rather than living inside a classic training library or a static learning shelf, BusyFlix hosts and distributes a wide range of content types: mini-series, documentary-style explainers, leadership talks, talent management releases, culture-driven episodes, short-form features and more. Every title is created through a mix of AI-assisted production methods that bring a more creative, original, cinematic and engaging approach to whatever the topic happens to be. The result is neither a static training library nor an ordinary corporate content output. It is a dedicated streaming environment where entertaining productions, stories, learning journeys, talent management outcomes and brand narratives are published, watched and shared.",
         "strategicAdvantage": [
           {
-            "title": "A training-led streaming experience",
-            "body": "BusyFlix turns corporate learning into a streaming experience. Training, leadership development, audit readiness, supplier know-how and culture-driven topics are published as seasons, episodes, channels and curated playlists with the same craft as a modern entertainment platform. The training focus shifts the relationship from mandatory viewing toward voluntary, self-paced learning that employees actually want to follow on their own time."
+            "title": "Entertainment first, development woven in",
+            "body": "BusyFlix is built to be watched, with development carried along inside the same flow. Stories, leadership talks, culture pieces and growth-oriented titles are published as seasons, episodes, channels and curated playlists with the same craft as a modern entertainment platform. By putting entertainment first and letting development sit naturally in the same stream, the experience moves away from any sense of mandatory viewing and toward voluntary, self-paced watching that employees actually want to follow on their own time."
           },
           {
             "title": "Many content types under one roof",
